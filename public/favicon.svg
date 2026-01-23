@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#102a43"/>
+      <stop offset="100%" style="stop-color:#0a1929"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="url(#bg)"/>
+  <!-- Stylized "D" for Detektei -->
+  <path d="M8 7h7c5.5 0 10 4.5 10 9.5S20.5 26 15 26H8V7z" fill="none" stroke="#e6b000" stroke-width="2.5"/>
+  <!-- Inner accent line -->
+  <path d="M11 11h4c3.3 0 6 2.7 6 5.5S18.3 22 15 22h-4" fill="none" stroke="#ffc91a" stroke-width="1.5"/>
+</svg>

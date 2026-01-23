@@ -1,0 +1,326 @@
+---
+description: Standard-Workflow für alle Detektei Blog-Artikel
+globs: content/posts/**/*.mdx
+alwaysApply: true
+---
+
+# Detektei Artikel-Workflow
+
+Bei jedem neuen Artikel für die Detektei-Website diesen Workflow strikt befolgen:
+
+## ⚠️ WICHTIG: Jahreszahl 2026
+
+Bei Artikeln mit Jahreszahlen (z.B. "Ratgeber 2026", "Rechtslage 2026") **IMMER das Jahr 2026** verwenden – unabhängig vom aktuellen Datum. Das gilt für:
+- Titel
+- Meta-Description
+- Überschriften (H2/H3)
+- Inhalt
+
+## 1. Artikel-Grundstruktur
+
+Jeder Artikel MUSS folgende Frontmatter-Felder haben:
+
+```yaml
+---
+title: "Titel mit Keyword"
+description: "150-160 Zeichen, Keyword enthalten"
+slug: "url-freundlicher-slug"
+date: "YYYY-MM-DD"
+updatedAt: "YYYY-MM-DD"
+category: "Eine der definierten Kategorien"
+tags: ["Tag1", "Tag2", "Tag3"]
+keyword: "Haupt-Keyword für SEO"
+image:
+  alt: "Beschreibender Alt-Text mit Keyword"
+  caption: "Optionale Bildunterschrift"
+faqs:
+  - question: "Frage 1?"
+    answer: "Antwort 1"
+  - question: "Frage 2?"
+    answer: "Antwort 2"
+sources:
+  - name: "Quellenname"
+    url: "https://..."
+    description: "Kurze Beschreibung"
+---
+```
+
+## 2. SEO-Textstruktur (GOLDSTANDARD)
+
+### Mindestanforderungen
+
+| Kriterium | Minimum | Optimal (Pillar Content) |
+|-----------|---------|-------------------------|
+| **Wortanzahl** | 2.000 Wörter | 5.000+ Wörter |
+| **FAQs** | 8 FAQs | 12+ FAQs |
+| **H2-Abschnitte** | 10 | 15-20 |
+| **H3-Unterabschnitte** | 5 | 10+ |
+| **Tabellen** | 2 | 4-6 |
+| **Listen** | 5 | 10+ |
+| **Interne Links** | 3 | 5+ |
+| **Externe Links** | 5 | 10+ |
+| **Quellen im Verzeichnis** | 5 | 10+ |
+
+### Keyword-Strategie
+
+**Haupt-Keyword Platzierung (PFLICHT):**
+- ✅ Im Titel (möglichst vorne)
+- ✅ In der Meta Description
+- ✅ In der URL/Slug
+- ✅ Im ersten Absatz
+- ✅ In mindestens 2-3 H2-Überschriften
+- ✅ Im Alt-Text des Hero-Bildes
+- ✅ Im Fazit
+
+**LSI Keywords (semantisch verwandte Begriffe):**
+
+Für jedes Thema MÜSSEN 5-10 LSI Keywords natürlich eingestreut werden:
+
+| Beispiel Haupt-Keyword | LSI Keywords (je 2-3x verwenden) |
+|------------------------|----------------------------------|
+| Privatdetektiv | Ermittler, Detektei, Observation, Recherche, Beweissicherung, diskret |
+| Untreue aufdecken | Fremdgehen, Ehepartner, Beziehung, Verdacht, Observation, Beweis |
+| Personensuche | Vermisste, Schuldner, Erben, Adressermittlung, Recherche |
+| Wirtschaftsdetektiv | Unternehmenssicherheit, Mitarbeiterüberprüfung, Betrug, Diebstahl |
+
+## 3. Featured Snippet Optimierung (PFLICHT)
+
+### "Kurz:" Definitionen
+
+Jeder wichtige H2-Abschnitt MUSS mit einer direkten Antwort beginnen:
+
+```mdx
+## Was kostet ein Privatdetektiv?
+
+**Kurz:** Ein Privatdetektiv kostet in Deutschland zwischen 50-150€ pro Stunde, abhängig von Erfahrung, Region und Auftragsart. Für Observationen sollten Sie mit 800-1.500€ pro Tag rechnen.
+
+[Dann folgt der ausführliche Text...]
+```
+
+**Regeln für "Kurz:" Definitionen:**
+- 40-60 Wörter (nicht länger!)
+- Beantwortet die Frage DIREKT
+- Enthält das Keyword oder LSI-Keyword
+- Steht IMMER direkt nach der H2-Überschrift
+- Kein Drumherum-Reden
+
+**Beispiele für gute Definitionen:**
+
+```mdx
+## Wann darf ein Detektiv ermitteln?
+
+**Kurz:** Ein Detektiv darf ermitteln, wenn ein berechtigtes Interesse vorliegt – z.B. bei Verdacht auf Untreue, Betrug oder Diebstahl. Die Ermittlungen müssen im Rahmen der Jedermannsrechte erfolgen und dürfen keine Persönlichkeitsrechte verletzen.
+```
+
+```mdx
+## Sind Detektiv-Beweise vor Gericht verwertbar?
+
+**Kurz:** Ja, professionell gesicherte Beweise eines Detektivs sind vor Gericht verwertbar, sofern sie legal beschafft wurden. Das gilt für Observationsberichte, Fotos aus dem öffentlichen Raum und Zeugenaussagen.
+```
+
+```mdx
+## Wie finde ich einen seriösen Detektiv?
+
+**Kurz:** Achten Sie auf: IHK-Zulassung nach §34a GewO, Mitgliedschaft in Berufsverbänden (BDD, BVPD), transparente Preisgestaltung, schriftliche Auftragserteilung und Referenzen.
+```
+
+## 4. Content-Struktur nach Artikeltyp
+
+### Für Dienstleistungs-Artikel (z.B. Observation, Personensuche):
+
+```
+1. Einleitung (Problem → Lösung durch Detektei)
+2. <KeyTakeaways> Box
+3. "Was ist [Dienstleistung]?" (Definition)
+4. "Wann ist [Dienstleistung] sinnvoll?" (Anwendungsfälle)
+5. "Wie läuft [Dienstleistung] ab?" (Prozess erklärt)
+6. "Rechtliche Grundlagen" (Gesetze, Erlaubtes/Verbotenes)
+7. "Was kostet [Dienstleistung]?" (Preistransparenz)
+8. "Welche Beweise können gesichert werden?"
+9. "Verwertbarkeit vor Gericht"
+10. "Häufige Fehler vermeiden" (Tipps für Auftraggeber)
+11. FAQ-Sektion (wird automatisch aus Frontmatter generiert)
+12. Quellenverzeichnis (wird automatisch generiert)
+13. Fazit mit Call-to-Action (Kontaktaufnahme)
+```
+
+### Für Ratgeber-Artikel (z.B. Untreue erkennen, Betrug im Unternehmen):
+
+```
+1. Einleitung (Problem → Lösung)
+2. <KeyTakeaways> Box
+3. "Was ist [Thema]?" (Definition)
+4. "Anzeichen erkennen" (Warnsignale)
+5. "Was tun bei Verdacht?" (Handlungsoptionen)
+6. "Rechtliche Situation" (Was ist erlaubt?)
+7. "Wann sollte ein Detektiv eingeschaltet werden?"
+8. "Ablauf einer Ermittlung"
+9. "Kosten und Dauer"
+10. "Ergebnisse und nächste Schritte"
+11. FAQ-Sektion
+12. Quellenverzeichnis
+13. Fazit mit Kontaktmöglichkeit
+```
+
+### Für rechtliche Info-Artikel (z.B. Detektivrecht, Beweisrecht):
+
+```
+1. Einleitung (Relevanz für Auftraggeber)
+2. <KeyTakeaways> Box
+3. "Rechtliche Grundlagen" (Gesetze)
+4. "Was ist erlaubt?" (Jedermannsrechte)
+5. "Was ist verboten?" (Grenzen)
+6. "Beweissicherung und Verwertbarkeit"
+7. "Aktuelle Rechtsprechung"
+8. "Tipps für Auftraggeber"
+9. FAQ-Sektion
+10. Quellenverzeichnis
+11. Fazit
+```
+
+## 5. Hero-Bild generieren
+
+Nach Fertigstellung des Artikels:
+
+```bash
+curl -X POST http://localhost:3000/api/generate-hero \
+  -H "Content-Type: application/json" \
+  -d '{"keyword": "ARTIKEL-KEYWORD"}'
+```
+
+Dann WebP optimieren:
+```bash
+node scripts/optimize-images.mjs
+```
+
+## 6. Interne Verlinkung
+
+MINDESTENS 2-3 interne Links zu anderen Artikeln einbauen:
+
+```mdx
+Erfahren Sie mehr über [Observationen](/blog/observation-privatdetektiv)...
+
+In unserem Ratgeber zur [Personensuche](/blog/personensuche-detektei) erklären wir...
+```
+
+## 7. Externe Links & Quellenverzeichnis
+
+MINDESTENS 3-5 externe Links zu autoritativen Quellen einbauen:
+
+- **Gesetzestexte** (dejure.org, gesetze-im-internet.de)
+- **Wikipedia** für allgemeine Erklärungen
+- **Berufsverbände** (BDD, BVPD)
+- **Gerichtsurteile** für Rechtsprechung
+- **Statistiken** (Statista, BKA, Polizeiliche Kriminalstatistik)
+
+### ⚠️ Externe Link-Validierung (PFLICHT!)
+
+**BEVOR** ein Artikel veröffentlicht wird, ALLE externen Links prüfen:
+
+```bash
+# Einzelnen Link prüfen:
+curl -s -o /dev/null -w "%{http_code}" -L --max-time 10 "URL"
+
+# Erwartetes Ergebnis: 200 = OK, 404 = Kaputt
+```
+
+**Regeln für externe Links:**
+- ✅ Nur Links mit HTTP Status 200 verwenden
+- ❌ Keine 404-Links, Redirects zu Fehlerseiten, oder "Seite nicht gefunden"
+- ⚠️ Bei kaputten Links: Alternative Quelle recherchieren
+- ⚠️ Bevorzugte Quellen: Gesetzestexte, Wikipedia, Berufsverbände, etablierte Nachrichtenquellen
+
+**Zuverlässige Quellen für Detektei-Artikel:**
+| Thema | Zuverlässige Quellen |
+|-------|---------------------|
+| Gesetze | dejure.org, gesetze-im-internet.de, buzer.de |
+| Rechtsprechung | dejure.org, juris.de, openjur.de |
+| Statistiken | Statista, destatis.de, BKA |
+| Berufsrecht | IHK, BDD, BVPD |
+| Allgemein | Wikipedia |
+
+### Quellenverzeichnis im Frontmatter:
+
+```yaml
+sources:
+  - name: "Quellenname"
+    url: "https://..."
+    description: "Kurze Beschreibung"
+```
+
+Das Quellenverzeichnis wird automatisch unter den FAQs angezeigt (einklappbar).
+
+## 8. LLM-Optimierung (GEO)
+
+Artikel für ChatGPT, Gemini & Co. optimieren:
+
+### KeyTakeaways-Box (PFLICHT)
+
+Direkt nach dem ersten Absatz eine TL;DR-Box einfügen:
+
+```mdx
+<KeyTakeaways>
+- **Kosten:** 50-150€/Stunde je nach Auftrag
+- **Rechtslage:** Erlaubt im Rahmen der Jedermannsrechte
+- **Fazit:** Professionelle Detektive liefern gerichtsverwertbare Beweise
+</KeyTakeaways>
+```
+
+### Strukturierte Antworten
+
+- **Direkte Antworten** auf Fragen (nicht drumherum reden)
+- **Listen & Tabellen** statt Fließtext wo möglich
+- **Definitionen klar formulieren:** "X ist Y" Format
+
+### Automatische Schemas
+
+Diese werden automatisch generiert:
+- ✅ Article Schema (JSON-LD)
+- ✅ FAQ Schema (JSON-LD) 
+- ✅ Breadcrumb Schema
+- ✅ LocalBusiness Schema (für Detektei)
+- ✅ Speakable Schema (für Voice Assistants)
+
+## 9. SEO-Checkliste
+
+- [ ] Keyword im Titel (vorne)
+- [ ] Keyword in Description
+- [ ] Keyword in H1 (= Titel)
+- [ ] Keyword in mindestens einer H2
+- [ ] Alt-Text mit Keyword
+- [ ] 3-5 FAQs mit strukturierten Daten
+- [ ] Mindestens 800 Wörter
+- [ ] Interne Links zu 2-3 anderen Artikeln
+- [ ] Externe Links zu 3-5 autoritativen Quellen
+- [ ] Quellenverzeichnis im Frontmatter
+- [ ] KeyTakeaways-Box am Artikelanfang
+- [ ] Call-to-Action zur Kontaktaufnahme
+
+## 10. Bilder
+
+Artikelbilder speichern unter:
+```
+public/images/blog/
+```
+
+Format: JPG oder PNG, werden automatisch optimiert.
+
+## 11. Queue aktualisieren
+
+Nach Veröffentlichung in `content/topics/queue.json` das Keyword auf `"used": true` setzen.
+
+---
+
+## Zusammenfassung: Artikel-Workflow
+
+```
+1. Thema aus Queue wählen
+2. Artikel schreiben (SEO-optimiert, FAQs, interne Links)
+3. KeyTakeaways-Box am Anfang einfügen (LLM-Optimierung)
+4. Externe Links zu autoritativen Quellen einbauen
+5. ⚠️ EXTERNE LINKS VALIDIEREN (curl Status 200 prüfen!)
+6. Quellenverzeichnis im Frontmatter ergänzen
+7. Hero-Bild generieren
+8. WebP optimieren
+9. Queue aktualisieren
+```

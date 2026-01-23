@@ -1,0 +1,1992 @@
+# Detektei Einsatzgebiete – Seiten-Architektur & SEO-Masterplan
+
+Diese Rule definiert den verbindlichen Aufbau aller Einsatzgebiete-Seiten (Bundesland, Landkreis, Stadt) mit vollständiger SEO-, Schema-, Rich-Snippet- und LLM-Optimierung.
+
+---
+
+## 1. Hierarchie & URL-Schema (VERBINDLICH)
+
+### Seitenhierarchie
+
+```
+/einsatzgebiete/
+└── /einsatzgebiete/bundesland/<bundesland>/
+    ├── /einsatzgebiete/bundesland/<bundesland>/<landkreis>/
+    │   └── /einsatzgebiete/bundesland/<bundesland>/<landkreis>/<stadt>/
+    └── /einsatzgebiete/bundesland/<bundesland>/<kreisfreie-stadt>/
+```
+
+### Veröffentlichungsregel
+
+| Seitentyp | Bedingung | URL-Beispiel |
+|-----------|-----------|--------------|
+| Bundesland | Immer | `/einsatzgebiete/bundesland/bayern/` |
+| Landkreis | Immer | `/einsatzgebiete/bundesland/bayern/landkreis-muenchen/` |
+| Stadt im Landkreis | >10.000 Einwohner | `/einsatzgebiete/bundesland/bayern/landkreis-muenchen/garching/` |
+| Kreisfreie Stadt | >10.000 Einwohner | `/einsatzgebiete/bundesland/bayern/muenchen/` |
+
+### Slug-Konventionen (PFLICHT)
+
+- **lowercase** immer
+- **Bindestriche** statt Leerzeichen
+- **Umlaute umwandeln:** ä→ae, ö→oe, ü→ue, ß→ss
+- **Keine Sonderzeichen**
+
+| Name | Slug |
+|------|------|
+| Landkreis München | `landkreis-muenchen` |
+| Düsseldorf | `duesseldorf` |
+| Groß-Gerau | `gross-gerau` |
+| Garching bei München | `garching` |
+
+---
+
+## 2. Schema-Markup (JSON-LD) – VOLLSTÄNDIG
+
+### 2.1 Basis-Schemas für ALLE Einsatzgebiete-Seiten
+
+Jede Einsatzgebiete-Seite MUSS folgende JSON-LD Schemas enthalten:
+
+```typescript
+// Automatisch generieren in: lib/schemas/einsatzgebiete.ts
+
+interface EinsatzgebieteSchemas {
+  breadcrumb: BreadcrumbList;
+  localBusiness: LocalBusiness;
+  faqPage?: FAQPage;
+  webPage: WebPage;
+  organization: Organization;
+  geoCoordinates?: GeoCoordinates;
+  areaServed: Place | AdministrativeArea;
+  speakable?: SpeakableSpecification;
+}
+```
+
+### 2.2 BreadcrumbList Schema (PFLICHT)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://domain.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Einsatzgebiete",
+      "item": "https://domain.de/einsatzgebiete/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Bayern",
+      "item": "https://domain.de/einsatzgebiete/bundesland/bayern/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "München",
+      "item": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/"
+    }
+  ]
+}
+```
+
+### 2.3 LocalBusiness Schema (PFLICHT)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://domain.de/#organization",
+  "name": "Detektei [Name]",
+  "description": "Professionelle Detektei für Privat- und Wirtschaftsermittlungen in [Stadt/Region]",
+  "url": "https://domain.de/",
+  "telephone": "+49-XXX-XXXXXXX",
+  "email": "kontakt@domain.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Straße Nr.",
+    "addressLocality": "Stadt",
+    "postalCode": "XXXXX",
+    "addressRegion": "Bundesland",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "XX.XXXXX",
+    "longitude": "XX.XXXXX"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "[Stadt/Landkreis/Bundesland]"
+  },
+  "priceRange": "€€-€€€",
+  "image": "https://domain.de/images/logo.png",
+  "sameAs": [
+    "https://www.linkedin.com/company/...",
+    "https://www.xing.com/..."
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Detektiv-Dienstleistungen",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Observation",
+          "description": "Professionelle Observationen zur Beweissicherung"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Personensuche",
+          "description": "Ermittlung von Aufenthaltsorten und Adressen"
+        }
+      }
+    ]
+  }
+}
+```
+
+### 2.4 FAQPage Schema (PFLICHT bei FAQs)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was kostet ein Privatdetektiv in [Stadt]?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein Privatdetektiv in [Stadt] kostet zwischen 50-150€ pro Stunde..."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie finde ich einen seriösen Detektiv in [Stadt]?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Achten Sie auf IHK-Zulassung nach §34a GewO..."
+      }
+    }
+  ]
+}
+```
+
+### 2.5 Service Schema (für Stadt-Seiten)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Detektei-Dienstleistungen",
+  "provider": {
+    "@type": "LocalBusiness",
+    "@id": "https://domain.de/#organization"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "[Stadt]",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "[Bundesland]"
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Ermittlungsleistungen in [Stadt]",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Observation in [Stadt]"
+        }
+      }
+    ]
+  }
+}
+```
+
+### 2.6 WebPage Schema mit Speakable (LLM-Optimierung)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Detektei in [Stadt] | Privatdetektiv & Wirtschaftsdetektei",
+  "description": "...",
+  "url": "https://domain.de/einsatzgebiete/...",
+  "inLanguage": "de-DE",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://domain.de/#website"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Detektei-Dienstleistungen in [Stadt]"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".key-takeaways", ".faq-answer", "h1", ".intro-text"]
+  },
+  "lastReviewed": "2026-01-20",
+  "reviewedBy": {
+    "@type": "Organization",
+    "@id": "https://domain.de/#organization"
+  }
+}
+```
+
+---
+
+## 3. Seiten-Templates nach Hierarchie-Ebene
+
+### 3.1 BUNDESLAND-SEITE
+
+**Umfang:** 600–1.200 Wörter
+
+#### Frontmatter-Struktur
+
+```yaml
+---
+title: "Detektei in [Bundesland] | Privatdetektiv & Ermittlungen 2026"
+description: "Professionelle Detektei in [Bundesland]. ✓ Observationen ✓ Personensuche ✓ Wirtschaftsermittlungen. Diskret & gerichtsverwertbar. Jetzt Beratung anfragen."
+slug: "[bundesland-slug]"
+type: "bundesland"
+bundesland:
+  name: "Bayern"
+  slug: "bayern"
+  capital: "München"
+  population: 13000000
+  area_km2: 70550
+keyword: "Detektei [Bundesland]"
+secondaryKeywords:
+  - "Privatdetektiv [Bundesland]"
+  - "Wirtschaftsdetektei [Bundesland]"
+  - "Ermittlungen [Bundesland]"
+image:
+  src: "/images/einsatzgebiete/[bundesland].webp"
+  alt: "Detektei [Bundesland] - Professionelle Ermittlungen"
+faqs:
+  - question: "Was kostet ein Privatdetektiv in [Bundesland]?"
+    answer: "..."
+  - question: "Welche Detektei-Leistungen gibt es in [Bundesland]?"
+    answer: "..."
+  - question: "Sind Detektiv-Beweise in [Bundesland] gerichtsverwertbar?"
+    answer: "..."
+  - question: "Wie schnell kann ein Detektiv in [Bundesland] starten?"
+    answer: "..."
+  - question: "Arbeitet die Detektei auch in ländlichen Gebieten?"
+    answer: "..."
+landkreise:
+  - name: "Landkreis München"
+    slug: "landkreis-muenchen"
+    population: 350000
+  - name: "Landkreis Rosenheim"
+    slug: "landkreis-rosenheim"
+    population: 260000
+kreisfreieStaedte:
+  - name: "München"
+    slug: "muenchen"
+    population: 1500000
+  - name: "Nürnberg"
+    slug: "nuernberg"
+    population: 520000
+---
+```
+
+#### Content-Struktur (H-Tag Hierarchie)
+
+```
+H1: Detektei in [Bundesland] – Professionelle Ermittlungen 2026
+
+  [KeyTakeaways Box]
+  
+  [Einleitungstext mit Keyword im ersten Satz]
+
+H2: Unsere Detektei-Leistungen in [Bundesland]
+  H3: Privatermittlungen
+  H3: Wirtschaftsermittlungen
+  
+H2: Einsatzgebiete in [Bundesland]
+  H3: Kreisfreie Städte
+    [Verlinkte Liste]
+  H3: Landkreise
+    [Verlinkte Liste]
+
+H2: Typische Ermittlungsfälle in [Bundesland]
+  [Tabelle: Fallart | Beschreibung | Dauer]
+
+H2: Rechtliche Grundlagen für Ermittlungen in [Bundesland]
+  H3: Zuständige Behörden
+  H3: Landesspezifische Regelungen
+
+H2: Kosten für Detektiv-Einsätze in [Bundesland]
+  [Preistabelle]
+
+H2: Ablauf einer Ermittlung in [Bundesland]
+  [Prozess-Grafik/Timeline]
+
+H2: Häufige Fragen zu Detektei-Leistungen in [Bundesland]
+  [FAQ Akkordeon - automatisch aus Frontmatter]
+
+H2: Jetzt Detektei in [Bundesland] kontaktieren
+  [CTA-Box mit Kontaktmöglichkeiten]
+```
+
+---
+
+### 3.2 LANDKREIS-SEITE
+
+**Umfang:** 800–1.500 Wörter
+
+#### Frontmatter-Struktur
+
+```yaml
+---
+title: "Detektei im [Landkreis] | Privatdetektiv & Ermittlungen 2026"
+description: "Professionelle Detektei im [Landkreis], [Bundesland]. ✓ Observationen ✓ Personensuche ✓ Wirtschaftsermittlungen. Jetzt diskret anfragen."
+slug: "[landkreis-slug]"
+type: "landkreis"
+bundesland:
+  name: "Bayern"
+  slug: "bayern"
+landkreis:
+  name: "Landkreis München"
+  slug: "landkreis-muenchen"
+  kreisstadt: "München"
+  population: 350000
+  area_km2: 664
+keyword: "Detektei [Landkreis]"
+secondaryKeywords:
+  - "Privatdetektiv [Landkreis]"
+  - "Detektiv [Kreisstadt]"
+  - "Ermittlungen [Landkreis]"
+image:
+  src: "/images/einsatzgebiete/[landkreis].webp"
+  alt: "Detektei [Landkreis] - Ermittlungen vor Ort"
+faqs:
+  - question: "Welche Städte im [Landkreis] werden abgedeckt?"
+    answer: "..."
+  - question: "Was kostet ein Detektiv im [Landkreis]?"
+    answer: "..."
+  - question: "Wie schnell ist ein Detektiv im [Landkreis] vor Ort?"
+    answer: "..."
+  - question: "Arbeiten Sie auch in kleineren Gemeinden im [Landkreis]?"
+    answer: "..."
+  - question: "Welche Ermittlungen führen Sie im [Landkreis] durch?"
+    answer: "..."
+staedte:
+  - name: "Garching"
+    slug: "garching"
+    population: 18000
+  - name: "Unterschleißheim"
+    slug: "unterschleissheim"
+    population: 29000
+kleineGemeinden:
+  - "Ismaning"
+  - "Aschheim"
+  - "Kirchheim"
+---
+```
+
+#### Content-Struktur
+
+```
+H1: Detektei im [Landkreis] – Ermittlungen vor Ort
+
+  [KeyTakeaways Box]
+  
+  [Einleitungstext - Keyword im ersten Satz]
+
+H2: Detektiv-Leistungen im [Landkreis]
+  H3: Privatermittlungen
+    [Bullet-Liste der Leistungen]
+  H3: Wirtschaftsermittlungen
+    [Bullet-Liste der Leistungen]
+
+H2: Städte im [Landkreis] mit Detektei-Service
+  [Verlinkte Karten/Liste zu Stadt-Seiten >10k]
+  
+  [Info-Box: "Auch in kleineren Gemeinden wie [Liste] sind Einsätze möglich."]
+
+H2: Anfahrt & Reaktionszeiten im [Landkreis]
+  [Tabelle: Stadt | Entfernung | Reaktionszeit]
+
+H2: Typische Einsätze im [Landkreis]
+  H3: Untreue & Fremdgehen
+  H3: Unterhaltsermittlungen
+  H3: Mitarbeiterüberprüfung
+
+H2: Kosten für Detektiv-Einsätze im [Landkreis]
+  [Preistabelle]
+
+H2: Rechtliche Grundlagen
+  [Kurzer Abschnitt zu Jedermannsrechten]
+
+H2: Häufige Fragen zur Detektei im [Landkreis]
+  [FAQ Akkordeon]
+
+H2: Kontakt zur Detektei im [Landkreis]
+  [CTA-Box]
+```
+
+---
+
+### 3.3 STADT-SEITE (>10.000 Einwohner)
+
+**Umfang:** 900–1.800 Wörter
+
+#### Frontmatter-Struktur
+
+```yaml
+---
+title: "Detektei in [Stadt] | Privatdetektiv [Stadt] 2026"
+description: "Professionelle Detektei in [Stadt]. ✓ Observationen ✓ Personensuche ✓ Wirtschaftsermittlungen ✓ Gerichtsverwertbare Beweise. Jetzt anfragen!"
+slug: "[stadt-slug]"
+type: "stadt"
+bundesland:
+  name: "Bayern"
+  slug: "bayern"
+landkreis:
+  name: "Landkreis München"
+  slug: "landkreis-muenchen"
+stadt:
+  name: "Garching"
+  slug: "garching"
+  population: 18500
+  plz: ["85748"]
+  coordinates:
+    lat: 48.2489
+    lng: 11.6532
+  isKreisfrei: false
+keyword: "Detektei [Stadt]"
+secondaryKeywords:
+  - "Privatdetektiv [Stadt]"
+  - "Detektiv [Stadt]"
+  - "[Stadt] Ermittlungen"
+  - "Observation [Stadt]"
+lsiKeywords:
+  - "Ermittler"
+  - "Beweissicherung"
+  - "diskret"
+  - "gerichtsverwertbar"
+  - "Observation"
+  - "Recherche"
+image:
+  src: "/images/einsatzgebiete/[stadt].webp"
+  alt: "Detektei [Stadt] - Professionelle Ermittlungen"
+faqs:
+  - question: "Was kostet ein Privatdetektiv in [Stadt]?"
+    answer: "Ein Privatdetektiv in [Stadt] kostet zwischen 50-150€ pro Stunde. Für ganztägige Observationen sollten Sie mit 800-1.500€ rechnen."
+  - question: "Wie finde ich einen seriösen Detektiv in [Stadt]?"
+    answer: "..."
+  - question: "Sind Detektiv-Beweise aus [Stadt] vor Gericht verwertbar?"
+    answer: "..."
+  - question: "Wie schnell kann ein Detektiv in [Stadt] starten?"
+    answer: "..."
+  - question: "Welche Ermittlungen führt die Detektei in [Stadt] durch?"
+    answer: "..."
+  - question: "Arbeitet die Detektei diskret in [Stadt]?"
+    answer: "..."
+  - question: "Kann ich die Detektei in [Stadt] auch anonym beauftragen?"
+    answer: "..."
+  - question: "Wie kontaktiere ich die Detektei in [Stadt]?"
+    answer: "..."
+nahegelegeneStaedte:
+  - name: "München"
+    slug: "muenchen"
+    distance_km: 15
+  - name: "Unterschleißheim"
+    slug: "unterschleissheim"
+    distance_km: 8
+services:
+  privat:
+    - "Untreue aufdecken"
+    - "Unterhaltsermittlungen"
+    - "Personensuche"
+    - "Stalking-Fälle"
+  wirtschaft:
+    - "Mitarbeiterüberprüfung"
+    - "Krankfeierkontrolle"
+    - "Wettbewerbsverstöße"
+    - "Diebstahlermittlung"
+---
+```
+
+#### Content-Struktur (GOLDSTANDARD)
+
+```
+H1: Detektei in [Stadt] – Ihr Privatdetektiv vor Ort
+
+  [KeyTakeaways Box - PFLICHT]
+  
+  <KeyTakeaways>
+  - **Kosten:** 50-150€/Stunde, Tagessätze ab 800€
+  - **Reaktionszeit:** Innerhalb von 24h einsatzbereit in [Stadt]
+  - **Leistungen:** Observation, Personensuche, Wirtschaftsermittlungen
+  - **Beweise:** Gerichtsverwertbar & DSGVO-konform
+  </KeyTakeaways>
+  
+  [Einleitungstext - 150-200 Wörter]
+  - Keyword "Detektei [Stadt]" im ersten Satz
+  - Problem-Lösung-Struktur
+  - Vertrauensaufbau
+
+H2: Unsere Detektei-Leistungen in [Stadt]
+
+  **Kurz:** Unsere Detektei in [Stadt] bietet professionelle Observationen, 
+  Personensuche und Wirtschaftsermittlungen – diskret und gerichtsverwertbar.
+
+  H3: Privatermittlungen in [Stadt]
+    [Detaillierte Liste mit Beschreibung]
+    
+  H3: Wirtschaftsermittlungen in [Stadt]
+    [Detaillierte Liste mit Beschreibung]
+
+H2: Ablauf einer Ermittlung in [Stadt]
+
+  **Kurz:** Der Ermittlungsablauf in [Stadt] folgt einem strukturierten 
+  5-Schritte-Prozess von der Erstberatung bis zum gerichtsverwertbaren Bericht.
+
+  [Timeline/Prozess-Grafik]
+  1. Kostenlose Erstberatung
+  2. Auftragserteilung
+  3. Ermittlung & Observation
+  4. Beweissicherung
+  5. Abschlussbericht
+
+H2: Kosten für einen Detektiv in [Stadt]
+
+  **Kurz:** Ein Privatdetektiv in [Stadt] kostet zwischen 50-150€ pro Stunde. 
+  Für Observationen rechnen Sie mit 800-1.500€ pro Tag inklusive Spesen.
+
+  [Preistabelle]
+  | Leistung | Preisspanne | Dauer |
+  |----------|-------------|-------|
+  | Erstberatung | Kostenlos | 30 min |
+  | Observation (Stunde) | 80-150€ | - |
+  | Observation (Tag) | 800-1.500€ | 8-12h |
+  | Personensuche | ab 500€ | 3-10 Tage |
+
+H2: Beweissicherung & Gerichtsverwertbarkeit in [Stadt]
+
+  **Kurz:** Alle von unserer Detektei in [Stadt] gesicherten Beweise sind 
+  gerichtsverwertbar, sofern sie im Rahmen der Jedermannsrechte erhoben wurden.
+
+  H3: Verwertbare Beweismittel
+  H3: Dokumentation & Berichte
+
+H2: Rechtliche Grundlagen für Detektei-Einsätze in [Stadt]
+
+  **Kurz:** Detektive in [Stadt] dürfen im Rahmen der Jedermannsrechte ermitteln. 
+  Das umfasst Observationen im öffentlichen Raum, Recherchen und Zeugenbefragungen.
+
+  [Infografik: Erlaubt vs. Verboten]
+
+H2: Warum unsere Detektei in [Stadt] wählen?
+
+  [Trust-Signale]
+  - ✓ IHK-Zulassung nach §34a GewO
+  - ✓ Mitglied im Bundesverband Deutscher Detektive (BDD)
+  - ✓ Über XX Jahre Erfahrung
+  - ✓ Lokale Präsenz in [Stadt]
+
+H2: Einsatzgebiet rund um [Stadt]
+
+  **Kurz:** Unsere Detektei ist neben [Stadt] auch in den umliegenden Städten 
+  [Nahegelegene Stadt 1], [Nahegelegene Stadt 2] und [Nahegelegene Stadt 3] tätig.
+
+  [Karte oder Liste mit verlinkten nahegelegenen Städten]
+  - Max. 6-10 Links zu anderen Städten
+
+H2: Häufige Fragen zur Detektei in [Stadt]
+
+  [FAQ Akkordeon - automatisch aus Frontmatter generiert]
+  [Mindestens 6-8 FAQs]
+
+H2: Jetzt Detektei in [Stadt] kontaktieren
+
+  [CTA-Box]
+  - Telefonnummer
+  - E-Mail
+  - Kontaktformular-Link
+  - "Kostenlose & unverbindliche Erstberatung"
+```
+
+---
+
+## 4. SEO-Anforderungen (HARD REQUIREMENTS)
+
+### 4.1 On-Page SEO
+
+| Element | Anforderung | Prüfung |
+|---------|-------------|---------|
+| H1 | Exakt 1x pro Seite, enthält Hauptkeyword | ✓ |
+| H2 | 8-15 pro Seite, logische Struktur | ✓ |
+| H3 | 5-10 pro Seite, unter relevanten H2 | ✓ |
+| Meta Title | 50-60 Zeichen, Keyword vorne | ✓ |
+| Meta Description | 150-160 Zeichen, Keyword + CTA | ✓ |
+| URL | Keyword im Slug, lowercase | ✓ |
+| Alt-Text | Beschreibend mit Keyword | ✓ |
+| Canonical | Selbstreferenzierend | ✓ |
+
+### 4.2 Keyword-Strategie für Einsatzgebiete
+
+**Primäres Keyword-Muster:**
+- `Detektei [Ort]`
+- `Privatdetektiv [Ort]`
+- `Wirtschaftsdetektei [Ort]`
+
+**Sekundäre Keywords:**
+- `Detektiv [Ort]`
+- `Ermittlungen [Ort]`
+- `Observation [Ort]`
+
+**LSI Keywords (natürlich einstreuen):**
+
+| Themenbereich | LSI Keywords |
+|---------------|--------------|
+| Allgemein | Ermittler, Recherche, diskret, professionell |
+| Methoden | Observation, Überwachung, Beweissicherung |
+| Qualität | gerichtsverwertbar, seriös, zuverlässig |
+| Rechtlich | Jedermannsrechte, legal, DSGVO-konform |
+
+### 4.3 Keyword-Platzierung (PFLICHT)
+
+- [x] Im Titel (möglichst am Anfang)
+- [x] In der Meta Description
+- [x] Im URL-Slug
+- [x] Im ersten Absatz (ersten 100 Wörter)
+- [x] In mindestens 2-3 H2-Überschriften
+- [x] Im Alt-Text des Hero-Bildes
+- [x] Im Fazit/CTA-Bereich
+- [x] In mindestens 1 FAQ
+
+### 4.4 Interne Verlinkung
+
+**Hierarchische Verlinkung (PFLICHT):**
+
+```
+Bundesland-Seite verlinkt zu:
+├── Alle Landkreise des Bundeslandes
+├── Alle kreisfreien Städte des Bundeslandes
+└── Übergeordnete /einsatzgebiete/ Seite
+
+Landkreis-Seite verlinkt zu:
+├── Alle Städte >10k des Landkreises
+├── Übergeordnete Bundesland-Seite
+└── Benachbarte Landkreise (optional)
+
+Stadt-Seite verlinkt zu:
+├── 6-10 nahegelegene Städte (nur >10k!)
+├── Übergeordnete Landkreis-Seite
+├── Übergeordnete Bundesland-Seite
+└── Relevante Dienstleistungs-Seiten (/privatdetektei/, /wirtschaftsdetektei/)
+```
+
+**Anchor-Text Best Practices:**
+- ✅ `Detektei in München` (keyword-reich)
+- ✅ `unsere Leistungen in Bayern` (kontextuell)
+- ❌ `hier klicken` (generisch)
+- ❌ `mehr erfahren` (generisch)
+
+---
+
+## 5. Rich Snippet Optimierung
+
+### 5.1 FAQ Rich Snippets
+
+**Voraussetzungen:**
+- Mindestens 2 FAQs pro Seite
+- FAQPage Schema korrekt implementiert
+- Fragen als echte Fragen formuliert
+- Antworten präzise und hilfreich (40-150 Wörter)
+
+**FAQ-Qualitätskriterien:**
+
+```markdown
+✅ GUTE FAQ:
+Q: "Was kostet ein Privatdetektiv in München?"
+A: "Ein Privatdetektiv in München kostet zwischen 50-150€ pro Stunde,
+   abhängig von Erfahrung und Auftragsart. Für ganztägige Observationen
+   sollten Sie mit 800-1.500€ rechnen, Anfahrtskosten inklusive."
+
+❌ SCHLECHTE FAQ:
+Q: "Kosten?"
+A: "Das kommt drauf an. Rufen Sie uns an für mehr Informationen."
+```
+
+### 5.2 Breadcrumb Rich Snippets
+
+- BreadcrumbList Schema auf JEDER Seite
+- Korrekte Hierarchie (Startseite → Einsatzgebiete → Bundesland → ...)
+- Alle URLs absolut
+- Position-Attribut korrekt
+
+### 5.3 LocalBusiness Rich Snippets
+
+- Vollständige Adresse
+- Telefonnummer im E.164 Format
+- Öffnungszeiten
+- Preisspanne
+- areaServed für jeden Standort anpassen
+
+### 5.4 Sitelinks Searchbox (optional)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://domain.de/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://domain.de/suche?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+```
+
+---
+
+## 6. LLM-Optimierung (Generative Engine Optimization)
+
+### 6.1 KeyTakeaways Box (PFLICHT)
+
+Direkt nach dem ersten Absatz auf JEDER Seite:
+
+```mdx
+<KeyTakeaways>
+- **Kosten:** 50-150€/Stunde, Tagessätze ab 800€
+- **Leistungen:** Observation, Personensuche, Wirtschaftsermittlungen
+- **Reaktionszeit:** Innerhalb von 24h einsatzbereit
+- **Beweise:** Gerichtsverwertbar & DSGVO-konform
+</KeyTakeaways>
+```
+
+### 6.2 "Kurz:" Definitionen (PFLICHT)
+
+Jeder H2-Abschnitt beginnt mit einer direkten Antwort:
+
+```mdx
+## Was kostet ein Detektiv in [Stadt]?
+
+**Kurz:** Ein Detektiv in [Stadt] kostet zwischen 50-150€ pro Stunde.
+Für ganztägige Observationen rechnen Sie mit 800-1.500€ inklusive Spesen.
+
+[Dann folgt der ausführliche Text...]
+```
+
+**Regeln:**
+- 40-60 Wörter maximal
+- Beantwortet die implizite Frage der Überschrift DIREKT
+- Enthält das Keyword oder ein LSI-Keyword
+- Keine Floskeln oder Füllwörter
+
+### 6.3 Speakable Schema (für Voice Search)
+
+```json
+{
+  "@type": "SpeakableSpecification",
+  "cssSelector": [
+    ".key-takeaways",
+    ".faq-answer",
+    ".kurz-definition",
+    "h1"
+  ]
+}
+```
+
+### 6.4 Strukturierte Inhalte
+
+**Tabellen statt Fließtext:**
+
+```markdown
+| Leistung | Preis | Dauer |
+|----------|-------|-------|
+| Observation | 80-150€/h | variabel |
+| Personensuche | ab 500€ | 3-10 Tage |
+```
+
+**Listen für Aufzählungen:**
+
+```markdown
+Unsere Leistungen in [Stadt]:
+- ✓ Observationen zur Beweissicherung
+- ✓ Personensuche & Adressermittlung
+- ✓ Unterhaltsermittlungen
+- ✓ Wirtschaftsermittlungen
+```
+
+### 6.5 Zitierbare Aussagen
+
+Formulierungen, die LLMs leicht extrahieren können:
+
+```markdown
+✅ "Die Kosten für einen Privatdetektiv in München liegen zwischen 50-150€ pro Stunde."
+
+✅ "Detektiv-Beweise sind vor Gericht verwertbar, sofern sie legal erhoben wurden."
+
+❌ "Je nachdem, was Sie brauchen, können die Kosten variieren..."
+```
+
+---
+
+## 7. Technisches SEO (KRITISCH)
+
+### 7.1 Core Web Vitals (PFLICHT)
+
+| Metrik | Zielwert | Messung |
+|--------|----------|---------|
+| **LCP** (Largest Contentful Paint) | < 2.5s | Hero-Bild optimieren, Critical CSS |
+| **FID** (First Input Delay) | < 100ms | JavaScript defer/async |
+| **CLS** (Cumulative Layout Shift) | < 0.1 | Bildgrößen vordefinieren, Font-display |
+| **INP** (Interaction to Next Paint) | < 200ms | Event-Handler optimieren |
+
+**Implementierung:**
+
+```typescript
+// next.config.js - Bildoptimierung
+module.exports = {
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200],
+    minimumCacheTTL: 31536000,
+  },
+}
+```
+
+```html
+<!-- Critical CSS inline im <head> -->
+<style>
+  /* Above-the-fold Styles inline */
+  .hero { ... }
+  .key-takeaways { ... }
+</style>
+
+<!-- Non-critical CSS deferred -->
+<link rel="preload" href="/styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+```
+
+### 7.2 Robots & Crawling
+
+**robots.txt (PFLICHT):**
+
+```txt
+User-agent: *
+Allow: /einsatzgebiete/
+Disallow: /api/
+Disallow: /*?*  # Query-Parameter blockieren
+
+# Crawl-Delay für schonende Indexierung
+Crawl-delay: 1
+
+Sitemap: https://domain.de/sitemap.xml
+```
+
+**Robots Meta Tags:**
+
+```html
+<!-- Standard Einsatzgebiete-Seiten -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<!-- Für Seiten mit dünnem Content (falls <300 Wörter) -->
+<meta name="robots" content="noindex, follow">
+```
+
+**X-Robots-Tag Header (für PDFs, Bilder):**
+
+```typescript
+// next.config.js
+headers: [
+  {
+    source: '/images/:path*',
+    headers: [
+      { key: 'X-Robots-Tag', value: 'index, follow' }
+    ]
+  }
+]
+```
+
+### 7.3 Canonical URLs (KRITISCH)
+
+**Regeln für Canonicals:**
+
+| Situation | Canonical |
+|-----------|-----------|
+| Hauptseite | Selbstreferenzierend |
+| Mit Query-Parametern | Zur sauberen URL ohne Parameter |
+| Trailing Slash | Konsistent mit/ohne (empfohlen: ohne) |
+| HTTP vs HTTPS | Immer HTTPS |
+| www vs non-www | Konsistent (empfohlen: ohne www) |
+
+```html
+<!-- Selbstreferenzierend (PFLICHT auf jeder Seite) -->
+<link rel="canonical" href="https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/">
+
+<!-- Trailing Slash Konsistenz -->
+<!-- RICHTIG: Immer ohne trailing slash ODER immer mit -->
+<link rel="canonical" href="https://domain.de/einsatzgebiete/bundesland/bayern/muenchen">
+```
+
+**Next.js Implementation:**
+
+```typescript
+// app/einsatzgebiete/[...slug]/page.tsx
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const canonicalUrl = `https://domain.de/einsatzgebiete/${params.slug.join('/')}`;
+  
+  return {
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
+}
+```
+
+### 7.4 XML Sitemap (PFLICHT)
+
+**Sitemap-Struktur:**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://domain.de/images/einsatzgebiete/muenchen.webp</image:loc>
+      <image:title>Detektei München</image:title>
+    </image:image>
+  </url>
+</urlset>
+```
+
+**Prioritäten:**
+
+```typescript
+const sitemapPriorities = {
+  '/einsatzgebiete/': 0.6,                    // Hub-Seite
+  '/einsatzgebiete/bundesland/[bundesland]/': 0.7,
+  '/einsatzgebiete/bundesland/[bundesland]/[landkreis]/': 0.8,
+  '/einsatzgebiete/bundesland/[bundesland]/[landkreis]/[stadt]/': 0.9,
+  '/einsatzgebiete/bundesland/[bundesland]/[kreisfreie-stadt]/': 0.9,
+};
+
+const changeFrequencies = {
+  bundesland: 'monthly',
+  landkreis: 'monthly', 
+  stadt: 'weekly',  // Höhere Frequenz für Conversion-Seiten
+};
+```
+
+**Sitemap Index (bei >50.000 URLs):**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://domain.de/sitemap-bundeslaender.xml</loc>
+    <lastmod>2026-01-20</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://domain.de/sitemap-landkreise.xml</loc>
+    <lastmod>2026-01-20</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://domain.de/sitemap-staedte-a-m.xml</loc>
+    <lastmod>2026-01-20</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://domain.de/sitemap-staedte-n-z.xml</loc>
+    <lastmod>2026-01-20</lastmod>
+  </sitemap>
+</sitemapindex>
+```
+
+### 7.5 IndexNow (Schnellere Indexierung)
+
+```typescript
+// Nach Veröffentlichung/Update einer Seite
+async function notifyIndexNow(url: string) {
+  await fetch('https://api.indexnow.org/indexnow', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      host: 'domain.de',
+      key: process.env.INDEXNOW_KEY,
+      urlList: [url],
+    }),
+  });
+}
+```
+
+### 7.6 Mobile-First & Responsive (PFLICHT)
+
+```html
+<!-- Viewport Meta (PFLICHT) -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Mobile App Capable -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+```
+
+**Responsive Bilder:**
+
+```html
+<picture>
+  <source 
+    media="(max-width: 640px)" 
+    srcset="/images/einsatzgebiete/muenchen-mobile.webp"
+    type="image/webp"
+  >
+  <source 
+    media="(min-width: 641px)" 
+    srcset="/images/einsatzgebiete/muenchen-desktop.webp"
+    type="image/webp"
+  >
+  <img 
+    src="/images/einsatzgebiete/muenchen.jpg" 
+    alt="Detektei München - Professionelle Ermittlungen"
+    width="1200"
+    height="630"
+    loading="lazy"
+    decoding="async"
+  >
+</picture>
+```
+
+### 7.7 Performance-Optimierungen
+
+**Resource Hints:**
+
+```html
+<head>
+  <!-- DNS Prefetch für externe Ressourcen -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  
+  <!-- Preconnect für kritische Third-Party -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Preload kritischer Ressourcen -->
+  <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/images/einsatzgebiete/hero.webp" as="image">
+  
+  <!-- Prefetch für wahrscheinliche Navigation -->
+  <link rel="prefetch" href="/kontakt/">
+</head>
+```
+
+**JavaScript Loading:**
+
+```html
+<!-- Kritisches JS inline oder async -->
+<script async src="/js/analytics.js"></script>
+
+<!-- Non-kritisches JS deferred -->
+<script defer src="/js/interactive.js"></script>
+
+<!-- Module für moderne Browser -->
+<script type="module" src="/js/app.mjs"></script>
+<script nomodule src="/js/app-legacy.js"></script>
+```
+
+**Font Loading:**
+
+```css
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap; /* PFLICHT für CLS */
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153;
+}
+```
+
+---
+
+## 8. Open Graph & Social Meta (PFLICHT)
+
+### 8.1 Open Graph Tags
+
+```html
+<head>
+  <!-- Basis OG Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Detektei [Name]">
+  <meta property="og:locale" content="de_DE">
+  
+  <!-- Seitenspezifisch -->
+  <meta property="og:title" content="Detektei in München | Privatdetektiv München 2026">
+  <meta property="og:description" content="Professionelle Detektei in München. ✓ Observationen ✓ Personensuche ✓ Gerichtsverwertbare Beweise.">
+  <meta property="og:url" content="https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/">
+  <meta property="og:image" content="https://domain.de/images/og/muenchen.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Detektei München - Diskrete Ermittlungen">
+</head>
+```
+
+### 8.2 Twitter Cards
+
+```html
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@detektei_name">
+<meta name="twitter:title" content="Detektei in München | Privatdetektiv München 2026">
+<meta name="twitter:description" content="Professionelle Detektei in München. Diskret & gerichtsverwertbar.">
+<meta name="twitter:image" content="https://domain.de/images/twitter/muenchen.jpg">
+```
+
+### 8.3 OG-Bild Anforderungen
+
+| Plattform | Größe | Format | Anforderung |
+|-----------|-------|--------|-------------|
+| Facebook/LinkedIn | 1200x630px | JPG/PNG | Text im Safe-Zone |
+| Twitter | 1200x600px | JPG/PNG | 2:1 Ratio |
+| WhatsApp | 300x200px (min) | JPG/PNG | Wird gecroppt |
+
+---
+
+## 9. Erweiterte Schema-Markup (VOLLSTÄNDIG)
+
+### 9.1 @graph Notation (Best Practice)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domain.de/#organization",
+      "name": "Detektei [Name]",
+      "url": "https://domain.de/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://domain.de/#logo",
+        "url": "https://domain.de/images/logo.png",
+        "width": 300,
+        "height": 60
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+49-XXX-XXXXXXX",
+          "contactType": "customer service",
+          "areaServed": "DE",
+          "availableLanguage": ["German", "English"]
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/...",
+        "https://www.xing.com/..."
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.de/#website",
+      "url": "https://domain.de/",
+      "name": "Detektei [Name]",
+      "publisher": {
+        "@id": "https://domain.de/#organization"
+      },
+      "inLanguage": "de-DE"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/#webpage",
+      "url": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/",
+      "name": "Detektei in München | Privatdetektiv München 2026",
+      "isPartOf": {
+        "@id": "https://domain.de/#website"
+      },
+      "about": {
+        "@id": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/#localbusiness"
+      },
+      "datePublished": "2026-01-15",
+      "dateModified": "2026-01-20",
+      "breadcrumb": {
+        "@id": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/#breadcrumb"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".key-takeaways", ".faq-answer", "h1"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Start", "item": "https://domain.de/"},
+        {"@type": "ListItem", "position": 2, "name": "Einsatzgebiete", "item": "https://domain.de/einsatzgebiete/"},
+        {"@type": "ListItem", "position": 3, "name": "Bayern", "item": "https://domain.de/einsatzgebiete/bundesland/bayern/"},
+        {"@type": "ListItem", "position": 4, "name": "München", "item": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/"}
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/#localbusiness",
+      "name": "Detektei [Name] München",
+      "description": "Professionelle Detektei in München für Observationen, Personensuche und Wirtschaftsermittlungen.",
+      "url": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/",
+      "telephone": "+49-XXX-XXXXXXX",
+      "priceRange": "€€-€€€",
+      "image": "https://domain.de/images/einsatzgebiete/muenchen.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "München",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1351,
+        "longitude": 11.5820
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.1351,
+          "longitude": 11.5820
+        },
+        "geoRadius": "50000"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "parentOrganization": {
+        "@id": "https://domain.de/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was kostet ein Privatdetektiv in München?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein Privatdetektiv in München kostet zwischen 60-150€ pro Stunde."
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+### 9.2 GeoShape für präzise Servicegebiete
+
+```json
+{
+  "@type": "Service",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "München und Umgebung",
+    "geo": {
+      "@type": "GeoShape",
+      "polygon": "48.2482,11.4268 48.2482,11.7230 48.0616,11.7230 48.0616,11.4268 48.2482,11.4268"
+    }
+  }
+}
+```
+
+### 9.3 AggregateRating (falls Reviews vorhanden)
+
+```json
+{
+  "@type": "LocalBusiness",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+```
+
+---
+
+## 10. E-E-A-T Signale (Experience, Expertise, Authoritativeness, Trust)
+
+### 10.1 Author/Expert Schema
+
+```json
+{
+  "@type": "Article",
+  "author": {
+    "@type": "Person",
+    "name": "Max Mustermann",
+    "jobTitle": "Geschäftsführer & Chefermittler",
+    "description": "Über 20 Jahre Erfahrung als Privatdetektiv, IHK-zertifiziert",
+    "image": "https://domain.de/images/team/max-mustermann.webp",
+    "sameAs": [
+      "https://www.linkedin.com/in/max-mustermann/"
+    ]
+  },
+  "reviewedBy": {
+    "@type": "Organization",
+    "@id": "https://domain.de/#organization"
+  }
+}
+```
+
+### 10.2 Trust-Signale im Content (PFLICHT)
+
+```markdown
+## Warum unsere Detektei in [Stadt] wählen?
+
+- ✓ **IHK-Zulassung** nach §34a GewO (Gewerbeordnung)
+- ✓ **Mitglied** im Bundesverband Deutscher Detektive (BDD)
+- ✓ **Mitglied** im Bund Internationaler Detektive (BID)
+- ✓ **XX+ Jahre** Erfahrung in der Branche
+- ✓ **DSGVO-konforme** Datenverarbeitung
+- ✓ **Versichert** – Berufshaftpflicht bis X Mio. €
+- ✓ **Diskretion** – Höchste Vertraulichkeit garantiert
+```
+
+### 10.3 Strukturelle Trust-Links (Footer/Sidebar)
+
+```html
+<footer>
+  <nav aria-label="Rechtliche Informationen">
+    <a href="/impressum/">Impressum</a>
+    <a href="/datenschutz/">Datenschutz</a>
+    <a href="/agb/">AGB</a>
+    <a href="/ueber-uns/">Über uns</a>
+    <a href="/kontakt/">Kontakt</a>
+  </nav>
+  
+  <div class="trust-badges">
+    <img src="/images/badges/ihk-zugelassen.svg" alt="IHK zugelassen" width="120" height="40">
+    <img src="/images/badges/bdd-mitglied.svg" alt="BDD Mitglied" width="120" height="40">
+  </div>
+</footer>
+```
+
+---
+
+## 11. Local SEO Spezifika
+
+### 11.1 GeoTargeting Meta Tags
+
+```html
+<meta name="geo.region" content="DE-BY">
+<meta name="geo.placename" content="München">
+<meta name="geo.position" content="48.1351;11.5820">
+<meta name="ICBM" content="48.1351, 11.5820">
+```
+
+### 11.2 NAP Konsistenz (Name, Address, Phone)
+
+**WICHTIG:** NAP muss auf ALLEN Seiten identisch sein!
+
+```html
+<!-- Schema Markup -->
+"name": "Detektei [Exakter Name]",
+"address": {
+  "streetAddress": "Musterstraße 123",
+  "addressLocality": "München",
+  "postalCode": "80331",
+  "addressRegion": "Bayern",
+  "addressCountry": "DE"
+},
+"telephone": "+49 89 12345678"
+
+<!-- Sichtbar im Footer (identisch!) -->
+<address>
+  Detektei [Exakter Name]<br>
+  Musterstraße 123<br>
+  80331 München<br>
+  Tel: +49 89 12345678
+</address>
+```
+
+### 11.3 Service Area Business vs. Physischer Standort
+
+```json
+// Für Detekteien ohne öffentliches Büro (Service Area Business)
+{
+  "@type": "LocalBusiness",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "München",
+    "addressRegion": "Bayern",
+    "addressCountry": "DE"
+    // KEINE streetAddress wenn kein öffentliches Büro!
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "München"
+    },
+    {
+      "@type": "AdministrativeArea", 
+      "name": "Landkreis München"
+    }
+  ]
+}
+```
+
+---
+
+## 12. Duplicate Content Vermeidung (KRITISCH)
+
+### 12.1 Problem bei programmatischen Seiten
+
+Bei ~10.000 Stadtseiten besteht hohes Risiko für Near-Duplicate Content!
+
+### 12.2 Unique Content Strategie
+
+**Pflicht-Variationen pro Stadt:**
+
+| Element | Variationsquelle |
+|---------|------------------|
+| Einleitung | 5-10 Templates, zufällig gewählt + lokale Daten |
+| Statistiken | Echte lokale Daten (Einwohner, PLZ, etc.) |
+| Entfernungen | Berechnete Distanzen zu Nachbarstädten |
+| FAQs | 3 Standard + 2-3 lokalisierte FAQs |
+| Preise | Regionale Anpassung wenn sinnvoll |
+| Reaktionszeiten | Basierend auf Entfernung zum nächsten Team |
+
+**Template-System:**
+
+```typescript
+// lib/templates/stadtseiten.ts
+
+const introTemplates = [
+  "Sie suchen eine **Detektei in {stadt}**? Unsere erfahrenen Privatdetektive...",
+  "Professionelle Ermittlungen in **{stadt}** – diskret, zuverlässig und gerichtsverwertbar...",
+  "Als Detektei mit Einsatzgebiet in **{stadt}** und {landkreis} bieten wir...",
+  "Benötigen Sie einen **Privatdetektiv in {stadt}**? Mit {entfernung_team} km Entfernung...",
+  "Unsere Detektei ist seit über {jahre} Jahren in **{stadt}** und Umgebung tätig...",
+];
+
+function generateIntro(stadt: Stadt): string {
+  // Deterministisch basierend auf Stadt-ID für Konsistenz
+  const templateIndex = hashCode(stadt.id) % introTemplates.length;
+  return interpolate(introTemplates[templateIndex], {
+    stadt: stadt.name,
+    landkreis: stadt.landkreis.name,
+    entfernung_team: calculateDistance(stadt, nearestTeam),
+    jahre: COMPANY_YEARS,
+  });
+}
+```
+
+### 12.3 Thin Content Vermeidung
+
+**Mindestanforderungen:**
+
+| Seitentyp | Min. Wörter | Min. unique Content |
+|-----------|-------------|---------------------|
+| Bundesland | 600 | 40% |
+| Landkreis | 800 | 50% |
+| Stadt | 900 | 60% |
+
+**Automatische Prüfung im Build:**
+
+```typescript
+// scripts/check-content-quality.ts
+
+function checkDuplicateContent(pages: Page[]): void {
+  for (const page of pages) {
+    const wordCount = countWords(page.content);
+    const uniqueRatio = calculateUniqueRatio(page, allPages);
+    
+    if (wordCount < MIN_WORDS[page.type]) {
+      throw new Error(`${page.url}: Nur ${wordCount} Wörter (min: ${MIN_WORDS[page.type]})`);
+    }
+    
+    if (uniqueRatio < MIN_UNIQUE[page.type]) {
+      console.warn(`${page.url}: Nur ${uniqueRatio}% unique content`);
+    }
+  }
+}
+```
+
+---
+
+## 13. Security Headers (SEO-relevant)
+
+```typescript
+// next.config.js
+headers: [
+  {
+    source: '/:path*',
+    headers: [
+      { key: 'X-DNS-Prefetch-Control', value: 'on' },
+      { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      { key: 'X-Frame-Options', value: 'DENY' },
+      { key: 'X-XSS-Protection', value: '1; mode=block' },
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+    ],
+  },
+]
+```
+
+---
+
+## 14. Accessibility (SEO-relevant)
+
+### 14.1 ARIA Labels (PFLICHT)
+
+```html
+<nav aria-label="Breadcrumb-Navigation">
+  <ol>
+    <li><a href="/">Startseite</a></li>
+    <li><a href="/einsatzgebiete/" aria-current="false">Einsatzgebiete</a></li>
+    <li><a href="/einsatzgebiete/bundesland/bayern/" aria-current="false">Bayern</a></li>
+    <li><a aria-current="page">München</a></li>
+  </ol>
+</nav>
+
+<main id="main-content" role="main">
+  <article>
+    <h1>Detektei in München</h1>
+    ...
+  </article>
+</main>
+
+<aside aria-label="Kontaktinformationen">
+  ...
+</aside>
+```
+
+### 14.2 Skip Links
+
+```html
+<body>
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+  <a href="#contact" class="skip-link">Zum Kontakt springen</a>
+  ...
+</body>
+
+<style>
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background: #000;
+  color: #fff;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+</style>
+```
+
+### 14.3 Fokus-Management
+
+```css
+/* Sichtbarer Fokus-Indikator */
+:focus-visible {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Keine Outline bei Maus-Klick */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+```
+
+---
+
+## 15. Implementierung & Datenmodell
+
+### 15.1 Datenmodell (TypeScript)
+
+```typescript
+// types/einsatzgebiete.ts
+
+interface Bundesland {
+  id: string;
+  name: string;
+  slug: string;
+  capital: string;
+  population: number;
+  area_km2: number;
+}
+
+interface Landkreis {
+  id: string;
+  name: string;
+  slug: string;
+  bundesland_id: string;
+  kreisstadt: string;
+  population: number;
+  area_km2: number;
+}
+
+interface Stadt {
+  id: string;
+  name: string;
+  slug: string;
+  population: number;
+  plz: string[];
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+  landkreis_id: string | null; // null für kreisfreie Städte
+  bundesland_id: string;
+  is_kreisfrei: boolean;
+}
+
+// Build-Regel: Stadt-Seiten nur wenn population > 10000
+```
+
+### 7.2 Automatische Schema-Generierung
+
+```typescript
+// lib/schemas/generateEinsatzgebieteSchemas.ts
+
+export function generateSchemas(page: EinsatzgebietePage): JsonLd[] {
+  return [
+    generateBreadcrumbSchema(page),
+    generateLocalBusinessSchema(page),
+    generateFAQSchema(page.faqs),
+    generateWebPageSchema(page),
+    generateServiceSchema(page), // nur für Stadt-Seiten
+  ].filter(Boolean);
+}
+```
+
+### 7.3 Sitemap-Generierung
+
+```typescript
+// Prioritäten
+const priorities = {
+  bundesland: 0.7,
+  landkreis: 0.8,
+  stadt: 0.9, // Höchste Priorität für Stadt-Seiten
+};
+
+// Ausgeschlossen: Städte ≤10.000 Einwohner
+```
+
+---
+
+## 16. Vollständige SEO-Checkliste
+
+### Vor Veröffentlichung prüfen:
+
+#### Content & On-Page SEO
+- [ ] Wortanzahl erreicht (600/800/900 je nach Typ)
+- [ ] Unique Content Ratio >50%
+- [ ] Keyword im ersten Absatz (erste 100 Wörter)
+- [ ] Keyword in mindestens 2-3 H2-Überschriften
+- [ ] Exakt 1x H1 mit Hauptkeyword
+- [ ] KeyTakeaways Box direkt nach Intro
+- [ ] "Kurz:"-Definitionen bei allen wichtigen H2
+- [ ] Mindestens 5-8 FAQs
+- [ ] CTA am Ende
+- [ ] LSI Keywords natürlich eingestreut (5-10x)
+
+#### Meta & Head
+- [ ] Meta Title 50-60 Zeichen, Keyword vorne
+- [ ] Meta Description 150-160 Zeichen mit CTA
+- [ ] Canonical URL selbstreferenzierend
+- [ ] robots meta: index, follow
+- [ ] Viewport meta tag vorhanden
+- [ ] Open Graph Tags vollständig (og:title, og:description, og:image, og:url)
+- [ ] Twitter Card Tags vorhanden
+- [ ] Geo Meta Tags für Local SEO
+
+#### Technisches SEO
+- [ ] URL lowercase, keine Sonderzeichen
+- [ ] Trailing Slash konsistent
+- [ ] HTTPS erzwungen
+- [ ] Seite in XML Sitemap enthalten
+- [ ] Core Web Vitals im grünen Bereich (LCP <2.5s, CLS <0.1)
+- [ ] Mobile-friendly (Responsive)
+- [ ] Keine Render-Blocking Resources
+- [ ] Bilder optimiert (WebP/AVIF, lazy loading, width/height)
+
+#### Schema Markup (JSON-LD)
+- [ ] @graph Notation verwendet
+- [ ] BreadcrumbList Schema korrekt
+- [ ] LocalBusiness Schema mit korrektem areaServed
+- [ ] FAQPage Schema
+- [ ] WebPage Schema mit Speakable
+- [ ] Organization Schema verlinkt
+- [ ] GeoCoordinates vorhanden
+- [ ] datePublished & dateModified gesetzt
+
+#### Interne Verlinkung
+- [ ] Link zu übergeordneter Hierarchie-Seite
+- [ ] Links zu untergeordneten Seiten (falls vorhanden)
+- [ ] 6-10 Links zu nahegelegenen Städten (nur Stadt-Seiten)
+- [ ] Links zu Dienstleistungs-Seiten (/privatdetektei/, /wirtschaftsdetektei/)
+- [ ] Keyword-reiche Anchor-Texte (keine "hier klicken")
+
+#### E-E-A-T & Trust
+- [ ] Trust-Signale im Content (IHK, Verbände, Erfahrung)
+- [ ] Link zu Impressum, Datenschutz im Footer
+- [ ] NAP konsistent (Name, Address, Phone)
+- [ ] Kontaktmöglichkeiten sichtbar
+
+#### Accessibility
+- [ ] Skip-Links vorhanden
+- [ ] ARIA Labels für Navigation
+- [ ] Alt-Texte für alle Bilder (beschreibend + Keyword)
+- [ ] Fokus-Indikator sichtbar
+- [ ] Ausreichender Farbkontrast
+
+#### Rich Snippets Potenzial
+- [ ] FAQs strukturiert (für FAQ Rich Snippets)
+- [ ] Breadcrumbs sichtbar (für Breadcrumb Rich Snippets)
+- [ ] LocalBusiness vollständig (für Local Knowledge Panel)
+- [ ] Preisangaben strukturiert (für Preis-Snippets)
+
+---
+
+## 9. Beispiel einer fertigen Stadt-Seite
+
+```mdx
+---
+title: "Detektei in München | Privatdetektiv München 2026"
+description: "Professionelle Detektei in München. ✓ Observationen ✓ Personensuche ✓ Wirtschaftsermittlungen ✓ Gerichtsverwertbare Beweise. Jetzt anfragen!"
+slug: "muenchen"
+type: "stadt"
+# ... weitere Frontmatter
+---
+
+# Detektei in München – Ihr Privatdetektiv vor Ort
+
+<KeyTakeaways>
+- **Kosten:** 60-150€/Stunde, Tagessätze ab 900€
+- **Reaktionszeit:** Innerhalb von 24h einsatzbereit in München
+- **Leistungen:** Observation, Personensuche, Wirtschaftsermittlungen
+- **Beweise:** Gerichtsverwertbar & DSGVO-konform
+</KeyTakeaways>
+
+Sie suchen eine **Detektei in München**? Unsere erfahrenen Privatdetektive unterstützen 
+Sie diskret bei Observationen, Personensuche und Wirtschaftsermittlungen. Mit lokaler 
+Präsenz in München und Umgebung sind wir schnell vor Ort und liefern gerichtsverwertbare 
+Beweise.
+
+## Unsere Detektei-Leistungen in München
+
+**Kurz:** Unsere Detektei in München bietet professionelle Observationen, Personensuche 
+und Wirtschaftsermittlungen – diskret, professionell und gerichtsverwertbar.
+
+### Privatermittlungen in München
+
+- **Untreue aufdecken:** Diskrete Observationen bei Verdacht auf Fremdgehen
+- **Unterhaltsermittlungen:** Überprüfung von Einkommens- und Vermögensverhältnissen
+- **Personensuche:** Ermittlung von Aufenthaltsorten und Adressen
+- **Stalking-Fälle:** Dokumentation und Beweissicherung
+
+### Wirtschaftsermittlungen in München
+
+- **Mitarbeiterüberprüfung:** Background-Checks und Referenzprüfungen
+- **Krankfeierkontrolle:** Überprüfung bei Verdacht auf Lohnfortzahlungsbetrug
+- **Wettbewerbsverstöße:** Ermittlung bei unlauterem Wettbewerb
+- **Diebstahlermittlung:** Aufklärung von Diebstahl im Unternehmen
+
+## Was kostet ein Detektiv in München?
+
+**Kurz:** Ein Privatdetektiv in München kostet zwischen 60-150€ pro Stunde. 
+Für ganztägige Observationen sollten Sie mit 900-1.600€ rechnen.
+
+| Leistung | Preisspanne | Dauer |
+|----------|-------------|-------|
+| Erstberatung | Kostenlos | 30 min |
+| Observation (Stunde) | 60-150€ | - |
+| Observation (Tag) | 900-1.600€ | 8-12h |
+| Personensuche | ab 500€ | 3-10 Tage |
+| Wirtschaftsermittlung | ab 1.000€ | individuell |
+
+[... weitere Abschnitte ...]
+
+## Häufige Fragen zur Detektei in München
+
+<FAQ />
+
+## Jetzt Detektei in München kontaktieren
+
+<CTABox>
+Kostenlose & unverbindliche Erstberatung
+
+📞 [Telefonnummer]
+📧 [E-Mail]
+🔒 100% diskret & vertraulich
+</CTABox>
+```
+
+---
+
+---
+
+## 17. Monitoring & Validierung
+
+### 17.1 Schema-Validierung
+
+**Tools:**
+- [Google Rich Results Test](https://search.google.com/test/rich-results)
+- [Schema.org Validator](https://validator.schema.org/)
+- [Structured Data Testing Tool](https://developers.google.com/search/docs/appearance/structured-data)
+
+**Automatisierte Prüfung im CI/CD:**
+
+```typescript
+// scripts/validate-schemas.ts
+import { validateSchema } from 'schema-dts';
+
+async function validateAllPages() {
+  const pages = await getAllEinsatzgebietePages();
+  
+  for (const page of pages) {
+    const schema = generateSchemas(page);
+    const errors = validateSchema(schema);
+    
+    if (errors.length > 0) {
+      console.error(`Schema Fehler auf ${page.url}:`, errors);
+      process.exit(1);
+    }
+  }
+}
+```
+
+### 17.2 SEO-Monitoring KPIs
+
+| KPI | Tool | Zielwert |
+|-----|------|----------|
+| Core Web Vitals | PageSpeed Insights, CrUX | Alle "Good" |
+| Index Coverage | Google Search Console | 100% indexiert |
+| Crawl Errors | Google Search Console | 0 Fehler |
+| Mobile Usability | Google Search Console | 0 Fehler |
+| Rich Results | Google Search Console | FAQ + Breadcrumb aktiv |
+| Keyword Rankings | Ahrefs/Semrush | Top 10 für "Detektei [Stadt]" |
+| Organic Traffic | Google Analytics | +10% MoM |
+| Click-Through-Rate | Search Console | >3% für Stadtseiten |
+
+### 17.3 Regelmäßige Audits
+
+**Wöchentlich:**
+- Search Console Fehler prüfen
+- Core Web Vitals monitoren
+- Neue Indexierungen prüfen
+
+**Monatlich:**
+- Keyword-Ranking-Entwicklung
+- Backlink-Profil prüfen
+- Competitor-Analyse
+
+**Quartalsweise:**
+- Vollständiger Technical SEO Audit
+- Content-Freshness prüfen (dateModified aktualisieren)
+- Schema-Markup auf Google-Änderungen prüfen
+
+---
+
+## Zusammenfassung: Einsatzgebiete-Workflow
+
+```
+PLANUNG:
+1. Seitentyp bestimmen (Bundesland/Landkreis/Stadt)
+2. Keyword-Recherche + LSI Keywords sammeln
+3. Lokale Daten sammeln (Einwohner, PLZ, Koordinaten)
+
+CONTENT-ERSTELLUNG:
+4. Frontmatter vollständig ausfüllen
+   - Meta Title (50-60 Zeichen, Keyword vorne)
+   - Meta Description (150-160 Zeichen)
+   - FAQs (mind. 5-8)
+   - Keywords (primary + secondary + LSI)
+5. Content nach Template-Struktur schreiben
+   - KeyTakeaways Box direkt nach Intro
+   - "Kurz:"-Definitionen bei allen H2
+   - Tabellen & Listen statt Fließtext
+   - Mind. 60% unique Content
+6. Interne Verlinkung gemäß Hierarchie
+   - Keyword-reiche Anchor-Texte
+   - 6-10 nahegelegene Städte (nur >10k!)
+
+TECHNISCHE UMSETZUNG:
+7. Schema-Markup automatisch generieren (@graph Notation)
+8. OG & Twitter Tags setzen
+9. Canonical URL prüfen
+10. Bilder optimieren (WebP, alt-Text, lazy loading)
+
+QUALITÄTSSICHERUNG:
+11. Vollständige SEO-Checkliste durchgehen
+12. Schema mit Google Rich Results Test validieren
+13. Core Web Vitals prüfen
+14. Mobile-Ansicht testen
+
+VERÖFFENTLICHUNG:
+15. In Sitemap aufnehmen
+16. IndexNow Ping senden
+17. Search Console Indexierung beantragen
+```
+
+---
+
+## Anhang: Quick Reference
+
+### Meta Title Formeln
+
+```
+Bundesland: "Detektei in [Bundesland] | Privatdetektiv & Ermittlungen 2026"
+Landkreis:  "Detektei im [Landkreis] | Privatdetektiv [Bundesland] 2026"
+Stadt:      "Detektei in [Stadt] | Privatdetektiv [Stadt] 2026"
+```
+
+### Meta Description Formel
+
+```
+"Professionelle Detektei in [Ort]. ✓ Observationen ✓ Personensuche 
+✓ Wirtschaftsermittlungen ✓ Gerichtsverwertbare Beweise. Jetzt anfragen!"
+```
+
+### Pflicht-Schemas pro Seitentyp
+
+| Schema | Bundesland | Landkreis | Stadt |
+|--------|:----------:|:---------:|:-----:|
+| BreadcrumbList | ✓ | ✓ | ✓ |
+| WebPage + Speakable | ✓ | ✓ | ✓ |
+| Organization | ✓ | ✓ | ✓ |
+| LocalBusiness | ○ | ○ | ✓ |
+| FAQPage | ✓ | ✓ | ✓ |
+| Service | - | - | ✓ |
+| GeoCoordinates | ○ | ○ | ✓ |
+
+✓ = Pflicht | ○ = Optional | - = Nicht relevant
