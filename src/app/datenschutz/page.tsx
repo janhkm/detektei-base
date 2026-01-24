@@ -272,7 +272,93 @@ export default function DatenschutzPage() {
             können.
           </p>
 
-          <h2>6. Ihre Rechte als betroffene Person</h2>
+          <h2>6. Webanalyse mit Google Analytics</h2>
+
+          <h3>Umfang der Verarbeitung</h3>
+          <p>
+            Wir nutzen auf unserer Website Google Analytics, einen Webanalysedienst
+            der Google Ireland Limited (&quot;Google&quot;), Gordon House, Barrow Street,
+            Dublin 4, Irland. Google Analytics verwendet Cookies, die eine Analyse
+            der Benutzung der Website durch Sie ermöglichen.
+          </p>
+
+          <h3>Einwilligung durch Cookie-Banner</h3>
+          <p>
+            <strong>
+              Google Analytics wird erst aktiviert, nachdem Sie über unser
+              Cookie-Banner zugestimmt haben.
+            </strong>{" "}
+            Ohne Ihre ausdrückliche Einwilligung werden keine Analyse-Cookies
+            gesetzt und keine Daten an Google übertragen.
+          </p>
+
+          <h3>Verarbeitete Daten</h3>
+          <p>
+            Im Falle Ihrer Einwilligung werden folgende Daten erhoben:
+          </p>
+          <ul>
+            <li>IP-Adresse (anonymisiert durch IP-Masking)</li>
+            <li>Datum und Uhrzeit des Seitenaufrufs</li>
+            <li>Besuchte Seiten und Verweildauer</li>
+            <li>Verwendeter Browser und Betriebssystem</li>
+            <li>Referrer-URL (von welcher Seite Sie kamen)</li>
+            <li>Gerätetyp (Desktop, Mobile, Tablet)</li>
+          </ul>
+
+          <h3>IP-Anonymisierung</h3>
+          <p>
+            Wir haben die IP-Anonymisierung aktiviert. Dadurch wird Ihre IP-Adresse
+            von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in
+            anderen Vertragsstaaten des Abkommens über den Europäischen
+            Wirtschaftsraum vor der Übermittlung in die USA gekürzt.
+          </p>
+
+          <h3>Zweck der Verarbeitung</h3>
+          <p>
+            Die Datenverarbeitung erfolgt zum Zweck der Analyse des Nutzerverhaltens
+            auf unserer Website. Dies ermöglicht uns:
+          </p>
+          <ul>
+            <li>Die Reichweite unserer Website zu messen</li>
+            <li>Nutzungsmuster zu verstehen und die Website zu verbessern</li>
+            <li>Technische Probleme zu erkennen</li>
+          </ul>
+
+          <h3>Rechtsgrundlage</h3>
+          <p>
+            Rechtsgrundlage für die Datenverarbeitung ist Ihre Einwilligung gemäß
+            Art. 6 Abs. 1 lit. a DSGVO, die Sie über unser Cookie-Banner erteilen.
+          </p>
+
+          <h3>Widerruf der Einwilligung</h3>
+          <p>
+            Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Cookies
+            in Ihrem Browser löschen. Beim nächsten Besuch unserer Website wird
+            Ihnen das Cookie-Banner erneut angezeigt. Alternativ können Sie in den
+            Browser-Einstellungen Cookies generell deaktivieren.
+          </p>
+
+          <h3>Speicherdauer</h3>
+          <p>
+            Die von uns gesendeten und mit Cookies verknüpften Daten werden nach 14
+            Monaten automatisch gelöscht.
+          </p>
+
+          <h3>Weitere Informationen</h3>
+          <p>
+            Weitere Informationen zu Nutzungsbedingungen und Datenschutz von Google
+            Analytics finden Sie unter:{" "}
+            <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-700 underline"
+            >
+              https://policies.google.com/privacy
+            </a>
+          </p>
+
+          <h2>7. Ihre Rechte als betroffene Person</h2>
           <p>Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
           <ul>
             <li>
@@ -311,7 +397,7 @@ export default function DatenschutzPage() {
             </li>
           </ul>
 
-          <h2>7. SSL- bzw. TLS-Verschlüsselung</h2>
+          <h2>8. SSL- bzw. TLS-Verschlüsselung</h2>
           <p>
             Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der
             Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie
@@ -321,7 +407,7 @@ export default function DatenschutzPage() {
             Schloss-Symbol in Ihrer Browserzeile.
           </p>
 
-          <h2>8. Änderungen dieser Datenschutzerklärung</h2>
+          <h2>9. Änderungen dieser Datenschutzerklärung</h2>
           <p>
             Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie
             an geänderte Rechtslagen oder bei Änderungen unserer Leistungen
