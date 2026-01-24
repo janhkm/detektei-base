@@ -1,10 +1,17 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCTA } from "@/components/layout/MobileCTA";
 import { SkipLink } from "@/components/layout/SkipLink";
+
+// ============================================================================
+// GOOGLE ANALYTICS
+// ============================================================================
+
+const GA_MEASUREMENT_ID = "G-D2H0E6PG1D";
 
 // ============================================================================
 // FONT OPTIMIZATION
@@ -104,9 +111,24 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+        
         {/* DNS Prefetch für schnellere externe Ressourcen */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
         {/* Preconnect zu kritischen Domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
