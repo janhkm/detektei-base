@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Shield, Clock, CheckCircle } from "lucide-react";
+import { Phone, Shield, Clock, CheckCircle, Users, Zap } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -21,72 +21,45 @@ export function HeroSection() {
           <div className="text-center lg:text-left">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-white/90 backdrop-blur-sm mb-6">
-              <Shield className="h-4 w-4 text-accent-400" />
-              <span>Zertifizierter Ermittler & Kriminalist</span>
+              <Users className="h-4 w-4 text-accent-400" />
+              <span>Netzwerk geprüfter Partner-Detekteien</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-tight">
-              <span className="text-accent-400">Privatdetektiv</span> & Detektei 
-              Oliver Peth
+              Die richtige <span className="text-accent-400">Detektei</span> für Ihren Fall – sofort
             </h1>
 
             {/* Subheadline */}
             <p className="mt-6 text-lg sm:text-xl text-primary-200 leading-relaxed max-w-xl mx-auto lg:mx-0 hero-description">
-              Ihr <strong>Privatdetektiv</strong> für diskrete Ermittlungen. 
-              Zertifizierter Ermittler, Kriminalist und Profiler mit 
-              gerichtsverwertbarer Beweissicherung – deutschlandweit im Einsatz.
+              <strong>Verlieren Sie keine Zeit.</strong> Wir vermitteln Sie direkt an die passende 
+              Detektei aus unserem Netzwerk geprüfter Partner – diskret, schnell und mit 
+              gerichtsverwertbarer Beweissicherung.
             </p>
 
-            {/* Trust Logos */}
-            <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
-              <span className="text-xs text-primary-400 mr-2 hidden sm:inline">Zertifizierter Ermittler</span>
-              <div className="flex items-center gap-3 sm:gap-5">
-                <Image 
-                  src="/images/dgfk-deutsche-gesellschaft-kriminalistik.png" 
-                  alt="DGfK – Deutsche Gesellschaft für Kriminalistik Mitglied" 
-                  width={80}
-                  height={32}
-                  className="h-6 sm:h-8 w-auto opacity-90 hover:opacity-100 transition-opacity rounded bg-white/90 p-1"
-                />
-                <Image 
-                  src="/images/zad-zentralstelle-ausbildung-detektivgewerbe.jpg" 
-                  alt="ZAD – Zentralstelle für die Ausbildung im Detektivgewerbe zertifiziert" 
-                  width={90}
-                  height={36}
-                  className="h-7 sm:h-9 w-auto opacity-80 hover:opacity-100 transition-opacity rounded bg-white/90 p-1"
-                />
-                <Image 
-                  src="/images/ihk-sachkunde-34a-gewo.png" 
-                  alt="IHK Sachkundeprüfung nach §34a GewO – Detektei Oliver Peth" 
-                  width={90}
-                  height={36}
-                  className="h-7 sm:h-9 w-auto opacity-90 hover:opacity-100 transition-opacity rounded"
-                />
-                <Image 
-                  src="/images/wad-world-association-detectives.jpg" 
-                  alt="W.A.D. – World Association of Detectives Member" 
-                  width={90}
-                  height={36}
-                  className="h-7 sm:h-9 w-auto opacity-80 hover:opacity-100 transition-opacity rounded bg-white/90 p-1"
-                />
-                <Image 
-                  src="/images/vdp-polizei-dein-partner.png" 
-                  alt="VDP – Polizei Dein Partner Unterstützer" 
-                  width={40}
-                  height={40}
-                  className="h-8 sm:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
-                />
+            {/* Trust Stats */}
+            <div className="mt-8 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
+              <div className="text-center lg:text-left">
+                <div className="text-2xl sm:text-3xl font-bold text-accent-400">4</div>
+                <div className="text-xs sm:text-sm text-primary-300">Partner deutschlandweit</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl sm:text-3xl font-bold text-accent-400">20+</div>
+                <div className="text-xs sm:text-sm text-primary-300">Jahre Partner-Erfahrung</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl sm:text-3xl font-bold text-accent-400">100%</div>
+                <div className="text-xs sm:text-sm text-primary-300">Diskretion</div>
               </div>
             </div>
 
             {/* USP List */}
             <ul className="mt-8 space-y-3 text-left max-w-md mx-auto lg:mx-0">
               {[
-                "Kostenlose & unverbindliche Erstberatung",
-                "Gerichtsverwertbare Dokumentation",
-                "100% Diskretion garantiert",
-                "Transparente Kostenstruktur",
+                "Kostenlose Erstberatung – unverbindlich",
+                "Geprüfte Detekteien mit IHK-Zulassung",
+                "Passende Experten für jeden Fall",
+                "Deutschlandweites Netzwerk",
               ].map((item, index) => (
                 <li key={index} className="flex items-center gap-3 text-white">
                   <CheckCircle className="h-5 w-5 text-accent-400 flex-shrink-0" />
@@ -99,9 +72,10 @@ export function HeroSection() {
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 href="/kontakt"
-                className="inline-flex items-center justify-center rounded-lg bg-accent-500 px-6 py-3.5 text-base font-semibold text-primary-900 shadow-lg hover:bg-accent-400 transition-all hover:shadow-xl"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent-500 px-6 py-3.5 text-base font-semibold text-primary-900 shadow-lg hover:bg-accent-400 transition-all hover:shadow-xl"
               >
-                Kostenlose Beratung anfragen
+                <Zap className="h-5 w-5" />
+                Jetzt Detektei finden
               </Link>
               <a
                 href="tel:+4917666918653"
@@ -119,43 +93,24 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Image/Visual - Mobile */}
-          <div className="relative lg:hidden mt-8">
-            <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-xl max-w-md mx-auto">
-              <Image 
-                src="/images/oliver-peth-detektiv.jpg" 
-                alt="Oliver Peth – Privatdetektiv und zertifizierter Ermittler" 
-                fill
-                className="object-cover object-top"
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent" />
-              {/* Mobile Badge */}
-              <div className="absolute bottom-3 left-3 right-3 flex justify-between items-center">
-                <div className="bg-white/95 backdrop-blur-sm rounded-lg px-3 py-1.5 text-xs font-semibold text-primary-900">
-                  IHK-zugelassen
-                </div>
-                <div className="bg-accent-500 rounded-lg px-3 py-1.5 text-xs font-semibold text-primary-900">
-                  Zertifizierter Profiler
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Image/Visual - Desktop */}
+          {/* Hero Image */}
           <div className="relative hidden lg:block">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image 
-                src="/images/oliver-peth-detektiv.jpg" 
-                alt="Oliver Peth – Privatdetektiv und zertifizierter Ermittler, Kriminalist und Profiler" 
-                fill
-                className="object-cover object-top"
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/sasun-bughdaryan-Qwv7JPI03VQ-unsplash.jpg"
+                alt="Lupe auf Zielscheibe symbolisiert präzise Detektei-Ermittlungen und zielgerichtete Beweissicherung"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
                 priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              {/* Subtle overlay for better integration */}
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/20 to-transparent" />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 to-transparent" />
+            </div>
+
+            {/* Floating Badge */}
+            <div className="absolute -top-4 -right-4 bg-accent-500 text-primary-900 rounded-lg shadow-lg px-4 py-2 text-sm font-semibold">
+              Alle IHK-geprüft
             </div>
 
             {/* Floating Stats Card */}
@@ -166,18 +121,33 @@ export function HeroSection() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-primary-900">
-                    Oliver Peth & Partner
+                    Präzise Ermittlungen
                   </p>
                   <p className="text-xs text-primary-500">
-                    Zertifizierter Profiler
+                    Gerichtsverwertbare Beweise
                   </p>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Floating Badge */}
-            <div className="absolute -top-4 -right-4 bg-accent-500 text-primary-900 rounded-lg shadow-lg px-4 py-2 text-sm font-semibold">
-              IHK-zugelassen
+          {/* Mobile Hero Image */}
+          <div className="relative lg:hidden mt-8">
+            <div className="relative rounded-xl overflow-hidden shadow-xl max-w-md mx-auto">
+              <Image
+                src="/images/sasun-bughdaryan-Qwv7JPI03VQ-unsplash.jpg"
+                alt="Lupe auf Zielscheibe symbolisiert präzise Detektei-Ermittlungen und zielgerichtete Beweissicherung"
+                width={400}
+                height={267}
+                className="w-full h-auto object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-center">
+                <p className="text-white font-semibold text-sm">
+                  4 geprüfte Partner-Detekteien deutschlandweit
+                </p>
+              </div>
             </div>
           </div>
         </div>

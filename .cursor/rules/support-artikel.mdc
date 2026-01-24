@@ -1,1045 +1,465 @@
 ---
-description: Vollständiger Workflow für Supporting Articles im Pillar-Cluster-System
+description: Strukturvorlagen für verschiedene Artikeltypen
 globs: content/posts/**/*.mdx
 alwaysApply: false
 ---
 
-# Supporting Articles für Pillar Pages – Vollständiger Workflow
+# Supporting Articles – Strukturvorlagen nach articleType
 
-Diese Rule gilt für alle Supporting Articles, die Teil eines Topic-Clusters sind. Supporting Articles sind spezialisierte Artikel, die ein Unterthema einer Pillar Page vertiefen.
+Diese Rule ergänzt `detektei-base-artikel.mdc` und enthält spezifische Strukturvorlagen für jeden `articleType` aus der Queue.
 
----
-
-## ⚠️ KRITISCHE REGELN (IMMER BEACHTEN!)
-
-1. **IMMER die Pillar Page verlinken** – mindestens 2x (Intro + Fazit)
-2. **IMMER `pillarId` und `pillarSlug` im Frontmatter angeben**
-3. **NIEMALS Inhalte der Pillar Page kopieren** – Supporting = Vertiefung, nicht Wiederholung
-4. **IMMER Long-Tail Keyword verwenden** – spezifischer als das Pillar-Keyword
-5. **IMMER Jahr 2026 verwenden** bei Jahreszahlen in Titeln/Überschriften
-6. **IMMER externe Links validieren** – nach Fertigstellung ALLE URLs prüfen:
-   - **Technisch:** HTTP 200 erreichbar?
-   - **Inhaltlich:** Belegt der Link die Aussage im Text?
-   - Broken/unpassende Links ersetzen UND Text anpassen!
+**WICHTIG:** Wähle die Struktur basierend auf dem `articleType` Feld in `content/topics/queue.json`.
 
 ---
 
-## 1. Was ist ein Supporting Article?
+## 1. articleType: `guide` (25 Artikel)
 
-### Definition
+**Wann verwenden:** Umfassende Ratgeber zu einem Thema.
 
-Ein Supporting Article ist ein fokussierter Artikel, der:
-- **EINEN spezifischen Aspekt** des Pillar-Themas tiefgehend behandelt
-- Ein **Long-Tail Keyword** mit weniger Konkurrenz targetiert
-- **Eigenständig wertvoll** ist (funktioniert auch ohne Pillar-Kontext)
-- Die **Pillar Page stärkt** durch thematische Relevanz und Verlinkung
-
-### Topic-Cluster-Architektur
+**Ziel-Wortanzahl:** 2.500-3.500 Wörter
 
 ```
-                    ┌─────────────────────────┐
-                    │      PILLAR PAGE        │
-                    │   (Hauptthema, breit)   │
-                    │     5.000+ Wörter       │
-                    │  "Fokus im Homeoffice"  │
-                    └───────────┬─────────────┘
-                                │
-        ┌───────────────────────┼───────────────────────┐
-        │                       │                       │
-        ▼                       ▼                       ▼
-┌───────────────┐     ┌───────────────┐     ┌───────────────┐
-│ SUPPORTING #1 │     │ SUPPORTING #2 │     │ SUPPORTING #3 │
-│  Long-Tail    │     │  Long-Tail    │     │  Long-Tail    │
-│ 2.000-3.000 W │     │ 2.000-3.000 W │     │ 2.000-3.000 W │
-│ "Ablenkungen  │     │ "Konzentration│     │ "Homeoffice   │
-│  reduzieren"  │     │  mit Familie" │     │  mit Kindern" │
-└───────────────┘     └───────────────┘     └───────────────┘
+1. Einleitung (Problem → Lösung ankündigen)
+2. <KeyTakeaways> Box (5-7 Bullet Points)
+3. ## Was ist [Thema]? (Definition + "Kurz:")
+4. ## Wann ist [Thema] relevant? (Anwendungsfälle)
+5. ## Wie funktioniert [Thema]? (Prozess/Ablauf)
+6. ## Schritt-für-Schritt Anleitung (wenn passend)
+7. ## Rechtliche Aspekte (Was erlaubt/verboten)
+8. ## Kosten und Zeitrahmen
+9. ## Häufige Fehler vermeiden
+10. ## Tipps für die Praxis
+11. ## Fazit mit CTA
 ```
 
-### Warum funktioniert das für SEO?
-
-Google bewertet **Topical Authority** (thematische Autorität). Ein Cluster aus 6-8 tiefgehenden Artikeln zu einem Thema signalisiert: "Diese Website ist DIE Autorität zu diesem Thema."
+**Beispiel-Artikel:** "Wann lohnt sich eine Detektei?", "Detektei beauftragen – Ablauf"
 
 ---
 
-## 2. Frontmatter-Struktur für Supporting Articles
+## 2. articleType: `legal_guide` (12 Artikel)
 
-### Pflichtfelder (ALLE erforderlich!)
+**Wann verwenden:** Rechtliche Themen, Gesetze, Erlaubtes/Verbotenes.
 
-```yaml
----
-title: "Long-Tail Keyword: Benefit/Nutzen"
-description: "150-160 Zeichen, Long-Tail Keyword enthalten, Nutzenversprechen"
-slug: "long-tail-keyword-slug"
-date: "2026-MM-DD"
-updatedAt: "2026-MM-DD"
-category: "Kategorie passend zur Pillar"
-tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"]
-keyword: "Long-Tail Keyword"
-affiliate: true/false
-canonical: "https://fokusmacher.de/blog/slug"
+**Ziel-Wortanzahl:** 2.500-3.500 Wörter
 
-# ⚠️ SUPPORTING-SPEZIFISCH (PFLICHT!)
-articleType: "supporting"
-pillarId: "pillar-id-aus-queue"
-pillarSlug: "slug-der-pillar-page"
-pillarTitle: "Titel der Pillar Page"
-relatedSupportingArticles:
-  - slug: "verwandter-supporting-article-1"
-    title: "Titel des verwandten Articles"
-  - slug: "verwandter-supporting-article-2"
-    title: "Titel des verwandten Articles"
-
-image:
-  alt: "Beschreibender Alt-Text mit Long-Tail Keyword"
-  caption: "Optionale Bildunterschrift"
-
-faqs:
-  - question: "Frage mit Keyword?"
-    answer: "Direkte Antwort (40-60 Wörter)"
-  - question: "Weitere relevante Frage?"
-    answer: "Direkte Antwort"
-  # Minimum 5 FAQs, optimal 8+
-
-sources:
-  - name: "Quellenname"
-    url: "https://..."
-    description: "Kurze Beschreibung der Quelle"
-  # Minimum 3 Quellen, optimal 5+
----
+```
+1. Einleitung (Warum rechtliche Klarheit wichtig ist)
+2. <KeyTakeaways> Box (Kernaussagen rechtlich)
+3. ## Die rechtliche Grundlage (Gesetze nennen + "Kurz:")
+4. ## Was ist erlaubt? (Jedermannsrechte, legale Methoden)
+5. ## Was ist verboten? (Straftatbestände, Grenzen)
+6. ## Graubereiche und Einzelfallentscheidungen
+7. ## Aktuelle Rechtsprechung (Urteile zitieren)
+8. ## Konsequenzen bei Verstößen
+9. ## Wie schützen Sie sich rechtlich?
+10. ## Fazit mit CTA (rechtliche Beratung anbieten)
 ```
 
-### Beispiel: Vollständiges Frontmatter
+**Pflicht-Quellen:**
+- dejure.org für Gesetzestexte
+- Konkrete Paragraphen nennen (§ 201 StGB, § 823 BGB, etc.)
+- Mind. 1 Gerichtsurteil zitieren
 
-```yaml
+**Beispiel-Artikel:** "Datenschutz & Detektivarbeit", "Observation ohne Zustimmung"
+
 ---
-title: "Konzentration bei Homeoffice mit Familie: 7 bewährte Strategien"
-description: "Fokussiert arbeiten trotz Kinder, Partner und Haustiere? Diese 7 Strategien helfen dir, im Homeoffice mit Familie produktiv zu bleiben."
-slug: "konzentration-bei-homeoffice-mit-familie"
-date: "2026-01-20"
-updatedAt: "2026-01-20"
-category: "Produktivität"
-tags: ["Homeoffice", "Familie", "Konzentration", "Work-Life-Balance", "Fokus"]
-keyword: "Konzentration bei Homeoffice mit Familie"
-affiliate: true
-canonical: "https://fokusmacher.de/blog/konzentration-bei-homeoffice-mit-familie"
 
-articleType: "supporting"
-pillarId: "homeoffice-fokus"
-pillarSlug: "fokus-im-homeoffice"
-pillarTitle: "Fokus im Homeoffice: Wie du konzentriert arbeitest ohne Ablenkung"
-relatedSupportingArticles:
-  - slug: "ablenkungen-im-homeoffice-reduzieren"
-    title: "Ablenkungen im Homeoffice reduzieren"
-  - slug: "fokusverlust-im-homeoffice-vermeiden"
-    title: "Fokusverlust im Homeoffice vermeiden"
+## 3. articleType: `how_to` (8 Artikel)
 
-image:
-  alt: "Konzentration Homeoffice Familie - Frau arbeitet fokussiert während Kinder spielen"
-  caption: "Fokussiertes Arbeiten ist auch mit Familie möglich"
+**Wann verwenden:** Anleitungen, Schritt-für-Schritt Prozesse.
 
-faqs:
-  - question: "Wie kann ich im Homeoffice konzentriert arbeiten wenn Kinder zuhause sind?"
-    answer: "Kommuniziere feste Arbeitszeiten, richte ein abschließbares Arbeitszimmer ein, nutze Noise-Cancelling Kopfhörer und plane Pausen für Familienzeit ein."
-  - question: "Was tun wenn der Partner im Homeoffice stört?"
-    answer: "Vereinbart klare Signale (z.B. geschlossene Tür = nicht stören), plant synchrone Pausen und respektiert gegenseitig Fokuszeiten."
-  - question: "Wie lange können Kinder sich alleine beschäftigen?"
-    answer: "Je nach Alter: Kleinkinder 15-30 Min., Kindergartenkinder 30-60 Min., Schulkinder 1-2 Stunden. Plane deine Deep-Work-Phasen entsprechend."
-  - question: "Sind Noise-Cancelling Kopfhörer für Eltern im Homeoffice geeignet?"
-    answer: "Ja, mit Einschränkungen. Nutze den Transparenzmodus für wichtige Geräusche oder trage nur einen Ohrhörer, um Kinder zu hören."
-  - question: "Wie strukturiere ich meinen Arbeitstag mit Familie?"
-    answer: "Arbeite in kurzen, fokussierten Blöcken (Pomodoro), nutze Randzeiten (früh morgens, nach Schlafenszeit) und plane Puffer für Unterbrechungen."
+**Ziel-Wortanzahl:** 2.000-2.500 Wörter
 
-sources:
-  - name: "Stanford Remote Work Study"
-    url: "https://nbloom.people.stanford.edu/sites/g/files/sbiybj4746/f/wfh.pdf"
-    description: "Studie zur Produktivität im Homeoffice"
-  - name: "BAuA Homeoffice-Ratgeber"
-    url: "https://www.baua.de/DE/Themen/Arbeitsgestaltung/Homeoffice"
-    description: "Bundesanstalt für Arbeitsschutz"
-  - name: "TK Stressreport"
-    url: "https://www.tk.de/techniker/gesundheit-und-medizin/praevention-und-fruehrerkennung/tk-stressstudie"
-    description: "Studie zu Stress und Arbeitsbelastung"
----
+```
+1. Einleitung (Was der Leser lernen wird)
+2. <KeyTakeaways> Box (Die wichtigsten Schritte)
+3. ## Voraussetzungen / Was Sie brauchen
+4. ## Schritt 1: [Erste Aktion] (+ "Kurz:")
+5. ## Schritt 2: [Zweite Aktion]
+6. ## Schritt 3: [Dritte Aktion]
+7. ## Schritt 4: [Vierte Aktion]
+8. ## Schritt 5: [Fünfte Aktion]
+9. ## Häufige Probleme und Lösungen
+10. ## Checkliste zum Abhaken
+11. ## Fazit mit CTA
 ```
 
+**Besonderheiten:**
+- Nummerierte Schritte verwenden
+- Jeder Schritt mit konkreter Handlungsanweisung
+- Optional: Checkliste am Ende als Zusammenfassung
+
+**Beispiel-Artikel:** "Beweise für Ehebruch sammeln – aber richtig", "Digitale Spuren richtig sichern"
+
 ---
 
-## 3. Content-Struktur (GOLDSTANDARD)
+## 4. articleType: `quick_answer` (8 Artikel)
 
-### Mindestanforderungen für Supporting Articles
+**Wann verwenden:** Featured Snippet Optimierung, kurze direkte Antworten.
 
-| Kriterium | Minimum | Optimal |
-|-----------|---------|---------|
-| **Wortanzahl** | 2.000 Wörter | 2.500-3.000 Wörter |
-| **FAQs** | 5 FAQs | 8+ FAQs |
-| **H2-Abschnitte** | 8 | 10-12 |
-| **H3-Unterabschnitte** | 4 | 8+ |
-| **Tabellen** | 1 | 2-3 |
-| **Listen** | 4 | 6+ |
-| **Link zur Pillar Page** | 2 (Intro + Fazit) | 3+ |
-| **Links zu anderen Supporting Articles** | 2 | 3-4 |
-| **Externe Links** | 3 | 5+ |
-| **Quellen im Verzeichnis** | 3 | 5+ |
+**Ziel-Wortanzahl:** 1.500-2.000 Wörter
 
-### Artikel-Gliederung (Template)
+**KRITISCH:** Die ersten 50-60 Wörter nach der H1 sind das Featured Snippet!
 
+```
+1. ## [Die Frage als H2] (+ SOFORT die Antwort in 50-60 Wörtern)
+2. <KeyTakeaways> Box (3-4 Kernpunkte)
+3. ## Warum ist das so? (Erklärung vertiefen)
+4. ## Was bedeutet das in der Praxis?
+5. ## Ausnahmen und Sonderfälle
+6. ## Verwandte Fragen (2-3 weitere H2s mit kurzen Antworten)
+7. ## Fazit mit CTA
+```
+
+**Struktur der Antwort (Featured Snippet Format):**
 ```mdx
-# H1: [Long-Tail Keyword]: [Nutzenversprechen]
+## Ist Fremdgehen strafbar?
 
-[Einleitung: 150-200 Wörter]
-- Problem ansprechen (Schmerzpunkt)
-- Lösung andeuten
-- Was der Leser lernen wird
-- Keyword in den ersten 100 Wörtern
-- Link zur Pillar Page einbauen: "Dieser Artikel ist Teil unseres Guides zu [Pillar-Thema](/blog/pillar-slug)."
+**Nein, Fremdgehen ist in Deutschland nicht strafbar.** Es gibt keinen 
+Straftatbestand "Ehebruch" im deutschen Recht. Allerdings kann Untreue 
+zivilrechtliche Konsequenzen haben, etwa bei Unterhalts- oder 
+Sorgerechtsfragen.
 
-<KeyTakeaways>
-- **Kernaussage 1:** Wichtigster Punkt
-- **Kernaussage 2:** Zweitwichtigster Punkt
-- **Kernaussage 3:** Dritter wichtiger Punkt
-- **Für wen:** Zielgruppe des Artikels
-</KeyTakeaways>
-
-## H2: Was ist/bedeutet [Thema]?
-
-**Kurz:** [40-60 Wörter direkte Definition für Featured Snippet. Enthält das Keyword. Beantwortet die Frage DIREKT ohne Umschweife.]
-
-[Ausführliche Erklärung, 200-300 Wörter...]
-
-## H2: Warum ist [Thema] wichtig/problematisch?
-
-**Kurz:** [40-60 Wörter direkte Antwort.]
-
-[Ausführlicher Text mit Statistiken, Studien, Beispielen...]
-[Externe Links zu Studien/Quellen einbauen]
-
-## H2: [Zahl] Strategien/Tipps/Methoden für [Keyword]
-
-**Kurz:** [40-60 Wörter Zusammenfassung der Strategien.]
-
-### H3: 1. [Erste Strategie]
-[Erklärung, 150-250 Wörter]
-[Praktisches Beispiel]
-
-### H3: 2. [Zweite Strategie]
-[Erklärung, 150-250 Wörter]
-[Praktisches Beispiel]
-
-### H3: 3. [Dritte Strategie]
-[...]
-
-[Hier ggf. Link zu verwandtem Supporting Article:]
-"Mehr dazu findest du in unserem Artikel über [Verwandtes Thema](/blog/verwandter-slug)."
-
-## H2: Häufige Fehler bei [Thema]
-
-**Kurz:** [40-60 Wörter.]
-
-| Fehler | Problem | Lösung |
-|--------|---------|--------|
-| Fehler 1 | Warum problematisch | Was stattdessen tun |
-| Fehler 2 | Warum problematisch | Was stattdessen tun |
-| Fehler 3 | Warum problematisch | Was stattdessen tun |
-
-## H2: [Thema] für [Spezifische Zielgruppe]
-
-**Kurz:** [40-60 Wörter.]
-
-[Spezifische Tipps für Untergruppe, z.B. "für Eltern", "für Selbstständige", etc.]
-
-## H2: Tools und Hilfsmittel für [Thema]
-
-**Kurz:** [40-60 Wörter.]
-
-[Hier Produkte einbauen wenn relevant:]
-
-<AmazonProduct 
-  asin="XXXXXXXXXX" 
-  description="Warum dieses Produkt bei [Thema] hilft. Eigene Begründung." 
-/>
-
-[Link zu Pillar oder anderem Supporting wenn passend:]
-"Weitere Tool-Empfehlungen findest du in unserem [Hauptguide zu Fokus im Homeoffice](/blog/pillar-slug)."
-
-## H2: [Thema] im Alltag umsetzen
-
-**Kurz:** [40-60 Wörter.]
-
-**Schritt-für-Schritt Anleitung:**
-
-1. **Schritt 1:** [Aktion]
-2. **Schritt 2:** [Aktion]
-3. **Schritt 3:** [Aktion]
-4. **Schritt 4:** [Aktion]
-5. **Schritt 5:** [Aktion]
-
-## H2: Fazit – [Keyword] zusammengefasst
-
-**Kurz:** [40-60 Wörter Fazit.]
-
-[Zusammenfassung der wichtigsten Punkte, 150-200 Wörter]
-
-[Call-to-Action]
-
-[PFLICHT: Link zur Pillar Page:]
-"Dieser Artikel ist Teil unseres umfassenden Guides **[Fokus im Homeoffice: Wie du konzentriert arbeitest ohne Ablenkung](/blog/fokus-im-homeoffice)**. Dort findest du weitere Strategien und Tipps."
-
-[Optional: Links zu verwandten Supporting Articles:]
-**Weiterführende Artikel:**
-- [Ablenkungen im Homeoffice reduzieren](/blog/ablenkungen-im-homeoffice-reduzieren)
-- [Fokusverlust im Homeoffice vermeiden](/blog/fokusverlust-im-homeoffice-vermeiden)
+[Dann folgt die ausführliche Erklärung...]
 ```
+
+**Beispiel-Artikel:** "Ist Fremdgehen strafbar?", "Wie lange darf eine Observation dauern?"
 
 ---
 
-## 4. Keyword-Strategie für Supporting Articles
+## 5. articleType: `comparison` (5 Artikel)
 
-### Die Keyword-Hierarchie
+**Wann verwenden:** Vergleiche zwischen zwei Optionen/Alternativen.
 
-| Ebene | Typ | Beispiel | Suchvolumen | Konkurrenz |
-|-------|-----|----------|-------------|------------|
-| Pillar | Head-Keyword | "Fokus im Homeoffice" | Hoch | Hoch |
-| Supporting | Long-Tail | "Konzentration bei Homeoffice mit Familie" | Mittel | Niedrig |
-| LSI | Semantisch | "Kinder zuhause arbeiten", "Remote Work Familie" | Variiert | — |
-
-### Keyword-Platzierung (PFLICHT)
-
-| Position | Pflicht | Beispiel |
-|----------|---------|----------|
-| Title Tag | ✅ JA | "Konzentration bei Homeoffice mit Familie: 7 Strategien" |
-| Meta Description | ✅ JA | "...Konzentration bei Homeoffice mit Familie ist möglich..." |
-| H1 | ✅ JA | Identisch mit Title oder Variation |
-| URL/Slug | ✅ JA | `/konzentration-bei-homeoffice-mit-familie` |
-| Erster Absatz | ✅ JA | In den ersten 100 Wörtern |
-| Mindestens 2 H2 | ✅ JA | "Warum Konzentration bei Homeoffice mit Familie schwer ist" |
-| Alt-Text Hero-Bild | ✅ JA | "Konzentration Homeoffice Familie Strategien" |
-| Fazit | ✅ JA | Nochmal natürlich erwähnen |
-
-### LSI-Keywords identifizieren und verwenden
-
-Für jedes Supporting Article 5-10 semantisch verwandte Begriffe recherchieren:
-
-**Beispiel für "Konzentration bei Homeoffice mit Familie":**
-
-| LSI-Keyword | Verwendung |
-|-------------|------------|
-| Kinder zuhause arbeiten | 2-3x im Text |
-| Remote Work mit Familie | 2-3x im Text |
-| Arbeiten mit Kindern | 2-3x im Text |
-| Homeoffice Störungen | 1-2x im Text |
-| Work-Life-Balance | 1-2x im Text |
-| Fokus trotz Ablenkung | 1-2x im Text |
-| Produktiv mit Familie | 1-2x im Text |
-
-### Keyword-Dichte
-
-- **Haupt-Keyword:** 0,5-1,5% (bei 2.500 Wörtern = 12-37 Vorkommen)
-- **Aber:** Natürlichkeit > Dichte. Google versteht Synonyme und Variationen.
-- **LSI-Keywords:** Je 2-3x natürlich einstreuen
-
----
-
-## 5. Interne Verlinkung (HERZSTÜCK!)
-
-### Die drei Verlinkungsebenen
+**Ziel-Wortanzahl:** 2.000-2.500 Wörter
 
 ```
-1. SUPPORTING → PILLAR (IMMER, PFLICHT!)
-   "Dieser Artikel ist Teil unseres Guides zu [Pillar-Thema](/blog/pillar-slug)."
-   Mindestens 2x: Einleitung + Fazit
-
-2. SUPPORTING → SUPPORTING (thematisch passend)
-   "Mehr dazu in unserem Artikel über [Verwandtes Thema](/blog/slug)."
-   2-3 Links zu verwandten Articles im selben Cluster
-
-3. SUPPORTING → ANDERE CLUSTER (sparsam)
-   Nur wenn thematisch WIRKLICH relevant, max. 1 Link
+1. Einleitung (Die Entscheidungssituation)
+2. <KeyTakeaways> Box (Hauptunterschiede)
+3. ## Kurzüberblick: [Option A] vs. [Option B] (Tabelle!)
+4. ## Was ist [Option A]? (+ "Kurz:")
+5. ## Was ist [Option B]? (+ "Kurz:")
+6. ## Direkter Vergleich (Tabelle mit Kriterien)
+7. ## Wann ist [Option A] besser?
+8. ## Wann ist [Option B] besser?
+9. ## Kosten im Vergleich
+10. ## Unsere Empfehlung
+11. ## Fazit mit CTA
 ```
 
-### Verlinkungsmatrix für Pillar "Fokus im Homeoffice"
-
-```
-                           Pillar
-                              ↑
-                    ┌─────────┴─────────┐
-                    │                   │
-              Supporting A ←──────→ Supporting B
-                    │                   │
-                    └────────┬──────────┘
-                             │
-                       Supporting C
-```
-
-**Jeder Supporting Article verlinkt:**
-1. ✅ Zur Pillar Page (2x: Intro + Fazit)
-2. ✅ Zu 2-3 thematisch verwandten Supporting Articles
-3. ❌ NICHT zu Supporting Articles anderer Pillar (Ausnahme: sehr starke Relevanz)
-
-### Anchor-Text-Regeln
-
-| Typ | Beispiel | Verwendung |
-|-----|----------|------------|
-| **Partial-Match** | "Ablenkungen reduzieren" | 40% – Bevorzugt |
-| **Natürlich** | "in diesem Artikel zu Ablenkungen" | 30% – Gut |
-| **Thematisch** | "weitere Tipps für dein Homeoffice" | 20% – Gut |
-| **Exakt-Match** | "Ablenkungen im Homeoffice reduzieren" | 10% – Sparsam! |
-| **Generisch** | "hier klicken", "mehr dazu" | ❌ Vermeiden |
-
-### Beispiele für gute Verlinkung
-
+**Pflicht-Element: Vergleichstabelle**
 ```mdx
-// Im Fließtext (natürlich):
-Besonders wenn [Ablenkungen im Homeoffice](/blog/ablenkungen-im-homeoffice-reduzieren) 
-durch Familienmitglieder entstehen, helfen klare Kommunikationsregeln.
-
-// Intro-Verweis auf Pillar:
-Dieser Artikel ist Teil unseres umfassenden Guides zu 
-[Fokus im Homeoffice](/blog/fokus-im-homeoffice).
-
-// Fazit-Verweis auf Pillar:
-Weitere Strategien findest du in unserem Hauptartikel 
-**[Fokus im Homeoffice: Wie du konzentriert arbeitest ohne Ablenkung](/blog/fokus-im-homeoffice)**.
-
-// Verweis auf verwandten Supporting Article:
-Wenn Ablenkungen dein größtes Problem sind, lies auch unseren Artikel 
-[Ablenkungen im Homeoffice reduzieren](/blog/ablenkungen-im-homeoffice-reduzieren).
+| Kriterium | Detektiv | Eigene Recherche |
+|-----------|----------|------------------|
+| Rechtssicherheit | ✅ Hoch | ⚠️ Riskant |
+| Kosten | 💰 Mittel-Hoch | 💰 Gering |
+| Erfolgsquote | ✅ Hoch | ❌ Niedrig |
+| Emotionale Belastung | ✅ Gering | ❌ Hoch |
 ```
+
+**Beispiel-Artikel:** "Detektiv oder Anwalt?", "Detektei vs. eigene Recherche"
 
 ---
 
-## 6. Featured Snippet Optimierung
+## 6. articleType: `checklist` (4 Artikel)
 
-### "Kurz:"-Definitionen (PFLICHT bei jedem H2!)
+**Wann verwenden:** Checklisten, Entscheidungshilfen.
 
-Jeder H2-Abschnitt MUSS mit einer direkten Antwort beginnen:
+**Ziel-Wortanzahl:** 1.500-2.000 Wörter
 
+```
+1. Einleitung (Wofür die Checkliste)
+2. <KeyTakeaways> Box (Die wichtigsten Punkte)
+3. ## Die vollständige Checkliste (+ "Kurz:")
+4. ## Punkt 1: [Erster Checkpunkt] – Erklärung
+5. ## Punkt 2: [Zweiter Checkpunkt] – Erklärung
+6. ## Punkt 3: [Dritter Checkpunkt] – Erklärung
+7. [Weitere Punkte...]
+8. ## Zusammenfassung als Kopiervorlage
+9. ## Fazit mit CTA
+```
+
+**Pflicht-Element: Kopierbare Checkliste**
 ```mdx
-## Wie kann ich mit Familie im Homeoffice konzentriert arbeiten?
+## Checkliste: Brauche ich eine Detektei?
 
-**Kurz:** Kommuniziere feste Arbeitszeiten, richte ein abschließbares Arbeitszimmer ein, nutze Noise-Cancelling Kopfhörer und plane bewusste Pausen für Familienzeit ein. Diese vier Säulen ermöglichen fokussiertes Arbeiten trotz Trubel.
+- [ ] Ich habe einen konkreten Verdacht
+- [ ] Ich brauche rechtssichere Beweise
+- [ ] Eigene Ermittlungen sind nicht möglich/sinnvoll
+- [ ] Ich bin bereit, für Qualität zu bezahlen
+- [ ] Mir ist Diskretion wichtig
 
-[Dann folgt der ausführliche Text...]
+**Ergebnis:** Wenn Sie 3+ Punkte angekreuzt haben, ist eine Detektei sinnvoll.
 ```
 
-### Regeln für "Kurz:"-Definitionen
+**Beispiel-Artikel:** "Checkliste: Brauche ich eine Detektei?", "Welche Infos braucht ein Detektiv?"
 
-| Regel | Erklärung |
-|-------|-----------|
-| **40-60 Wörter** | Nicht länger! Google zeigt max. 60 Wörter im Snippet |
-| **Direkte Antwort** | KEINE Einleitung, sofort zur Sache |
-| **Keyword enthalten** | Das Keyword oder LSI-Keyword muss vorkommen |
-| **Actionable** | Konkrete Handlung oder klare Definition |
-| **Sofort nach H2** | Keine Leerzeile zwischen H2 und "Kurz:" |
+---
 
-### Snippet-Typen und wie man sie triggert
+## 7. articleType: `pricing` (3 Artikel)
 
-**1. Definitions-Snippet (Was ist X?):**
+**Wann verwenden:** Kosten, Preise, Honorare.
+
+**Ziel-Wortanzahl:** 2.500-3.500 Wörter
+
+```
+1. Einleitung (Preistransparenz versprechen)
+2. <KeyTakeaways> Box (Preisübersicht)
+3. ## Was kostet [Dienstleistung]? Überblick (+ "Kurz:" + Tabelle)
+4. ## Stundensätze im Detail
+5. ## Tagespauschalen erklärt
+6. ## Kostenfaktoren: Was beeinflusst den Preis?
+7. ## Preisbeispiele aus der Praxis (3-4 Szenarien)
+8. ## Versteckte Kosten vermeiden
+9. ## Kosten sparen: Tipps
+10. ## Steuerliche Aspekte
+11. ## Kostenerstattung: Wann zahlt die Gegenseite?
+12. ## Fazit mit CTA (kostenlose Kostenschätzung)
+```
+
+**Pflicht-Element: Preistabelle**
 ```mdx
-## Was bedeutet Konzentration bei Homeoffice mit Familie?
-
-**Kurz:** Konzentration bei Homeoffice mit Familie beschreibt die Fähigkeit, fokussiert zu arbeiten, obwohl Partner, Kinder oder andere Haushaltsmitglieder anwesend sind. Es erfordert klare Grenzen, Kommunikation und die richtigen Strategien.
+| Dienstleistung | Preisspanne | Typischer Fall |
+|----------------|-------------|----------------|
+| Observation (Tag) | 800-1.500€ | 1.200€ |
+| Personensuche | 500-2.000€ | 800€ |
+| Erstberatung | Kostenlos | 0€ |
 ```
 
-**2. Listen-Snippet (Wie macht man X?):**
+**Beispiel-Artikel:** "Was kostet ein Privatdetektiv pro Stunde?", "Detektiv Kosten bei Ehebruch"
+
+---
+
+## 8. articleType: `case_study` (3 Artikel)
+
+**Wann verwenden:** Fallbeispiele, Erfolgsgeschichten (anonymisiert!).
+
+**Ziel-Wortanzahl:** 2.500-3.000 Wörter
+
+```
+1. Einleitung (Warum Fallbeispiele hilfreich sind)
+2. <KeyTakeaways> Box (Learnings aus den Fällen)
+3. ## Fall 1: [Anonymisierter Titel] (+ "Kurz:")
+   - Ausgangssituation
+   - Vorgehensweise
+   - Ergebnis
+   - Lessons Learned
+4. ## Fall 2: [Anonymisierter Titel]
+   [Gleiche Struktur]
+5. ## Fall 3: [Anonymisierter Titel]
+   [Gleiche Struktur]
+6. ## Gemeinsamkeiten erfolgreicher Ermittlungen
+7. ## Was Sie daraus lernen können
+8. ## Fazit mit CTA
+```
+
+**WICHTIG: Anonymisierung!**
+- Keine echten Namen
+- Keine identifizierbaren Orte
+- Keine spezifischen Daten
+- "Ein Mandant aus dem Raum München..." statt konkreter Details
+
+**Beispiel-Artikel:** "Erfolgsgeschichten aus der Detektivpraxis"
+
+---
+
+## 9. articleType: `tips` (3 Artikel)
+
+**Wann verwenden:** Praktische Tipps, Ratschläge.
+
+**Ziel-Wortanzahl:** 2.000-2.500 Wörter
+
+```
+1. Einleitung (Warum diese Tipps wertvoll sind)
+2. <KeyTakeaways> Box (Top 5 Tipps)
+3. ## Tipp 1: [Erster Tipp] (+ "Kurz:")
+4. ## Tipp 2: [Zweiter Tipp]
+5. ## Tipp 3: [Dritter Tipp]
+6. ## Tipp 4: [Vierter Tipp]
+7. ## Tipp 5: [Fünfter Tipp]
+8. [Optional: Weitere Tipps...]
+9. ## Bonus-Tipp für Fortgeschrittene
+10. ## Fazit mit CTA
+```
+
+**Beispiel-Artikel:** "Detektei finden – diese Fehler vermeiden", "Wie man Kosten spart"
+
+---
+
+## 10. articleType: `explainer` (8 Artikel)
+
+**Wann verwenden:** Begriffe erklären, Konzepte verständlich machen.
+
+**Ziel-Wortanzahl:** 1.500-2.500 Wörter
+
+```
+1. Einleitung (Warum dieses Thema wichtig ist)
+2. <KeyTakeaways> Box (Kernpunkte)
+3. ## Was ist [Begriff]? Definition (+ "Kurz:")
+4. ## Wie funktioniert [Begriff]?
+5. ## [Begriff] in der Praxis
+6. ## Vorteile und Nachteile
+7. ## Häufige Missverständnisse
+8. ## Fazit mit CTA
+```
+
+**Beispiel-Artikel:** "Online-Recherche durch Detektive (OSINT)", "GPS-Tracking – rechtlich heikel?"
+
+---
+
+## 11. articleType: `warning` (2 Artikel)
+
+**Wann verwenden:** Warnungen, Risiken aufzeigen.
+
+**Ziel-Wortanzahl:** 2.000-2.500 Wörter
+
+```
+1. Einleitung (Warum diese Warnung wichtig ist)
+2. <KeyTakeaways> Box (Die größten Risiken)
+3. ## Das Problem: [Risiko beschreiben] (+ "Kurz:")
+4. ## Warnsignal 1: [Erstes Anzeichen]
+5. ## Warnsignal 2: [Zweites Anzeichen]
+6. ## Warnsignal 3: [Drittes Anzeichen]
+7. ## Konsequenzen: Was kann passieren?
+8. ## So schützen Sie sich
+9. ## Wann ist es zu spät?
+10. ## Fazit mit CTA
+```
+
+**Beispiel-Artikel:** "Warum billige Detektive teuer werden können", "Typische Fehler bei der Beauftragung"
+
+---
+
+## 12. articleType: `decision_guide` (1 Artikel)
+
+**Wann verwenden:** Entscheidungshilfen, Ja/Nein-Fragen.
+
+**Ziel-Wortanzahl:** 2.500-3.000 Wörter
+
+```
+1. Einleitung (Die Entscheidungssituation)
+2. <KeyTakeaways> Box (Entscheidungskriterien)
+3. ## Die zentrale Frage (+ "Kurz:")
+4. ## Argumente FÜR [Option]
+5. ## Argumente GEGEN [Option]
+6. ## Entscheidungsbaum / Flowchart (als Text)
+7. ## Wann JA: Konkrete Szenarien
+8. ## Wann NEIN: Konkrete Szenarien
+9. ## Der Mittelweg: Alternativen
+10. ## Fazit mit CTA
+```
+
+**Pflicht-Element: Entscheidungshilfe**
 ```mdx
-## Wie arbeite ich konzentriert mit Kindern zuhause?
+## Schnelltest: Detektei – Ja oder Nein?
 
-**Kurz:** 1) Feste Arbeitszeiten kommunizieren, 2) Beschäftigungsideen für Kinder vorbereiten, 3) Noise-Cancelling Kopfhörer nutzen, 4) In kurzen Fokusblöcken arbeiten, 5) Pausen für Quality Time einplanen.
+Beantworten Sie diese 5 Fragen:
+
+1. Brauchen Sie gerichtsverwertbare Beweise? → Ja = +1 Punkt
+2. Ist Diskretion absolut wichtig? → Ja = +1 Punkt
+3. Haben Sie einen konkreten Verdacht? → Ja = +1 Punkt
+4. Können Sie 1.000€+ investieren? → Ja = +1 Punkt
+5. Ist die Sache emotional zu belastend? → Ja = +1 Punkt
+
+**0-2 Punkte:** Detektei vermutlich nicht nötig
+**3-4 Punkte:** Detektei kann sinnvoll sein – Erstberatung nutzen
+**5 Punkte:** Detektei ist sehr empfehlenswert
 ```
 
-**3. Tabellen-Snippet (Vergleich):**
-```mdx
-## Welche Strategie hilft am besten?
-
-**Kurz:** Die beste Strategie hängt vom Alter der Kinder ab: Bei Kleinkindern helfen kurze Fokusblöcke (25 Min.), bei Schulkindern längere Deep-Work-Phasen (90 Min.). Ein abschließbarer Raum ist für alle Altersgruppen hilfreich.
-```
+**Beispiel-Artikel:** "Detektei beauftragen – Ja oder Nein?"
 
 ---
 
-## 7. Technisches SEO
+## 13. articleType: `local_landing` (6 Artikel - Templates)
 
-### 7.1 Schema Markup (Automatisch + Manuell)
+**Wann verwenden:** Lokale SEO-Seiten für Städte/Regionen.
 
-**Automatisch generiert (über Next.js):**
-- Article Schema
-- FAQ Schema
-- Breadcrumb Schema
-- Speakable Schema
+**Ziel-Wortanzahl:** 1.500-2.000 Wörter
 
-**Manuell im Frontmatter sicherstellen:**
+**ACHTUNG:** Dies sind Templates! `[Stadt]` und `[Region]` ersetzen.
 
-Das `isPartOf`-Feld im Article Schema verknüpft Supporting mit Pillar:
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Konzentration bei Homeoffice mit Familie",
-  "isPartOf": {
-    "@type": "WebPage",
-    "@id": "https://fokusmacher.de/blog/fokus-im-homeoffice",
-    "name": "Fokus im Homeoffice: Wie du konzentriert arbeitest ohne Ablenkung"
-  }
-}
-```
-
-**Wichtig:** Durch `pillarSlug` und `pillarTitle` im Frontmatter wird das automatisch generiert!
-
-### 7.2 URL-Struktur
+**→ SIEHE AUCH:** `einsatzgebiete-seitenaufbau.mdc` für detaillierte lokale SEO-Anleitung!
 
 ```
-✅ /blog/[keyword-slug]
-   Beispiel: /blog/konzentration-bei-homeoffice-mit-familie
-
-❌ /blog/artikel-123
-❌ /blog/2026/01/konzentration-familie-homeoffice-tipps-2026
-❌ /blog/produktivitaet/homeoffice/konzentration/familie
+1. ## Privatdetektiv in [Stadt] – Ihre lokale Detektei (+ "Kurz:")
+2. <KeyTakeaways> Box (Lokale Vorteile)
+3. ## Warum ein lokaler Detektiv in [Stadt]?
+4. ## Unsere Leistungen in [Stadt] und Umgebung
+5. ## Typische Einsätze in [Region]
+6. ## Kosten für Detektiv-Einsätze in [Stadt]
+7. ## So erreichen Sie uns in [Stadt]
+8. ## Häufige Fragen zu Detekteien in [Stadt]
+9. ## Fazit mit lokalem CTA
 ```
 
-**Regeln:**
-- Keyword im Slug
-- Keine Jahreszahlen im Slug
-- Keine Kategorie-Pfade
-- Keine IDs oder Nummern
-- Maximal 60 Zeichen
+**Lokale Elemente einbauen:**
+- Lokale Bezüge ("Im Großraum München...", "Für Kunden aus dem Rhein-Main-Gebiet...")
+- Regionale Besonderheiten erwähnen
+- Anfahrtszeiten/Erreichbarkeit
+- Lokale Gerichtsstandorte (wenn relevant)
+- **Mindestens 40% einzigartiger Content** (kein Copy-Paste mit Stadt-Tausch!)
 
-### 7.3 Canonical Tags
-
-Jeder Supporting Article hat seine EIGENE Canonical URL:
-
-```yaml
-canonical: "https://fokusmacher.de/blog/konzentration-bei-homeoffice-mit-familie"
-```
-
-**NICHT** die URL der Pillar Page verwenden!
-
-### 7.4 Breadcrumb-Struktur
-
-```
-Home > Blog > [Pillar-Titel] > [Supporting-Titel]
-```
-
-Beispiel:
-```
-Home > Blog > Fokus im Homeoffice > Konzentration bei Homeoffice mit Familie
-```
-
-### 7.5 Core Web Vitals
-
-| Metrik | Ziel | Maßnahme |
-|--------|------|----------|
-| **LCP** | < 2.5s | Hero-Bild als WebP, < 200KB, preload |
-| **FID** | < 100ms | JS minimieren, keine heavy Komponenten |
-| **CLS** | < 0.1 | Bildgrößen definieren, keine Layout-Shifts |
-
-**Bild-Optimierung:**
-```mdx
-// Hero-Bild wird automatisch aus Frontmatter geladen
-// Sicherstellen: WebP-Format, max. 200KB
-
-// Bei manuellen Bildern im Artikel:
-![Alt-Text mit Keyword](/images/posts/bild.webp)
-```
-
-### 7.6 Meta-Tags Optimierung
-
-**Title Tag (max. 60 Zeichen):**
-```
-[Keyword]: [Nutzenversprechen] [Jahr wenn relevant]
-```
-Beispiele:
-- ✅ "Konzentration bei Homeoffice mit Familie: 7 Strategien 2026" (58 Zeichen)
-- ❌ "Wie du deine Konzentration verbesserst wenn du im Homeoffice bist und Familie hast" (zu lang)
-
-**Meta Description (150-160 Zeichen):**
-```
-[Schmerzpunkt ansprechen] + [Lösung andeuten] + [CTA/Nutzen]
-```
-Beispiel:
-> "Kinder, Partner, Haustiere – Fokus im Homeoffice mit Familie ist möglich. Entdecke 7 bewährte Strategien für ungestörtes Arbeiten trotz Trubel."
+**Verlinken auf:** `/einsatzgebiete/bundesland/[bundesland]/[stadt]`
 
 ---
 
-## 8. E-E-A-T Signale einbauen
+## 14. articleType: `local_service` (3 Artikel - Templates)
 
-Google bewertet **Experience, Expertise, Authoritativeness, Trustworthiness**:
+**Wann verwenden:** Kombination aus Lokalität + spezifischer Dienstleistung.
 
-### Experience (Erfahrung)
+**Ziel-Wortanzahl:** 1.500 Wörter
 
-```mdx
-// Persönliche Anekdoten einbauen:
-Als ich selbst mit zwei Kindern im Homeoffice arbeitete, habe ich gelernt, 
-dass starre Zeitpläne nicht funktionieren. Stattdessen...
-
-// Authentische Beispiele:
-In meiner Erfahrung funktioniert die "Ampel-Methode" am besten: Grüne Ampel 
-an der Tür bedeutet "du darfst reinkommen", rot heißt "bitte nicht stören".
+```
+1. ## [Dienstleistung] in [Stadt]: Professionelle Ermittlungen (+ "Kurz:")
+2. <KeyTakeaways> Box
+3. ## Wann ist [Dienstleistung] in [Stadt] sinnvoll?
+4. ## So läuft [Dienstleistung] in [Stadt] ab
+5. ## Kosten für [Dienstleistung] in [Region]
+6. ## Lokale Besonderheiten
+7. ## Jetzt Kontakt aufnehmen
 ```
 
-### Expertise
-
-```mdx
-// Studien zitieren:
-Laut einer [Stanford-Studie](https://...) steigt die Produktivität im 
-Homeoffice um 13%, wenn Ablenkungen minimiert werden.
-
-// Externe Experten:
-Wie der Arbeitspsychologe Prof. Dr. Müller erklärt: "Fokus ist eine 
-trainierbare Fähigkeit, keine angeborene Eigenschaft."
-```
-
-### Authoritativeness
-
-```mdx
-// Quellenverzeichnis im Frontmatter (PFLICHT)
-// Mindestens 3 autoritative Quellen
-
-// Im Text auf Quellen verweisen:
-Diese Empfehlung basiert auf Erkenntnissen der [Bundesanstalt für 
-Arbeitsschutz und Arbeitsmedizin](https://baua.de/...).
-```
-
-### Trustworthiness
-
-- ✅ Alle externen Links funktionieren (HTTP 200)
-- ✅ Affiliate-Links sind gekennzeichnet (`affiliate: true`)
-- ✅ Quellenverzeichnis vorhanden
-- ✅ Datum und "Zuletzt aktualisiert" sichtbar
-- ✅ Autor mit Bio verlinkt
+**Beispiel:** "Observation in München", "Wirtschaftsdetektei im Rhein-Main-Gebiet"
 
 ---
 
-## 9. Produkte in Supporting Articles
+## 15. articleType: `thought_leadership` (2 Artikel)
 
-### Wann Produkte einbauen?
+**Wann verwenden:** Zukunftsthemen, Trends, Meinungsartikel.
 
-| Artikel-Thema | Produkte? | Beispiele |
-|---------------|-----------|-----------|
-| Konzentration mit Familie | ✅ Ja | Noise-Cancelling Kopfhörer, Türschilder |
-| Ablenkungen reduzieren | ✅ Ja | Kopfhörer, Website-Blocker Apps |
-| Mentale Erschöpfung | ⚠️ Optional | Bücher, Meditation Apps |
-| Mindset-Themen | ⚠️ Optional | Bücher, Journals |
+**Ziel-Wortanzahl:** 2.000-2.500 Wörter
 
-### Produkt-Integration
-
-```mdx
-## Tools und Hilfsmittel für konzentriertes Arbeiten mit Familie
-
-**Kurz:** Die richtigen Tools machen den Unterschied. Noise-Cancelling Kopfhörer 
-blenden Umgebungsgeräusche aus, ein visuelles Türschild kommuniziert deine 
-Fokuszeiten, und Timer-Apps strukturieren deinen Tag.
-
-### Noise-Cancelling Kopfhörer
-
-Für das Arbeiten mit Familie im Hintergrund sind Kopfhörer mit aktivem ANC 
-unverzichtbar. Sie blenden Gespräche und Spielgeräusche effektiv aus.
-
-<AmazonProduct 
-  asin="B09Y2LL45F" 
-  description="Der Sony WH-1000XM5 bietet das beste ANC am Markt – ideal für 
-  laute Umgebungen. Der Transparenzmodus lässt dich wichtige Geräusche (weinendes 
-  Kind) trotzdem hören." 
-/>
-
-**Budget-Alternative:** Für weniger als 100€ bietet der Anker Soundcore Space 
-Q45 ein hervorragendes Preis-Leistungs-Verhältnis.
-
-<AmazonProduct 
-  asin="B0B2GK51S6" 
-  description="Solides ANC zum fairen Preis. Perfekt, wenn du erstmal testen 
-  willst, ob Kopfhörer für dich funktionieren." 
-/>
+```
+1. Einleitung (Die Entwicklung/Der Trend)
+2. <KeyTakeaways> Box (Kernaussagen)
+3. ## Der Status Quo (+ "Kurz:")
+4. ## Was sich verändert
+5. ## Chancen und Risiken
+6. ## Unsere Einschätzung als Experten
+7. ## Was das für Sie bedeutet
+8. ## Fazit mit CTA
 ```
 
-### ⚠️ ASIN-Validierung (PFLICHT!)
-
-**VOR Veröffentlichung:**
-```bash
-node scripts/validate-asins.mjs --file=content/posts/ARTIKEL.mdx
-```
+**Beispiel-Artikel:** "KI in der Detektivarbeit", "Detektivarbeit im digitalen Zeitalter"
 
 ---
 
-## 10. Qualitätssicherung vor Veröffentlichung
-
-### Checkliste: Frontmatter
-
-- [ ] `title` enthält Long-Tail Keyword (< 60 Zeichen)
-- [ ] `description` 150-160 Zeichen, Keyword enthalten
-- [ ] `slug` enthält Keyword, keine Sonderzeichen
-- [ ] `date` und `updatedAt` korrekt (2026-MM-DD)
-- [ ] `category` passt zur Pillar
-- [ ] `keyword` ist das Long-Tail Keyword
-- [ ] `articleType: "supporting"` gesetzt
-- [ ] `pillarId` korrekt (aus queue.json)
-- [ ] `pillarSlug` korrekt
-- [ ] `pillarTitle` korrekt
-- [ ] `relatedSupportingArticles` mindestens 2 eingetragen
-- [ ] `faqs` mindestens 5, optimal 8+
-- [ ] `sources` mindestens 3, optimal 5+
-- [ ] `canonical` URL korrekt
-
-### Checkliste: Content
-
-- [ ] Mindestens 2.000 Wörter
-- [ ] Keyword in ersten 100 Wörtern
-- [ ] Keyword in mindestens 2 H2-Überschriften
-- [ ] "Kurz:"-Definition unter jedem H2
-- [ ] KeyTakeaways-Box nach Einleitung
-- [ ] Mindestens 8 H2-Abschnitte
-- [ ] Mindestens 4 H3-Unterabschnitte
-- [ ] Mindestens 1 Tabelle
-- [ ] Mindestens 4 Listen (nummeriert oder Bullet)
-- [ ] LSI-Keywords natürlich eingestreut (5-10 verschiedene)
-
-### Checkliste: Interne Verlinkung
-
-- [ ] Link zur Pillar Page in Einleitung
-- [ ] Link zur Pillar Page im Fazit
-- [ ] 2-3 Links zu verwandten Supporting Articles
-- [ ] Anchor-Texte variiert (nicht nur Exact-Match)
-- [ ] Keine "hier klicken" oder "mehr dazu" Anchor-Texte
-
-### Checkliste: Externe Links & Quellen
-
-- [ ] Mindestens 3 externe Links zu autoritativen Quellen
-- [ ] **⚠️ ALLE externen Links auf HTTP 200 geprüft**
-- [ ] **⚠️ INHALT jeder Zielseite GELESEN** – nicht nur Status geprüft!
-- [ ] **⚠️ ALLE Links inhaltlich geprüft** – belegen sie die Aussagen im Text?
-- [ ] Zielseite behandelt wirklich das Thema, das im Text behauptet wird
-- [ ] Spezifische Statistiken sind in der verlinkten Quelle tatsächlich zu finden
-- [ ] Broken Links ersetzt durch funktionierende UND inhaltlich passende Alternativen
-- [ ] Text angepasst, falls Quellen ersetzt wurden (keine falschen Behauptungen!)
-- [ ] Quellenverzeichnis im Frontmatter vollständig
-- [ ] ALLE Quellen aus dem Frontmatter sind auch im Text referenziert
-
-### Checkliste: Produkte (wenn relevant)
-
-- [ ] Produkte passen zum Thema
-- [ ] ASIN validiert: `node scripts/validate-asins.mjs --file=...`
-- [ ] Eigene Beschreibung für jedes Produkt
-- [ ] Keine blinden Affiliate-Links ohne Begründung
-
-### Checkliste: Technisch (NACH Link-Validierung!)
-
-- [ ] **Alle vorherigen Checklisten abgeschlossen** (Frontmatter, Content, Links, Produkte)
-- [ ] Artikel ist inhaltlich FINAL
-- [ ] **JETZT ERST:** Hero-Bild generiert und optimiert (WebP, < 200KB)
-- [ ] Alt-Text enthält Keyword
-- [ ] Keine Linter-Fehler in der MDX-Datei
-- [ ] Lokal getestet (npm run dev)
-
----
-
-## 10.1 ⚠️ PFLICHT: Externe Link-Validierung (NACH Fertigstellung!)
-
-**KRITISCH:** Nach Fertigstellung des Artikels MÜSSEN alle externen Links geprüft werden:
-1. **Technisch:** Links müssen erreichbar sein (HTTP 200)
-2. **Inhaltlich:** Links müssen zum Kontext passen und die Aussage im Text belegen!
-
-### Zwei Prüfebenen
-
-| Prüfung | Frage | Beispiel |
-|---------|-------|----------|
-| **Technisch** | Ist der Link erreichbar? | HTTP 200 = OK, 404 = Broken |
-| **Inhaltlich** | Belegt der Link die Aussage im Text? | "Laut Studie X..." → Link muss zu Studie X führen |
-
-**WICHTIG:** Ein funktionierender Link, der inhaltlich nicht passt, ist genauso problematisch wie ein Broken Link!
-
-### Schritt 1: Alle externen Links aus dem Artikel extrahieren
-
-Externe Links finden sich:
-- Im **Frontmatter** unter `sources[].url`
-- Im **Content** als Markdown-Links `[Text](https://...)`
-
-### Schritt 2: Jeden Link technisch prüfen
-
-```bash
-# Einzelnen Link prüfen:
-curl -s -o /dev/null -w "%{http_code}" -L --max-time 15 "URL"
-
-# Erwartetes Ergebnis:
-# 200 = OK ✅
-# 301/302 = Redirect (prüfen wohin) ⚠️
-# 404 = Not Found ❌ MUSS ERSETZT WERDEN
-# 403 = Forbidden ❌ Alternative suchen
-# 5xx = Server Error ❌ Alternative suchen
-# 000 = Timeout ❌ Alternative suchen
-```
-
-### Schritt 3: Inhalt der Zielseite LESEN und prüfen
-
-**⚠️ KRITISCH: VOR dem Verlinken IMMER den Inhalt der Zielseite prüfen!**
-
-```bash
-# Seiteninhalt abrufen und lesen:
-curl -s -L --max-time 15 "URL" | head -200
-
-# Oder bei PDFs: Metadaten prüfen
-curl -s -I -L --max-time 15 "URL"
-```
-
-**Prüffragen beim Lesen der Zielseite:**
-- Behandelt die Seite wirklich das Thema, das ich im Text behaupte?
-- Enthält die Seite die Statistik/Information, die ich zitiere?
-- Ist die Seite aktuell und nicht veraltet?
-- Ist die Seite seriös (keine Werbeschleuder, kein Spam)?
-
-**Beispiel für Fehler:**
-```
-❌ FALSCH:
-Text: "Die DGPPN betont: Soziale Unterstützung ist wichtig"
-Link: https://www.dgppn.de/schwerpunkte/corona.html
-→ Seite handelt von COVID-19, nicht von sozialer Unterstützung!
-
-✅ RICHTIG:
-Text: "Soziale Isolation ist ein Risikofaktor für psychische Erkrankungen"
-Link: https://www.barmer.de/gesundheit-verstehen/psyche/einsamkeit
-→ Seite behandelt genau dieses Thema!
-```
-
-### Schritt 4: Jeden Link inhaltlich zum Text prüfen
-
-**Für jeden Link im Text fragen:**
-- Habe ich den Inhalt der Zielseite WIRKLICH gelesen?
-- Belegt dieser Link die Aussage, die ich im Text mache?
-- Wenn ich "Laut Studie X zeigt sich Y" schreibe – führt der Link wirklich zu dieser Studie?
-- Wenn ich spezifische Zahlen nenne (z.B. "67% fühlen sich erschöpft") – ist diese Zahl in der verlinkten Quelle zu finden?
-
-**Häufige Fehler:**
-
-| Fehler | Problem | Lösung |
-|--------|---------|--------|
-| Link nicht gelesen | Annahme, dass URL-Name = Inhalt | **IMMER Zielseite öffnen und Inhalt lesen!** |
-| Spezifische Statistik, allgemeiner Link | "Laut X arbeiten Menschen 1,4h länger" → Link führt zu Hauptseite ohne diese Zahl | Text allgemeiner formulieren ODER spezifischere Quelle finden |
-| Quelle im Frontmatter, nicht im Text | Quelle in `sources` aber nirgends referenziert | Quelle an passender Stelle im Text einbauen |
-| Falsche Attribution | "Laut WHO..." aber Link führt zu anderem Verband | Richtige Quelle finden oder Attribution korrigieren |
-| URL klingt passend, Inhalt ist anders | URL enthält "einsamkeit" aber Seite handelt von Corona | Inhalt lesen, nicht nur URL-Name vertrauen |
-
-### Schritt 5: Broken/Unpassende Links ersetzen
-
-Bei jedem Broken Link:
-
-1. **Alternative Quelle recherchieren:**
-   - Gleiche Organisation, andere URL?
-   - Wikipedia als Fallback für Definitionen
-   - Andere autoritative Quelle zum gleichen Thema
-
-2. **Funktionierende Alternative finden und prüfen:**
-   ```bash
-   curl -s -o /dev/null -w "%{http_code}" -L --max-time 15 "NEUE_URL"
-   # Muss 200 zurückgeben!
-   ```
-
-3. **Inhaltliche Passung prüfen:**
-   - Belegt die neue Quelle dieselbe Aussage?
-   - Wenn NEIN: **Text anpassen!** Keine falschen Behauptungen mit falschen Quellen belegen.
-
-4. **Im Artikel ersetzen:**
-   - URL im Frontmatter (`sources`) aktualisieren
-   - URL im Content ersetzen
-   - **Text anpassen** wenn die neue Quelle andere/allgemeinere Informationen liefert
-
-### Zuverlässige Ersatz-Quellen
-
-| Thema | Zuverlässige Quellen |
-|-------|---------------------|
-| Statistiken | Statista, destatis.de, Eurostat |
-| Gesundheit | WHO, RKI, Krankenkassen (TK, AOK, Barmer) |
-| Arbeitsschutz | Hans-Böckler-Stiftung, IAB |
-| Studien | Google Scholar, ResearchGate |
-| Technik | Wikipedia, Heise, CHIP |
-| Produktivität | Harvard Business Review, McKinsey |
-
-### Beispiel: Link-Validierung und Ersetzung
-
-```bash
-# Prüfung ergibt 404:
-curl -s -o /dev/null -w "%{http_code}" -L --max-time 15 \
-  "https://www.baua.de/DE/Themen/Arbeitsgestaltung/Homeoffice"
-# Ergebnis: 404
-
-# Alternative suchen und prüfen:
-curl -s -o /dev/null -w "%{http_code}" -L --max-time 15 \
-  "https://www.boeckler.de/de/auf-einen-blick-17945-Auf-einen-Blick-Studien-zu-Homeoffice-und-mobiler-Arbeit-28040.htm"
-# Ergebnis: 200 ✅
-
-# → Jetzt im Artikel die alte URL durch die neue ersetzen
-# → Quellenbeschreibung anpassen wenn nötig
-```
-
-### Automatisierte Prüfung (optional)
-
-Für mehrere Links gleichzeitig:
-
-```bash
-# Alle externen Links aus MDX extrahieren und prüfen
-grep -oP 'https?://[^\s\)\]"]+' content/posts/ARTIKEL.mdx | while read url; do
-  code=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 10 "$url")
-  echo "$code $url"
-done
-```
-
----
-
-## 11. Nach Veröffentlichung
-
-### Sofort nach Publish
-
-1. **Queue aktualisieren:**
-   ```json
-   // In content/topics/queue.json
-   {
-     "keyword": "Konzentration bei Homeoffice mit Familie",
-     "status": "published",
-     "publishedAt": "2026-01-20"
-   }
-   ```
-
-2. **Pillar Page aktualisieren:**
-   - Link zum neuen Supporting Article hinzufügen
-   - Ggf. Teaser-Text zum neuen Artikel
-
-3. **Andere Supporting Articles aktualisieren:**
-   - Wo thematisch passend, Link zum neuen Artikel
-
-4. **Google Search Console:**
-   - URL zur Indexierung einreichen
-   - Sitemap aktualisieren prüfen
-
-### Nach 1-2 Wochen
-
-1. **Rankings prüfen:**
-   - Rankt der Artikel für das Keyword?
-   - Gibt es Featured Snippets?
-
-2. **Interne Verlinkung optimieren:**
-   - Ältere Artikel prüfen, ob Link zum neuen passt
-   - Pillar Page ggf. erweitern
-
----
-
-## 12. Workflow-Zusammenfassung
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│ SUPPORTING ARTICLE WORKFLOW                                 │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│ === PHASE 1: VORBEREITUNG ===                               │
-│ 1. Thema aus Queue wählen (pillarId beachten!)              │
-│ 2. Keyword-Recherche: Long-Tail + 5-10 LSI-Keywords         │
-│ 3. Frontmatter erstellen (ALLE Pflichtfelder!)              │
-│ 4. Gliederung nach Template erstellen                       │
-│                                                             │
-│ === PHASE 2: CONTENT SCHREIBEN ===                          │
-│ 5. Artikel schreiben:                                       │
-│    - "Kurz:" unter jedem H2                                 │
-│    - KeyTakeaways-Box                                       │
-│    - 2x Pillar-Link (Intro + Fazit)                         │
-│    - 2-3 Links zu anderen Supporting Articles               │
-│    - Externe Links mit Quellenverzeichnis                   │
-│ 6. Produkte einbauen (wenn passend)                         │
-│                                                             │
-│ === PHASE 3: VALIDIERUNG (VOR Hero-Bild!) ===               │
-│ 7. ⚠️ ASINs validieren                                      │
-│ 8. ⚠️ EXTERNE LINKS VALIDIEREN (PFLICHT!)                   │
-│    a) TECHNISCH: curl prüfen (HTTP 200)                     │
-│    b) INHALT LESEN: Zielseite aufrufen und Inhalt prüfen    │
-│    c) KONTEXT: Belegt der Link die Aussage im Text?         │
-│    d) Broken/unpassende Links ersetzen                      │
-│    e) Text anpassen wenn Quelle nicht passt                 │
-│ 9. Interne Links prüfen (existieren die Zielseiten?)        │
-│ 10. Artikel nochmal durchlesen: Ist alles stimmig?          │
-│                                                             │
-│ === PHASE 4: FINALISIERUNG (GANZ ZUM SCHLUSS!) ===          │
-│ 11. ✅ Text vollständig fertig                              │
-│ 12. ✅ Alle Links validiert (technisch + inhaltlich)        │
-│ 13. ✅ Produkte/ASINs validiert                             │
-│ 14. JETZT ERST: Hero-Bild generieren + optimieren           │
-│ 15. Lokal testen (npm run dev)                              │
-│                                                             │
-│ === PHASE 5: VERÖFFENTLICHUNG ===                           │
-│ 16. Veröffentlichen                                         │
-│ 17. Queue + Pillar + andere Articles aktualisieren          │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
-
-**⚠️ WICHTIG: Hero-Bild IMMER ganz zum Schluss!**
-
-Das Hero-Bild wird erst generiert, wenn:
-- ✅ Der Text vollständig fertig ist
-- ✅ Alle externen Links geprüft und korrigiert sind
-- ✅ Alle internen Links geprüft sind
-- ✅ ASINs validiert sind
-- ✅ Der Artikel inhaltlich final ist
-
-**Warum?** Das Hero-Bild basiert auf dem Keyword. Wenn sich durch Link-Korrekturen 
-der Fokus des Artikels verschiebt, wäre ein vorher generiertes Bild möglicherweise 
-nicht mehr passend.
-
----
-
-## 13. Anti-Patterns (WAS NICHT TUN!)
-
-### ❌ Content-Fehler
-
-| Fehler | Problem | Richtig |
-|--------|---------|---------|
-| Pillar-Inhalte kopieren | Duplicate Content, kein Mehrwert | Einzigartige Vertiefung schreiben |
-| Nur Oberfläche kratzen | Kein Ranking, kein Wert | Mind. 2.000 Wörter Tiefe |
-| Keyword-Stuffing | Google-Strafe, unleserlich | 0,5-1,5% natürliche Dichte |
-| Keine Pillar-Verlinkung | Cluster-Struktur bricht | 2x Pillar verlinken |
-| Generische Anchor-Texte | SEO-Wert verschenkt | Keyword-reiche Anchors |
-
-### ❌ Technische Fehler
-
-| Fehler | Problem | Richtig |
-|--------|---------|---------|
-| Pillar als Canonical | Google indexiert falsche Seite | Eigene URL als Canonical |
-| Fehlende pillarId | Cluster-Zuordnung fehlt | pillarId im Frontmatter |
-| **Broken external Links (404)** | **Vertrauensverlust, schlechte UX, SEO-Schaden** | **JEDEN Link mit curl prüfen, Broken Links ersetzen!** |
-| **Link-Inhalt nicht gelesen** | **Link passt nicht zur Aussage im Text** | **IMMER Zielseite öffnen und Inhalt lesen!** |
-| Links nicht validiert | Broken Links landen auf der Website | Nach Fertigstellung IMMER alle externen URLs prüfen |
-| Hero-Bild zu früh erstellt | Bild passt nicht mehr nach Link-Korrekturen | Hero-Bild GANZ ZUM SCHLUSS erstellen |
-| Ungültige ASINs | Affiliate-Einnahmen verloren | validate-asins.mjs nutzen |
-| Fehlende FAQs | FAQ-Schema nicht generiert | Mind. 5 FAQs |
-
-### ❌ Struktur-Fehler
-
-| Fehler | Problem | Richtig |
-|--------|---------|---------|
-| Nur zu einem Pillar verlinken | Andere Cluster nicht gestärkt | Querlinks wo relevant |
-| Zu viele externe Links | Authority-Leak | 3-7 externe Links |
-| Keine "Kurz:"-Definitionen | Keine Featured Snippets | Nach jedem H2 |
-| H2 ohne Keyword | SEO-Signal verschenkt | 2-3 H2 mit Keyword |
-
----
-
-## 14. Beispiel-Prompt für KI-gestütztes Schreiben
-
-Wenn du einen Supporting Article mit KI-Unterstützung erstellst:
-
-```
-Schreibe einen Supporting Article für fokusmacher.de.
-
-**Keyword:** [Long-Tail Keyword]
-**Pillar:** [Pillar-Titel]
-**pillarSlug:** [slug]
-
-**Anforderungen:**
-- 2.500 Wörter Mindestlänge
-- "Kurz:"-Definition (40-60 Wörter) unter JEDEM H2
-- KeyTakeaways-Box nach der Einleitung
-- Keyword in Titel, ersten 100 Wörtern, 2+ H2s, Fazit
-- LSI-Keywords natürlich einstreuen: [Liste]
-- 2x Link zur Pillar Page einbauen (Intro + Fazit)
-- Links zu diesen verwandten Artikeln: [Liste]
-- Externe Links zu autoritativen Quellen
-- Mind. 5 FAQs für Frontmatter
-- Wenn Produkte passen: AmazonProduct-Komponente verwenden
-- Jahr 2026 verwenden bei Jahreszahlen
-- Deutsche Sprache, Du-Anrede, lockerer aber kompetenter Ton
-```
+## Übersichtstabelle: articleType → Struktur
+
+| articleType | Wortanzahl | Besonderheit | Hauptelement |
+|-------------|------------|--------------|--------------|
+| guide | 2.500-3.500 | Umfassend | Schritt-für-Schritt |
+| legal_guide | 2.500-3.500 | Paragraphen | Gesetze zitieren |
+| how_to | 2.000-2.500 | Nummeriert | Schritte |
+| quick_answer | 1.500-2.000 | Featured Snippet | Direkte Antwort |
+| comparison | 2.000-2.500 | A vs. B | Vergleichstabelle |
+| checklist | 1.500-2.000 | Checkboxen | Kopierbare Liste |
+| pricing | 2.500-3.500 | Preise | Kostentabelle |
+| case_study | 2.500-3.000 | Anonym! | Fallbeispiele |
+| tips | 2.000-2.500 | Nummeriert | Konkrete Tipps |
+| explainer | 1.500-2.500 | Definition | Klare Erklärung |
+| warning | 2.000-2.500 | Risiken | Warnsignale |
+| decision_guide | 2.500-3.000 | Ja/Nein | Entscheidungsbaum |
+| local_landing | 1.500-2.000 | [Stadt] | Lokale Bezüge |
+| local_service | 1.500 | [Stadt]+[Service] | Kombination |
+| thought_leadership | 2.000-2.500 | Trend/Zukunft | Expertenmeinung |

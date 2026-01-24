@@ -154,11 +154,26 @@ export function getRelatedPosts(slug: string, limit: number = 3): BlogPostMeta[]
     .map(({ score: _score, ...post }) => post);
 }
 
-// Kategorien-Liste
+// Kategorien-Liste (muss mit den tatsächlichen Kategorien in den Posts übereinstimmen)
 export const BLOG_CATEGORIES = [
-  { id: "ratgeber", name: "Ratgeber", description: "Tipps und Anleitungen" },
-  { id: "recht", name: "Recht & Gesetz", description: "Rechtliche Grundlagen" },
-  { id: "kosten", name: "Kosten & Preise", description: "Preistransparenz" },
-  { id: "dienstleistungen", name: "Dienstleistungen", description: "Unsere Services" },
-  { id: "news", name: "Aktuelles", description: "Neuigkeiten und Updates" },
+  { id: "grundlagen", name: "Grundlagen", slug: "grundlagen", description: "Basiswissen rund um Detekteien" },
+  { id: "wirtschaft", name: "Wirtschaft", slug: "wirtschaft", description: "Wirtschaftsdetektei & Arbeitsrecht" },
+  { id: "partnerschaft", name: "Partnerschaft", slug: "partnerschaft", description: "Untreue, Scheidung & Familie" },
+  { id: "kosten", name: "Kosten", slug: "kosten", description: "Preise & Kostenübersicht" },
+  { id: "recht", name: "Recht", slug: "recht", description: "Rechtliche Grundlagen & Grenzen" },
+  { id: "digital", name: "Digital", slug: "digital", description: "Online-Ermittlung & OSINT" },
+  { id: "entscheidungshilfen", name: "Entscheidungshilfen", slug: "entscheidungshilfen", description: "Checklisten & Tipps zur Entscheidung" },
 ];
+
+// Kategorie-Slug aus Name generieren
+export function getCategorySlug(categoryName: string): string {
+  const category = BLOG_CATEGORIES.find(
+    (c) => c.name.toLowerCase() === categoryName.toLowerCase()
+  );
+  return category?.slug || categoryName.toLowerCase().replace(/\s+/g, "-");
+}
+
+// Kategorie-Name aus Slug
+export function getCategoryBySlug(slug: string): typeof BLOG_CATEGORIES[0] | undefined {
+  return BLOG_CATEGORIES.find((c) => c.slug === slug);
+}

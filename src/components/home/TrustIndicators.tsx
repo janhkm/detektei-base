@@ -24,12 +24,12 @@ const indicators = [
   {
     icon: Users,
     label: "2.500+ Fälle",
-    description: "Erfolgreich abgeschlossen",
+    description: "Netzwerkweit gelöst",
   },
   {
     icon: Award,
     label: "20+ Jahre",
-    description: "Berufserfahrung",
+    description: "Partner-Erfahrung",
   },
 ];
 

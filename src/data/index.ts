@@ -1,15 +1,36 @@
 // Zentrale Daten-API für Einsatzgebiete
 import { bundeslaender, getBundeslandBySlug, getBundeslandById } from "./bundeslaender";
+// Landkreise
 import { landkreiseBayern } from "./landkreise/bayern";
 import { landkreiseNRW } from "./landkreise/nordrhein-westfalen";
 import { landkreiseBaWue } from "./landkreise/baden-wuerttemberg";
 import { landkreiseHessen } from "./landkreise/hessen";
+import { landkreiseNiedersachsen } from "./landkreise/niedersachsen";
+import { landkreiseSachsen } from "./landkreise/sachsen";
+import { landkreiseSchleswigHolstein } from "./landkreise/schleswig-holstein";
+import { landkreiseRheinlandPfalz } from "./landkreise/rheinland-pfalz";
+import { landkreiseBrandenburg } from "./landkreise/brandenburg";
+import { landkreiseThueringen } from "./landkreise/thueringen";
+import { landkreiseSachsenAnhalt } from "./landkreise/sachsen-anhalt";
+import { landkreiseMecklenburgVorpommern } from "./landkreise/mecklenburg-vorpommern";
+import { landkreiseSaarland } from "./landkreise/saarland";
+// Städte
 import { staedteBayern, kleineGemeindenBayern } from "./staedte/bayern";
 import { staedteNRW, kleineGemeindenNRW } from "./staedte/nordrhein-westfalen";
 import { staedteBaWue, kleineGemeindenBaWue } from "./staedte/baden-wuerttemberg";
 import { staedteHessen, kleineGemeindenHessen } from "./staedte/hessen";
 import { staedteBerlin } from "./staedte/berlin";
 import { staedteHamburg } from "./staedte/hamburg";
+import { staedteNiedersachsen, kleineGemeindenNiedersachsen } from "./staedte/niedersachsen";
+import { staedteSachsen, kleineGemeindenSachsen } from "./staedte/sachsen";
+import { staedteSchleswigHolstein, kleineGemeindenSchleswigHolstein } from "./staedte/schleswig-holstein";
+import { staedteRheinlandPfalz, kleineGemeindenRheinlandPfalz } from "./staedte/rheinland-pfalz";
+import { staedteBrandenburg, kleineGemeindenBrandenburg } from "./staedte/brandenburg";
+import { staedteThueringen, kleineGemeindenThueringen } from "./staedte/thueringen";
+import { staedteSachsenAnhalt, kleineGemeindenSachsenAnhalt } from "./staedte/sachsen-anhalt";
+import { staedteMecklenburgVorpommern, kleineGemeindenMecklenburgVorpommern } from "./staedte/mecklenburg-vorpommern";
+import { staedteSaarland, kleineGemeindenSaarland } from "./staedte/saarland";
+import { staedteBremen } from "./staedte/bremen";
 import {
   Bundesland,
   Landkreis,
@@ -26,6 +47,15 @@ const alleLandkreise: Landkreis[] = [
   ...landkreiseNRW,
   ...landkreiseBaWue,
   ...landkreiseHessen,
+  ...landkreiseNiedersachsen,
+  ...landkreiseSachsen,
+  ...landkreiseSchleswigHolstein,
+  ...landkreiseRheinlandPfalz,
+  ...landkreiseBrandenburg,
+  ...landkreiseThueringen,
+  ...landkreiseSachsenAnhalt,
+  ...landkreiseMecklenburgVorpommern,
+  ...landkreiseSaarland,
 ];
 
 // Alle Städte zusammengeführt
@@ -36,6 +66,16 @@ const alleStaedte: Stadt[] = [
   ...staedteHessen,
   ...staedteBerlin,
   ...staedteHamburg,
+  ...staedteNiedersachsen,
+  ...staedteSachsen,
+  ...staedteSchleswigHolstein,
+  ...staedteRheinlandPfalz,
+  ...staedteBrandenburg,
+  ...staedteThueringen,
+  ...staedteSachsenAnhalt,
+  ...staedteMecklenburgVorpommern,
+  ...staedteSaarland,
+  ...staedteBremen,
 ];
 
 // Alle kleinen Gemeinden
@@ -44,6 +84,15 @@ const alleKleinenGemeinden: Record<string, string[]> = {
   ...kleineGemeindenNRW,
   ...kleineGemeindenBaWue,
   ...kleineGemeindenHessen,
+  ...kleineGemeindenNiedersachsen,
+  ...kleineGemeindenSachsen,
+  ...kleineGemeindenSchleswigHolstein,
+  ...kleineGemeindenRheinlandPfalz,
+  ...kleineGemeindenBrandenburg,
+  ...kleineGemeindenThueringen,
+  ...kleineGemeindenSachsenAnhalt,
+  ...kleineGemeindenMecklenburgVorpommern,
+  ...kleineGemeindenSaarland,
 };
 
 // ============================================

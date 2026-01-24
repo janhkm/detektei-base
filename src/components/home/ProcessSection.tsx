@@ -1,33 +1,33 @@
-import { Phone, FileText, Search, CheckCircle } from "lucide-react";
+import { Phone, Users, Handshake, CheckCircle } from "lucide-react";
 
 const steps = [
   {
     step: "01",
     icon: Phone,
-    title: "Kostenlose Erstberatung",
+    title: "Kostenlose Anfrage",
     description:
-      "Schildern Sie uns Ihren Fall vertraulich. Wir analysieren die Situation und beraten Sie zu den Möglichkeiten.",
+      "Schildern Sie uns Ihren Fall vertraulich. Wir benötigen nur die wichtigsten Informationen, um die passende Detektei zu finden.",
   },
   {
     step: "02",
-    icon: FileText,
-    title: "Auftragserteilung",
+    icon: Users,
+    title: "Wir finden den Experten",
     description:
-      "Nach Ihrer Zustimmung erstellen wir einen transparenten Kostenvoranschlag und Auftragsvertrag.",
+      "Basierend auf Ihrem Anliegen und Standort wählen wir die geeignete Partner-Detektei aus unserem Netzwerk.",
   },
   {
     step: "03",
-    icon: Search,
-    title: "Ermittlung & Observation",
+    icon: Handshake,
+    title: "Direkter Kontakt",
     description:
-      "Unsere erfahrenen Detektive führen die Ermittlungen diskret und professionell durch.",
+      "Die Partner-Detektei meldet sich bei Ihnen für eine persönliche Beratung und bespricht das weitere Vorgehen.",
   },
   {
     step: "04",
     icon: CheckCircle,
-    title: "Ergebnisbericht",
+    title: "Professionelle Ermittlung",
     description:
-      "Sie erhalten einen detaillierten, gerichtsverwertbaren Bericht mit allen relevanten Beweisen.",
+      "Die Detektei führt die Ermittlung durch und liefert Ihnen gerichtsverwertbare Ergebnisse.",
   },
 ];
 
@@ -38,14 +38,14 @@ export function ProcessSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-sm font-semibold text-accent-600 uppercase tracking-wider">
-            Unser Ablauf
+            So funktioniert&apos;s
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-primary-900">
-            So arbeiten wir für Sie
+            In 4 Schritten zur richtigen Detektei
           </h2>
           <p className="mt-4 text-lg text-primary-600">
-            Ein strukturierter Prozess für maximale Effizienz und Transparenz –
-            von der ersten Beratung bis zum fertigen Ermittlungsbericht.
+            Unkompliziert und schnell – von der Anfrage bis zum passenden 
+            Ermittler für Ihren Fall.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export function ProcessSection() {
             href="/ablauf"
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary-700 hover:text-primary-900 transition-colors"
           >
-            Mehr zum Ermittlungsablauf erfahren
+            Mehr zum Ablauf erfahren
             <svg
               className="h-4 w-4"
               fill="none"

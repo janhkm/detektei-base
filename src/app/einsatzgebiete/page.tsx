@@ -5,9 +5,9 @@ import { bundeslaender } from "@/data/bundeslaender";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Einsatzgebiete | Detektei deutschlandweit",
+  title: "Einsatzgebiete | Detektei finden deutschlandweit",
   description:
-    "Unsere Detektei ist deutschlandweit im Einsatz. Finden Sie Ihren lokalen Detektiv in allen 16 Bundesländern. Professionelle Ermittlungen vor Ort.",
+    "Detektei in Ihrer Nähe finden. Unser Netzwerk vermittelt geprüfte Partner-Detekteien in allen 16 Bundesländern. Kostenlose Vermittlung.",
 };
 
 export default function EinsatzgebietePage() {
@@ -23,12 +23,12 @@ export default function EinsatzgebietePage() {
               <span>Deutschlandweit im Einsatz</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-white leading-tight">
-              Einsatzgebiete unserer Detektei
+              Detektei finden – deutschlandweit
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Professionelle Ermittlungen in allen 16 Bundesländern. Wählen Sie
-              Ihr Bundesland für lokale Informationen und direkten Kontakt zu
-              unseren Detektiven vor Ort.
+              Finden Sie die passende Detektei in allen 16 Bundesländern. Wählen Sie
+              Ihr Bundesland – wir vermitteln Sie an geprüfte Partner-Detekteien 
+              vor Ort.
             </p>
           </div>
         </div>
@@ -70,9 +70,9 @@ export default function EinsatzgebietePage() {
             Lokale Präsenz, professionelle Ermittlungen
           </h2>
           <p className="text-primary-600 leading-relaxed max-w-2xl mx-auto">
-            Unsere Detektive sind in ganz Deutschland tätig. Durch unser
-            Netzwerk erfahrener Ermittler können wir schnell und diskret vor Ort
-            agieren – ob in Großstädten oder ländlichen Regionen.
+            Detektei Base vermittelt Partner-Detekteien in ganz Deutschland. Durch 
+            unser Netzwerk erfahrener Ermittler finden Sie schnell die passende 
+            Detektei vor Ort – ob in Großstädten oder ländlichen Regionen.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <div className="px-4 py-2 bg-white rounded-lg border border-primary-200">

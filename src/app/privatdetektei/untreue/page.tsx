@@ -18,9 +18,9 @@ import { ProcessTimeline } from "@/components/einsatzgebiete/ProcessTimeline";
 import { generatePrivatdetekteiBreadcrumbSchema } from "@/lib/schemas/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Untreue aufdecken | Fremdgehen beweisen lassen",
+  title: "Untreue aufdecken | Detektei für Fremdgehen finden",
   description:
-    "Verdacht auf Untreue? Unsere Detektive decken Fremdgehen diskret auf. ✓ Gerichtsverwertbare Beweise ✓ 100% Diskretion ✓ Erfahrene Ermittler. Jetzt beraten lassen.",
+    "Verdacht auf Untreue? Finden Sie eine spezialisierte Detektei für diskrete Ermittlungen. ✓ Geprüfte Partner ✓ Gerichtsverwertbare Beweise ✓ Kostenlose Vermittlung.",
 };
 
 const anzeichen = [
@@ -36,43 +36,42 @@ const anzeichen = [
 
 const faqs = [
   {
-    question: "Wie kann ein Detektiv Untreue aufdecken?",
+    question: "Wie kann eine Detektei Untreue aufdecken?",
     answer:
-      "Unsere Detektive führen diskrete Observationen durch, dokumentieren Treffen und Aktivitäten mit Foto- und Videobeweisen und erstellen einen detaillierten Bericht. Alle Ermittlungen erfolgen legal im öffentlichen Raum.",
+      "Professionelle Detektive führen diskrete Observationen durch, dokumentieren Treffen und Aktivitäten mit Foto- und Videobeweisen und erstellen einen detaillierten Bericht. Alle Ermittlungen erfolgen legal im öffentlichen Raum.",
   },
   {
     question: "Sind die Beweise vor Gericht verwertbar?",
     answer:
-      "Ja, alle von uns dokumentierten Beweise sind gerichtsverwertbar, sofern sie legal erhoben wurden. Unsere Berichte werden von Anwälten und Gerichten anerkannt und können in Scheidungsverfahren eingesetzt werden.",
+      "Ja, alle von professionellen Detekteien dokumentierten Beweise sind gerichtsverwertbar, sofern sie legal erhoben wurden. Die Berichte werden von Anwälten und Gerichten anerkannt und können in Scheidungsverfahren eingesetzt werden.",
   },
   {
     question: "Wie lange dauert eine Untreue-Ermittlung?",
     answer:
-      "Die Dauer hängt vom Einzelfall ab. Oft reichen 2-5 Observationstage, um Gewissheit zu erlangen. In manchen Fällen sind längere Ermittlungen nötig. Wir beraten Sie individuell.",
+      "Die Dauer hängt vom Einzelfall ab. Oft reichen 2-5 Observationstage, um Gewissheit zu erlangen. In manchen Fällen sind längere Ermittlungen nötig. Die Detektei berät Sie individuell.",
   },
   {
     question: "Was kostet eine Untreue-Ermittlung?",
     answer:
-      "Die Kosten liegen bei 60-150€ pro Stunde bzw. 800-1.500€ pro Observationstag. Sie erhalten vorab einen transparenten Kostenvoranschlag. Die Erstberatung ist kostenlos.",
+      "Die Kosten liegen typischerweise bei 60-150€ pro Stunde bzw. 800-1.500€ pro Observationstag. Sie erhalten von der Detektei vorab einen transparenten Kostenvoranschlag. Unsere Vermittlung ist kostenlos.",
   },
   {
     question: "Erfährt mein Partner von der Ermittlung?",
     answer:
-      "Nein, absolute Diskretion ist garantiert. Unsere Detektive arbeiten verdeckt und unauffällig. Ihr Partner erfährt nichts von der Observation – weder während noch nach der Ermittlung.",
+      "Nein, absolute Diskretion ist garantiert. Professionelle Detektive arbeiten verdeckt und unauffällig. Ihr Partner erfährt nichts von der Observation – weder während noch nach der Ermittlung.",
   },
   {
-    question: "Was passiert nach der Ermittlung?",
+    question: "Wie finde ich die richtige Detektei für Untreue-Ermittlungen?",
     answer:
-      "Sie erhalten einen ausführlichen Bericht mit allen Beweisen. Wir besprechen die Ergebnisse persönlich mit Ihnen und beraten Sie zu weiteren Schritten, falls gewünscht auch zur Zusammenarbeit mit einem Anwalt.",
+      "Über Detektei Base werden Sie kostenlos an eine geprüfte Partner-Detektei vermittelt, die auf Untreue-Ermittlungen spezialisiert ist. Alle Partner sind IHK-zugelassen und erfahren.",
   },
 ];
 
 const prices = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
+  { service: "Vermittlung über Detektei Base", priceRange: "Kostenlos", duration: "-" },
   { service: "Observation (Stunde)", priceRange: "60-150€", duration: "-" },
   { service: "Observation (Tag)", priceRange: "800-1.500€", duration: "8-12h" },
-  { service: "Ermittlungsbericht", priceRange: "Inklusive", duration: "-" },
-  { service: "Gerichtsverwertbare Dokumentation", priceRange: "Inklusive", duration: "-" },
+  { service: "Ermittlungsbericht", priceRange: "Meist inklusive", duration: "-" },
 ];
 
 export default function UntreuePage() {
@@ -98,15 +97,15 @@ export default function UntreuePage() {
           <div className="mt-8 max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-white/90 backdrop-blur-sm mb-6">
               <Heart className="h-4 w-4 text-accent-400" />
-              <span>Diskrete Ermittlungen</span>
+              <span>Spezialisierte Partner-Detekteien</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-white leading-tight">
-              Untreue aufdecken – Gewissheit durch professionelle Ermittlung
+              Untreue aufdecken – Die richtige Detektei finden
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Der Verdacht auf <strong>Untreue</strong> belastet. Statt
-              selbst zu ermitteln, überlassen Sie die Aufklärung unseren
-              erfahrenen Detektiven. Wir liefern Ihnen diskret und legal
+              Der Verdacht auf <strong>Untreue</strong> belastet. Statt selbst zu 
+              ermitteln, lassen Sie sich an eine <strong>spezialisierte Detektei</strong> 
+              vermitteln. Professionelle Ermittler liefern Ihnen diskret und legal 
               gerichtsverwertbare Beweise.
             </p>
           </div>
@@ -123,7 +122,7 @@ export default function UntreuePage() {
                 items={[
                   "<strong>Methode:</strong> Diskrete Observation mit Foto-/Videodokumentation",
                   "<strong>Dauer:</strong> Meist 2-5 Observationstage für Klarheit",
-                  "<strong>Kosten:</strong> 800-1.500€/Tag, kostenlose Erstberatung",
+                  "<strong>Kosten:</strong> 800-1.500€/Tag, Vermittlung kostenlos",
                   "<strong>Ergebnis:</strong> Gerichtsverwertbarer Ermittlungsbericht",
                 ]}
               />
@@ -152,13 +151,13 @@ export default function UntreuePage() {
                 </div>
               </div>
 
-              {/* Unsere Leistungen */}
+              {/* Wie Detekteien vorgehen */}
               <div className="mt-12">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  So decken wir Untreue auf
+                  So decken Detekteien Untreue auf
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Unsere Detektive führen verdeckte
+                  <strong>Kurz:</strong> Professionelle Detektive führen verdeckte
                   Observationen durch, dokumentieren alle relevanten Aktivitäten
                   und erstellen einen gerichtsverwertbaren Bericht.
                 </p>
@@ -208,10 +207,9 @@ export default function UntreuePage() {
                   Kosten für Untreue-Ermittlungen
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Eine Untreue-Ermittlung kostet zwischen
-                  800-1.500€ pro Observationstag. Die genauen Kosten hängen vom
-                  Umfang ab – Sie erhalten vorab einen transparenten
-                  Kostenvoranschlag.
+                  <strong>Kurz:</strong> Eine Untreue-Ermittlung kostet typischerweise 
+                  800-1.500€ pro Observationstag. Die genauen Kosten vereinbaren Sie 
+                  direkt mit der Detektei – unsere Vermittlung ist für Sie kostenlos.
                 </p>
                 <PriceTable prices={prices} />
               </div>
@@ -252,11 +250,12 @@ export default function UntreuePage() {
 
                 <div className="bg-accent-50 rounded-xl p-6 border border-accent-200">
                   <h3 className="font-display font-bold text-primary-900 mb-2">
-                    Vertraulich & diskret
+                    Kostenlose Vermittlung
                   </h3>
                   <p className="text-sm text-primary-600">
-                    Ihre Anfrage wird zu 100% vertraulich behandelt. Niemand
-                    erfährt von der Ermittlung – weder Ihr Partner noch Dritte.
+                    Wir vermitteln Sie kostenlos an eine geprüfte Detektei, die 
+                    auf Untreue-Ermittlungen spezialisiert ist. Ihre Anfrage wird 
+                    100% vertraulich behandelt.
                   </p>
                 </div>
 
@@ -278,7 +277,7 @@ export default function UntreuePage() {
                     </li>
                     <li>
                       <Link href="/ablauf" className="text-primary-600 hover:text-primary-900 transition-colors">
-                        → Ablauf einer Ermittlung
+                        → So funktioniert die Vermittlung
                       </Link>
                     </li>
                     <li>

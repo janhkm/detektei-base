@@ -14,9 +14,9 @@ import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Personensuche | Vermisste Personen finden lassen",
+  title: "Personensuche | Detektei für Vermisstensuche finden",
   description:
-    "Professionelle Personensuche durch erfahrene Detektive. ✓ Vermisste finden ✓ Schuldner aufspüren ✓ Erbenermittlung ✓ Weltweite Recherche. Jetzt anfragen.",
+    "Finden Sie eine Detektei für professionelle Personensuche. ✓ Vermisste finden ✓ Schuldner aufspüren ✓ Erbenermittlung ✓ Geprüfte Partner. Kostenlose Vermittlung.",
 };
 
 const anwendungsfaelle = [
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "Wie funktioniert eine professionelle Personensuche?",
     answer:
-      "Wir kombinieren Datenbankrecherchen, Befragungen im Umfeld, Observation und internationale Netzwerke. Je nach Fall nutzen wir verschiedene legale Methoden, um den aktuellen Aufenthaltsort zu ermitteln.",
+      "Professionelle Detekteien kombinieren Datenbankrecherchen, Befragungen im Umfeld, Observation und internationale Netzwerke. Je nach Fall werden verschiedene legale Methoden genutzt, um den aktuellen Aufenthaltsort zu ermitteln.",
   },
   {
     question: "Wie lange dauert eine Personensuche?",
@@ -59,19 +59,19 @@ const faqs = [
       "Einfache Adressermittlungen beginnen ab 500€. Komplexe Suchaufträge werden individuell kalkuliert. Sie erhalten vorab einen Kostenvoranschlag mit Erfolgsaussichten.",
   },
   {
-    question: "Können Sie auch Personen im Ausland finden?",
+    question: "Können Detekteien auch Personen im Ausland finden?",
     answer:
-      "Ja, durch unser internationales Netzwerk können wir auch Personen im Ausland aufspüren. Die Möglichkeiten variieren je nach Land und lokalen Gegebenheiten.",
+      "Ja, durch internationale Netzwerke können Detekteien auch Personen im Ausland aufspüren. Die Möglichkeiten variieren je nach Land und lokalen Gegebenheiten.",
   },
   {
-    question: "Was benötigen Sie für die Suche?",
+    question: "Was benötigt die Detektei für die Suche?",
     answer:
-      "Je mehr Informationen Sie haben, desto besser: Name, Geburtsdatum, letzte bekannte Adresse, Fotos, Arbeitgeber, Kontakte. Aber auch mit wenigen Daten können wir oft erfolgreich ermitteln.",
+      "Je mehr Informationen Sie haben, desto besser: Name, Geburtsdatum, letzte bekannte Adresse, Fotos, Arbeitgeber, Kontakte. Aber auch mit wenigen Daten können Detekteien oft erfolgreich ermitteln.",
   },
   {
     question: "Ist die Personensuche legal?",
     answer:
-      "Ja, sofern ein berechtigtes Interesse vorliegt (z.B. Unterhalt, Erbschaft, familiäre Gründe). Wir arbeiten ausschließlich mit legalen Methoden und halten alle Datenschutzbestimmungen ein.",
+      "Ja, sofern ein berechtigtes Interesse vorliegt (z.B. Unterhalt, Erbschaft, familiäre Gründe). Professionelle Detekteien arbeiten ausschließlich mit legalen Methoden und halten alle Datenschutzbestimmungen ein.",
   },
 ];
 
@@ -105,8 +105,8 @@ export default function PersonensuchePage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               Sie suchen einen vermissten Angehörigen, einen Schuldner oder
-              unbekannte Erben? Unsere erfahrenen Detektive finden Personen –
-              <strong> deutschlandweit und international</strong>.
+              unbekannte Erben? Wir vermitteln Sie an spezialisierte Detekteien, 
+              die Personen finden – <strong>deutschlandweit und international</strong>.
             </p>
           </div>
         </div>
@@ -153,12 +153,12 @@ export default function PersonensuchePage() {
               {/* Methoden */}
               <div className="mt-12">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Unsere Methoden der Personensuche
+                  Methoden professioneller Personensuche
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Wir nutzen eine Kombination aus
-                  Datenbankrecherchen, Befragungen, Observation und
-                  internationalen Partnernetzwerken.
+                  <strong>Kurz:</strong> Professionelle Detekteien nutzen eine 
+                  Kombination aus Datenbankrecherchen, Befragungen, Observation 
+                  und internationalen Partnernetzwerken.
                 </p>
                 <ul className="space-y-3">
                   {[

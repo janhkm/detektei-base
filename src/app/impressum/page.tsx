@@ -3,7 +3,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Impressum | Rechtliche Angaben",
-  description: "Impressum und rechtliche Angaben der Detektei gemäß § 5 TMG.",
+  description: "Impressum und rechtliche Angaben der Detektei Base Vermittlungsplattform gemäß § 5 TMG.",
 };
 
 export default function ImpressumPage() {
@@ -21,13 +21,22 @@ export default function ImpressumPage() {
       <section className="py-12 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 prose prose-primary max-w-none">
           <h2>Angaben gemäß § 5 TMG</h2>
+
           <p>
-            <strong>Oliver Peth</strong>
+            <strong>Hemkemeier & Awad GbR</strong>
             <br />
-            Zertifizierter Ermittler & Kriminalist / Profiler
+            Mühlstraße 41
             <br />
+            71229 Leonberg
             <br />
-            [Adresse wird nach Kontaktaufnahme mitgeteilt]
+            Deutschland
+          </p>
+
+          <h3>Vertreten durch</h3>
+          <p>
+            Jan Hemkemeier
+            <br />
+            Adrian Awad
           </p>
 
           <h3>Kontakt</h3>
@@ -37,23 +46,20 @@ export default function ImpressumPage() {
             E-Mail: kontakt@detektei-base.de
           </p>
 
-          <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
-          <p>
-            Berufsbezeichnung: Zertifizierter Ermittler, Kriminalist, Profiler
-            <br />
-            Zulassung nach: § 34a Gewerbeordnung (GewO)
-          </p>
-
-          <h3>Berufshaftpflichtversicherung</h3>
-          <p>
-            Eine Berufshaftpflichtversicherung besteht.
-            <br />
-            <strong>Geltungsraum:</strong> Deutschland
-          </p>
-
           <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
           <p>
-            Oliver Peth
+            Hemkemeier & Awad GbR
+            <br />
+            Mühlstraße 41
+            <br />
+            71229 Leonberg
+          </p>
+
+          <h2>Art der Tätigkeit</h2>
+          <p>
+            Detektei Base ist eine <strong>Vermittlungsplattform</strong>, die 
+            Kontakte zwischen Auftraggebern und selbstständigen Partner-Detekteien 
+            herstellt. Wir erbringen selbst keine Detektiv-Dienstleistungen.
           </p>
 
           <h2>EU-Streitschlichtung</h2>
@@ -103,6 +109,18 @@ export default function ImpressumPage() {
             fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
             verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber
             der Seiten verantwortlich.
+          </p>
+
+          <h2>Haftungshinweis zur Vermittlung</h2>
+          <p>
+            <strong>
+              Wir vermitteln lediglich den Kontakt zu selbstständigen 
+              Partner-Detekteien.
+            </strong>{" "}
+            Für die Leistungen, die von den vermittelten Partner-Detekteien 
+            erbracht werden, übernehmen wir keine Haftung. Die Partner-Detekteien 
+            sind eigenständige Unternehmen und keine Erfüllungsgehilfen von 
+            Detektei Base.
           </p>
 
           <h2>Urheberrecht</h2>

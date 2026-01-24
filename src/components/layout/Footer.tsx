@@ -7,6 +7,16 @@ const footerNavigation = {
     { name: "Wirtschaftsdetektei", href: "/wirtschaftsdetektei" },
     { name: "Einsatzgebiete", href: "/einsatzgebiete" },
   ],
+  ratgeber: [
+    { name: "Privatdetektiv Kosten", href: "/blog/privatdetektiv-kosten-pro-stunde" },
+    { name: "Was darf ein Detektiv?", href: "/blog/privatdetektiv-aufgaben-erklaerung" },
+    { name: "Beweise vor Gericht", href: "/blog/detektiv-beweissicherung-gericht" },
+    { name: "Seriöse Detektei erkennen", href: "/blog/serioese-detektei-erkennen" },
+    { name: "Detektei beauftragen", href: "/blog/detektei-beauftragen-ablauf" },
+    { name: "Fremdgehen beweisen", href: "/blog/fremdgehen-beweisen-erlaubt" },
+    { name: "Mitarbeiter überwachen", href: "/blog/mitarbeiter-ueberwachen-erlaubt" },
+    { name: "Alle Ratgeber →", href: "/blog" },
+  ],
   unternehmen: [
     { name: "Über uns", href: "/ueber-uns" },
     { name: "Blog", href: "/blog" },
@@ -44,13 +54,13 @@ export function Footer() {
                     Detektei Base
                   </span>
                   <span className="text-xs text-primary-400">
-                    Zertifizierter Ermittler
+                    Detektei-Vermittlung
                   </span>
                 </div>
               </Link>
               <p className="mt-4 text-sm text-primary-300 leading-relaxed">
-                Oliver Peth – Zertifizierter Ermittler, Kriminalist und Profiler.
-                Diskrete Ermittlungen mit gerichtsverwertbaren Beweisen.
+                Ihr Netzwerk für professionelle Ermittlungen. Wir vermitteln Sie 
+                an geprüfte Partner-Detekteien – diskret und zuverlässig.
               </p>
               <address className="mt-6 space-y-3 not-italic">
                 <a
@@ -77,13 +87,30 @@ export function Footer() {
             </div>
 
             {/* Navigation Links */}
-            <nav className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-3" aria-label="Footer-Navigation">
+            <nav className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-3" aria-label="Footer-Navigation">
               <div>
                 <h3 className="text-sm font-semibold text-white uppercase tracking-wider" id="footer-leistungen">
                   Leistungen
                 </h3>
                 <ul className="mt-4 space-y-3" aria-labelledby="footer-leistungen">
                   {footerNavigation.leistungen.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="text-sm hover:text-white transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-white uppercase tracking-wider" id="footer-ratgeber">
+                  Ratgeber
+                </h3>
+                <ul className="mt-4 space-y-3" aria-labelledby="footer-ratgeber">
+                  {footerNavigation.ratgeber.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}

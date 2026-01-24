@@ -65,7 +65,7 @@ export function MobileCTA() {
 
         {/* Trust indicator */}
         <p className="text-center text-xs text-primary-300 mt-2">
-          Oliver Peth – Zertifizierter Ermittler
+          Geprüfte Partner-Detekteien deutschlandweit
         </p>
       </div>
     </div>

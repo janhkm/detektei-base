@@ -18,11 +18,22 @@ import {
   getBundeslandMetaDescription,
 } from "@/lib/content-variants";
 
+// ============================================================================
+// ISR KONFIGURATION
+// ============================================================================
+
+// Alle Bundesländer werden statisch generiert (nur 16 Seiten)
+export const dynamicParams = true;
+export const revalidate = 2592000; // 30 Tage in Sekunden
+
+const SITE_URL = "https://detektei-base.de";
+
 interface PageProps {
   params: Promise<{ bundesland: string }>;
 }
 
 export async function generateStaticParams() {
+  // Alle 16 Bundesländer werden bei Build generiert
   return getAllBundeslandParams();
 }
 
@@ -34,13 +45,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const title = getBundeslandTitle(data.bundesland);
   const description = getBundeslandMetaDescription(data.bundesland);
 
+  const pageUrl = `/einsatzgebiete/bundesland/${slug}`;
+
   return {
     title,
     description,
+    alternates: {
+      canonical: `${SITE_URL}${pageUrl}`,
+    },
     openGraph: {
       title,
       description,
-      url: `/einsatzgebiete/bundesland/${slug}`,
+      url: pageUrl,
+      type: "website",
+      siteName: "Detektei Base",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }
@@ -93,7 +116,7 @@ export default async function BundeslandPage({ params }: PageProps) {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed intro-text">
               Sie suchen eine <strong>Detektei in {bundesland.name}</strong>?
-              Unsere erfahrenen Privatdetektive unterstützen Sie bei allen Fällen der
+              Wir vermitteln Sie an geprüfte Partner-Detekteien für alle Fälle der
               Privatdetektei und Wirtschaftsdetektei – diskret, professionell
               und mit gerichtsverwertbarer Beweissicherung.
             </p>

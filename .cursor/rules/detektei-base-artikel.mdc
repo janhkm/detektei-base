@@ -307,20 +307,179 @@ Format: JPG oder PNG, werden automatisch optimiert.
 
 ## 11. Queue aktualisieren
 
-Nach Veröffentlichung in `content/topics/queue.json` das Keyword auf `"used": true` setzen.
+Nach Veröffentlichung in `content/topics/queue.json` den Status auf `"status": "published"` setzen.
 
 ---
 
-## Zusammenfassung: Artikel-Workflow
+## 12. Konkurrenzanalyse VOR dem Schreiben (PFLICHT!)
+
+**Bevor** du mit dem Artikel beginnst, analysiere die Top 5 Google-Ergebnisse:
+
+### Schritt 1: Google-Suche durchführen
+Suche das Haupt-Keyword und notiere:
+- Welche H2-Überschriften haben die Top-Ergebnisse?
+- Welche Themen werden abgedeckt?
+- Wie lang sind die Artikel? (Wortanzahl)
+- Welche FAQs erscheinen im "People Also Ask"?
+
+### Schritt 2: Content Gap finden
+Identifiziere, was die Konkurrenz NICHT abdeckt:
+- Fehlende Unterthemen
+- Veraltete Informationen
+- Keine lokalen Bezüge
+- Fehlende Praxisbeispiele
+- Keine konkreten Zahlen/Preise
+
+### Schritt 3: Besser machen
+Dein Artikel MUSS:
+- Alle wichtigen H2s der Konkurrenz abdecken
+- PLUS die Content Gaps füllen
+- PLUS mehr FAQs haben
+- PLUS aktuellere Informationen (2026)
+- PLUS konkretere Handlungsempfehlungen
+
+### People Also Ask (PAA) Integration
+Die PAA-Fragen aus Google MÜSSEN als FAQs in den Artikel:
+
+```yaml
+# Beispiel: Keyword "Privatdetektiv Kosten"
+# PAA zeigt: "Wie viel kostet eine Stunde Detektiv?"
+faqs:
+  - question: "Wie viel kostet eine Stunde Detektiv?"
+    answer: "Ein Detektiv kostet 50-150€ pro Stunde..."
+```
+
+---
+
+## 13. CTA-Bibliothek (je nach Artikel-Intent verwenden)
+
+### Für transaktionale Artikel (hohe Kaufabsicht):
+```mdx
+**Jetzt kostenlose Erstberatung anfordern:** Rufen Sie uns an unter 
+[Telefonnummer] oder nutzen Sie unser [Kontaktformular](/kontakt). 
+Innerhalb von 24 Stunden melden wir uns diskret zurück – garantiert.
+```
+
+### Für informationale Artikel (Recherche-Phase):
+```mdx
+**Haben Sie noch Fragen?** Unsere Experten beraten Sie kostenlos und 
+unverbindlich zu Ihrem individuellen Fall. [Zur kostenlosen Erstberatung →](/kontakt)
+```
+
+### Für Kosten-Artikel:
+```mdx
+**Transparente Kostenschätzung gewünscht?** Schildern Sie uns Ihren Fall 
+und erhalten Sie innerhalb von 24 Stunden eine unverbindliche Einschätzung 
+der voraussichtlichen Kosten. [Jetzt Anfrage stellen →](/kontakt)
+```
+
+### Für rechtliche Artikel:
+```mdx
+**Unsicher, ob Ihr Fall rechtlich möglich ist?** In einer kostenlosen 
+Erstberatung prüfen wir die rechtlichen Rahmenbedingungen für Ihre 
+Situation. [Unverbindlich anfragen →](/kontakt)
+```
+
+### Für emotionale Themen (Untreue, Stalking):
+```mdx
+**Sie sind nicht allein.** Wir behandeln jeden Fall mit höchster Diskretion 
+und Einfühlungsvermögen. Ein erstes Gespräch ist kostenlos und völlig 
+unverbindlich. [Vertraulich Kontakt aufnehmen →](/kontakt)
+```
+
+### Für B2B/Wirtschaftsthemen:
+```mdx
+**Schützen Sie Ihr Unternehmen.** Lassen Sie uns Ihren Fall analysieren 
+und ein maßgeschneidertes Konzept entwickeln. Die Erstberatung für 
+Geschäftskunden ist selbstverständlich kostenlos. [Jetzt Termin vereinbaren →](/kontakt)
+```
+
+---
+
+## 14. LSI-Keywords dynamisch ermitteln
+
+Für jedes Thema MÜSSEN 8-12 LSI-Keywords recherchiert und eingebaut werden.
+
+### Methode 1: Google Suggest
+Tippe das Keyword in Google ein und notiere die Autocomplete-Vorschläge:
+```
+"Privatdetektiv" → Privatdetektiv Kosten, Privatdetektiv beauftragen, 
+Privatdetektiv Observation, Privatdetektiv legal...
+```
+
+### Methode 2: "Verwandte Suchanfragen"
+Scrolle auf der Google-Ergebnisseite nach unten zu "Verwandte Suchanfragen".
+
+### Methode 3: Semantische Begriffe
+Überlege: Welche Begriffe würde jemand AUCH verwenden?
+
+| Hauptkeyword | Semantische Alternativen |
+|--------------|-------------------------|
+| Privatdetektiv | Ermittler, Detektei, Schnüffler, Privat-Ermittler |
+| Observation | Überwachung, Beschattung, Verfolgung, Personenüberwachung |
+| Untreue | Fremdgehen, Ehebruch, Affäre, Seitensprung, Betrug |
+| Beweissicherung | Dokumentation, Nachweis, Beweis, gerichtsfest |
+| Kosten | Preise, Gebühren, Honorar, Stundensatz, Tagessatz |
+
+### LSI-Keywords im Artikel verteilen
+- **2-3x** im Fließtext natürlich einbauen
+- **1x** in einer H2 oder H3 Überschrift
+- **1x** in einer FAQ-Frage
+- Nicht übertreiben! Der Text muss natürlich klingen.
+
+---
+
+## 15. Interne Verlinkungsstrategie (Pillar-Cluster)
+
+### Prinzip verstehen:
+- **Pillar Articles** = Umfassende Hauptartikel (3000+ Wörter)
+- **Cluster Articles** = Spezifischere Artikel, die auf den Pillar verlinken
+
+### Verlinkungsregeln:
+1. Jeder Cluster-Artikel MUSS auf seinen Pillar verlinken
+2. Der Pillar MUSS auf alle seine Cluster verlinken
+3. Cluster untereinander dürfen verlinken, wenn thematisch sinnvoll
+4. Service-Seiten (`/privatdetektei/*`, `/wirtschaftsdetektei/*`) immer verlinken
+
+### Beispiel Pillar-Cluster:
+```
+PILLAR: "Was kostet ein Privatdetektiv?" (/blog/privatdetektiv-kosten)
+  ├── CLUSTER: "Detektei Pauschalpreis" → verlinkt auf Pillar
+  ├── CLUSTER: "Detektivkosten steuerlich absetzbar" → verlinkt auf Pillar
+  ├── CLUSTER: "Detektiv Kosten Ehebruch" → verlinkt auf Pillar + /privatdetektei/untreue
+  └── CLUSTER: "Detektei Kosten sparen" → verlinkt auf Pillar
+```
+
+### Link-Anker-Texte variieren:
+```mdx
+# SCHLECHT (immer gleicher Ankertext):
+Mehr zu [Privatdetektiv Kosten](/blog/privatdetektiv-kosten)...
+Erfahren Sie mehr über [Privatdetektiv Kosten](/blog/privatdetektiv-kosten)...
+
+# GUT (variierte Ankertexte):
+Mehr zu den [Kosten eines Privatdetektivs](/blog/privatdetektiv-kosten)...
+In unserem [Kostenratgeber](/blog/privatdetektiv-kosten) erklären wir...
+Die [Preise für Detektei-Leistungen](/blog/privatdetektiv-kosten) variieren...
+```
+
+---
+
+## Zusammenfassung: Erweiterter Artikel-Workflow
 
 ```
-1. Thema aus Queue wählen
-2. Artikel schreiben (SEO-optimiert, FAQs, interne Links)
-3. KeyTakeaways-Box am Anfang einfügen (LLM-Optimierung)
-4. Externe Links zu autoritativen Quellen einbauen
-5. ⚠️ EXTERNE LINKS VALIDIEREN (curl Status 200 prüfen!)
-6. Quellenverzeichnis im Frontmatter ergänzen
-7. Hero-Bild generieren
-8. WebP optimieren
-9. Queue aktualisieren
+1. Thema aus Queue wählen (Priorität 1 zuerst!)
+2. ⚠️ KONKURRENZANALYSE durchführen (Top 5 + PAA)
+3. LSI-Keywords recherchieren (8-12 Begriffe)
+4. Pillar-Cluster Beziehung prüfen (wohin verlinken?)
+5. Artikel schreiben nach articleType-Struktur (siehe support-artikel.mdc)
+6. KeyTakeaways-Box am Anfang einfügen
+7. "Kurz:" Definitionen nach jeder H2
+8. Interne Links setzen (Pillar-Cluster + Service-Seiten)
+9. Externe Links zu autoritativen Quellen einbauen
+10. ⚠️ EXTERNE LINKS VALIDIEREN (curl Status 200 prüfen!)
+11. CTA aus Bibliothek wählen (passend zum Intent)
+12. FAQs mit PAA-Fragen ergänzen
+13. Quellenverzeichnis im Frontmatter ergänzen
+14. Hero-Bild generieren + WebP optimieren
+15. Queue Status auf "published" setzen
 ```

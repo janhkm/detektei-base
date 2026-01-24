@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Calendar, Clock, Tag, ArrowLeft, ArrowRight } from "lucide-react";
+import { Calendar, Clock, Tag, ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { KeyTakeaways } from "@/components/ui/KeyTakeaways";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { CTABox } from "@/components/ui/CTABox";
+import { MDXContent } from "@/components/mdx/MDXContent";
 import { getAllPostSlugs, getPostBySlug, getRelatedPosts } from "@/lib/blog";
 import { generateBlogBreadcrumbSchema } from "@/lib/schemas/breadcrumbs";
+// Neue Imports für Pillar-Cluster-Verlinkung
+import { RelatedArticles, PillarBacklink } from "@/components/blog";
+import { ClusterLinks } from "@/components/blog/ClusterLinks";
+import { ServiceLinks } from "@/components/blog/ServiceLinks";
+import { isPillar, isCluster, getPillarForCluster, getClustersForPillar } from "@/lib/pillar-cluster";
+import { getCategorySlug } from "@/lib/blog";
+import { getBlogBreadcrumbs } from "@/lib/internal-linking";
+import { SEO_CONFIG } from "@/lib/metadata";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -28,17 +36,30 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const pageUrl = `/blog/${slug}`;
+  const fullUrl = `${SEO_CONFIG.siteUrl}${pageUrl}`;
+
   return {
     title: post.frontmatter.title,
     description: post.frontmatter.description,
     keywords: post.frontmatter.tags.join(", "),
+    alternates: {
+      canonical: fullUrl,
+    },
     openGraph: {
       title: post.frontmatter.title,
       description: post.frontmatter.description,
+      url: fullUrl,
       type: "article",
       publishedTime: post.frontmatter.date,
       modifiedTime: post.frontmatter.updatedAt || post.frontmatter.date,
       tags: post.frontmatter.tags,
+      siteName: SEO_CONFIG.siteName,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
     },
   };
 }
@@ -69,30 +90,18 @@ export default async function BlogPostPage({ params }: PageProps) {
   const relatedPosts = getRelatedPosts(slug, 3);
   const readingTime = estimateReadingTime(post.content);
 
-  // Einfaches MDX-Rendering (ohne komplexe MDX-Features)
-  // Für vollständiges MDX-Rendering wäre @next/mdx oder mdx-bundler nötig
-  const contentHtml = post.content
-    .split("\n")
-    .map((line) => {
-      // Überschriften
-      if (line.startsWith("## ")) {
-        return `<h2 class="text-2xl font-display font-bold text-primary-900 mt-10 mb-4">${line.slice(3)}</h2>`;
-      }
-      if (line.startsWith("### ")) {
-        return `<h3 class="text-xl font-display font-semibold text-primary-900 mt-8 mb-3">${line.slice(4)}</h3>`;
-      }
-      // Leere Zeilen
-      if (line.trim() === "") {
-        return "";
-      }
-      // Listen
-      if (line.startsWith("- ")) {
-        return `<li class="ml-4">${line.slice(2)}</li>`;
-      }
-      // Normaler Text
-      return `<p class="text-primary-600 mb-4 leading-relaxed">${line}</p>`;
-    })
-    .join("\n");
+  // Pillar-Cluster Awareness
+  const articleIsPillar = isPillar(slug);
+  const articleIsCluster = isCluster(slug);
+  const parentPillar = articleIsCluster ? getPillarForCluster(slug) : null;
+  const clusterArticles = articleIsPillar ? getClustersForPillar(slug) : [];
+
+  // Pillar-aware Breadcrumbs
+  const pillarBreadcrumbs = getBlogBreadcrumbs(slug);
+  const breadcrumbItems = [
+    ...pillarBreadcrumbs,
+    { label: post.frontmatter.title, href: `/blog/${slug}` },
+  ];
 
   const breadcrumbSchema = generateBlogBreadcrumbSchema(post.frontmatter.title, slug);
 
@@ -108,8 +117,8 @@ export default async function BlogPostPage({ params }: PageProps) {
     datePublished: post.frontmatter.date,
     dateModified: post.frontmatter.updatedAt || post.frontmatter.date,
     author: {
-      "@type": "Person",
-      name: "Oliver Peth",
+      "@type": "Organization",
+      name: "Detektei Base",
       url: "https://detektei-base.de/ueber-uns",
     },
     publisher: {
@@ -168,17 +177,21 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 py-16 lg:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs
-            items={[
-              { label: "Blog", href: "/blog" },
-              { label: post.frontmatter.title, href: `/blog/${slug}` },
-            ]}
-          />
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="mt-8">
             <div className="flex flex-wrap items-center gap-4 text-sm text-primary-300 mb-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full text-white font-medium">
+              <Link
+                href={`/blog/kategorie/${getCategorySlug(post.frontmatter.category)}`}
+                className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full text-white font-medium hover:bg-white/20 transition-colors"
+              >
                 {post.frontmatter.category}
-              </span>
+              </Link>
+              {articleIsPillar && (
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-accent-500/20 rounded-full text-accent-200 font-medium">
+                  <BookOpen className="h-3.5 w-3.5" />
+                  Übersichtsartikel
+                </span>
+              )}
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-4 w-4" />
                 {formatDate(post.frontmatter.date)}
@@ -206,22 +219,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Main Content */}
             <article className="lg:col-span-2">
-              {/* Key Takeaways wenn vorhanden */}
-              {post.frontmatter.keyword && (
-                <KeyTakeaways
-                  items={[
-                    `<strong>Thema:</strong> ${post.frontmatter.keyword}`,
-                    `<strong>Kategorie:</strong> ${post.frontmatter.category}`,
-                    `<strong>Aktualisiert:</strong> ${formatDate(post.frontmatter.updatedAt || post.frontmatter.date)}`,
-                  ]}
-                />
-              )}
-
-              {/* Artikel-Inhalt */}
-              <div
-                className="mt-8 prose prose-primary max-w-none"
-                dangerouslySetInnerHTML={{ __html: contentHtml }}
-              />
+              {/* MDX Content mit echtem Rendering */}
+              <MDXContent source={post.content} />
 
               {/* FAQs wenn vorhanden */}
               {post.frontmatter.faqs && post.frontmatter.faqs.length > 0 && (
@@ -230,6 +229,42 @@ export default async function BlogPostPage({ params }: PageProps) {
                     Häufige Fragen
                   </h2>
                   <FAQAccordion faqs={post.frontmatter.faqs} />
+                </div>
+              )}
+
+              {/* Cluster-Links für Pillar-Artikel */}
+              {articleIsPillar && clusterArticles.length > 0 && (
+                <div className="mt-12">
+                  <ClusterLinks
+                    pillarSlug={slug}
+                    title="Vertiefende Artikel zu diesem Thema"
+                    variant="cards"
+                  />
+                </div>
+              )}
+
+              {/* Pillar-Backlink für Cluster-Artikel */}
+              {articleIsCluster && parentPillar && (
+                <div className="mt-12 p-6 bg-primary-50 rounded-xl border border-primary-100">
+                  <p className="text-sm text-primary-600 mb-3">
+                    Dieser Artikel ist Teil unserer Artikelserie:
+                  </p>
+                  <Link
+                    href={parentPillar.pillarUrl}
+                    className="group flex items-center gap-3 p-4 bg-white rounded-lg border border-primary-200 hover:border-primary-300 hover:shadow-sm transition-all"
+                  >
+                    <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center group-hover:bg-primary-200">
+                      <BookOpen className="h-5 w-5 text-primary-700" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <span className="font-semibold text-primary-900 group-hover:text-primary-700 line-clamp-1">
+                        {parentPillar.pillarTitle}
+                      </span>
+                      <span className="block text-sm text-primary-500">
+                        Zum Hauptartikel →
+                      </span>
+                    </div>
+                  </Link>
                 </div>
               )}
 
@@ -292,11 +327,25 @@ export default async function BlogPostPage({ params }: PageProps) {
               <div className="sticky top-24 space-y-6">
                 <CTABox variant="dark" />
 
-                {/* Verwandte Artikel */}
-                {relatedPosts.length > 0 && (
+                {/* Service-Links basierend auf Kategorie */}
+                <ServiceLinks
+                  category={post.frontmatter.category}
+                  variant="sidebar"
+                  maxLinks={3}
+                />
+
+                {/* Pillar-Cluster-aware Related Articles */}
+                <RelatedArticles
+                  currentSlug={slug}
+                  category={post.frontmatter.category}
+                  maxArticles={4}
+                />
+
+                {/* Fallback: Standard Related Posts wenn keine Pillar-Cluster Links */}
+                {!articleIsPillar && !articleIsCluster && relatedPosts.length > 0 && (
                   <div className="bg-primary-50 rounded-xl p-6 border border-primary-100">
                     <h3 className="font-display font-bold text-primary-900 mb-4">
-                      Verwandte Artikel
+                      Weitere Artikel
                     </h3>
                     <ul className="space-y-4">
                       {relatedPosts.map((related) => (

@@ -1,10 +1,10 @@
 // ============================================
 // HOMEPAGE SCHEMA - Optimiert für SEO
+// Vermittlungsplattform für Detekteien
 // ============================================
 
 const SITE_URL = "https://detektei-base.de";
-const COMPANY_NAME = "Detektei Oliver Peth";
-const OWNER_NAME = "Oliver Peth";
+const COMPANY_NAME = "Detektei Base";
 const PHONE = "+49 176 66918653";
 const EMAIL = "kontakt@detektei-base.de";
 
@@ -21,16 +21,12 @@ export function generateOrganizationSchema() {
     logo: {
       "@type": "ImageObject",
       "@id": `${SITE_URL}/#logo`,
-      url: `${SITE_URL}/images/logo.png`,
-      width: 300,
-      height: 60,
+      url: `${SITE_URL}/favicon.svg`,
+      width: 512,
+      height: 512,
     },
-    image: `${SITE_URL}/images/oliver-peth-detektiv.jpg`,
-    founder: {
-      "@type": "Person",
-      name: OWNER_NAME,
-      jobTitle: "Zertifizierter Ermittler, Kriminalist & Profiler",
-    },
+    description:
+      "Detektei Base vermittelt Sie an geprüfte Partner-Detekteien in ganz Deutschland. Unser Netzwerk aus IHK-zugelassenen Ermittlern garantiert Qualität und Diskretion.",
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -62,19 +58,13 @@ export function generateLocalBusinessSchema() {
     "@type": ["LocalBusiness", "ProfessionalService"],
     "@id": `${SITE_URL}/#localbusiness`,
     name: COMPANY_NAME,
-    alternateName: ["Detektei Peth", "Privatdetektiv Oliver Peth"],
+    alternateName: ["Detektei Vermittlung", "Detektiv finden"],
     description:
-      "Oliver Peth – Zertifizierter Ermittler, Kriminalist und Profiler. Diskrete Privatdetektei und Wirtschaftsdetektei mit gerichtsverwertbarer Beweissicherung. Deutschlandweit im Einsatz.",
+      "Detektei Base ist Ihre zentrale Anlaufstelle für professionelle Ermittlungen. Wir vermitteln Sie an geprüfte Partner-Detekteien mit IHK-Zulassung – schnell, diskret und deutschlandweit.",
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
-    priceRange: "€€-€€€",
-    image: `${SITE_URL}/images/oliver-peth-detektiv.jpg`,
-    founder: {
-      "@type": "Person",
-      name: OWNER_NAME,
-      jobTitle: "Zertifizierter Ermittler, Kriminalist & Profiler",
-    },
+    priceRange: "Kostenlose Vermittlung",
     areaServed: {
       "@type": "Country",
       name: "Deutschland",
@@ -104,52 +94,44 @@ export function generateLocalBusinessSchema() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Detektiv-Dienstleistungen",
+      name: "Vermittlung von Detektiv-Dienstleistungen",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Privatdetektei",
+            name: "Vermittlung Privatdetektei",
             description:
-              "Untreue-Ermittlungen, Personensuche, Sorgerechtsstreitigkeiten",
+              "Vermittlung an geprüfte Privatdetekteien für Untreue-Ermittlungen, Personensuche, Sorgerecht",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Wirtschaftsdetektei",
+            name: "Vermittlung Wirtschaftsdetektei",
             description:
-              "Mitarbeiterüberprüfung, Betrugsaufklärung, Krankfeiermissbrauch",
+              "Vermittlung an spezialisierte Wirtschaftsdetekteien für Mitarbeiterüberprüfung, Betrugsaufklärung",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Observation",
-            description: "Professionelle Observationen zur Beweissicherung",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Beweissicherung",
-            description: "Gerichtsverwertbare Dokumentation und Beweisführung",
+            name: "Deutschlandweites Netzwerk",
+            description:
+              "Zugang zu über 50 geprüften Partner-Detekteien in allen Bundesländern",
           },
         },
       ],
     },
     knowsAbout: [
+      "Detektei Vermittlung",
+      "Privatdetektiv finden",
+      "Wirtschaftsdetektei",
       "Observation",
       "Personensuche",
       "Beweissicherung",
-      "Kriminalistik",
-      "Profiling",
-      "Wirtschaftsermittlungen",
-      "Untreue-Ermittlungen",
     ],
     parentOrganization: {
       "@id": `${SITE_URL}/#organization`,
@@ -167,9 +149,9 @@ export function generateWebSiteSchema() {
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
     name: COMPANY_NAME,
-    alternateName: "Detektei Peth",
+    alternateName: "Detektei finden",
     description:
-      "Privatdetektiv und Wirtschaftsdetektei – Zertifizierter Ermittler Oliver Peth",
+      "Vermittlungsplattform für geprüfte Detekteien in Deutschland",
     publisher: {
       "@id": `${SITE_URL}/#organization`,
     },
@@ -196,9 +178,9 @@ export function generateWebPageSchema() {
     "@type": "WebPage",
     "@id": `${SITE_URL}/#webpage`,
     url: SITE_URL,
-    name: "Privatdetektiv & Detektei Oliver Peth | Zertifizierter Ermittler Deutschland",
+    name: "Detektei finden | Geprüfte Privatdetektive deutschlandweit | Detektei Base",
     description:
-      "Oliver Peth – Zertifizierter Ermittler, Kriminalist und Profiler. Diskrete Privatdetektei und Wirtschaftsdetektei mit gerichtsverwertbarer Beweissicherung. Deutschlandweit.",
+      "Finden Sie sofort die richtige Detektei für Ihren Fall. Unser Netzwerk aus geprüften Partner-Detekteien vermittelt Sie diskret und schnell an zertifizierte Ermittler in Ihrer Region.",
     inLanguage: "de-DE",
     isPartOf: {
       "@id": `${SITE_URL}/#website`,
@@ -208,10 +190,6 @@ export function generateWebPageSchema() {
     },
     datePublished: "2024-01-01",
     dateModified: today,
-    primaryImageOfPage: {
-      "@type": "ImageObject",
-      url: `${SITE_URL}/images/oliver-peth-detektiv.jpg`,
-    },
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", ".hero-description", ".key-takeaways"],
@@ -226,34 +204,34 @@ export function generateWebPageSchema() {
 export function generateHomepageFAQSchema() {
   const faqs = [
     {
-      question: "Was kostet eine Detektei?",
+      question: "Was kostet die Vermittlung einer Detektei?",
       answer:
-        "Die Kosten für eine Detektei variieren je nach Auftragsart und -umfang. Stundensätze liegen typischerweise zwischen 50-150€. Bei Observationen sollten Sie mit Tageskosten von 800-1.500€ rechnen. Wir erstellen Ihnen vorab einen transparenten Kostenvoranschlag.",
+        "Die Vermittlung über Detektei Base ist für Sie komplett kostenfrei. Wir finanzieren uns über Vermittlungsprovisionen der Partner-Detekteien. Die Kosten für die eigentliche Detektiv-Dienstleistung werden direkt mit der vermittelten Detektei vereinbart.",
     },
     {
-      question: "Sind die Beweise einer Detektei vor Gericht verwertbar?",
+      question: "Wie finde ich eine seriöse Detektei?",
       answer:
-        "Ja, professionell gesicherte Beweise sind vor Gericht verwertbar, sofern sie legal beschafft wurden. Das gilt für Observationsberichte, Fotos aus dem öffentlichen Raum und Zeugenaussagen. Unsere Detektive sind geschult, Beweise gerichtsfest zu dokumentieren.",
+        "Über Detektei Base werden Sie nur an geprüfte Partner-Detekteien vermittelt. Alle Partner sind IHK-zugelassen nach §34a GewO, haben eine Berufshaftpflichtversicherung und sind zur Einhaltung der DSGVO verpflichtet. So sparen Sie sich die aufwendige Recherche.",
     },
     {
-      question: "Wie läuft eine Ermittlung ab?",
+      question: "Wie schnell werde ich an eine Detektei vermittelt?",
       answer:
-        "Nach einer kostenlosen Erstberatung analysieren wir Ihren Fall und erstellen einen Ermittlungsplan. Nach Auftragserteilung beginnen unsere Detektive mit der Arbeit. Sie erhalten regelmäßige Updates und am Ende einen detaillierten Abschlussbericht.",
+        "In der Regel erhalten Sie innerhalb von 24 Stunden (an Werktagen) einen Rückruf von einer passenden Partner-Detektei. In dringenden Fällen ist oft eine noch schnellere Vermittlung möglich.",
     },
     {
-      question: "Wie diskret arbeitet eine Detektei?",
+      question: "Werden meine Daten vertraulich behandelt?",
       answer:
-        "Diskretion ist das Fundament unserer Arbeit. Alle Informationen werden streng vertraulich behandelt. Unsere Detektive arbeiten unauffällig und sind auf verdeckte Ermittlungen spezialisiert. Ihre Identität und der Auftrag bleiben stets geschützt.",
+        "Ja, absolut. Wir behandeln alle Anfragen streng vertraulich. Ihre Daten werden nur an die eine ausgewählte Partner-Detektei weitergegeben, nicht an mehrere. Details finden Sie in unserer Datenschutzerklärung.",
     },
     {
-      question: "In welchen Regionen sind Sie tätig?",
+      question: "In welchen Regionen vermitteln Sie Detekteien?",
       answer:
-        "Wir sind deutschlandweit im Einsatz und können bei Bedarf auch internationale Ermittlungen durchführen. Durch unser Netzwerk aus erfahrenen Detektiven können wir schnell in jeder Region aktiv werden.",
+        "Unser Netzwerk umfasst über 50 Partner-Detekteien in ganz Deutschland. Egal ob in München, Berlin, Hamburg oder ländlichen Regionen – wir finden eine geeignete Detektei in Ihrer Nähe.",
     },
     {
-      question: "Wie schnell kann eine Ermittlung beginnen?",
+      question: "Kann ich auch direkt eine Detektei kontaktieren?",
       answer:
-        "In dringenden Fällen können wir innerhalb von 24 Stunden mit den Ermittlungen starten. In der Regel beginnen wir innerhalb weniger Tage nach Auftragserteilung. Kontaktieren Sie uns für eine schnelle Erstberatung.",
+        "Natürlich. Detektei Base ist ein freiwilliges Angebot. Der Vorteil unserer Vermittlung: Sie sparen Zeit bei der Suche und können sicher sein, dass unsere Partner geprüft und qualifiziert sind.",
     },
   ];
 
@@ -272,32 +250,6 @@ export function generateHomepageFAQSchema() {
 }
 
 // ============================================
-// PERSON SCHEMA für Oliver Peth
-// ============================================
-
-export function generatePersonSchema() {
-  return {
-    "@type": "Person",
-    "@id": `${SITE_URL}/#person`,
-    name: OWNER_NAME,
-    jobTitle: "Zertifizierter Ermittler, Kriminalist & Profiler",
-    description:
-      "Oliver Peth ist zertifizierter Ermittler, Kriminalist und Profiler mit IHK-Zulassung nach §34a GewO. Er leitet die Detektei Peth und ist deutschlandweit im Einsatz.",
-    image: `${SITE_URL}/images/oliver-peth-detektiv.jpg`,
-    worksFor: {
-      "@id": `${SITE_URL}/#organization`,
-    },
-    knowsAbout: [
-      "Kriminalistik",
-      "Profiling",
-      "Observation",
-      "Beweissicherung",
-      "Ermittlungen",
-    ],
-  };
-}
-
-// ============================================
 // COMPLETE HOMEPAGE GRAPH SCHEMA
 // ============================================
 
@@ -310,7 +262,6 @@ export function generateHomepageSchema() {
       generateWebPageSchema(),
       generateLocalBusinessSchema(),
       generateHomepageFAQSchema(),
-      generatePersonSchema(),
     ],
   };
 }

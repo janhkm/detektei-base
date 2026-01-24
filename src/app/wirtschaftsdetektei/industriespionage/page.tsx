@@ -7,9 +7,9 @@ import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Industriespionage | Spionageabwehr & Informationsschutz",
+  title: "Industriespionage | Detektei für Spionageabwehr finden",
   description:
-    "Schutz vor Industriespionage: ✓ Spionageabwehr ✓ Lauschangriff-Detektion ✓ Informationsschutz. Sichern Sie Ihre Geschäftsgeheimnisse.",
+    "Finden Sie eine Detektei zum Schutz vor Industriespionage. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Spionageabwehr ✓ Informationsschutz.",
 };
 
 const bedrohungen = [
@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "Was können Sie gegen Industriespionage tun?",
     answer:
-      "Wir bieten: Lauschabwehr (Sweeping), Sicherheitsaudits, Überprüfung von Mitarbeitern und Geschäftspartnern, Ermittlung bei Verdacht auf Informationsabfluss und Beratung zu Schutzmaßnahmen.",
+      "Detekteien bieten: Lauschabwehr (Sweeping), Sicherheitsaudits, Überprüfung von Mitarbeitern und Geschäftspartnern, Ermittlung bei Verdacht auf Informationsabfluss und Beratung zu Schutzmaßnahmen.",
   },
   {
     question: "Was ist Lauschabwehr (Sweeping)?",
@@ -142,13 +142,13 @@ export default function IndustriespionagePage() {
                 </div>
               </div>
 
-              {/* Unsere Leistungen */}
+              {/* Leistungen */}
               <div className="mt-12">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Unsere Schutzmaßnahmen
+                  Schutzmaßnahmen von Detekteien
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Wir bieten technische Abwehr,
+                  <strong>Kurz:</strong> Detekteien bieten technische Abwehr,
                   Sicherheitsberatung und Ermittlungen bei konkretem Verdacht.
                 </p>
                 <ul className="space-y-3">

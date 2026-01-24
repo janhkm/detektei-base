@@ -14,22 +14,20 @@ import { generateHomepageSchema } from "@/lib/schemas/homepage";
 // ============================================
 
 export const metadata: Metadata = {
-  title: "Privatdetektiv & Detektei Oliver Peth | Zertifizierter Ermittler Deutschland",
+  title: "Detektei finden | Geprüfte Privatdetektive deutschlandweit | Detektei Base",
   description:
-    "Oliver Peth – Ihr Privatdetektiv und zertifizierter Ermittler, Kriminalist & Profiler. Diskrete Detektei mit gerichtsverwertbarer Beweissicherung. Kostenlose Erstberatung. Deutschlandweit.",
+    "Finden Sie sofort die richtige Detektei für Ihren Fall. Unser Netzwerk aus geprüften Partner-Detekteien mit über 20 Jahren Erfahrung vermittelt Sie diskret und schnell an zertifizierte Ermittler in Ihrer Region.",
   keywords: [
+    "Detektei finden",
     "Privatdetektiv",
-    "Detektei",
-    "Oliver Peth",
-    "Ermittler",
-    "Kriminalist",
-    "Profiler",
+    "Detektei Vermittlung",
     "Wirtschaftsdetektei",
     "Beweissicherung",
     "Observation",
     "Personensuche",
-    "Untreue",
+    "Untreue Ermittlung",
     "Detektiv Deutschland",
+    "geprüfte Detektei",
   ],
   alternates: {
     canonical: "https://detektei-base.de",
@@ -38,24 +36,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     url: "https://detektei-base.de",
-    siteName: "Detektei Oliver Peth",
-    title: "Privatdetektiv & Detektei Oliver Peth | Zertifizierter Ermittler",
+    siteName: "Detektei Base",
+    title: "Detektei finden | Geprüfte Privatdetektive deutschlandweit",
     description:
-      "Oliver Peth – Ihr Privatdetektiv und zertifizierter Ermittler. Diskrete Detektei mit gerichtsverwertbarer Beweissicherung. Deutschlandweit im Einsatz.",
+      "Finden Sie sofort die richtige Detektei. Geprüfte Partner-Detekteien mit über 20 Jahren Erfahrung vermitteln wir diskret und schnell.",
     images: [
       {
         url: "https://detektei-base.de/images/og-homepage.jpg",
         width: 1200,
         height: 630,
-        alt: "Detektei Oliver Peth – Privatdetektiv und zertifizierter Ermittler",
+        alt: "Detektei Base – Ihr Netzwerk für geprüfte Privatdetektive",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privatdetektiv & Detektei Oliver Peth",
+    title: "Detektei finden | Geprüfte Privatdetektive deutschlandweit",
     description:
-      "Zertifizierter Ermittler, Kriminalist & Profiler. Diskrete Ermittlungen mit gerichtsverwertbarer Beweissicherung.",
+      "Finden Sie sofort die richtige Detektei. Geprüfte Partner-Detekteien mit über 20 Jahren Erfahrung deutschlandweit.",
     images: ["https://detektei-base.de/images/og-homepage.jpg"],
   },
   robots: {

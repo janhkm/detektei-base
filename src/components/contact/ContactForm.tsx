@@ -199,8 +199,8 @@ export function ContactForm() {
           Vielen Dank für Ihre Anfrage!
         </h3>
         <p className="text-primary-600 mb-6">
-          Wir haben Ihre Nachricht erhalten und melden uns schnellstmöglich bei
-          Ihnen.
+          Wir haben Ihre Nachricht erhalten und vermitteln Sie schnellstmöglich 
+          an eine passende Partner-Detektei.
         </p>
         <button
           onClick={() => setStatus("idle")}

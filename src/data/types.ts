@@ -1,5 +1,103 @@
 // Einsatzgebiete Datenmodell
 // Basierend auf PRD v1.1 und SEO-Masterplan
+// Erweitert für pSEO-Skalierung (Phase 2)
+
+// ============================================================================
+// SEO PAGE ENTITY SYSTEM
+// ============================================================================
+
+/**
+ * Intent-Klassifikation für SEO-Optimierung
+ * - transactional: Seiten mit hoher Kaufabsicht (Stadt-Seiten, Kontakt)
+ * - navigational: Übersichtsseiten (Bundesland, Landkreis)
+ * - informational: Blog-Artikel, Ratgeber
+ */
+export type PageIntent = "transactional" | "navigational" | "informational";
+
+/**
+ * Schema-Typen für strukturierte Daten
+ */
+export type SchemaType = 
+  | "LocalBusiness" 
+  | "Service" 
+  | "Article" 
+  | "FAQPage" 
+  | "BreadcrumbList"
+  | "WebPage";
+
+/**
+ * Base Page Entity - gemeinsame Felder für alle pSEO-Seiten
+ */
+export interface PageEntity {
+  // Identifikation
+  url: string;
+  slug: string;
+  
+  // SEO-Klassifikation
+  intent: PageIntent;
+  primaryKeyword: string;
+  supportingKeywords: string[];
+  
+  // Hub-Spoke-Beziehungen
+  parentHub: string | null;      // URL der übergeordneten Hub-Seite
+  relatedPages: string[];        // URLs verwandter Seiten
+  
+  // Schema-Konfiguration
+  schemaTypes: SchemaType[];
+  
+  // Zeitstempel
+  lastModified: string;          // ISO-Datum für Sitemap
+  
+  // Content-Metriken (für Validierung)
+  contentMetrics?: {
+    wordCount: number;
+    faqCount: number;
+    hasKeyTakeaways: boolean;
+    internalLinkCount: number;
+  };
+}
+
+/**
+ * Einsatzgebiete Page Entity - erweitert für lokale Seiten
+ */
+export interface EinsatzgebietPageEntity extends PageEntity {
+  pageType: "bundesland" | "landkreis" | "stadt";
+  bundeslandId: string;
+  landkreisId?: string;
+  stadtId?: string;
+  
+  // Geo-Daten
+  coordinates?: { lat: number; lng: number };
+  population?: number;
+  
+  // Lokale SEO-Daten
+  areaServed: string;
+  nearbyLocations: string[];     // Slugs naheliegender Orte
+}
+
+/**
+ * Blog Page Entity - erweitert für Artikel
+ */
+export interface BlogPageEntity extends PageEntity {
+  pageType: "article";
+  category: string;
+  tags: string[];
+  
+  // Pillar-Cluster-Beziehung
+  pillarId?: number;
+  clusterId?: number;
+  isPublished: boolean;
+  
+  // Content
+  title: string;
+  description: string;
+  publishDate: string;
+  updatedAt?: string;
+}
+
+// ============================================================================
+// ORIGINAL GEOGRAPHIC DATA TYPES
+// ============================================================================
 
 export interface Bundesland {
   id: string;

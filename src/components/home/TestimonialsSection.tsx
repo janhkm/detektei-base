@@ -3,21 +3,21 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     content:
-      "Die Detektei hat mir in einer schwierigen Situation sehr geholfen. Die Ermittlungen waren diskret und professionell, und die Beweise haben vor Gericht standgehalten.",
+      "Ich wusste nicht, wo ich anfangen sollte. Detektei Base hat mich innerhalb eines Tages an eine passende Detektei in meiner Region vermittelt. Die Erstberatung war kostenlos und hat mir sehr geholfen, meinen Fall einzuordnen.",
     author: "M. Schmidt",
     role: "Privatperson",
     rating: 5,
   },
   {
     content:
-      "Wir haben die Detektei für eine interne Ermittlung beauftragt. Die Ergebnisse waren detailliert und haben uns geholfen, den Betrug aufzuklären.",
+      "Als Unternehmer brauchte ich schnell einen erfahrenen Wirtschaftsdetektiv. Über Detektei Base wurde mir innerhalb von 24 Stunden ein spezialisierter Partner vermittelt, der genau zu unserem Fall passte.",
     author: "K. Müller",
     role: "Geschäftsführer",
     rating: 5,
   },
   {
     content:
-      "Sehr empfehlenswert! Die Beratung war ausgezeichnet und die Kosten transparent. Die Detektive haben schnell und effektiv gearbeitet.",
+      "Die Beratung war ehrlich und unverbindlich. Man hat mir erklärt, welche Art von Detektei ich brauche und mich dann an einen geprüften Partner weitergeleitet. So stelle ich mir guten Service vor.",
     author: "S. Weber",
     role: "Privatperson",
     rating: 5,
@@ -31,14 +31,14 @@ export function TestimonialsSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-sm font-semibold text-accent-400 uppercase tracking-wider">
-            Kundenstimmen
+            Erfahrungen
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-white">
-            Was unsere Kunden sagen
+            So bewerten uns unsere Kunden
           </h2>
           <p className="mt-4 text-lg text-primary-300">
-            Vertrauen ist die Grundlage unserer Arbeit. Lesen Sie, was unsere
-            Kunden über ihre Erfahrungen berichten.
+            Wir vermitteln Sie an die passende Detektei – schnell, diskret und 
+            unverbindlich. Lesen Sie, wie andere unseren Service erlebt haben.
           </p>
         </div>
 

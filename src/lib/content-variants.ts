@@ -57,43 +57,43 @@ export function getCitySize(population: number): "metropole" | "grossstadt" | "m
 type H1Generator = (name: string, bundesland?: string) => string;
 
 const H1_STADT_VARIANTEN: H1Generator[] = [
-  (name) => `Detektei in ${name} – Diskrete Ermittlungen vor Ort`,
-  (name) => `Privatdetektiv ${name} – Professionelle Beweissicherung`,
-  (name) => `Ihre Detektei in ${name} – Vertraulich & effektiv`,
-  (name, bl) => `Detektei ${name} (${bl}) – Erfahrene Ermittler`,
-  (name) => `Ermittlungen in ${name} – Ihr Detektiv vor Ort`,
-  (name) => `Detektiv in ${name} – Diskret. Professionell. Erfolgreich.`,
+  (name) => `Detektei in ${name} finden – Diskrete Ermittlungen vor Ort`,
+  (name) => `Privatdetektiv ${name} – Geprüfte Partner-Detekteien`,
+  (name) => `Detektei in ${name} finden – Vertraulich & effektiv`,
+  (name, bl) => `Detektei ${name} (${bl}) – Erfahrene Partner finden`,
+  (name) => `Ermittlungen in ${name} – Passende Detektei finden`,
+  (name) => `Detektiv in ${name} finden – Diskret. Professionell. Erfolgreich.`,
 ];
 
 const H1_GROSSSTADT_VARIANTEN: H1Generator[] = [
-  (name) => `Detektei ${name} – Professionelle Ermittlungen in der Großstadt`,
-  (name) => `Privatdetektiv in ${name} – Ihr Partner für diskrete Aufklärung`,
-  (name) => `${name}: Ihre erfahrene Detektei vor Ort`,
+  (name) => `Detektei ${name} finden – Professionelle Ermittlungen in der Großstadt`,
+  (name) => `Privatdetektiv in ${name} – Geprüfte Partner für diskrete Aufklärung`,
+  (name) => `${name}: Erfahrene Detektei vor Ort finden`,
   (name, bl) => `Detektei ${name}, ${bl} – Ermittlungen auf höchstem Niveau`,
-  (name) => `Ermittlungsbüro ${name} – Diskretion ist unsere Stärke`,
+  (name) => `Detektei ${name} – Geprüfte Partner für diskrete Ermittlungen`,
 ];
 
 const H1_METROPOLE_VARIANTEN: H1Generator[] = [
-  (name) => `Detektei ${name} – Ermittlungen in der Metropole`,
-  (name) => `Ihr Privatdetektiv in ${name} – Professionell & diskret`,
-  (name) => `${name}: Führende Detektei für anspruchsvolle Ermittlungen`,
-  (name) => `Detektei ${name} – Mit Erfahrung zum Ergebnis`,
+  (name) => `Detektei ${name} finden – Ermittlungen in der Metropole`,
+  (name) => `Privatdetektiv in ${name} finden – Professionell & diskret`,
+  (name) => `${name}: Detektei für anspruchsvolle Ermittlungen finden`,
+  (name) => `Detektei ${name} – Erfahrene Partner vor Ort`,
 ];
 
 const H1_LANDKREIS_VARIANTEN: H1Generator[] = [
-  (name) => `Detektei im ${name} – Ermittlungen im gesamten Landkreis`,
-  (name) => `Privatdetektiv für den ${name} – Diskret vor Ort`,
-  (name) => `Ihre Detektei im ${name} – Professionelle Aufklärung`,
-  (name, bl) => `Ermittlungen im ${name} (${bl}) – Erfahren & zuverlässig`,
-  (name) => `${name}: Ihr Detektiv für den gesamten Landkreis`,
+  (name) => `Detektei im ${name} finden – Ermittlungen im gesamten Landkreis`,
+  (name) => `Privatdetektiv für den ${name} – Diskrete Partner vor Ort`,
+  (name) => `Detektei im ${name} finden – Professionelle Aufklärung`,
+  (name, bl) => `Ermittlungen im ${name} (${bl}) – Erfahrene Partner`,
+  (name) => `${name}: Detektei für den gesamten Landkreis finden`,
 ];
 
 const H1_BUNDESLAND_VARIANTEN: H1Generator[] = [
-  (name) => `Detektei in ${name} – Landesweite Ermittlungen`,
-  (name) => `Privatdetektiv ${name} – In allen Regionen vor Ort`,
-  (name) => `Ihre Detektei für ${name} – Professionell & diskret`,
-  (name) => `Ermittlungen in ${name} – Erfahrene Detektive im Einsatz`,
-  (name) => `${name}: Detektei mit landesweitem Netzwerk`,
+  (name) => `Detektei in ${name} finden – Landesweite Ermittlungen`,
+  (name) => `Privatdetektiv ${name} – Partner in allen Regionen`,
+  (name) => `Detektei für ${name} finden – Professionell & diskret`,
+  (name) => `Ermittlungen in ${name} – Erfahrene Partner-Detekteien`,
+  (name) => `${name}: Detektei-Netzwerk für landesweite Vermittlung`,
 ];
 
 export function getStadtH1(stadt: Stadt, bundesland: Bundesland): string {
@@ -255,27 +255,27 @@ export function getStadtIntroText(stadt: Stadt, bundesland: Bundesland): string 
   const popStr = formatPopulation(stadt.population);
   
   const varianten = [
-    `Sie suchen einen erfahrenen Privatdetektiv in ${stadt.name}? Unsere Detektei ist Ihr kompetenter Partner für diskrete Ermittlungen – Privatdetektei und Wirtschaftsdetektei mit gerichtsfester Beweissicherung.`,
+    `Sie suchen einen erfahrenen Privatdetektiv in ${stadt.name}? Detektei Base vermittelt Sie an geprüfte Partner-Detekteien für diskrete Ermittlungen – Privatdetektei und Wirtschaftsdetektei mit gerichtsfester Beweissicherung.`,
     
-    `In ${stadt.name} und Umgebung sind wir Ihr Ansprechpartner für professionelle Ermittlungsarbeit. Ob Untreue, Unterhaltsermittlung oder Wirtschaftsdelikte – wir klären Ihren Fall diskret auf.`,
+    `In ${stadt.name} und Umgebung vermittelt Detektei Base professionelle Partner-Detekteien. Ob Untreue, Unterhaltsermittlung oder Wirtschaftsdelikte – finden Sie die passende Detektei.`,
     
-    `Unsere Detektei bietet in ${stadt.name} (${bundesland.name}) das komplette Spektrum an Ermittlungsleistungen. Vertrauen Sie auf unsere Erfahrung und Diskretion.`,
+    `Detektei Base vermittelt in ${stadt.name} (${bundesland.name}) Partner für das komplette Spektrum an Ermittlungsleistungen. Geprüfte Detekteien vor Ort.`,
     
-    `Als Privatdetektiv in ${stadt.name} unterstützen wir Sie bei der Aufklärung sensibler Angelegenheiten. Alle Beweise werden gerichtsfest dokumentiert.`,
+    `Für Ermittlungen in ${stadt.name} vermittelt Detektei Base geprüfte Partner-Detekteien. Alle Beweise werden gerichtsfest dokumentiert.`,
     
-    `${stadt.name}: Hier sind wir für Sie im Einsatz. Professionelle Ermittlungen mit modernsten Methoden und absoluter Vertraulichkeit.`,
+    `${stadt.name}: Hier vermittelt Detektei Base Partner-Detekteien vor Ort. Professionelle Ermittlungen mit modernsten Methoden und absoluter Vertraulichkeit.`,
     
-    `Sie benötigen einen Detektiv in ${stadt.name}? Wir bieten diskrete Ermittlungen, schnelle Einsatzbereitschaft und gerichtsverwertbare Ergebnisse.`,
+    `Sie benötigen einen Detektiv in ${stadt.name}? Detektei Base vermittelt geprüfte Partner-Detekteien für diskrete Ermittlungen und gerichtsverwertbare Ergebnisse.`,
   ];
   
   // Großstädte bekommen Zusatz mit Einwohnerzahl
   if (size === "grossstadt" || size === "metropole") {
     const grossVarianten = [
-      `${stadt.name} mit seinen ${popStr} Einwohnern stellt besondere Anforderungen an Ermittlungen. Unsere erfahrenen Detektive kennen die Stadt und arbeiten diskret und effektiv.`,
+      `${stadt.name} mit seinen ${popStr} Einwohnern stellt besondere Anforderungen an Ermittlungen. Detektei Base vermittelt erfahrene Partner-Detekteien, die die Stadt kennen und diskret arbeiten.`,
       
-      `Als führende Detektei in ${stadt.name} verfügen wir über ein eingespieltes Team vor Ort. In der ${popStr}-Einwohner-Stadt sind wir schnell einsatzbereit.`,
+      `Für Ermittlungen in ${stadt.name} vermittelt Detektei Base Partner-Detekteien mit eingesielten Teams vor Ort. In der ${popStr}-Einwohner-Stadt sind diese schnell einsatzbereit.`,
       
-      `Professionelle Ermittlungen in ${stadt.name}: Mit mehreren Detektiven vor Ort können wir auch komplexe Fälle in der Großstadt zuverlässig bearbeiten.`,
+      `Professionelle Ermittlungen in ${stadt.name}: Detektei Base vermittelt Partner-Detekteien, die auch komplexe Fälle in der Großstadt zuverlässig bearbeiten.`,
     ];
     const index = getVariantIndex(stadt.slug + "intro", grossVarianten.length);
     return grossVarianten[index];
@@ -287,15 +287,15 @@ export function getStadtIntroText(stadt: Stadt, bundesland: Bundesland): string 
 
 export function getLandkreisIntroText(landkreis: Landkreis, bundesland: Bundesland): string {
   const varianten = [
-    `Sie suchen eine Detektei im ${landkreis.name}? Unsere erfahrenen Privatdetektive sind im gesamten Landkreis für Sie da – diskret, professionell und mit gerichtsverwertbarer Beweissicherung.`,
+    `Sie suchen eine Detektei im ${landkreis.name}? Detektei Base vermittelt erfahrene Partner-Detekteien im gesamten Landkreis – diskret, professionell und mit gerichtsverwertbarer Beweissicherung.`,
     
-    `Im ${landkreis.name} (${bundesland.name}) sind wir Ihr zuverlässiger Partner für Ermittlungen aller Art. Von der Personensuche bis zur Wirtschaftsdetektei – wir sind vor Ort.`,
+    `Im ${landkreis.name} (${bundesland.name}) vermittelt Detektei Base zuverlässige Partner für Ermittlungen aller Art. Von der Personensuche bis zur Wirtschaftsdetektei – Partner vor Ort.`,
     
-    `Professionelle Detektei-Leistungen im gesamten ${landkreis.name}: Unsere Ermittler kennen die Region und arbeiten diskret in allen Städten und Gemeinden.`,
+    `Professionelle Detektei-Leistungen im gesamten ${landkreis.name}: Detektei Base vermittelt Partner-Detekteien, die die Region kennen und diskret in allen Städten und Gemeinden arbeiten.`,
     
-    `Ob in der Kreisstadt oder in kleineren Gemeinden – im ${landkreis.name} sind wir schnell einsatzbereit. Vertrauen Sie auf unsere Erfahrung und lokale Präsenz.`,
+    `Ob in der Kreisstadt oder in kleineren Gemeinden – im ${landkreis.name} vermittelt Detektei Base schnell verfügbare Partner-Detekteien mit lokaler Präsenz.`,
     
-    `Der ${landkreis.name} gehört zu unserem Kerngebiet. Hier ermitteln wir seit Jahren erfolgreich – mit Ortskenntnis, Diskretion und professioneller Dokumentation.`,
+    `Der ${landkreis.name} wird durch das Netzwerk von Detektei Base vollständig abgedeckt. Partner-Detekteien mit Ortskenntnis, Diskretion und professioneller Dokumentation.`,
   ];
   
   const index = getVariantIndex(landkreis.slug + "intro", varianten.length);
@@ -308,23 +308,23 @@ export function getLandkreisIntroText(landkreis: Landkreis, bundesland: Bundesla
 
 export function getWarumLokalText(name: string, isLandkreis: boolean, seed: string): string {
   const stadtVarianten = [
-    `Eine lokale Detektei in ${name} bietet entscheidende Vorteile: Unsere Ermittler kennen die Stadt, ihre Strukturen und können schnell vor Ort sein. Das spart Zeit und Kosten – und erhöht die Erfolgschancen erheblich.`,
+    `Eine lokale Detektei in ${name} bietet entscheidende Vorteile: Partner-Detekteien kennen die Stadt, ihre Strukturen und können schnell vor Ort sein. Das spart Zeit und Kosten – und erhöht die Erfolgschancen erheblich.`,
     
-    `Warum ein Detektiv aus ${name}? Ortskenntnis ist bei Ermittlungen Gold wert. Wir kennen die Gegebenheiten, können Zielpersonen unauffällig verfolgen und wissen, wo und wie wir am effektivsten arbeiten.`,
+    `Warum ein Detektiv aus ${name}? Ortskenntnis ist bei Ermittlungen Gold wert. Lokale Partner-Detekteien kennen die Gegebenheiten, können Zielpersonen unauffällig verfolgen und wissen, wo sie am effektivsten arbeiten.`,
     
-    `Lokale Präsenz macht den Unterschied: Als Detektei in ${name} sind wir in Minuten einsatzbereit – nicht in Stunden. Bei zeitkritischen Observationen kann das entscheidend sein.`,
+    `Lokale Präsenz macht den Unterschied: Detekteien in ${name} sind in Minuten einsatzbereit – nicht in Stunden. Bei zeitkritischen Observationen kann das entscheidend sein.`,
     
-    `Ein Privatdetektiv vor Ort in ${name} bedeutet: kürzere Anfahrtswege, niedrigere Spesen, schnellere Reaktionszeiten. Gleichzeitig profitieren Sie von unserer Erfahrung in der Region.`,
+    `Ein Privatdetektiv vor Ort in ${name} bedeutet: kürzere Anfahrtswege, niedrigere Spesen, schnellere Reaktionszeiten. Detektei Base vermittelt erfahrene Partner in der Region.`,
   ];
   
   const landkreisVarianten = [
-    `Eine Detektei im ${name} kennt die Region: Wir wissen, welche Routen Zielpersonen nutzen, wo sich Observation lohnt und wie wir in ländlichen wie städtischen Gebieten gleichermaßen effektiv arbeiten.`,
+    `Eine Detektei im ${name} kennt die Region: Partner-Detekteien wissen, welche Routen Zielpersonen nutzen, wo sich Observation lohnt und wie in ländlichen wie städtischen Gebieten effektiv gearbeitet wird.`,
     
-    `Warum ein lokaler Detektiv im ${name}? Regionale Expertise spart Zeit und Geld. Unsere Ermittler sind mit den Gegebenheiten im gesamten Landkreis vertraut und schnell vor Ort.`,
+    `Warum ein lokaler Detektiv im ${name}? Regionale Expertise spart Zeit und Geld. Partner-Detekteien sind mit den Gegebenheiten im gesamten Landkreis vertraut und schnell vor Ort.`,
     
-    `Lokale Detektei-Präsenz im ${name}: Wir sind in allen Städten und Gemeinden des Landkreises einsatzbereit. Kurze Wege, schnelle Reaktion, bessere Ergebnisse.`,
+    `Lokale Detektei-Präsenz im ${name}: Partner-Detekteien sind in allen Städten und Gemeinden des Landkreises einsatzbereit. Kurze Wege, schnelle Reaktion, bessere Ergebnisse.`,
     
-    `Der ${name} ist unser Gebiet. Von der größten Stadt bis zur kleinsten Gemeinde – wir kennen jeden Winkel und arbeiten hier seit Jahren erfolgreich und diskret.`,
+    `Der ${name} wird durch Partner-Detekteien abgedeckt. Von der größten Stadt bis zur kleinsten Gemeinde – lokale Partner arbeiten seit Jahren erfolgreich und diskret.`,
   ];
   
   const varianten = isLandkreis ? landkreisVarianten : stadtVarianten;
@@ -345,61 +345,61 @@ export function getTypischeFaelleText(name: string, isLandkreis: boolean, seed: 
       cases: [
         {
           title: "Untreue-Verdacht",
-          description: `Ein Klient aus ${name.split(" ")[0]} beauftragte uns wegen Verdacht auf Fremdgehen. Durch diskrete Observation über mehrere Tage konnten wir den Verdacht bestätigen und gerichtsverwertbare Beweise sichern.`
+          description: `Ein Klient aus ${name.split(" ")[0]} beauftragte eine Partner-Detektei wegen Verdacht auf Fremdgehen. Durch diskrete Observation über mehrere Tage konnte der Verdacht bestätigt und gerichtsverwertbare Beweise gesichert werden.`
         },
         {
           title: "Unterhaltsermittlung", 
-          description: `Nach der Scheidung verschwieg der Ex-Partner sein wahres Einkommen. Unsere Recherchen ${prefix} deckten nicht angegebene Nebeneinkünfte und Vermögenswerte auf.`
+          description: `Nach der Scheidung verschwieg der Ex-Partner sein wahres Einkommen. Recherchen der Detektei ${prefix} deckten nicht angegebene Nebeneinkünfte und Vermögenswerte auf.`
         },
         {
           title: "Krankfeierkontrolle",
-          description: `Ein Unternehmen ${prefix} hatte Zweifel an der Arbeitsunfähigkeit eines Mitarbeiters. Unsere Observation zeigte: Der "Kranke" arbeitete schwarz auf einer Baustelle.`
+          description: `Ein Unternehmen ${prefix} hatte Zweifel an der Arbeitsunfähigkeit eines Mitarbeiters. Die Observation zeigte: Der "Kranke" arbeitete schwarz auf einer Baustelle.`
         },
         {
           title: "Personensuche",
-          description: `Ein Mandant suchte einen verschollenen Verwandten. Durch systematische Recherchen und Befragungen ${prefix} konnten wir die Person innerhalb von zwei Wochen ausfindig machen.`
+          description: `Ein Mandant suchte einen verschollenen Verwandten. Durch systematische Recherchen und Befragungen ${prefix} konnte die Person innerhalb von zwei Wochen gefunden werden.`
         }
       ]
     },
     {
-      title: `Fallbeispiele aus unserer Arbeit ${prefix}`,
+      title: `Fallbeispiele von Partner-Detekteien ${prefix}`,
       cases: [
         {
           title: "Verdacht auf Fremdgehen",
-          description: `Häufigster Auftrag ${prefix}: Partnerüberwachung bei Untreue-Verdacht. Wir beobachten diskret und dokumentieren Treffen, Kontakte und Verhaltensweisen – immer im Rahmen des Erlaubten.`
+          description: `Häufigster Auftrag ${prefix}: Partnerüberwachung bei Untreue-Verdacht. Detekteien beobachten diskret und dokumentieren Treffen, Kontakte und Verhaltensweisen – immer im Rahmen des Erlaubten.`
         },
         {
           title: "Mitarbeiter-Betrug",
-          description: `Ein Unternehmer vermutete, dass sein Außendienstmitarbeiter Arbeitszeit erschwindelt. Unsere GPS-lose Observation bestätigte: Mehrere Stunden täglich wurden privat genutzt.`
+          description: `Ein Unternehmer vermutete, dass sein Außendienstmitarbeiter Arbeitszeit erschwindelt. Die GPS-lose Observation bestätigte: Mehrere Stunden täglich wurden privat genutzt.`
         },
         {
           title: "Erbschaftsstreit",
-          description: `Bei einer Erbschaft ${prefix} tauchten plötzlich unbekannte Anspruchsteller auf. Unsere Recherchen klärten die tatsächlichen Familienverhältnisse und Berechtigungen.`
+          description: `Bei einer Erbschaft ${prefix} tauchten plötzlich unbekannte Anspruchsteller auf. Die Recherchen der Detektei klärten die tatsächlichen Familienverhältnisse und Berechtigungen.`
         },
         {
           title: "Stalking-Dokumentation",
-          description: `Eine Mandantin wurde belästigt. Wir dokumentierten die Vorfälle professionell und lieferten Beweise, die zur erfolgreichen Erwirkung einer einstweiligen Verfügung führten.`
+          description: `Eine Mandantin wurde belästigt. Die Detektei dokumentierte die Vorfälle professionell und lieferte Beweise, die zur erfolgreichen Erwirkung einer einstweiligen Verfügung führten.`
         }
       ]
     },
     {
-      title: `So helfen wir Klienten ${prefix}`,
+      title: `So helfen Detekteien Klienten ${prefix}`,
       cases: [
         {
           title: "Eheliche Untreue",
-          description: `Der klassische Fall: Verdacht auf Fremdgehen. ${prefix.charAt(0).toUpperCase() + prefix.slice(1)} führen wir regelmäßig diskrete Observationen durch – mit eindeutigen, gerichtsfesten Ergebnissen.`
+          description: `Der klassische Fall: Verdacht auf Fremdgehen. ${prefix.charAt(0).toUpperCase() + prefix.slice(1)} führen Detekteien regelmäßig diskrete Observationen durch – mit eindeutigen, gerichtsfesten Ergebnissen.`
         },
         {
           title: "Arbeitszeitbetrug",
-          description: `Homeoffice-Kontrolle, Außendienst-Überwachung, Nebentätigkeiten während der Krankschreibung – wir decken Arbeitszeitbetrug ${prefix} zuverlässig auf.`
+          description: `Homeoffice-Kontrolle, Außendienst-Überwachung, Nebentätigkeiten während der Krankschreibung – Detekteien decken Arbeitszeitbetrug ${prefix} zuverlässig auf.`
         },
         {
           title: "Vermögensrecherche",
-          description: `Bei Unterhaltsfragen oder Forderungen recherchieren wir Vermögenswerte, Immobilien und Einkünfte – diskret und gründlich.`
+          description: `Bei Unterhaltsfragen oder Forderungen recherchieren Detekteien Vermögenswerte, Immobilien und Einkünfte – diskret und gründlich.`
         },
         {
           title: "Adressermittlung",
-          description: `Schuldner oder Zeugen verschwunden? ${prefix.charAt(0).toUpperCase() + prefix.slice(1)} und bundesweit ermitteln wir aktuelle Adressen schnell und zuverlässig.`
+          description: `Schuldner oder Zeugen verschwunden? ${prefix.charAt(0).toUpperCase() + prefix.slice(1)} und bundesweit ermitteln Detekteien aktuelle Adressen schnell und zuverlässig.`
         }
       ]
     }
@@ -415,11 +415,11 @@ export function getTypischeFaelleText(name: string, isLandkreis: boolean, seed: 
 
 export function getRechtlicheHinweise(name: string, seed: string): { intro: string; erlaubt: string[]; verboten: string[] } {
   const introVarianten = [
-    `Detektive arbeiten im Rahmen der sogenannten Jedermannsrechte. Das bedeutet: Alles, was jeder Bürger darf, dürfen auch wir – jedoch mit professioneller Ausrüstung und Erfahrung. In ${name} gelten dieselben rechtlichen Grundlagen wie überall in Deutschland.`,
+    `Detektive arbeiten im Rahmen der sogenannten Jedermannsrechte. Das bedeutet: Alles, was jeder Bürger darf, dürfen auch Detektive – jedoch mit professioneller Ausrüstung und Erfahrung. In ${name} gelten dieselben rechtlichen Grundlagen wie überall in Deutschland.`,
     
-    `In ${name} gilt wie überall: Detektive haben keine Sonderrechte. Wir arbeiten auf Basis der Jedermannsrechte und der Rechtsprechung des Bundesgerichtshofs. Unsere Methoden sind legal, unsere Beweise gerichtsverwertbar.`,
+    `In ${name} gilt wie überall: Detektive haben keine Sonderrechte. Sie arbeiten auf Basis der Jedermannsrechte und der Rechtsprechung des Bundesgerichtshofs. Die Methoden sind legal, die Beweise gerichtsverwertbar.`,
     
-    `Rechtssicherheit ist uns wichtig: Alle Ermittlungen in ${name} erfolgen im Einklang mit deutschem Recht. Wir überschreiten keine Grenzen – das würde auch Ihnen als Auftraggeber schaden.`,
+    `Rechtssicherheit ist wichtig: Alle Ermittlungen in ${name} erfolgen im Einklang mit deutschem Recht. Professionelle Detekteien überschreiten keine Grenzen – das würde auch dem Auftraggeber schaden.`,
   ];
   
   const erlaubtItems = [
@@ -456,24 +456,24 @@ export function getRechtlicheHinweise(name: string, seed: string): { intro: stri
 export function getServiceBeschreibung(serviceType: "untreue" | "personensuche" | "wirtschaft" | "observation", name: string, seed: string): string {
   const beschreibungen: Record<string, string[]> = {
     untreue: [
-      `Bei Untreue-Verdacht in ${name} gehen wir methodisch vor: Zunächst analysieren wir Ihre Informationen, dann planen wir die Observation. Unsere Detektive dokumentieren diskret jeden relevanten Kontakt und jede Bewegung – mit Fotos, Zeiten und Orten.`,
-      `Fremdgehen aufdecken in ${name}: Wir beobachten die Zielperson über den vereinbarten Zeitraum, dokumentieren Treffen und Aktivitäten. Am Ende erhalten Sie einen detaillierten Bericht mit allen Beweisen.`,
-      `Untreue-Ermittlungen in ${name} führen wir mit größter Diskretion durch. Die Zielperson erfährt nichts von unserer Beobachtung. Sie erhalten aussagekräftige Beweise, die auch vor Gericht Bestand haben.`,
+      `Bei Untreue-Verdacht in ${name} gehen Detekteien methodisch vor: Zunächst werden Ihre Informationen analysiert, dann die Observation geplant. Detektive dokumentieren diskret jeden relevanten Kontakt und jede Bewegung – mit Fotos, Zeiten und Orten.`,
+      `Fremdgehen aufdecken in ${name}: Detekteien beobachten die Zielperson über den vereinbarten Zeitraum, dokumentieren Treffen und Aktivitäten. Am Ende erhalten Sie einen detaillierten Bericht mit allen Beweisen.`,
+      `Untreue-Ermittlungen in ${name} werden von Detekteien mit größter Diskretion durchgeführt. Die Zielperson erfährt nichts von der Beobachtung. Sie erhalten aussagekräftige Beweise, die auch vor Gericht Bestand haben.`,
     ],
     personensuche: [
-      `Personensuche in ${name} und darüber hinaus: Wir finden vermisste Angehörige, untergetauchte Schuldner oder Zeugen. Unsere Methoden reichen von Datenbankrecherchen bis zu Vor-Ort-Ermittlungen.`,
-      `Sie suchen jemanden in ${name}? Wir ermitteln aktuelle Adressen, Arbeitgeber und Lebensumstände. Ob Erbfall, Unterhalt oder private Gründe – wir finden die Person.`,
-      `Adressermittlung und Personensuche in ${name}: Mit legalen Recherchemethoden und lokaler Präsenz spüren wir Personen auf, die sich Ihren Ansprüchen entziehen wollen.`,
+      `Personensuche in ${name} und darüber hinaus: Detekteien finden vermisste Angehörige, untergetauchte Schuldner oder Zeugen. Die Methoden reichen von Datenbankrecherchen bis zu Vor-Ort-Ermittlungen.`,
+      `Sie suchen jemanden in ${name}? Detekteien ermitteln aktuelle Adressen, Arbeitgeber und Lebensumstände. Ob Erbfall, Unterhalt oder private Gründe – die Person wird gefunden.`,
+      `Adressermittlung und Personensuche in ${name}: Mit legalen Recherchemethoden und lokaler Präsenz spüren Detekteien Personen auf, die sich Ihren Ansprüchen entziehen wollen.`,
     ],
     wirtschaft: [
-      `Wirtschaftsermittlungen in ${name}: Mitarbeiterüberprüfung, Krankfeierkontrolle, Diebstahlaufklärung – wir schützen Ihr Unternehmen vor internem Betrug und Missbrauch.`,
-      `Für Unternehmen in ${name} bieten wir: Überprüfung von Bewerbern und Mitarbeitern, Kontrolle bei Verdacht auf Arbeitszeitbetrug, Aufklärung von Unterschlagung und Diebstahl.`,
-      `Ihr Wirtschaftsdetektiv in ${name}: Wir ermitteln diskret bei Verdacht auf Mitarbeiterbetrug, überprüfen Krankmeldungen und klären interne Unregelmäßigkeiten auf.`,
+      `Wirtschaftsermittlungen in ${name}: Mitarbeiterüberprüfung, Krankfeierkontrolle, Diebstahlaufklärung – Detekteien schützen Ihr Unternehmen vor internem Betrug und Missbrauch.`,
+      `Für Unternehmen in ${name} bieten Detekteien: Überprüfung von Bewerbern und Mitarbeitern, Kontrolle bei Verdacht auf Arbeitszeitbetrug, Aufklärung von Unterschlagung und Diebstahl.`,
+      `Wirtschaftsdetektive in ${name}: Detekteien ermitteln diskret bei Verdacht auf Mitarbeiterbetrug, überprüfen Krankmeldungen und klären interne Unregelmäßigkeiten auf.`,
     ],
     observation: [
-      `Professionelle Observation in ${name}: Unsere Detektive überwachen Zielpersonen unauffällig – zu Fuß, per Fahrzeug oder stationär. Moderne Ausrüstung und Erfahrung garantieren lückenlose Dokumentation.`,
-      `Observationen in ${name} führen wir mit mindestens zwei Ermittlern durch. So können wir die Zielperson auch bei Ortswechseln zuverlässig verfolgen, ohne aufzufallen.`,
-      `Diskrete Überwachung in ${name}: Wir beobachten Personen im öffentlichen Raum und dokumentieren ihre Aktivitäten. Unsere Berichte sind detailliert, unsere Fotos beweiskräftig.`,
+      `Professionelle Observation in ${name}: Detektive überwachen Zielpersonen unauffällig – zu Fuß, per Fahrzeug oder stationär. Moderne Ausrüstung und Erfahrung garantieren lückenlose Dokumentation.`,
+      `Observationen in ${name} werden von Detekteien mit mindestens zwei Ermittlern durchgeführt. So kann die Zielperson auch bei Ortswechseln zuverlässig verfolgt werden, ohne aufzufallen.`,
+      `Diskrete Überwachung in ${name}: Detekteien beobachten Personen im öffentlichen Raum und dokumentieren ihre Aktivitäten. Die Berichte sind detailliert, die Fotos beweiskräftig.`,
     ],
   };
   

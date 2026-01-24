@@ -16,9 +16,9 @@ import { KeyTakeaways } from "@/components/ui/KeyTakeaways";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Wirtschaftsdetektei | Ermittlungen für Unternehmen",
+  title: "Wirtschaftsdetektei | Detektei für Unternehmen finden",
   description:
-    "Professionelle Wirtschaftsdetektei für Unternehmen. ✓ Mitarbeiterüberprüfung ✓ Krankfeierkontrolle ✓ Betrugsermittlung ✓ Gerichtsverwertbare Beweise. Jetzt beraten lassen.",
+    "Finden Sie eine Wirtschaftsdetektei für Ihr Unternehmen. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Mitarbeiterüberprüfung ✓ Krankfeierkontrolle.",
 };
 
 const services = [

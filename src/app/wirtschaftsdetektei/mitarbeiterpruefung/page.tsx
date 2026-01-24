@@ -7,9 +7,9 @@ import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Mitarbeiterüberprüfung | Pre-Employment Screening",
+  title: "Mitarbeiterüberprüfung | Detektei für Background Check finden",
   description:
-    "Professionelle Mitarbeiterüberprüfung und Background Checks. ✓ Lebenslauf-Verifizierung ✓ Referenzprüfung ✓ Bonitätscheck. Für sichere Personalentscheidungen.",
+    "Finden Sie eine Detektei für Mitarbeiterüberprüfung. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Pre-Employment Screening ✓ Background Checks.",
 };
 
 const pruefungen = [
@@ -127,10 +127,10 @@ export default function MitarbeiterpruefungPage() {
               {/* Prüfungen */}
               <div className="mt-12">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Was wir prüfen
+                  Was Detekteien prüfen
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Wir verifizieren Angaben im Lebenslauf,
+                  <strong>Kurz:</strong> Detekteien verifizieren Angaben im Lebenslauf,
                   prüfen Referenzen, Qualifikationen und – bei Bedarf – Bonität
                   und Online-Präsenz.
                 </p>

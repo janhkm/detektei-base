@@ -7,9 +7,9 @@ import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Krankfeierkontrolle | Lohnfortzahlungsbetrug aufdecken",
+  title: "Krankfeierkontrolle | Detektei für Lohnfortzahlungsbetrug finden",
   description:
-    "Verdacht auf vorgetäuschte Krankheit? Diskrete Observation bei Krankfeiermissbrauch. ✓ Gerichtsverwertbare Beweise ✓ Arbeitsrechtlich belastbar. Jetzt beraten lassen.",
+    "Finden Sie eine Detektei bei Verdacht auf vorgetäuschte Krankheit. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Gerichtsverwertbare Beweise.",
 };
 
 const anzeichen = [
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Wie läuft eine Krankfeierkontrolle ab?",
     answer:
-      "Wir observieren den kranken Mitarbeiter diskret zu verschiedenen Tageszeiten. Dabei dokumentieren wir alle Aktivitäten mit Fotos und erstellen einen detaillierten Bericht. Die Observation erfolgt nur im öffentlichen Raum.",
+      "Die Detektei observiert den kranken Mitarbeiter diskret zu verschiedenen Tageszeiten. Dabei werden alle Aktivitäten mit Fotos dokumentiert und ein detaillierter Bericht erstellt. Die Observation erfolgt nur im öffentlichen Raum.",
   },
   {
     question: "Sind die Beweise vor dem Arbeitsgericht verwertbar?",
@@ -47,12 +47,12 @@ const faqs = [
   {
     question: "Kann der Mitarbeiter die Observation bemerken?",
     answer:
-      "Unsere Detektive sind auf verdeckte Observationen spezialisiert und arbeiten unauffällig. In den allermeisten Fällen bemerkt der Beobachtete nichts von der Überwachung.",
+      "Professionelle Detektive sind auf verdeckte Observationen spezialisiert und arbeiten unauffällig. In den allermeisten Fällen bemerkt der Beobachtete nichts von der Überwachung.",
   },
   {
     question: "Was kostet eine Krankfeierkontrolle?",
     answer:
-      "Eine Observation kostet 800-1.500€ pro Tag. Die genauen Kosten hängen von Dauer und Umfang ab. Wir empfehlen meist 2-3 Observationstage für aussagekräftige Ergebnisse.",
+      "Eine Observation kostet 800-1.500€ pro Tag. Die genauen Kosten hängen von Dauer und Umfang ab. Meist werden 2-3 Observationstage für aussagekräftige Ergebnisse empfohlen. Die Vermittlung über Detektei Base ist kostenlos.",
   },
 ];
 
@@ -86,8 +86,8 @@ export default function KrankfeierPage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               Verdacht auf <strong>vorgetäuschte Arbeitsunfähigkeit</strong>?
-              Unsere Detektive überprüfen diskret, ob der kranke Mitarbeiter
-              wirklich krank ist – und liefern gerichtsverwertbare Beweise.
+              Wir vermitteln Sie an <strong>spezialisierte Partner-Detekteien</strong>, 
+              die diskret prüfen und gerichtsverwertbare Beweise liefern.
             </p>
           </div>
         </div>
@@ -134,10 +134,10 @@ export default function KrankfeierPage() {
               {/* Unsere Leistung */}
               <div className="mt-12">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  So decken wir Krankfeiermissbrauch auf
+                  So decken Detekteien Krankfeiermissbrauch auf
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Unsere Detektive observieren den
+                  <strong>Kurz:</strong> Professionelle Detektive observieren den
                   kranken Mitarbeiter diskret und dokumentieren alle
                   Aktivitäten, die einer Genesung widersprechen.
                 </p>

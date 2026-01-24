@@ -7,9 +7,9 @@ import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Sorgerecht & Unterhalt | Beweise für Familienrecht",
+  title: "Sorgerecht & Unterhalt | Detektei für Familienrecht finden",
   description:
-    "Beweissicherung bei Sorgerecht und Unterhalt. ✓ Unterhaltsermittlung ✓ Vermögensrecherche ✓ Dokumentation von Pflichtverletzungen. Gerichtsverwertbare Beweise.",
+    "Finden Sie eine Detektei für Beweissicherung bei Sorgerecht und Unterhalt. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung. Gerichtsverwertbare Beweise.",
 };
 
 const leistungen = [
@@ -46,19 +46,19 @@ const faqs = [
       "Eine Ermittlung ist sinnvoll, wenn Sie vermuten, dass Ihr Ex-Partner sein Einkommen oder Vermögen falsch angibt, um Unterhaltszahlungen zu reduzieren. Typische Anzeichen sind ein auffällig hoher Lebensstandard trotz angeblich geringem Einkommen.",
   },
   {
-    question: "Welche Beweise können Sie liefern?",
+    question: "Welche Beweise können Detekteien liefern?",
     answer:
-      "Wir dokumentieren den tatsächlichen Lebensstil (Fahrzeuge, Urlaube, Ausgaben), recherchieren Beschäftigungsverhältnisse, Nebeneinkünfte und Vermögenswerte. Alle Beweise werden gerichtsverwertbar aufbereitet.",
+      "Detekteien dokumentieren den tatsächlichen Lebensstil (Fahrzeuge, Urlaube, Ausgaben), recherchieren Beschäftigungsverhältnisse, Nebeneinkünfte und Vermögenswerte. Alle Beweise werden gerichtsverwertbar aufbereitet.",
   },
   {
     question: "Sind die Ermittlungen legal?",
     answer:
-      "Ja, alle unsere Ermittlungen erfolgen im Rahmen der Jedermannsrechte und sind vollständig legal. Wir beobachten nur im öffentlichen Raum und nutzen legale Recherchemethoden.",
+      "Ja, alle Ermittlungen professioneller Detekteien erfolgen im Rahmen der Jedermannsrechte und sind vollständig legal. Es wird nur im öffentlichen Raum beobachtet und mit legalen Recherchemethoden gearbeitet.",
   },
   {
     question: "Wie helfen die Beweise vor Gericht?",
     answer:
-      "Unsere Ermittlungsberichte werden von Familiengerichten anerkannt. Sie können als Grundlage für Anträge auf Auskunft über Einkommen dienen oder bestehende Unterhaltstitel anfechten.",
+      "Ermittlungsberichte von Detekteien werden von Familiengerichten anerkannt. Sie können als Grundlage für Anträge auf Auskunft über Einkommen dienen oder bestehende Unterhaltstitel anfechten.",
   },
   {
     question: "Was kostet eine Sorgerechts-/Unterhaltsermittlung?",
@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "Können Sie auch bei Umgangsrechtsverletzungen helfen?",
     answer:
-      "Ja, wir dokumentieren Verstöße gegen das Umgangsrecht, z.B. wenn das Kind nicht wie vereinbart übergeben wird oder der Kontakt zum Kind systematisch verhindert wird.",
+      "Ja, Detekteien dokumentieren Verstöße gegen das Umgangsrecht, z.B. wenn das Kind nicht wie vereinbart übergeben wird oder der Kontakt zum Kind systematisch verhindert wird.",
   },
 ];
 
@@ -102,9 +102,9 @@ export default function SorgerechtPage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               Verdacht auf <strong>Unterhaltsbetrug</strong>? Verletzung des
-              Umgangsrechts? Wir liefern gerichtsverwertbare Beweise für
-              familienrechtliche Auseinandersetzungen – diskret, professionell
-              und im Interesse des Kindeswohls.
+              Umgangsrechts? Wir vermitteln Sie an <strong>spezialisierte 
+              Partner-Detekteien</strong> für gerichtsverwertbare Beweise – 
+              diskret, professionell und im Interesse des Kindeswohls.
             </p>
           </div>
         </div>
@@ -128,10 +128,10 @@ export default function SorgerechtPage() {
               {/* Leistungen */}
               <div className="mt-12">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Unsere Leistungen im Familienrecht
+                  Leistungen im Familienrecht
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Wir unterstützen bei Unterhaltsfragen,
+                  <strong>Kurz:</strong> Detekteien unterstützen bei Unterhaltsfragen,
                   Sorgerechtstreitigkeiten und Umgangsrechtsverletzungen mit
                   professioneller Beweissicherung.
                 </p>
@@ -210,9 +210,9 @@ export default function SorgerechtPage() {
                     Vor Gericht verwertbar
                   </h3>
                   <p className="text-sm text-primary-600">
-                    Unsere Ermittlungsberichte werden von Familiengerichten
-                    anerkannt und können als Beweismittel in Verfahren
-                    eingebracht werden.
+                    Ermittlungsberichte professioneller Detekteien werden von 
+                    Familiengerichten anerkannt und können als Beweismittel in 
+                    Verfahren eingebracht werden.
                   </p>
                 </div>
 

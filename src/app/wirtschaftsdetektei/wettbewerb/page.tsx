@@ -7,9 +7,9 @@ import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Wettbewerbsverstöße | Unlauterer Wettbewerb & Markenpiraterie",
+  title: "Wettbewerbsverstöße | Detektei für Wettbewerbsrecht finden",
   description:
-    "Ermittlungen bei unlauterem Wettbewerb: ✓ Markenpiraterie ✓ Abwerbung ✓ Geschäftsgeheimnis-Verletzung. Beweise für rechtliche Schritte. Jetzt beraten lassen.",
+    "Finden Sie eine Detektei bei Wettbewerbsverstößen. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Markenpiraterie ✓ Geschäftsgeheimnis-Schutz.",
 };
 
 const verstoesse = [
@@ -48,12 +48,12 @@ const faqs = [
   {
     question: "Wie können Sie bei Markenpiraterie helfen?",
     answer:
-      "Wir ermitteln die Quellen von Fälschungen, dokumentieren Vertriebswege, kaufen Testprodukte als Beweismittel und liefern Informationen für Abmahnungen, einstweilige Verfügungen oder Strafanzeigen.",
+      "Detekteien ermitteln die Quellen von Fälschungen, dokumentieren Vertriebswege, kaufen Testprodukte als Beweismittel und liefern Informationen für Abmahnungen, einstweilige Verfügungen oder Strafanzeigen.",
   },
   {
     question: "Was tun bei Verdacht auf Geheimnisverrat?",
     answer:
-      "Wir können überprüfen, ob ehemalige Mitarbeiter beim Wettbewerber arbeiten und Firmengeheimnisse nutzen, Kontakte zu aktuellen Mitarbeitern halten oder gegen Wettbewerbsverbote verstoßen.",
+      "Detekteien können überprüfen, ob ehemalige Mitarbeiter beim Wettbewerber arbeiten und Firmengeheimnisse nutzen, Kontakte zu aktuellen Mitarbeitern halten oder gegen Wettbewerbsverbote verstoßen.",
   },
   {
     question: "Sind die Ermittlungen vor Gericht verwertbar?",
@@ -102,8 +102,8 @@ export default function WettbewerbsverstoessePage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               <strong>Markenpiraterie, unlautere Abwerbung, Geheimnisverrat</strong> –
-              Wettbewerbsverstöße schaden Ihrem Unternehmen. Wir ermitteln und
-              liefern Beweise für rechtliche Schritte.
+              Wettbewerbsverstöße schaden Ihrem Unternehmen. Wir vermitteln Sie an 
+              <strong> spezialisierte Partner-Detekteien</strong> für Beweissicherung.
             </p>
           </div>
         </div>

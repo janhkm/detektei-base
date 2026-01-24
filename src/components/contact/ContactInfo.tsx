@@ -9,8 +9,8 @@ export function ContactInfo() {
           Direkt Kontakt aufnehmen
         </h3>
         <p className="text-primary-200 text-sm mb-6">
-          Sie möchten lieber direkt sprechen? Rufen Sie mich an oder
-          schreiben Sie mir eine E-Mail.
+          Sie möchten lieber direkt sprechen? Rufen Sie uns an oder
+          schreiben Sie uns eine E-Mail – wir vermitteln Sie schnell weiter.
         </p>
 
         <div className="space-y-4">
@@ -83,13 +83,13 @@ export function ContactInfo() {
             <MapPin className="h-5 w-5 text-primary-700" />
           </div>
           <h3 className="font-display font-bold text-primary-900">
-            Einsatzgebiet
+            Unser Netzwerk
           </h3>
         </div>
 
         <p className="text-sm text-primary-600">
-          Wir sind <strong>deutschlandweit</strong> im Einsatz und können bei
-          Bedarf auch internationale Ermittlungen durchführen.
+          Wir vermitteln Partner-Detekteien <strong>deutschlandweit</strong>. 
+          Bei Bedarf auch mit internationaler Reichweite.
         </p>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -117,26 +117,26 @@ export function ContactInfo() {
       {/* Trust Badges */}
       <div className="bg-white rounded-2xl p-6 border border-primary-100">
         <h3 className="font-display font-bold text-primary-900 mb-4">
-          Das garantiere ich
+          Das garantieren wir
         </h3>
 
         <div className="space-y-3">
           <div className="flex items-center gap-3">
             <Shield className="h-5 w-5 text-accent-600" />
             <span className="text-sm text-primary-700">
-              Zertifizierter Ermittler & Kriminalist
+              Nur geprüfte Partner-Detekteien
             </span>
           </div>
           <div className="flex items-center gap-3">
             <Shield className="h-5 w-5 text-accent-600" />
             <span className="text-sm text-primary-700">
-              IHK-zugelassen nach §34a GewO
+              IHK-zugelassene Partner (§34a GewO)
             </span>
           </div>
           <div className="flex items-center gap-3">
             <Shield className="h-5 w-5 text-accent-600" />
             <span className="text-sm text-primary-700">
-              100% Diskretion garantiert
+              100% Diskretion bei der Vermittlung
             </span>
           </div>
           <div className="flex items-center gap-3">

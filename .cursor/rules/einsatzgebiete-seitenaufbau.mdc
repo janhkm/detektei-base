@@ -1,266 +1,241 @@
-# Einsatzgebiete Seitenaufbau – Goldstandard
+---
+description: Spezifika für lokale SEO-Artikel (Städte, Bundesländer, Regionen)
+globs: content/posts/**/*-[stadt]*.mdx, content/posts/**/*-[bundesland]*.mdx
+alwaysApply: false
+---
 
-Diese Rule definiert den **verbindlichen Aufbau** von Stadt- und Landkreis-Seiten für optimale SEO und Duplicate-Content-Vermeidung.
+# Lokale SEO-Artikel – Spezifische Anleitung
+
+Diese Rule gilt für alle Artikel mit `articleType: "local_landing"` oder `articleType: "local_service"` aus der Queue.
 
 ---
 
-## 1. Seitenstruktur im Überblick
+## 1. Wann lokale Artikel schreiben?
 
-### Stadt-Seite (inkl. kreisfreie Städte)
+Lokale Artikel sind **Templates**, die für spezifische Städte/Regionen angepasst werden:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ HERO SECTION                                                │
-│ ├── Breadcrumbs                                             │
-│ ├── H1 (variiert via getStadtH1)                           │
-│ └── Intro-Text (variiert via getStadtIntroText)            │
-├─────────────────────────────────────────────────────────────┤
-│ MAIN CONTENT (2/3)              │ SIDEBAR (1/3)            │
-│                                 │                          │
-│ ├── KeyTakeaways               │ ├── CTABox               │
-│ ├── Leistungen (H2)            │ ├── Info-Card            │
-│ │   └── ServicesList x2        │ │   └── Landkreis, BL    │
-│ ├── Ablauf (H2)                │ │       PLZ              │
-│ │   └── ProcessTimeline        │ └── Trust Badges         │
-│ ├── Warum lokal (H2) ⭐        │                          │
-│ │   └── WarumLokal             │                          │
-│ ├── Typische Fälle (H2) ⭐     │                          │
-│ │   └── TypischeFaelle         │                          │
-│ ├── Kosten (H2)                │                          │
-│ │   └── PriceTable             │                          │
-│ ├── Rechtliche Grundlagen ⭐   │                          │
-│ │   └── RechtlicheHinweise     │                          │
-│ ├── Nahegelegene Städte        │                          │
-│ │   └── NearbyLocations        │                          │
-│ └── FAQ (H2)                   │                          │
-│     └── FAQAccordion (12 FAQs) │                          │
-└─────────────────────────────────────────────────────────────┘
-```
+| Template | Beispiel-Umsetzung |
+|----------|-------------------|
+| `privatdetektiv-[stadt]` | `privatdetektiv-muenchen`, `privatdetektiv-hamburg` |
+| `detektei-[bundesland]` | `detektei-bayern`, `detektei-nrw` |
+| `observation-detektiv-[stadt]` | `observation-detektiv-frankfurt` |
 
-### Landkreis-Seite
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│ HERO SECTION                                                │
-│ ├── Breadcrumbs                                             │
-│ ├── H1 (variiert via getLandkreisH1)                       │
-│ └── Intro-Text (variiert via getLandkreisIntroText)        │
-├─────────────────────────────────────────────────────────────┤
-│ FULL WIDTH CONTENT                                          │
-│                                                             │
-│ ├── KeyTakeaways                                            │
-│ ├── Städte im Landkreis (H2) – Verlinkungen                │
-│ │   └── Grid mit Links zu Stadt-Seiten                     │
-│ ├── Kleine Gemeinden (Info-Box)                            │
-│ ├── Leistungen (H2)                                        │
-│ │   └── ServicesList x2                                    │
-│ ├── Warum lokal (H2) ⭐                                    │
-│ │   └── WarumLokal                                         │
-│ ├── Typische Fälle (H2) ⭐                                 │
-│ │   └── TypischeFaelle                                     │
-│ ├── Kosten (H2)                                            │
-│ │   └── PriceTable                                         │
-│ ├── Rechtliche Grundlagen (H2) ⭐                          │
-│ │   └── RechtlicheHinweise                                 │
-│ ├── FAQ (H2)                                               │
-│ │   └── FAQAccordion (10 FAQs)                             │
-│ └── CTA Box                                                │
-└─────────────────────────────────────────────────────────────┘
-```
-
-⭐ = Neue Sektionen für mehr Content
+**Priorisierung nach Suchvolumen:**
+1. Top 10 Städte: München, Berlin, Hamburg, Köln, Frankfurt, Düsseldorf, Stuttgart, Leipzig, Dresden, Nürnberg
+2. Bundesländer: NRW, Bayern, Baden-Württemberg, Hessen
+3. Dann: Weitere Großstädte > 200.000 Einwohner
 
 ---
 
-## 2. Content-Varianten System
+## 2. Lokale Daten einbauen
 
-### Warum Varianten?
-Um **Duplicate Content** zu vermeiden, werden alle dynamischen Texte über das Varianten-System in `src/lib/content-variants.ts` generiert.
+### Pflicht-Elemente für jeden lokalen Artikel:
 
-### Verfügbare Varianten-Funktionen
+```mdx
+## Privatdetektiv in München – Ihre lokale Detektei
 
-| Funktion | Beschreibung | Varianten |
-|----------|--------------|-----------|
-| `getStadtH1()` | H1 für Stadt-Seiten | 4-6 je nach Stadtgröße |
-| `getStadtIntroText()` | Intro-Absatz | 6 Varianten |
-| `getStadtTitle()` | Meta-Title | 5 Varianten |
-| `getStadtMetaDescription()` | Meta-Description | 5-6 Varianten |
-| `getLandkreisH1()` | H1 für Landkreis | 5 Varianten |
-| `getLandkreisIntroText()` | Intro-Absatz | 5 Varianten |
-| `getLandkreisTitle()` | Meta-Title | 4 Varianten |
-| `getLandkreisMetaDescription()` | Meta-Description | 5 Varianten |
-| `getWarumLokalText()` | "Warum lokal" Absatz | 4 Varianten (Stadt/LK) |
-| `getTypischeFaelleText()` | Fallbeispiele | 3 Sets à 4 Fälle |
-| `getRechtlicheHinweise()` | Rechtliche Infos | 3 Intro-Varianten |
-
-### Verwendung im Code
-
-```tsx
-import {
-  getStadtH1,
-  getStadtIntroText,
-  getWarumLokalText,
-  getTypischeFaelleText,
-  getRechtlicheHinweise,
-} from "@/lib/content-variants";
-
-// In der Page-Komponente:
-const seed = stadt.slug + stadt.id; // Deterministischer Seed
-const h1 = getStadtH1(stadt, bundesland);
-const introText = getStadtIntroText(stadt, bundesland);
-const warumLokalText = getWarumLokalText(stadt.name, false, seed);
-const typischeFaelle = getTypischeFaelleText(stadt.name, false, seed);
-const rechtlicheHinweise = getRechtlicheHinweise(stadt.name, seed);
+**Kurz:** Als Detektei mit Sitz in München bieten wir diskrete Ermittlungen 
+im gesamten Großraum München, von Schwabing bis Pasing, von Freising bis 
+Starnberg. Unsere Detektive kennen die Stadt und ihre Besonderheiten.
 ```
 
-### Deterministischer Hash
-Die Varianten-Auswahl basiert auf einem **deterministischen Hash** aus dem Seed-String. Das bedeutet:
-- Gleicher Seed → Gleiche Variante (konsistent bei Rebuilds)
-- Verschiedene Städte → Verschiedene Varianten (keine Duplicates)
+### Lokale Bezüge variieren:
 
----
+| Element | München Beispiel | Hamburg Beispiel |
+|---------|-----------------|-----------------|
+| Stadtteile | Schwabing, Bogenhausen, Pasing | Altona, Eppendorf, Blankenese |
+| Umland | Freising, Starnberg, Erding | Ahrensburg, Norderstedt, Pinneberg |
+| Besonderheit | "Wirtschaftsmetropole Bayern" | "Tor zur Welt, Hafenstadt" |
+| Gerichtsstandort | "Landgericht München I" | "Landgericht Hamburg" |
 
-## 3. FAQ-System
+### Regionale Redewendungen (optional):
 
-### Anzahl FAQs
+```mdx
+# München:
+"Von der Isar bis zum Ammersee – wir ermitteln diskret."
 
-| Seitentyp | Anzahl FAQs |
-|-----------|-------------|
-| Stadt-Seite | 12 FAQs |
-| Landkreis-Seite | 10 FAQs |
-| Bundesland-Seite | 5 FAQs |
+# Hamburg:
+"Von der Elbe bis zur Alster – Ihre Hamburger Detektei."
 
-### FAQ-Funktionen
-
-```tsx
-import { getStadtFAQs, getLandkreisFAQs, getBundeslandFAQs } from "@/lib/faqs";
-
-// Stadt: 12 FAQs
-const faqs = getStadtFAQs(stadt, bundesland);
-
-// Landkreis: 10 FAQs
-const faqs = getLandkreisFAQs(landkreis, bundesland);
-```
-
-### FAQ-Kategorien (Stadt)
-
-1. Kosten
-2. Seriöser Detektiv
-3. Gerichtsverwertbarkeit
-4. Schnelligkeit
-5. Leistungen
-6. Diskretion
-7. Dauer einer Ermittlung ⭐
-8. Keine Beweise gefunden ⭐
-9. Zeuge vor Gericht ⭐
-10. Fortschritt-Updates ⭐
-11. Anonyme Beauftragung
-12. Kontakt
-
----
-
-## 4. Komponenten
-
-### Neue Komponenten
-
-| Komponente | Pfad | Beschreibung |
-|------------|------|--------------|
-| `TypischeFaelle` | `components/einsatzgebiete/TypischeFaelle.tsx` | 4 anonymisierte Fallbeispiele |
-| `WarumLokal` | `components/einsatzgebiete/WarumLokal.tsx` | Vorteile lokaler Detektei |
-| `RechtlicheHinweise` | `components/einsatzgebiete/RechtlicheHinweise.tsx` | Erlaubt/Verboten Listen |
-
-### Bestehende Komponenten
-
-| Komponente | Beschreibung |
-|------------|--------------|
-| `KeyTakeaways` | TL;DR Box am Anfang |
-| `ServicesList` | Privat- und Wirtschaftsermittlungen |
-| `ProcessTimeline` | 5-Schritte Ablauf |
-| `PriceTable` | Kosten-Übersicht |
-| `FAQAccordion` | Aufklappbare FAQs |
-| `NearbyLocations` | Links zu nahen Städten |
-| `CTABox` | Call-to-Action |
-
----
-
-## 5. SEO-Checkliste
-
-### Pflicht-Elemente pro Seite
-
-- [ ] **H1** variiert via Content-Varianten
-- [ ] **Meta-Title** variiert (< 60 Zeichen)
-- [ ] **Meta-Description** variiert (< 160 Zeichen)
-- [ ] **Intro-Text** variiert
-- [ ] **KeyTakeaways** Box
-- [ ] **Mindestens 800 Wörter** Fließtext
-- [ ] **10-12 FAQs** mit FAQ-Schema
-- [ ] **JSON-LD Schemas**: Breadcrumb, LocalBusiness, FAQPage, WebPage
-- [ ] **Interne Links** zu nahen Städten/Landkreisen
-- [ ] **"Kurz:" Definitionen** bei jedem H2
-
-### Content-Sektionen (Minimum)
-
-| Sektion | Pflicht? |
-|---------|----------|
-| Hero + Intro | ✅ |
-| KeyTakeaways | ✅ |
-| Leistungen | ✅ |
-| Ablauf (nur Stadt) | ✅ |
-| Warum lokal | ✅ |
-| Typische Fälle | ✅ |
-| Kosten + Tabelle | ✅ |
-| Rechtliche Hinweise | ✅ |
-| FAQ | ✅ |
-| CTA | ✅ |
-
----
-
-## 6. Dateien-Übersicht
-
-```
-src/
-├── app/einsatzgebiete/
-│   ├── page.tsx                              # Übersicht
-│   └── bundesland/
-│       └── [bundesland]/
-│           ├── page.tsx                      # Bundesland-Seite
-│           └── [landkreisOderStadt]/
-│               ├── page.tsx                  # Landkreis ODER kreisfreie Stadt
-│               └── [stadt]/
-│                   └── page.tsx              # Stadt im Landkreis
-│
-├── components/einsatzgebiete/
-│   ├── ServicesList.tsx
-│   ├── ProcessTimeline.tsx
-│   ├── NearbyLocations.tsx
-│   ├── TypischeFaelle.tsx                   # NEU
-│   ├── WarumLokal.tsx                       # NEU
-│   └── RechtlicheHinweise.tsx               # NEU
-│
-└── lib/
-    ├── content-variants.ts                   # Alle Varianten-Funktionen
-    ├── faqs.ts                               # FAQ-Generatoren
-    └── schemas/
-        └── einsatzgebiete.ts                 # JSON-LD Schemas
+# Köln:
+"Am Dom und am Rhein – diskrete Ermittlungen in Köln."
 ```
 
 ---
 
-## 7. Duplicate Content Check
+## 3. Verlinkung auf Einsatzgebiete-Seiten
 
-Nach Änderungen an Einsatzgebiete-Seiten IMMER prüfen:
+Jeder lokale Artikel MUSS auf die entsprechende `/einsatzgebiete` Seite verlinken:
 
-```bash
-npm run check:duplicates
+```mdx
+## Unser Einsatzgebiet in Bayern
+
+Wir sind nicht nur in München aktiv, sondern im gesamten Freistaat. 
+Erfahren Sie mehr über unsere [Einsatzgebiete in Bayern](/einsatzgebiete/bundesland/bayern) 
+und die [Städte, in denen wir für Sie da sind](/einsatzgebiete/bundesland/bayern/muenchen).
 ```
 
-### Erwartetes Ergebnis
+### Verlinkungsschema:
+
+| Artikel-Typ | Verlinken auf |
+|-------------|---------------|
+| Stadt-Artikel | `/einsatzgebiete/bundesland/[bundesland]/[stadt]` |
+| Bundesland-Artikel | `/einsatzgebiete/bundesland/[bundesland]` |
+| Region-Artikel | Alle relevanten Stadt-Seiten |
+
+---
+
+## 4. Lokale Keywords
+
+### Haupt-Keyword-Muster:
 
 ```
-✅ Keine kritischen Duplicate Content Probleme gefunden!
+[Dienstleistung] + [Stadt]
+Privatdetektiv München
+Detektei Hamburg
+Observation Frankfurt
+Wirtschaftsdetektei Düsseldorf
 ```
 
-Falls Probleme:
-1. Prüfen ob neue Texte in `content-variants.ts` eingefügt wurden
-2. Sicherstellen dass dynamische Variablen (`{h1}`) verwendet werden
-3. Mehr Varianten hinzufügen falls nötig
+### LSI-Keywords lokal:
+
+```
+Privatdetektiv München → 
+  - Ermittler München
+  - Detektei Bayern
+  - Observation München
+  - diskrete Ermittlungen München
+  - Detektiv Großraum München
+```
+
+### Long-Tail Keywords:
+
+```
+- "Privatdetektiv München Kosten"
+- "Detektei München Untreue"
+- "Observation München diskret"
+- "Wirtschaftsdetektei München Krankfeier"
+```
+
+---
+
+## 5. Lokale Schema-Daten
+
+Die Einsatzgebiete-Seiten generieren automatisch LocalBusiness Schema. 
+
+Für Blog-Artikel zusätzlich im Frontmatter:
+
+```yaml
+---
+# Zusätzliche lokale Felder
+location:
+  city: "München"
+  state: "Bayern"
+  region: "Oberbayern"
+  areaServed: ["München", "Freising", "Erding", "Starnberg", "Fürstenfeldbruck"]
+---
+```
+
+---
+
+## 6. Struktur: Local Landing Page
+
+```
+1. ## [Dienstleistung] in [Stadt] – [USP] (+ "Kurz:")
+2. <KeyTakeaways> Box (lokale Vorteile)
+3. ## Warum ein lokaler Detektiv in [Stadt]?
+   - Ortskenntnis
+   - Keine Anfahrtskosten
+   - Schnelle Verfügbarkeit
+   - Kenntnis lokaler Gegebenheiten
+4. ## Unsere Leistungen in [Stadt] und Umgebung
+   - Liste der Services
+   - Verlinkung auf Service-Seiten
+5. ## Typische Einsätze in [Region]
+   - 3-4 anonymisierte Fallbeispiele mit lokalem Bezug
+6. ## Kosten für Detektiv-Einsätze in [Stadt]
+   - Regionale Preisangaben
+   - "Im Raum [Stadt] liegen die Kosten bei..."
+7. ## So erreichen Sie uns in [Stadt]
+   - Kontaktmöglichkeiten
+   - Verfügbarkeit
+8. ## Häufige Fragen zu Detekteien in [Stadt]
+   - 5-6 lokale FAQs
+9. ## Fazit mit lokalem CTA
+```
+
+---
+
+## 7. FAQs lokalisieren
+
+```yaml
+faqs:
+  - question: "Was kostet ein Privatdetektiv in München?"
+    answer: "In München liegen die Stundensätze zwischen 60-150€, 
+    abhängig von der Auftragsart. Für Observationen im Großraum 
+    München rechnen Sie mit 900-1.500€ pro Tag."
+    
+  - question: "Wie schnell kann ein Detektiv in München starten?"
+    answer: "Als lokale Detektei in München können wir oft noch 
+    am selben Tag mit Ermittlungen beginnen. In dringenden Fällen 
+    sind wir innerhalb weniger Stunden einsatzbereit."
+    
+  - question: "Ermitteln Sie auch im Umland von München?"
+    answer: "Ja, unser Einsatzgebiet umfasst den gesamten Großraum 
+    München: Freising, Erding, Starnberg, Dachau, Fürstenfeldbruck 
+    und weitere Landkreise in Oberbayern."
+```
+
+---
+
+## 8. Lokale CTAs
+
+```mdx
+## München:
+**Jetzt Münchner Detektei kontaktieren:** Rufen Sie uns an oder nutzen 
+Sie unser [Kontaktformular](/kontakt). Wir sind in München und Umgebung 
+für Sie da – diskret und zuverlässig.
+
+## Hamburg:
+**Ihre Hamburger Detektei erreichen Sie unter:** [Telefon] oder über 
+unser [Kontaktformular](/kontakt). Von Altona bis Bergedorf – wir 
+ermitteln für Sie.
+
+## Bundesland (Bayern):
+**Bayernweit für Sie im Einsatz:** Von München bis Nürnberg, von 
+Augsburg bis Regensburg – unsere Detektive kennen den Freistaat. 
+[Jetzt unverbindlich anfragen →](/kontakt)
+```
+
+---
+
+## 9. Duplicate Content vermeiden!
+
+**WICHTIG:** Lokale Artikel dürfen NICHT einfach kopiert und Stadt-Namen ausgetauscht werden!
+
+### Einzigartig machen durch:
+
+1. **Lokale Fallbeispiele** (anonymisiert, aber mit lokalem Bezug)
+2. **Regionale Besonderheiten** erwähnen
+3. **Unterschiedliche Schwerpunkte** je nach Stadt:
+   - München: Wirtschaftsermittlungen (viele Firmensitze)
+   - Hamburg: Hafenwirtschaft, Import/Export
+   - Berlin: Regierungsbezirk, Botschaften
+   - Frankfurt: Finanzsektor, Banken
+4. **Lokale Statistiken** wenn verfügbar
+
+### Mindestens 40% einzigartiger Content pro Artikel!
+
+---
+
+## 10. Checkliste Lokaler Artikel
+
+- [ ] Stadt/Region korrekt in Titel, H1, H2s
+- [ ] Mindestens 3 Stadtteile/Umlandgemeinden genannt
+- [ ] Lokale Besonderheit erwähnt
+- [ ] Auf `/einsatzgebiete/[...]` Seite verlinkt
+- [ ] FAQs lokalisiert
+- [ ] CTA mit lokalem Bezug
+- [ ] Mindestens 40% einzigartiger Content
+- [ ] Keine Duplicate Content Phrasen
+- [ ] LocalBusiness-relevante Infos im Frontmatter

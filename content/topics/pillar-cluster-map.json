@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "description": "Definiert die Pillar-Cluster Beziehungen für interne Verlinkung",
+    "lastUpdated": "2026-01-24",
+    "instructions": "Jeder Cluster-Artikel gehört zu EINEM Pillar. Zusätzliche Verlinkungen via alsoLinkTo.",
+    "activePillars": 14,
+    "deferredPillars": 1,
+    "totalClusters": 55,
+    "notes": "Lokaler Pillar (ID 41) ist auf 'deferred' gesetzt. Keine doppelten Cluster-IDs."
+  },
+  "pillars": [
+    {
+      "pillarId": 11,
+      "pillarTitle": "Was kostet ein Privatdetektiv pro Stunde?",
+      "pillarSlug": "privatdetektiv-kosten-pro-stunde",
+      "pillarUrl": "/blog/privatdetektiv-kosten-pro-stunde",
+      "category": "Kosten",
+      "clusters": [
+        { "id": 12, "slug": "detektei-kosten-uebersicht", "linkText": ["Kosten einer Detektei", "Detektei Kostenübersicht"] },
+        { "id": 13, "slug": "detektei-pauschalpreis", "linkText": ["Pauschalpreise bei Detekteien", "Detektei Pauschalen"] },
+        { "id": 14, "slug": "billige-detektei-erfahrungen", "linkText": ["Erfahrungen mit günstigen Detekteien", "billige Detektive"] },
+        { "id": 15, "slug": "detektivkosten-steuerlich-absetzbar", "linkText": ["Detektivkosten von der Steuer absetzen", "steuerliche Absetzbarkeit"] },
+        { "id": 16, "slug": "detektivkosten-erstattung-gericht", "linkText": ["Kostenerstattung vor Gericht", "wer zahlt die Detektivkosten"] },
+        { "id": 17, "slug": "detektei-oder-selbst-ermitteln", "linkText": ["selbst ermitteln vs. Detektei", "Kostenvergleich"] },
+        { "id": 18, "slug": "detektiv-kosten-ehebruch", "linkText": ["Kosten bei Untreue-Ermittlung", "Detektiv Kosten Ehebruch"] },
+        { "id": 19, "slug": "warum-detektei-teuer", "linkText": ["warum Detektive kosten", "Preise erklärt"] },
+        { "id": 20, "slug": "detektei-kosten-sparen", "linkText": ["Kosten sparen bei der Detektei", "günstig beauftragen"] }
+      ],
+      "alsoLinkTo": ["/kosten", "/kontakt"]
+    },
+    {
+      "pillarId": 1,
+      "pillarTitle": "Was macht ein Privatdetektiv wirklich? Aufgaben & Grenzen erklärt",
+      "pillarSlug": "privatdetektiv-aufgaben-erklaerung",
+      "pillarUrl": "/blog/privatdetektiv-aufgaben-erklaerung",
+      "category": "Grundlagen",
+      "clusters": [
+        { "id": 2, "slug": "wann-detektei-einschalten", "linkText": ["wann eine Detektei sinnvoll ist", "Detektei beauftragen"] },
+        { "id": 3, "slug": "detektei-diskret-arbeiten", "linkText": ["diskrete Arbeitsweise", "wie Detekteien diskret arbeiten"] },
+        { "id": 6, "slug": "privatdetektiv-vs-wirtschaftsdetektiv", "linkText": ["Unterschied Privat- und Wirtschaftsdetektiv", "Detektiv-Typen"] },
+        { "id": 9, "slug": "qualifikation-privatdetektiv", "linkText": ["Qualifikationen eines Detektivs", "Ausbildung Privatdetektiv"] },
+        { "id": 10, "slug": "was-darf-ein-detektiv", "linkText": ["was Detektive dürfen", "Befugnisse eines Detektivs"] }
+      ],
+      "alsoLinkTo": ["/privatdetektei", "/wirtschaftsdetektei", "/ueber-uns"]
+    },
+    {
+      "pillarId": 5,
+      "pillarTitle": "Welche Beweise sind vor Gericht verwertbar?",
+      "pillarSlug": "detektiv-beweissicherung-gericht",
+      "pillarUrl": "/blog/detektiv-beweissicherung-gericht",
+      "category": "Grundlagen",
+      "clusters": [
+        { "id": 55, "slug": "detektiv-beweis-vor-gericht", "linkText": ["Detektivbeweise vor Gericht", "Praxisbeispiele Beweisverwertung"] },
+        { "id": 59, "slug": "beweisverwertung-detektiv", "linkText": ["Beweisverwertung im Zivilprozess", "rechtliche Grundlagen"] },
+        { "id": 94, "slug": "detektiv-glaubwuerdigkeit-gericht", "linkText": ["Glaubwürdigkeit von Detektiven", "Detektiv als Zeuge"] },
+        { "id": 93, "slug": "nach-beweissicherung-detektiv", "linkText": ["nach der Beweisaufnahme", "nächste Schritte"] }
+      ],
+      "alsoLinkTo": ["/rechtliches", "/privatdetektei/observation"]
+    },
+    {
+      "pillarId": 7,
+      "pillarTitle": "Wie seriös ist eine Detektei? Woran man Profis erkennt",
+      "pillarSlug": "serioese-detektei-erkennen",
+      "pillarUrl": "/blog/serioese-detektei-erkennen",
+      "category": "Grundlagen",
+      "clusters": [
+        { "id": 61, "slug": "detektei-finden-tipps", "linkText": ["Detektei finden", "Tipps zur Auswahl"] },
+        { "id": 82, "slug": "detektei-fehler-vermeiden", "linkText": ["Fehler bei der Beauftragung", "häufige Fehler"] },
+        { "id": 85, "slug": "detektei-vertrauen", "linkText": ["Vertrauen zur Detektei", "Vertrauensaufbau"] }
+      ],
+      "alsoLinkTo": ["/ueber-uns", "/kontakt", "/blog/billige-detektei-erfahrungen"]
+    },
+    {
+      "pillarId": 8,
+      "pillarTitle": "Detektei beauftragen – Ablauf Schritt für Schritt",
+      "pillarSlug": "detektei-beauftragen-ablauf",
+      "pillarUrl": "/blog/detektei-beauftragen-ablauf",
+      "category": "Grundlagen",
+      "clusters": [
+        { "id": 62, "slug": "erstgespraech-detektei", "linkText": ["Erstgespräch vorbereiten", "erste Beratung"] },
+        { "id": 63, "slug": "informationen-fuer-detektiv", "linkText": ["welche Infos der Detektiv braucht", "Vorbereitung"] },
+        { "id": 64, "slug": "detektei-anonym-anfragen", "linkText": ["anonyme Anfrage", "diskret anfragen"] },
+        { "id": 67, "slug": "detektei-online-beauftragen", "linkText": ["online beauftragen", "Detektei im Internet"] },
+        { "id": 88, "slug": "detektei-erstberatung", "linkText": ["kostenlose Erstberatung", "Erstberatung nutzen"] },
+        { "id": 97, "slug": "detektiv-sofort-beauftragen", "linkText": ["sofort starten", "schnelle Beauftragung"] }
+      ],
+      "alsoLinkTo": ["/ablauf", "/kontakt"]
+    },
+    {
+      "pillarId": 21,
+      "pillarTitle": "Fremdgehen beweisen – was ist erlaubt?",
+      "pillarSlug": "fremdgehen-beweisen-erlaubt",
+      "pillarUrl": "/blog/fremdgehen-beweisen-erlaubt",
+      "category": "Partnerschaft",
+      "clusters": [
+        { "id": 22, "slug": "partner-ueberwachen-legal", "linkText": ["Partner überwachen", "legale Überwachung"] },
+        { "id": 23, "slug": "anzeichen-fremdgehen-partner", "linkText": ["Anzeichen für Fremdgehen", "Untreue erkennen"] },
+        { "id": 24, "slug": "beweise-ehebruch-sammeln", "linkText": ["Beweise sammeln", "Ehebruch dokumentieren"] },
+        { "id": 29, "slug": "doppelleben-aufdecken-detektiv", "linkText": ["Doppelleben aufdecken", "Geheimnisse enthüllen"] },
+        { "id": 90, "slug": "fremdgehen-strafbar", "linkText": ["Ist Fremdgehen strafbar?", "rechtliche Konsequenzen"] }
+      ],
+      "alsoLinkTo": ["/privatdetektei/untreue", "/privatdetektei/observation"]
+    },
+    {
+      "pillarId": 25,
+      "pillarTitle": "Detektiv bei Scheidung – wann sinnvoll?",
+      "pillarSlug": "detektiv-scheidung-beauftragen",
+      "pillarUrl": "/blog/detektiv-scheidung-beauftragen",
+      "category": "Partnerschaft",
+      "clusters": [
+        { "id": 26, "slug": "detektiv-sorgerecht", "linkText": ["Detektiv bei Sorgerecht", "Sorgerechtsstreit"] },
+        { "id": 27, "slug": "unterhaltsbetrug-detektiv", "linkText": ["Unterhaltsbetrug aufdecken", "Unterhalt"] }
+      ],
+      "alsoLinkTo": ["/privatdetektei/untreue", "/privatdetektei/sorgerecht", "/blog/detektiv-kosten-ehebruch"]
+    },
+    {
+      "pillarId": 31,
+      "pillarTitle": "Mitarbeiter überwachen – was ist erlaubt?",
+      "pillarSlug": "mitarbeiter-ueberwachen-erlaubt",
+      "pillarUrl": "/blog/mitarbeiter-ueberwachen-erlaubt",
+      "category": "Wirtschaft",
+      "clusters": [
+        { "id": 32, "slug": "krankfeiern-beweisen-detektiv", "linkText": ["Krankfeiern aufdecken", "Blaumachen beweisen"] },
+        { "id": 38, "slug": "fake-krankmeldung-beweisen", "linkText": ["gefälschte Krankmeldung", "Fake-AU"] },
+        { "id": 39, "slug": "homeoffice-kontrollieren-detektiv", "linkText": ["Homeoffice kontrollieren", "Remote-Arbeit"] },
+        { "id": 95, "slug": "mitarbeiter-ueberwachen-detektei", "linkText": ["Mitarbeiter überwachen lassen", "Überwachung beauftragen"] }
+      ],
+      "alsoLinkTo": ["/wirtschaftsdetektei/krankfeier", "/wirtschaftsdetektei"]
+    },
+    {
+      "pillarId": 36,
+      "pillarTitle": "Diebstahl im Betrieb aufklären",
+      "pillarSlug": "betrieblicher-diebstahl-detektei",
+      "pillarUrl": "/blog/betrieblicher-diebstahl-detektei",
+      "category": "Wirtschaft",
+      "clusters": [
+        { "id": 33, "slug": "spesenbetrug-detektei", "linkText": ["Spesenbetrug", "Abrechnungsbetrug"] },
+        { "id": 34, "slug": "wettbewerbsverstoss-mitarbeiter-detektiv", "linkText": ["Wettbewerbsverstoß", "Konkurrenzverbot"] },
+        { "id": 40, "slug": "wirtschaftskriminalitaet-detektei", "linkText": ["Wirtschaftskriminalität", "Betrug im Unternehmen"] }
+      ],
+      "alsoLinkTo": ["/wirtschaftsdetektei/betrug", "/wirtschaftsdetektei"]
+    },
+    {
+      "pillarId": 51,
+      "pillarTitle": "Datenschutz & Detektivarbeit – was gilt?",
+      "pillarSlug": "datenschutz-detektei",
+      "pillarUrl": "/blog/datenschutz-detektei",
+      "category": "Recht",
+      "clusters": [
+        { "id": 52, "slug": "observation-ohne-zustimmung", "linkText": ["Observation ohne Zustimmung", "heimliche Überwachung"] },
+        { "id": 53, "slug": "videoueberwachung-detektiv-erlaubt", "linkText": ["Videoüberwachung", "Filmen erlaubt?"] },
+        { "id": 54, "slug": "tonaufnahme-beweis-erlaubt", "linkText": ["Tonaufnahmen", "Mitschnitte"] },
+        { "id": 57, "slug": "gps-tracking-erlaubt-detektiv", "linkText": ["GPS-Tracking", "Ortung"] },
+        { "id": 58, "slug": "privatsphaere-beweissicherung", "linkText": ["Privatsphäre vs. Beweise", "Interessenabwägung"] }
+      ],
+      "alsoLinkTo": ["/rechtliches", "/datenschutz"]
+    },
+    {
+      "pillarId": 56,
+      "pillarTitle": "Was Detektive NICHT dürfen",
+      "pillarSlug": "detektiv-verboten",
+      "pillarUrl": "/blog/detektiv-verboten",
+      "category": "Recht",
+      "clusters": [
+        { "id": 91, "slug": "illegale-ermittlungsmethoden", "linkText": ["illegale Methoden", "verbotene Ermittlungen"] },
+        { "id": 92, "slug": "detektiv-strafbar-wann", "linkText": ["wann machen sich Detektive strafbar", "Strafbarkeit"] }
+      ],
+      "alsoLinkTo": ["/rechtliches", "/blog/was-darf-ein-detektiv", "/blog/observation-ohne-zustimmung", "/blog/gps-tracking-erlaubt-detektiv"]
+    },
+    {
+      "pillarId": 41,
+      "pillarTitle": "Detektei in meiner Nähe finden – so geht's",
+      "pillarSlug": "detektei-in-der-naehe",
+      "pillarUrl": "/blog/detektei-in-der-naehe",
+      "category": "Lokal",
+      "status": "deferred",
+      "clusters": [
+        { "id": 48, "slug": "detektiv-diskret-kleinstadt", "linkText": ["Detektiv in der Kleinstadt", "ländliche Gebiete"] },
+        { "id": 49, "slug": "detektei-einsatzgebiet", "linkText": ["Einsatzgebiet", "wie weit reisen Detektive"] },
+        { "id": 50, "slug": "detektiv-deutschlandweit", "linkText": ["deutschlandweit beauftragen", "bundesweite Detektei"] },
+        { "id": 86, "slug": "regionale-detektei-vorteile", "linkText": ["lokale Detektei Vorteile", "regionale Ermittler"] }
+      ],
+      "alsoLinkTo": ["/einsatzgebiete"],
+      "notes": "DEFERRED: Lokale Artikel werden später bearbeitet."
+    },
+    {
+      "pillarId": 71,
+      "pillarTitle": "Online-Recherche durch Detektive",
+      "pillarSlug": "osint-detektei",
+      "pillarUrl": "/blog/osint-detektei",
+      "category": "Digital",
+      "clusters": [
+        { "id": 72, "slug": "social-media-detektiv", "linkText": ["Social Media Ermittlungen", "Facebook, Instagram"] },
+        { "id": 74, "slug": "fake-profil-detektiv", "linkText": ["Fake-Profile entlarven", "Catfishing"] },
+        { "id": 77, "slug": "digitale-beweissicherung", "linkText": ["digitale Beweise sichern", "Screenshots"] },
+        { "id": 79, "slug": "online-betrug-detektiv", "linkText": ["Online-Betrug", "Internet-Betrug"] }
+      ],
+      "alsoLinkTo": ["/privatdetektei/personensuche", "/privatdetektei/betrug"]
+    },
+    {
+      "pillarId": 73,
+      "pillarTitle": "Cyberstalking erkennen & beweisen",
+      "pillarSlug": "cyberstalking-beweisen",
+      "pillarUrl": "/blog/cyberstalking-beweisen",
+      "category": "Digital",
+      "clusters": [
+        { "id": 28, "slug": "stalking-beweisen-detektiv", "linkText": ["Stalking beweisen", "Belästigung dokumentieren"] },
+        { "id": 75, "slug": "online-belaestigung-beweisen", "linkText": ["Online-Belästigung dokumentieren", "digitales Stalking"] }
+      ],
+      "alsoLinkTo": ["/privatdetektei/stalking", "/blog/fake-profil-detektiv"]
+    },
+    {
+      "pillarId": 81,
+      "pillarTitle": "Checkliste: Brauche ich eine Detektei?",
+      "pillarSlug": "detektei-checkliste",
+      "pillarUrl": "/blog/detektei-checkliste",
+      "category": "Entscheidungshilfen",
+      "clusters": [
+        { "id": 84, "slug": "wann-keine-detektei", "linkText": ["wann KEINE Detektei", "Alternativen"] },
+        { "id": 98, "slug": "detektei-ja-oder-nein", "linkText": ["Ja oder Nein", "Entscheidung"] }
+      ],
+      "alsoLinkTo": ["/kontakt", "/ablauf", "/blog/wann-detektei-einschalten"]
+    }
+  ],
+  "servicePageLinks": {
+    "description": "Diese Service-Seiten sollten aus thematisch passenden Artikeln verlinkt werden",
+    "pages": [
+      { "url": "/privatdetektei", "linkFrom": ["Grundlagen", "Partnerschaft", "Conversion"] },
+      { "url": "/privatdetektei/untreue", "linkFrom": ["Partnerschaft", "Kosten"] },
+      { "url": "/privatdetektei/observation", "linkFrom": ["Grundlagen", "Partnerschaft", "Recht"] },
+      { "url": "/privatdetektei/personensuche", "linkFrom": ["Grundlagen", "Digital"] },
+      { "url": "/privatdetektei/stalking", "linkFrom": ["Partnerschaft", "Digital"] },
+      { "url": "/privatdetektei/sorgerecht", "linkFrom": ["Partnerschaft"] },
+      { "url": "/privatdetektei/betrug", "linkFrom": ["Digital", "Partnerschaft"] },
+      { "url": "/wirtschaftsdetektei", "linkFrom": ["Grundlagen", "Wirtschaft", "Conversion"] },
+      { "url": "/wirtschaftsdetektei/krankfeier", "linkFrom": ["Wirtschaft"] },
+      { "url": "/wirtschaftsdetektei/betrug", "linkFrom": ["Wirtschaft"] },
+      { "url": "/wirtschaftsdetektei/wettbewerb", "linkFrom": ["Wirtschaft"] },
+      { "url": "/wirtschaftsdetektei/mitarbeiterpruefung", "linkFrom": ["Wirtschaft"] },
+      { "url": "/kosten", "linkFrom": ["Kosten", "Conversion"] },
+      { "url": "/ablauf", "linkFrom": ["Grundlagen", "Conversion"] },
+      { "url": "/kontakt", "linkFrom": ["ALL"] },
+      { "url": "/einsatzgebiete", "linkFrom": ["Lokal"] },
+      { "url": "/rechtliches", "linkFrom": ["Recht"] }
+    ]
+  }
+}

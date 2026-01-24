@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Calendar, Tag, ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { getAllPosts, BLOG_CATEGORIES } from "@/lib/blog";
+import { getAllPosts, BLOG_CATEGORIES, getCategorySlug } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog | Ratgeber & Wissen rund um Detektei-Dienstleistungen",
+  title: "Blog | Ratgeber & Wissen rund um Detekteien",
   description:
-    "Fachartikel zu Privatdetektiv, Observation, Kosten und Rechtsfragen. Fundiertes Wissen von erfahrenen Ermittlern.",
+    "Fachartikel zu Privatdetektiv, Observation, Kosten und Rechtsfragen. Fundiertes Wissen für Ihre Entscheidung.",
 };
 
 function formatDate(dateString: string): string {
@@ -33,9 +33,8 @@ export default function BlogPage() {
               Ratgeber & Wissen
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Fachartikel zu Detektei-Dienstleistungen, rechtlichen Grundlagen
-              und Kosten. Fundiertes Wissen von erfahrenen Ermittlern für Ihre
-              Fragen.
+              Fachartikel zu Detekteien, rechtlichen Grundlagen und Kosten. 
+              Fundiertes Wissen, damit Sie die richtige Entscheidung treffen.
             </p>
           </div>
         </div>
@@ -62,9 +61,12 @@ export default function BlogPage() {
                     >
                       <div className="p-6">
                         <div className="flex items-center gap-4 text-sm text-primary-500 mb-3">
-                          <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary-50 rounded-full text-primary-700 font-medium">
+                          <Link
+                            href={`/blog/kategorie/${getCategorySlug(post.category)}`}
+                            className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary-50 rounded-full text-primary-700 font-medium hover:bg-primary-100 transition-colors"
+                          >
                             {post.category}
-                          </span>
+                          </Link>
                           <span className="flex items-center gap-1.5">
                             <Calendar className="h-4 w-4" />
                             {formatDate(post.date)}
@@ -118,30 +120,41 @@ export default function BlogPage() {
                     Kategorien
                   </h3>
                   <ul className="space-y-2">
-                    {BLOG_CATEGORIES.map((category) => (
-                      <li key={category.id}>
-                        <span className="text-primary-600 hover:text-primary-900 transition-colors cursor-default">
-                          {category.name}
-                        </span>
-                      </li>
-                    ))}
+                    {BLOG_CATEGORIES.map((category) => {
+                      const categoryPosts = posts.filter(
+                        (p) => p.category.toLowerCase() === category.name.toLowerCase()
+                      );
+                      return (
+                        <li key={category.id}>
+                          <Link
+                            href={`/blog/kategorie/${category.slug}`}
+                            className="flex items-center justify-between py-1 text-primary-600 hover:text-primary-900 transition-colors"
+                          >
+                            <span>{category.name}</span>
+                            <span className="text-xs bg-primary-100 px-2 py-0.5 rounded-full">
+                              {categoryPosts.length}
+                            </span>
+                          </Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
 
                 {/* CTA */}
                 <div className="bg-primary-900 rounded-xl p-6 text-white">
                   <h3 className="font-display font-bold mb-2">
-                    Persönliche Beratung
+                    Detektei finden
                   </h3>
                   <p className="text-primary-200 text-sm mb-4">
-                    Sie haben Fragen zu einem Thema? Unsere Experten beraten Sie
-                    diskret und kostenlos.
+                    Sie brauchen professionelle Hilfe? Wir vermitteln Sie 
+                    kostenlos an geprüfte Partner-Detekteien.
                   </p>
                   <Link
                     href="/kontakt"
                     className="inline-flex items-center justify-center w-full rounded-lg bg-accent-500 px-4 py-3 text-sm font-semibold text-primary-900 hover:bg-accent-400 transition-colors"
                   >
-                    Beratung anfragen
+                    Jetzt Detektei finden
                   </Link>
                 </div>
               </div>

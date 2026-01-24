@@ -7,9 +7,9 @@ import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Betrug & Scamming | Romance Scam & Heiratsschwindel aufdecken",
+  title: "Betrug & Scamming | Detektei für Betrugsermittlung finden",
   description:
-    "Schutz vor Betrug im privaten Umfeld: ✓ Romance Scam ✓ Heiratsschwindel ✓ Identitätsprüfung. Diskrete Ermittlungen. Jetzt beraten lassen.",
+    "Finden Sie eine Detektei bei Romance Scam & Heiratsschwindel. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Identitätsprüfung.",
 };
 
 const betrugsarten = [
@@ -55,7 +55,7 @@ const faqs = [
   {
     question: "Wie kann ein Detektiv bei Betrugsverdacht helfen?",
     answer:
-      "Wir können: die Identität der Person überprüfen, Angaben verifizieren (Beruf, Wohnort, Familienstand), nach früheren Betrugsdelikten recherchieren und Beweise für eine mögliche Strafanzeige sichern.",
+      "Detekteien können: die Identität der Person überprüfen, Angaben verifizieren (Beruf, Wohnort, Familienstand), nach früheren Betrugsdelikten recherchieren und Beweise für eine mögliche Strafanzeige sichern.",
   },
   {
     question: "Was kostet eine Überprüfung einer Person?",
@@ -109,8 +109,8 @@ export default function BetrugsermittlungPage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               <strong>Romance Scam, Heiratsschwindel, Erbschleicherei</strong> –
-              Betrüger nutzen Gefühle aus. Wir prüfen Personen diskret und
-              helfen Ihnen, sich zu schützen.
+              Betrüger nutzen Gefühle aus. Wir vermitteln Sie an <strong>spezialisierte 
+              Partner-Detekteien</strong>, die Personen diskret prüfen.
             </p>
           </div>
         </div>

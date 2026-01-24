@@ -30,6 +30,17 @@ import {
   getRechtlicheHinweise,
 } from "@/lib/content-variants";
 
+// ============================================================================
+// ISR KONFIGURATION - Kritisch für Scale
+// ============================================================================
+
+// Erlaubt dynamische Generierung für alle Städte nicht im generateStaticParams
+export const dynamicParams = true;
+// Revalidierung alle 7 Tage
+export const revalidate = 604800;
+
+const SITE_URL = "https://detektei-base.de";
+
 interface PageProps {
   params: Promise<{
     bundesland: string;
@@ -39,7 +50,21 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return getAllStadtParams();
+  // Bei Build: Nur die Top 100 Städte nach Einwohnerzahl generieren
+  // Der Rest wird on-demand mit ISR generiert
+  // Dies hält Build-Zeiten niedrig bei tausenden potenziellen Seiten
+  
+  const allParams = getAllStadtParams();
+  
+  // Für bessere Performance: Alle Städte bei Build generieren
+  // wenn die Gesamtzahl unter 500 liegt
+  if (allParams.length <= 500) {
+    return allParams;
+  }
+  
+  // Bei mehr als 500 Städten: Nur die wichtigsten bei Build
+  // Rest wird on-demand generiert
+  return allParams.slice(0, 100);
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -51,14 +76,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Verwende variierende Title und Description
   const title = getStadtTitle(data.stadt, data.bundesland);
   const description = getStadtMetaDescription(data.stadt, data.bundesland);
+  const pageUrl = `/einsatzgebiete/bundesland/${bundeslandSlug}/${landkreisSlug}/${stadtSlug}`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: `${SITE_URL}${pageUrl}`,
+    },
     openGraph: {
       title,
       description,
-      url: `/einsatzgebiete/bundesland/${bundeslandSlug}/${landkreisSlug}/${stadtSlug}`,
+      url: pageUrl,
+      type: "website",
+      siteName: "Detektei Base",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }
@@ -153,10 +189,10 @@ export default async function StadtPage({ params }: PageProps) {
               {/* Services */}
               <div className="mt-12">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Unsere Detektei-Leistungen in {stadt.name}
+                  Detektei-Leistungen in {stadt.name}
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Unsere Detektei in {stadt.name} bietet
+                  <strong>Kurz:</strong> Partner-Detekteien in {stadt.name} bieten
                   das gesamte Spektrum der Privatdetektei und Wirtschaftsdetektei – 
                   diskret, professionell und gerichtsverwertbar.
                 </p>
@@ -274,14 +310,14 @@ export default async function StadtPage({ params }: PageProps) {
                 {/* Trust Badges */}
                 <div className="bg-white rounded-xl p-6 border border-primary-100">
                   <h3 className="font-display font-bold text-primary-900 mb-4">
-                    Unsere Garantien
+                    Das garantieren wir
                   </h3>
                   <ul className="space-y-3 text-sm">
                     {[
-                      "IHK-zugelassen nach §34a GewO",
-                      "100% Diskretion garantiert",
-                      "Gerichtsverwertbare Beweise",
-                      "Kostenlose Erstberatung",
+                      "Nur geprüfte Partner-Detekteien",
+                      "IHK-zugelassene Partner (§34a GewO)",
+                      "100% Diskretion bei der Vermittlung",
+                      "Kostenlose Vermittlung",
                       "DSGVO-konforme Arbeitsweise",
                     ].map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-primary-700">

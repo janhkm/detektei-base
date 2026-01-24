@@ -19,9 +19,9 @@ import { ProcessTimeline } from "@/components/einsatzgebiete/ProcessTimeline";
 import { generatePrivatdetekteiBreadcrumbSchema } from "@/lib/schemas/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Observation | Professionelle Personenüberwachung",
+  title: "Observation | Detektei für Personenüberwachung finden",
   description:
-    "Professionelle Observation durch erfahrene Detektive. ✓ Diskrete Überwachung ✓ Gerichtsverwertbare Beweise ✓ Modernste Technik. Jetzt Erstberatung anfragen.",
+    "Finden Sie eine Detektei für professionelle Observation. ✓ Diskrete Überwachung ✓ Gerichtsverwertbare Beweise ✓ Geprüfte Partner. Kostenlose Vermittlung.",
 };
 
 const einsatzgebiete = [
@@ -44,17 +44,17 @@ const faqs = [
   {
     question: "Ist eine Observation legal?",
     answer:
-      "Ja, Observationen im öffentlichen Raum sind legal und werden von den Gerichten als Beweismittel anerkannt. Unsere Detektive arbeiten im Rahmen der Jedermannsrechte und überschreiten keine rechtlichen Grenzen.",
+      "Ja, Observationen im öffentlichen Raum sind legal und werden von Gerichten als Beweismittel anerkannt. Professionelle Detektive arbeiten im Rahmen der Jedermannsrechte und überschreiten keine rechtlichen Grenzen.",
   },
   {
     question: "Wie läuft eine Observation ab?",
     answer:
-      "Nach einem Briefing über die Zielperson beginnt die Observation zu den vereinbarten Zeiten. Unsere Detektive folgen der Person unauffällig, dokumentieren alle relevanten Aktivitäten mit Fotos und Videos und erstellen einen detaillierten Bericht.",
+      "Nach einem Briefing über die Zielperson beginnt die Observation zu den vereinbarten Zeiten. Die Detektive folgen der Person unauffällig, dokumentieren alle relevanten Aktivitäten mit Fotos und Videos und erstellen einen detaillierten Bericht.",
   },
   {
     question: "Wie viele Detektive sind im Einsatz?",
     answer:
-      "Je nach Auftrag setzen wir mindestens zwei Detektive ein. Bei mobilen Observationen oder in unübersichtlichen Situationen können auch drei oder mehr Ermittler erforderlich sein, um die Zielperson nicht zu verlieren.",
+      "Je nach Auftrag setzen Detekteien mindestens zwei Ermittler ein. Bei mobilen Observationen oder in unübersichtlichen Situationen können auch drei oder mehr erforderlich sein, um die Zielperson nicht zu verlieren.",
   },
   {
     question: "Was kostet eine Observation?",
@@ -69,12 +69,12 @@ const faqs = [
   {
     question: "Werden die Ergebnisse vor Gericht anerkannt?",
     answer:
-      "Ja, unsere Observationsberichte sind gerichtsverwertbar. Unsere Detektive dokumentieren alle Beobachtungen so, dass sie als Beweismittel in zivil- und arbeitsrechtlichen Verfahren verwendet werden können.",
+      "Ja, professionelle Observationsberichte sind gerichtsverwertbar. Die Detektive dokumentieren alle Beobachtungen so, dass sie als Beweismittel in zivil- und arbeitsrechtlichen Verfahren verwendet werden können.",
   },
   {
     question: "Bemerkt die Zielperson die Observation?",
     answer:
-      "Nein, unsere Detektive sind Profis im verdeckten Arbeiten. Mit unauffälligen Fahrzeugen, angepasster Kleidung und jahrelanger Erfahrung bleiben sie unentdeckt. Die Zielperson erfährt nichts von der Überwachung.",
+      "Nein, professionelle Detektive sind Experten im verdeckten Arbeiten. Mit unauffälligen Fahrzeugen, angepasster Kleidung und Erfahrung bleiben sie unentdeckt. Die Zielperson erfährt nichts von der Überwachung.",
   },
 ];
 
@@ -117,9 +117,9 @@ export default function ObservationPage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               Die <strong>Observation</strong> ist das Kerngeschäft jeder
-              Detektei. Unsere erfahrenen Ermittler überwachen Zielpersonen
-              diskret und dokumentieren alle relevanten Aktivitäten – für
-              gerichtsverwertbare Beweise, die Klarheit schaffen.
+              Detektei. Wir vermitteln Sie an erfahrene Partner-Detekteien, die 
+              Zielpersonen diskret überwachen und alle relevanten Aktivitäten 
+              dokumentieren – für gerichtsverwertbare Beweise.
             </p>
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function ObservationPage() {
                   dokumentiert – diskret, legal und gerichtsverwertbar.
                 </p>
                 <p className="text-primary-600 mb-4">
-                  Bei einer Observation verfolgen unsere Detektive eine
+                  Bei einer Observation verfolgen professionelle Detektive eine
                   Zielperson über einen definierten Zeitraum. Dabei werden alle
                   relevanten Aktivitäten beobachtet und dokumentiert: Wo hält
                   sich die Person auf? Mit wem trifft sie sich? Was tut sie?
@@ -191,12 +191,12 @@ export default function ObservationPage() {
               {/* Unsere Methoden */}
               <div className="mt-12">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Unsere Observationsmethoden
+                  Observationsmethoden professioneller Detekteien
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Wir setzen auf mobile und stationäre
-                  Observation, moderne Technik und erfahrene Teams – für
-                  lückenlose Dokumentation ohne Entdeckungsrisiko.
+                  <strong>Kurz:</strong> Professionelle Detekteien setzen auf mobile 
+                  und stationäre Observation, moderne Technik und erfahrene Teams – 
+                  für lückenlose Dokumentation ohne Entdeckungsrisiko.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
@@ -341,12 +341,12 @@ export default function ObservationPage() {
 
                 <div className="bg-accent-50 rounded-xl p-6 border border-accent-200">
                   <h3 className="font-display font-bold text-primary-900 mb-2">
-                    Schnelle Einsatzbereitschaft
+                    Schnelle Vermittlung
                   </h3>
                   <p className="text-sm text-primary-600">
-                    In dringenden Fällen können wir innerhalb von 24 Stunden
-                    mit der Observation beginnen. Kontaktieren Sie uns für eine
-                    schnelle Erstberatung.
+                    In dringenden Fällen vermitteln wir Sie innerhalb von 24 Stunden 
+                    an eine einsatzbereite Partner-Detektei. Kontaktieren Sie uns 
+                    für eine schnelle Beratung.
                   </p>
                 </div>
 

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import {
   Phone,
-  FileText,
+  Users,
+  Handshake,
   Search,
-  Camera,
   FileCheck,
   CheckCircle,
   Clock,
@@ -16,128 +16,114 @@ import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Ablauf | So arbeiten wir für Sie",
+  title: "Ablauf | So funktioniert die Vermittlung",
   description:
-    "Transparenter Ermittlungsablauf von der Erstberatung bis zum Bericht. ✓ Kostenlose Beratung ✓ Klare Prozesse ✓ Regelmäßige Updates. Erfahren Sie, wie wir arbeiten.",
+    "Transparenter Ablauf von der Anfrage bis zur Detektei. ✓ Kostenlose Beratung ✓ Schnelle Vermittlung ✓ Geprüfte Partner. Erfahren Sie, wie wir Sie unterstützen.",
 };
 
 const steps = [
   {
     step: "01",
     icon: Phone,
-    title: "Kostenlose Erstberatung",
+    title: "Kostenlose Anfrage",
     description:
-      "Schildern Sie uns Ihren Fall vertraulich per Telefon oder E-Mail. Wir analysieren die Situation und beraten Sie zu den Möglichkeiten – kostenlos und unverbindlich.",
+      "Schildern Sie uns Ihren Fall vertraulich per Telefon, E-Mail oder Kontaktformular. Wir benötigen nur die wichtigsten Informationen, um die passende Detektei zu finden.",
     details: [
       "Vertrauliches Gespräch über Ihre Situation",
-      "Einschätzung der Erfolgsaussichten",
-      "Beratung zu rechtlichen Möglichkeiten",
-      "Erste Kostenschätzung",
+      "Einschätzung, welche Art Detektei Sie brauchen",
+      "Beratung zu Ihren Möglichkeiten",
+      "Völlig kostenlos und unverbindlich",
     ],
-    duration: "ca. 30 Minuten",
+    duration: "ca. 15-30 Minuten",
   },
   {
     step: "02",
-    icon: FileText,
-    title: "Auftragserteilung",
+    icon: Users,
+    title: "Wir finden den Experten",
     description:
-      "Nach Ihrer Entscheidung erstellen wir einen transparenten Kostenvoranschlag und Auftragsvertrag. Sie behalten jederzeit die volle Kostenkontrolle.",
+      "Basierend auf Ihrem Anliegen, Standort und der benötigten Spezialisierung wählen wir die geeignete Partner-Detektei aus unserem Netzwerk.",
     details: [
-      "Detaillierter Kostenvoranschlag",
-      "Schriftlicher Auftragsvertrag",
-      "Klare Zieldefinition",
-      "Festlegung des Budgetrahmens",
+      "Analyse Ihres Falls",
+      "Auswahl nach Spezialisierung",
+      "Regionale Verfügbarkeit prüfen",
+      "Nur IHK-zugelassene Partner",
     ],
-    duration: "1-2 Werktage",
+    duration: "Wenige Stunden",
   },
   {
     step: "03",
-    icon: Search,
-    title: "Ermittlung & Recherche",
+    icon: Handshake,
+    title: "Kontakt zur Detektei",
     description:
-      "Unsere erfahrenen Detektive beginnen mit den Ermittlungen. Je nach Auftrag umfasst dies Observationen, Recherchen oder Befragungen.",
+      "Die ausgewählte Partner-Detektei meldet sich direkt bei Ihnen. Sie besprechen Ihren Fall persönlich und erhalten einen individuellen Kostenvoranschlag.",
     details: [
-      "Verdeckte Observation",
-      "Datenbank- und Online-Recherche",
-      "Befragungen im Umfeld",
-      "Vor-Ort-Ermittlungen",
+      "Persönliche Beratung durch die Detektei",
+      "Detaillierter Kostenvoranschlag",
+      "Klärung aller Fragen",
+      "Keine Verpflichtung zur Beauftragung",
+    ],
+    duration: "Innerhalb von 24h",
+  },
+  {
+    step: "04",
+    icon: Search,
+    title: "Ermittlung durch Partner",
+    description:
+      "Nach Ihrer Beauftragung führt die Partner-Detektei die Ermittlungen professionell durch. Sie haben direkten Kontakt zu Ihrem Ermittler.",
+    details: [
+      "Professionelle Ermittlungsarbeit",
+      "Direkter Ansprechpartner",
+      "Regelmäßige Updates",
+      "Legale Methoden garantiert",
     ],
     duration: "Je nach Auftrag",
   },
   {
-    step: "04",
-    icon: Camera,
-    title: "Beweissicherung",
-    description:
-      "Alle relevanten Erkenntnisse werden professionell und gerichtsverwertbar dokumentiert: Fotos, Videos, Protokolle und Berichte.",
-    details: [
-      "Foto- und Videodokumentation",
-      "Lückenlose Protokolle",
-      "Zeugensicherung wenn möglich",
-      "Digitale Beweissicherung",
-    ],
-    duration: "Laufend während Ermittlung",
-  },
-  {
     step: "05",
     icon: FileCheck,
-    title: "Abschlussbericht",
+    title: "Ergebnisse & Bericht",
     description:
-      "Sie erhalten einen detaillierten, gerichtsverwertbaren Ermittlungsbericht mit allen Beweisen und einer Zusammenfassung der Ergebnisse.",
+      "Sie erhalten von der Partner-Detektei einen detaillierten, gerichtsverwertbaren Ermittlungsbericht mit allen Beweisen.",
     details: [
       "Chronologischer Ablaufbericht",
-      "Alle Beweismittel als Anlage",
-      "Zusammenfassung der Erkenntnisse",
+      "Alle Beweismittel dokumentiert",
+      "Gerichtsverwertbare Qualität",
       "Handlungsempfehlungen",
     ],
-    duration: "3-5 Werktage nach Abschluss",
-  },
-  {
-    step: "06",
-    icon: MessageCircle,
-    title: "Nachbesprechung",
-    description:
-      "Wir besprechen die Ergebnisse persönlich mit Ihnen und beraten Sie zu möglichen nächsten Schritten – ob rechtliche Maßnahmen oder weitere Ermittlungen.",
-    details: [
-      "Persönliches Abschlussgespräch",
-      "Erläuterung der Ergebnisse",
-      "Beratung zu nächsten Schritten",
-      "Bei Bedarf Vermittlung an Anwälte",
-    ],
-    duration: "ca. 60 Minuten",
+    duration: "Nach Abschluss",
   },
 ];
 
 const faqs = [
   {
-    question: "Wie lange dauert eine Ermittlung?",
+    question: "Was kostet die Vermittlung?",
     answer:
-      "Die Dauer hängt vom Fall ab. Einfache Observationen können 2-5 Tage dauern, komplexe Ermittlungen mehrere Wochen. Wir geben Ihnen bei der Erstberatung eine realistische Einschätzung.",
+      "Die Vermittlung über Detektei Base ist für Sie komplett kostenfrei. Wir finanzieren uns über Provisionen der Partner-Detekteien. Die Kosten für die Ermittlung selbst vereinbaren Sie direkt mit der Detektei.",
   },
   {
-    question: "Wie erfahre ich vom Fortschritt?",
+    question: "Wie schnell werde ich an eine Detektei vermittelt?",
     answer:
-      "Sie erhalten regelmäßige Updates – je nach Wunsch täglich, wöchentlich oder bei wichtigen Entwicklungen. Sie können jederzeit anrufen und den aktuellen Stand erfragen.",
+      "In der Regel meldet sich eine passende Partner-Detektei innerhalb von 24 Stunden (an Werktagen) bei Ihnen. In dringenden Fällen ist oft eine noch schnellere Vermittlung möglich.",
   },
   {
-    question: "Kann ich den Auftrag abbrechen?",
+    question: "Kann ich den Auftrag bei der Detektei abbrechen?",
     answer:
-      "Ja, Sie können den Auftrag jederzeit beenden. Abgerechnet werden nur die bis dahin erbrachten Leistungen. Es gibt keine versteckten Kosten oder Stornogebühren.",
+      "Ja, das regeln Sie direkt mit der Partner-Detektei. Unsere Partner arbeiten in der Regel mit fairen Kündigungsbedingungen ohne versteckte Kosten.",
   },
   {
     question: "Was passiert mit meinen Daten?",
     answer:
-      "Alle Daten werden streng vertraulich behandelt und DSGVO-konform verarbeitet. Nach Abschluss des Auftrags werden die Daten auf Wunsch gelöscht oder sicher archiviert.",
+      "Ihre Anfragedaten werden nur an die eine ausgewählte Partner-Detektei weitergegeben. Wir geben keine Daten an mehrere Detekteien weiter. Details finden Sie in unserer Datenschutzerklärung.",
   },
   {
-    question: "Arbeiten Sie auch am Wochenende?",
+    question: "Wie wählen Sie die Partner-Detektei aus?",
     answer:
-      "Ja, unsere Detektive sind bei Bedarf auch an Wochenenden und Feiertagen im Einsatz. Gerade für Observationen sind flexible Einsatzzeiten oft entscheidend.",
+      "Wir berücksichtigen Ihr Anliegen (z.B. Untreue, Wirtschaftsermittlung), Ihren Standort und die Spezialisierung der Detektei. Alle Partner sind IHK-zugelassen und von uns geprüft.",
   },
   {
-    question: "Wie erreiche ich Sie in dringenden Fällen?",
+    question: "Was, wenn ich mit der vermittelten Detektei nicht zufrieden bin?",
     answer:
-      "Unser Büro ist Mo-Fr 8-20 Uhr und Sa 9-16 Uhr besetzt. In dringenden Fällen erreichen Sie uns auch außerhalb dieser Zeiten über unsere Notfall-Nummer.",
+      "Kontaktieren Sie uns – wir helfen Ihnen gerne und können bei Bedarf eine alternative Partner-Detektei vermitteln.",
   },
 ];
 
@@ -150,12 +136,11 @@ export default function AblaufPage() {
           <Breadcrumbs items={[{ label: "Ablauf", href: "/ablauf" }]} />
           <div className="mt-8 max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-white leading-tight">
-              Unser Ablauf – Transparent von Anfang bis Ende
+              So funktioniert die Vermittlung
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Von der ersten Kontaktaufnahme bis zum fertigen Ermittlungsbericht
-              – wir arbeiten strukturiert, transparent und halten Sie jederzeit
-              auf dem Laufenden.
+              Von Ihrer Anfrage bis zur passenden Detektei – transparent und 
+              unkompliziert. Sie behalten jederzeit die volle Kontrolle.
             </p>
           </div>
         </div>
@@ -166,21 +151,20 @@ export default function AblaufPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <KeyTakeaways
             items={[
-              "<strong>Erstberatung:</strong> Kostenlos und unverbindlich",
-              "<strong>Transparenz:</strong> Klare Kosten, regelmäßige Updates",
-              "<strong>Flexibilität:</strong> Auftrag jederzeit kündbar",
-              "<strong>Ergebnis:</strong> Gerichtsverwertbarer Abschlussbericht",
+              "<strong>Kostenlos:</strong> Unsere Vermittlung ist für Sie gratis",
+              "<strong>Schnell:</strong> Partner-Detektei meldet sich in 24h",
+              "<strong>Geprüft:</strong> Alle Partner sind IHK-zugelassen",
+              "<strong>Unverbindlich:</strong> Keine Verpflichtung zur Beauftragung",
             ]}
           />
 
           {/* Process Steps */}
           <div className="mt-16">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-900 text-center mb-4">
-              Der Ermittlungsprozess in 6 Schritten
+              Der Vermittlungsprozess in 5 Schritten
             </h2>
             <p className="text-primary-600 text-center max-w-2xl mx-auto mb-12">
-              Ein strukturierter Ablauf garantiert effiziente Ermittlungen und
-              transparente Kommunikation.
+              Einfach und transparent – so finden Sie die richtige Detektei
             </p>
 
             <div className="space-y-8">
@@ -237,30 +221,30 @@ export default function AblaufPage() {
               Unsere Garantien
             </h2>
             <p className="text-primary-300 max-w-2xl mx-auto">
-              Damit Sie sich auf das Wesentliche konzentrieren können
+              Das können Sie von unserer Vermittlung erwarten
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Shield,
-                title: "100% Diskretion",
-                description: "Absolute Vertraulichkeit ist garantiert",
+                title: "Geprüfte Partner",
+                description: "Alle Detekteien sind IHK-zugelassen",
               },
               {
-                icon: FileText,
-                title: "Transparente Kosten",
-                description: "Keine versteckten Gebühren",
+                icon: MessageCircle,
+                title: "Kostenlose Vermittlung",
+                description: "Für Sie entstehen keine Kosten",
               },
               {
                 icon: Clock,
-                title: "Regelmäßige Updates",
-                description: "Sie bleiben immer informiert",
+                title: "Schnelle Reaktion",
+                description: "Rückmeldung innerhalb von 24h",
               },
               {
                 icon: CheckCircle,
-                title: "Gerichtsverwertbar",
-                description: "Professionelle Beweissicherung",
+                title: "Unverbindlich",
+                description: "Keine Verpflichtung zur Beauftragung",
               },
             ].map((item, i) => (
               <div
@@ -280,7 +264,7 @@ export default function AblaufPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-display font-bold text-primary-900 text-center mb-8">
-            Häufige Fragen zum Ablauf
+            Häufige Fragen zur Vermittlung
           </h2>
           <FAQAccordion faqs={faqs} />
         </div>
@@ -290,8 +274,8 @@ export default function AblaufPage() {
       <section className="py-16 lg:py-24 bg-primary-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <CTABox
-            title="Bereit für den ersten Schritt?"
-            description="Kostenlose und unverbindliche Erstberatung"
+            title="Jetzt die passende Detektei finden"
+            description="Kostenlose und unverbindliche Vermittlung"
             variant="dark"
           />
         </div>

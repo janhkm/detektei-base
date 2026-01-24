@@ -2,7 +2,7 @@ import { Bundesland, Landkreis, Stadt, FAQ } from "@/data/types";
 import { BreadcrumbItem } from "@/components/ui/Breadcrumbs";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://detektei-base.de";
-const COMPANY_NAME = "Detektei Oliver Peth";
+const COMPANY_NAME = "Detektei Base";
 const PHONE = "+49 176 66918653";
 const EMAIL = "kontakt@detektei-base.de";
 
@@ -43,9 +43,9 @@ export function generateOrganizationSchema() {
     logo: {
       "@type": "ImageObject",
       "@id": `${SITE_URL}/#logo`,
-      url: `${SITE_URL}/images/logo.png`,
-      width: 300,
-      height: 60,
+      url: `${SITE_URL}/favicon.svg`,
+      width: 512,
+      height: 512,
     },
     contactPoint: [
       {
@@ -77,12 +77,12 @@ export function generateLocalBusinessSchema(options: LocalBusinessOptions) {
   const schema: Record<string, unknown> = {
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}${options.url}/#localbusiness`,
-    name: `${COMPANY_NAME} ${options.name}`,
+    name: `${COMPANY_NAME} – Detektei in ${options.name}`,
     description: options.description,
     url: `${SITE_URL}${options.url}`,
     telephone: PHONE,
     email: EMAIL,
-    priceRange: "€€-€€€",
+    priceRange: "Kostenlose Vermittlung",
     image: `${SITE_URL}/images/og/detektei.jpg`,
     address: {
       "@type": "PostalAddress",
@@ -110,30 +110,30 @@ export function generateLocalBusinessSchema(options: LocalBusinessOptions) {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Detektiv-Dienstleistungen",
+      name: "Vermittlung von Detektiv-Dienstleistungen",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Observation",
-            description: "Professionelle Observationen zur Beweissicherung",
+            name: "Vermittlung Observation",
+            description: "Vermittlung an Detekteien für professionelle Observationen",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Personensuche",
-            description: "Ermittlung von Aufenthaltsorten und Adressen",
+            name: "Vermittlung Personensuche",
+            description: "Vermittlung an Detekteien für Adressermittlung und Personensuche",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Wirtschaftsermittlungen",
-            description: "Ermittlungen für Unternehmen",
+            name: "Vermittlung Wirtschaftsermittlungen",
+            description: "Vermittlung an Wirtschaftsdetekteien",
           },
         },
       ],
@@ -216,7 +216,7 @@ export function generateWebPageSchema(options: WebPageOptions) {
 export function generateServiceSchema(stadtName: string, bundeslandName: string) {
   return {
     "@type": "Service",
-    serviceType: "Detektei-Dienstleistungen",
+    serviceType: "Vermittlung von Detektei-Dienstleistungen",
     provider: {
       "@type": "LocalBusiness",
       "@id": `${SITE_URL}/#organization`,
@@ -231,20 +231,20 @@ export function generateServiceSchema(stadtName: string, bundeslandName: string)
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: `Ermittlungsleistungen in ${stadtName}`,
+      name: `Detektei-Vermittlung in ${stadtName}`,
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: `Observation in ${stadtName}`,
+            name: `Detektei finden in ${stadtName}`,
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: `Personensuche in ${stadtName}`,
+            name: `Privatdetektiv in ${stadtName}`,
           },
         },
       ],

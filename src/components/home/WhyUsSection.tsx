@@ -10,39 +10,39 @@ import {
 const reasons = [
   {
     icon: Shield,
-    title: "IHK-zugelassen & zertifiziert",
+    title: "Nur geprüfte Detekteien",
     description:
-      "Alle unsere Detektive sind nach §34a GewO zugelassen und verfügen über die erforderlichen Sachkundenachweise.",
+      "Alle Partner-Detekteien sind nach §34a GewO zugelassen und werden von uns auf Qualität geprüft.",
   },
   {
     icon: Scale,
     title: "Gerichtsverwertbare Beweise",
     description:
-      "Unsere Ermittlungsberichte und Dokumentationen werden von Gerichten und Anwälten anerkannt.",
+      "Unsere Partner liefern Ermittlungsberichte und Dokumentationen, die von Gerichten anerkannt werden.",
   },
   {
     icon: Lock,
     title: "Absolute Diskretion",
     description:
-      "Vertraulichkeit ist oberstes Gebot. Alle Informationen werden streng vertraulich behandelt.",
+      "Vertraulichkeit ist oberstes Gebot. Ihre Daten werden nur an eine ausgewählte Partner-Detektei weitergegeben.",
   },
   {
     icon: Clock,
-    title: "Schnelle Einsatzbereitschaft",
+    title: "Schnelle Vermittlung",
     description:
-      "In dringenden Fällen können wir innerhalb von 24 Stunden mit den Ermittlungen beginnen.",
+      "Keine Zeit verlieren: In der Regel erhalten Sie innerhalb von 24 Stunden einen Rückruf.",
   },
   {
     icon: Award,
-    title: "20+ Jahre Erfahrung",
+    title: "Erfahrene Spezialisten",
     description:
-      "Profitieren Sie von unserer langjährigen Expertise in allen Bereichen der Ermittlungsarbeit.",
+      "Für jeden Fall die passende Expertise – von Observation bis Wirtschaftsermittlung.",
   },
   {
     icon: HeartHandshake,
-    title: "Transparente Kosten",
+    title: "Kostenlos für Sie",
     description:
-      "Keine versteckten Gebühren. Sie erhalten vorab einen detaillierten Kostenvoranschlag.",
+      "Unsere Vermittlung ist komplett kostenlos. Die Konditionen vereinbaren Sie direkt mit der Detektei.",
   },
 ];
 
@@ -54,26 +54,25 @@ export function WhyUsSection() {
           {/* Content */}
           <div>
             <span className="text-sm font-semibold text-accent-600 uppercase tracking-wider">
-              Warum wir?
+              Warum Detektei Base?
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-primary-900">
-              Vertrauen Sie auf Professionalität und Erfahrung
+              Ihr Netzwerk für professionelle Ermittlungen
             </h2>
             <p className="mt-4 text-lg text-primary-600 leading-relaxed">
-              Als etablierte Detektei verbinden wir modernste
-              Ermittlungsmethoden mit jahrzehntelanger Erfahrung. Unser Team aus
-              erfahrenen Ermittlern steht Ihnen diskret und zuverlässig zur
-              Seite.
+              Die Suche nach der richtigen Detektei ist zeitaufwendig und schwierig. 
+              Wir haben das Netzwerk – Sie sparen Zeit und bekommen garantiert einen 
+              kompetenten Partner für Ihren Fall.
             </p>
 
             {/* Stats */}
             <div className="mt-10 grid grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-primary-900">
-                  20+
+                  4
                 </div>
                 <div className="text-sm text-primary-500 mt-1">
-                  Jahre Erfahrung
+                  Partner deutschlandweit
                 </div>
               </div>
               <div className="text-center">
@@ -81,15 +80,15 @@ export function WhyUsSection() {
                   2.500+
                 </div>
                 <div className="text-sm text-primary-500 mt-1">
-                  Gelöste Fälle
+                  Fälle netzwerkweit
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-primary-900">
-                  98%
+                  24h
                 </div>
                 <div className="text-sm text-primary-500 mt-1">
-                  Erfolgsquote
+                  Vermittlungszeit
                 </div>
               </div>
             </div>

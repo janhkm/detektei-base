@@ -7,9 +7,9 @@ import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Betrug & Unterschlagung | Wirtschaftskriminalität aufklären",
+  title: "Betrug & Unterschlagung | Detektei für Unternehmen finden",
   description:
-    "Aufklärung von Betrug, Unterschlagung und Veruntreuung im Unternehmen. ✓ Täterermittlung ✓ Beweissicherung ✓ Schadensdokumentation. Diskret und gerichtsverwertbar.",
+    "Finden Sie eine Detektei bei Betrug und Unterschlagung. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Täterermittlung ✓ Gerichtsverwertbare Beweise.",
 };
 
 const betrugsarten = [

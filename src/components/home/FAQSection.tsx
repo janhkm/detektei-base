@@ -6,34 +6,34 @@ import { clsx } from "clsx";
 
 const faqs = [
   {
-    question: "Was kostet eine Detektei?",
+    question: "Was kostet die Vermittlung einer Detektei?",
     answer:
-      "Die Kosten für eine Detektei variieren je nach Auftragsart und -umfang. Stundensätze liegen typischerweise zwischen 50-150€. Bei Observationen sollten Sie mit Tageskosten von 800-1.500€ rechnen. Wir erstellen Ihnen vorab einen transparenten Kostenvoranschlag.",
+      "Die Vermittlung über Detektei Base ist für Sie komplett kostenfrei. Wir finanzieren uns über Vermittlungsprovisionen der Partner-Detekteien. Die Kosten für die eigentliche Detektiv-Dienstleistung werden direkt mit der vermittelten Detektei vereinbart.",
+  },
+  {
+    question: "Wie finde ich eine seriöse Detektei?",
+    answer:
+      "Über Detektei Base werden Sie nur an geprüfte Partner-Detekteien vermittelt. Alle Partner sind IHK-zugelassen nach §34a GewO, haben eine Berufshaftpflichtversicherung und sind zur Einhaltung der DSGVO verpflichtet. So sparen Sie sich die aufwendige Recherche.",
+  },
+  {
+    question: "Wie schnell werde ich an eine Detektei vermittelt?",
+    answer:
+      "In der Regel erhalten Sie innerhalb von 24 Stunden (an Werktagen) einen Rückruf von einer passenden Partner-Detektei. In dringenden Fällen ist oft eine noch schnellere Vermittlung möglich.",
+  },
+  {
+    question: "Werden meine Daten vertraulich behandelt?",
+    answer:
+      "Ja, absolut. Wir behandeln alle Anfragen streng vertraulich. Ihre Daten werden nur an die eine ausgewählte Partner-Detektei weitergegeben, nicht an mehrere. Details finden Sie in unserer Datenschutzerklärung.",
+  },
+  {
+    question: "In welchen Regionen vermitteln Sie Detekteien?",
+    answer:
+      "Unser Netzwerk umfasst über 50 Partner-Detekteien in ganz Deutschland. Egal ob in München, Berlin, Hamburg oder ländlichen Regionen – wir finden eine geeignete Detektei in Ihrer Nähe.",
   },
   {
     question: "Sind die Beweise einer Detektei vor Gericht verwertbar?",
     answer:
-      "Ja, professionell gesicherte Beweise sind vor Gericht verwertbar, sofern sie legal beschafft wurden. Das gilt für Observationsberichte, Fotos aus dem öffentlichen Raum und Zeugenaussagen. Unsere Detektive sind geschult, Beweise gerichtsfest zu dokumentieren.",
-  },
-  {
-    question: "Wie läuft eine Ermittlung ab?",
-    answer:
-      "Nach einer kostenlosen Erstberatung analysieren wir Ihren Fall und erstellen einen Ermittlungsplan. Nach Auftragserteilung beginnen unsere Detektive mit der Arbeit. Sie erhalten regelmäßige Updates und am Ende einen detaillierten Abschlussbericht.",
-  },
-  {
-    question: "Wie diskret arbeitet eine Detektei?",
-    answer:
-      "Diskretion ist das Fundament unserer Arbeit. Alle Informationen werden streng vertraulich behandelt. Unsere Detektive arbeiten unauffällig und sind auf verdeckte Ermittlungen spezialisiert. Ihre Identität und der Auftrag bleiben stets geschützt.",
-  },
-  {
-    question: "In welchen Regionen sind Sie tätig?",
-    answer:
-      "Wir sind deutschlandweit im Einsatz und können bei Bedarf auch internationale Ermittlungen durchführen. Durch unser Netzwerk aus erfahrenen Detektiven können wir schnell in jeder Region aktiv werden.",
-  },
-  {
-    question: "Wie schnell kann eine Ermittlung beginnen?",
-    answer:
-      "In dringenden Fällen können wir innerhalb von 24 Stunden mit den Ermittlungen starten. In der Regel beginnen wir innerhalb weniger Tage nach Auftragserteilung. Kontaktieren Sie uns für eine schnelle Erstberatung.",
+      "Ja, professionell gesicherte Beweise sind vor Gericht verwertbar, sofern sie legal beschafft wurden. Alle unsere Partner-Detekteien sind darauf spezialisiert, gerichtsfeste Dokumentationen zu erstellen.",
   },
 ];
 
@@ -49,7 +49,7 @@ export function FAQSection() {
             Häufige Fragen
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-primary-900">
-            FAQ – Ihre Fragen, unsere Antworten
+            FAQ – Ihre Fragen zur Vermittlung
           </h2>
         </div>
 

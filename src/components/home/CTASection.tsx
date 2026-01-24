@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, ArrowRight } from "lucide-react";
+import { Phone, Mail, ArrowRight, Users } from "lucide-react";
 
 export function CTASection() {
   return (
@@ -17,19 +17,19 @@ export function CTASection() {
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 rounded-full bg-accent-500/20 px-4 py-1.5 text-sm text-accent-300 mb-6">
-          <span className="w-2 h-2 bg-accent-400 rounded-full animate-pulse" />
-          <span>Kostenlose Erstberatung</span>
+          <Users className="h-4 w-4" />
+          <span>Geprüfte Partner-Detekteien mit 20+ Jahren Erfahrung</span>
         </div>
 
         {/* Headline */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white leading-tight">
-          Lassen Sie uns über Ihren Fall sprechen
+          Jetzt die passende Detektei finden
         </h2>
 
         {/* Description */}
         <p className="mt-6 text-lg sm:text-xl text-primary-200 max-w-2xl mx-auto">
-          Vertraulich, unverbindlich und kostenfrei. Als zertifizierter 
-          Ermittler und Kriminalist berate ich Sie diskret zu Ihren Möglichkeiten.
+          Kostenlose Vermittlung an geprüfte Detekteien. Schildern Sie uns 
+          Ihren Fall – wir finden den richtigen Partner für Sie.
         </p>
 
         {/* CTA Buttons */}
@@ -38,7 +38,7 @@ export function CTASection() {
             href="/kontakt"
             className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent-500 px-8 py-4 text-base font-semibold text-primary-900 shadow-lg hover:bg-accent-400 transition-all hover:shadow-xl"
           >
-            Jetzt Kontakt aufnehmen
+            Jetzt Detektei finden
             <ArrowRight className="h-5 w-5" />
           </Link>
           <a
@@ -65,8 +65,8 @@ export function CTASection() {
 
         {/* Trust Note */}
         <p className="mt-8 text-xs text-primary-400">
-          Alle Anfragen werden vertraulich behandelt. Keine Weitergabe an
-          Dritte.
+          Alle Anfragen werden vertraulich behandelt. Ihre Daten werden nur an 
+          eine ausgewählte Partner-Detektei weitergegeben.
         </p>
       </div>
     </section>

@@ -39,15 +39,30 @@ import {
   getRechtlicheHinweise,
 } from "@/lib/content-variants";
 
+// ============================================================================
+// ISR KONFIGURATION
+// ============================================================================
+
+// Erlaubt dynamische Generierung für Seiten nicht im generateStaticParams
+export const dynamicParams = true;
+// Revalidierung alle 14 Tage
+export const revalidate = 1209600;
+
+const SITE_URL = "https://detektei-base.de";
+
 interface PageProps {
   params: Promise<{ bundesland: string; landkreisOderStadt: string }>;
 }
 
 export async function generateStaticParams() {
-  // Kombiniere Landkreis-Params und kreisfreie Stadt-Params
+  // Bei Build: Nur die wichtigsten Landkreise und kreisfreie Städte generieren
+  // Rest wird on-demand mit ISR generiert
   const landkreisParams = getAllLandkreisParams();
   const kreisfreieStadtParams = getAllKreisfreieStadtParams();
-  return [...landkreisParams, ...kreisfreieStadtParams];
+  
+  // Alle kreisfreien Städte (wichtig, da Metropolen)
+  // + alle Landkreise (manageable Anzahl)
+  return [...kreisfreieStadtParams, ...landkreisParams];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -58,10 +73,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (stadtData && stadtData.stadt.is_kreisfrei) {
     const title = getStadtTitle(stadtData.stadt, stadtData.bundesland);
     const description = getStadtMetaDescription(stadtData.stadt, stadtData.bundesland);
+    const pageUrl = `/einsatzgebiete/bundesland/${bundeslandSlug}/${slug}`;
+    
     return {
       title,
       description,
-      openGraph: { title, description },
+      alternates: {
+        canonical: `${SITE_URL}${pageUrl}`,
+      },
+      openGraph: { 
+        title, 
+        description,
+        url: pageUrl,
+        type: "website",
+        siteName: "Detektei Base",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+      },
     };
   }
 
@@ -74,10 +105,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       landkreisData.bundesland,
       landkreisData.staedte.length
     );
+    const pageUrl = `/einsatzgebiete/bundesland/${bundeslandSlug}/${slug}`;
+    
     return {
       title,
       description,
-      openGraph: { title, description },
+      alternates: {
+        canonical: `${SITE_URL}${pageUrl}`,
+      },
+      openGraph: { 
+        title, 
+        description,
+        url: pageUrl,
+        type: "website",
+        siteName: "Detektei Base",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+      },
     };
   }
 
@@ -179,10 +226,10 @@ function StadtPageContent({ data }: { data: StadtPageData }) {
               {/* Services */}
               <div className="mt-12">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Unsere Detektei-Leistungen in {stadt.name}
+                  Detektei-Leistungen in {stadt.name}
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Unsere Detektei in {stadt.name} bietet
+                  <strong>Kurz:</strong> Partner-Detekteien in {stadt.name} bieten
                   das gesamte Spektrum der Privatdetektei und Wirtschaftsdetektei – 
                   diskret, professionell und gerichtsverwertbar.
                 </p>
@@ -292,14 +339,14 @@ function StadtPageContent({ data }: { data: StadtPageData }) {
                 {/* Trust Badges */}
                 <div className="bg-white rounded-xl p-6 border border-primary-100">
                   <h3 className="font-display font-bold text-primary-900 mb-4">
-                    Unsere Garantien
+                    Das garantieren wir
                   </h3>
                   <ul className="space-y-3 text-sm">
                     {[
-                      "IHK-zugelassen nach §34a GewO",
-                      "100% Diskretion garantiert",
-                      "Gerichtsverwertbare Beweise",
-                      "Kostenlose Erstberatung",
+                      "Nur geprüfte Partner-Detekteien",
+                      "IHK-zugelassene Partner (§34a GewO)",
+                      "100% Diskretion bei der Vermittlung",
+                      "Kostenlose Vermittlung",
                       "DSGVO-konforme Arbeitsweise",
                     ].map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-primary-700">
@@ -432,8 +479,8 @@ function LandkreisPageContent({ data }: { data: LandkreisPageData }) {
           {kleineGemeinden.length > 0 && (
             <div className="mt-8 p-4 bg-accent-50 rounded-lg border border-accent-200">
               <p className="text-sm text-primary-700">
-                <strong>Auch in kleineren Gemeinden tätig:</strong> Wir führen
-                Ermittlungen auch in {kleineGemeinden.slice(0, 5).join(", ")}
+                <strong>Auch in kleineren Gemeinden:</strong> Partner-Detekteien
+                führen Ermittlungen auch in {kleineGemeinden.slice(0, 5).join(", ")}
                 {kleineGemeinden.length > 5 &&
                   ` und ${kleineGemeinden.length - 5} weiteren Orten`}{" "}
                 durch.
@@ -444,10 +491,10 @@ function LandkreisPageContent({ data }: { data: LandkreisPageData }) {
           {/* Services */}
           <div className="mt-16">
             <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-              Unsere Detektei-Leistungen im {landkreis.name}
+              Detektei-Leistungen im {landkreis.name}
             </h2>
             <p className="text-primary-600 mb-6">
-              <strong>Kurz:</strong> Unsere Detektei im {landkreis.name} bietet
+              <strong>Kurz:</strong> Partner-Detekteien im {landkreis.name} bieten
               das gesamte Spektrum der Privatdetektei und Wirtschaftsdetektei – 
               diskret, professionell und gerichtsverwertbar.
             </p>

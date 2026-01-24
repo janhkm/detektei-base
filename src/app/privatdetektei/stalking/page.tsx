@@ -7,9 +7,9 @@ import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Stalking & Mobbing | Täter identifizieren & Beweise sichern",
+  title: "Stalking & Mobbing | Detektei für Beweissicherung finden",
   description:
-    "Hilfe bei Stalking und Mobbing: ✓ Täteridentifikation ✓ Beweissicherung ✓ Dokumentation für Strafanzeige. Diskret und professionell. Jetzt beraten lassen.",
+    "Finden Sie eine Detektei bei Stalking und Mobbing. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Beweissicherung für Strafanzeige.",
 };
 
 const anzeichen = [
@@ -57,27 +57,27 @@ const faqs = [
   {
     question: "Wie kann ein Detektiv bei Stalking helfen?",
     answer:
-      "Wir können: unbekannte Stalker identifizieren, Beweise für eine Strafanzeige sichern, das Ausmaß des Stalkings dokumentieren und Sie zu Schutzmaßnahmen beraten. Die Dokumentation ist oft entscheidend für Gewaltschutzanordnungen.",
+      "Detekteien können: unbekannte Stalker identifizieren, Beweise für eine Strafanzeige sichern, das Ausmaß des Stalkings dokumentieren und zu Schutzmaßnahmen beraten. Die Dokumentation ist oft entscheidend für Gewaltschutzanordnungen.",
   },
   {
     question: "Was kostet die Hilfe bei Stalking?",
     answer:
-      "Die Kosten hängen vom Umfang ab. Täteridentifikation und Dokumentation beginnen ab 1.000€. Bei längerer Observation entsprechend mehr. Wir beraten Sie kostenlos zu den Möglichkeiten und Kosten.",
+      "Die Kosten hängen vom Umfang ab. Täteridentifikation und Dokumentation beginnen ab 1.000€. Bei längerer Observation entsprechend mehr. Die Vermittlung über Detektei Base ist kostenlos.",
   },
   {
     question: "Soll ich parallel zur Polizei gehen?",
     answer:
-      "Ja, wir empfehlen immer auch die Erstattung einer Strafanzeige. Unsere Ermittlungsergebnisse können die Polizeiarbeit unterstützen und ergänzen. Beides zusammen erhöht die Chancen auf Erfolg.",
+      "Ja, es wird immer auch die Erstattung einer Strafanzeige empfohlen. Die Ermittlungsergebnisse der Detektei können die Polizeiarbeit unterstützen und ergänzen. Beides zusammen erhöht die Chancen auf Erfolg.",
   },
   {
-    question: "Können Sie auch bei Cyberstalking helfen?",
+    question: "Können Detekteien auch bei Cyberstalking helfen?",
     answer:
-      "Ja, auch bei Online-Stalking können wir unterstützen: Dokumentation von Nachrichten, Ermittlung von Fake-Profilen, Sicherung digitaler Beweise. In Zusammenarbeit mit IT-Forensikern auch technisch komplexe Fälle.",
+      "Ja, auch bei Online-Stalking können Detekteien unterstützen: Dokumentation von Nachrichten, Ermittlung von Fake-Profilen, Sicherung digitaler Beweise. In Zusammenarbeit mit IT-Forensikern auch technisch komplexe Fälle.",
   },
   {
     question: "Was ist eine Gewaltschutzanordnung?",
     answer:
-      "Nach dem Gewaltschutzgesetz kann das Gericht dem Stalker verbieten, sich Ihnen zu nähern, Kontakt aufzunehmen oder bestimmte Orte aufzusuchen. Unsere Dokumentation kann die Grundlage für einen solchen Antrag bilden.",
+      "Nach dem Gewaltschutzgesetz kann das Gericht dem Stalker verbieten, sich Ihnen zu nähern, Kontakt aufzunehmen oder bestimmte Orte aufzusuchen. Die Dokumentation der Detektei kann die Grundlage für einen solchen Antrag bilden.",
   },
 ];
 
@@ -107,12 +107,12 @@ export default function StalkingPage() {
               <span>Schutz & Dokumentation</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-white leading-tight">
-              Stalking & Mobbing – Wir helfen Ihnen
+              Stalking & Mobbing – Professionelle Hilfe finden
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Werden Sie verfolgt, belästigt oder bedroht? Unsere Detektive
-              helfen Ihnen, <strong>Beweise zu sichern</strong>, den Täter zu
-              identifizieren und sich rechtlich zu schützen.
+              Werden Sie verfolgt, belästigt oder bedroht? Wir vermitteln Sie an 
+              <strong> spezialisierte Partner-Detekteien</strong>, die Beweise sichern, 
+              den Täter identifizieren und Sie rechtlich schützen.
             </p>
           </div>
         </div>

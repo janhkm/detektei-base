@@ -1,7 +1,7 @@
 {
-  "name": "Detektei Oliver Peth",
-  "short_name": "Detektei Peth",
-  "description": "Privatdetektiv und Wirtschaftsdetektei - Zertifizierter Ermittler deutschlandweit im Einsatz",
+  "name": "Detektei Base",
+  "short_name": "Detektei Base",
+  "description": "Vermittlung von geprüften Partner-Detekteien - Deutschlandweit",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0c1425",

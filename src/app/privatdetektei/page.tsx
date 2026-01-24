@@ -16,9 +16,9 @@ import { KeyTakeaways } from "@/components/ui/KeyTakeaways";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Privatdetektei | Diskrete Ermittlungen für Privatpersonen",
+  title: "Privatdetektei finden | Diskrete Ermittlungen für Privatpersonen",
   description:
-    "Professionelle Privatdetektei für diskrete Ermittlungen. ✓ Untreue aufdecken ✓ Personensuche ✓ Unterhaltsermittlungen ✓ Gerichtsverwertbare Beweise. Kostenlose Beratung.",
+    "Finden Sie die passende Privatdetektei für Ihren Fall. ✓ Untreue aufdecken ✓ Personensuche ✓ Unterhaltsermittlungen ✓ Geprüfte Partner-Detekteien. Kostenlose Vermittlung.",
 };
 
 const services = [
@@ -26,7 +26,7 @@ const services = [
     icon: Heart,
     title: "Untreue & Fremdgehen",
     description:
-      "Diskrete Observation bei Verdacht auf Untreue. Wir liefern Gewissheit und gerichtsverwertbare Beweise für Scheidungsverfahren.",
+      "Diskrete Observation bei Verdacht auf Untreue. Geprüfte Partner-Detekteien liefern Ihnen gerichtsverwertbare Beweise.",
     href: "/privatdetektei/untreue",
     features: ["Verdeckte Observation", "Fotodokumentation", "GPS-Ortung", "Detaillierter Bericht"],
   },
@@ -34,7 +34,7 @@ const services = [
     icon: Search,
     title: "Personensuche",
     description:
-      "Professionelle Suche nach vermissten Personen, Schuldnern, Erben oder alten Bekannten. Weltweite Recherche mit modernen Methoden.",
+      "Professionelle Suche nach vermissten Personen, Schuldnern, Erben oder alten Bekannten. Weltweite Recherche.",
     href: "/privatdetektei/personensuche",
     features: ["Adressermittlung", "Aufenthaltsort finden", "Vermisstensuche", "Erbenermittlung"],
   },
@@ -50,7 +50,7 @@ const services = [
     icon: ShieldAlert,
     title: "Stalking & Belästigung",
     description:
-      "Dokumentation und Beweissicherung bei Stalking, Mobbing oder Belästigung. Schutz Ihrer Sicherheit und rechtliche Absicherung.",
+      "Dokumentation und Beweissicherung bei Stalking, Mobbing oder Belästigung. Schutz und rechtliche Absicherung.",
     href: "/privatdetektei/stalking",
     features: ["Täteridentifikation", "Beweissicherung", "Dokumentation", "Behördenkontakt"],
   },
@@ -82,20 +82,19 @@ export default function PrivatdetekteiPage() {
           <div className="mt-8 grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl sm:text-5xl font-display font-bold text-white leading-tight">
-                Privatdetektei – Diskrete Ermittlungen für Sie
+                Privatdetektei finden – Diskrete Ermittlungen
               </h1>
               <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-                Verdacht auf Untreue? Suchen Sie eine vermisste Person? Unsere
-                erfahrenen Privatdetektive unterstützen Sie diskret und
-                professionell. Mit gerichtsverwertbaren Beweisen schaffen wir
-                Klarheit in schwierigen Situationen.
+                Verdacht auf Untreue? Suchen Sie eine vermisste Person? Wir vermitteln 
+                Sie an <strong>geprüfte Privatdetekteien</strong>, die Sie diskret und 
+                professionell unterstützen – mit gerichtsverwertbaren Beweisen.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/kontakt"
                   className="inline-flex items-center justify-center rounded-lg bg-accent-500 px-6 py-3.5 text-base font-semibold text-primary-900 hover:bg-accent-400 transition-colors"
                 >
-                  Kostenlose Beratung
+                  Jetzt Detektei finden
                 </Link>
                 <a
                   href="tel:+4917666918653"
@@ -109,15 +108,15 @@ export default function PrivatdetekteiPage() {
             <div className="hidden lg:block">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <h3 className="text-lg font-semibold text-white mb-4">
-                  Unsere Garantien
+                  Unsere Vermittlungsgarantie
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "100% Diskretion garantiert",
-                    "Gerichtsverwertbare Beweise",
-                    "IHK-zugelassene Detektive",
-                    "Kostenlose Erstberatung",
-                    "Transparente Preise",
+                    "Nur geprüfte Partner-Detekteien",
+                    "Alle Partner IHK-zugelassen",
+                    "Kostenlose Vermittlung für Sie",
+                    "Passende Experten für jeden Fall",
+                    "Schnelle Rückmeldung in 24h",
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-primary-200">
                       <CheckCircle className="h-5 w-5 text-accent-400 flex-shrink-0" />
@@ -136,21 +135,20 @@ export default function PrivatdetekteiPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <KeyTakeaways
             items={[
-              "<strong>Leistungen:</strong> Untreue, Sorgerecht, Stalking, Betrug",
-              "<strong>Kosten:</strong> 60-150€/Stunde, kostenlose Erstberatung",
-              "<strong>Beweise:</strong> Gerichtsverwertbar & rechtssicher dokumentiert",
-              "<strong>Diskretion:</strong> Absolute Vertraulichkeit garantiert",
+              "<strong>Leistungen:</strong> Untreue, Personensuche, Sorgerecht, Stalking, Betrug",
+              "<strong>Kosten:</strong> Vermittlung kostenlos, Detektei ab 60€/Stunde",
+              "<strong>Partner:</strong> 4 geprüfte Privatdetekteien deutschlandweit mit 20+ Jahren Erfahrung",
+              "<strong>Garantie:</strong> Alle Partner sind IHK-zugelassen",
             ]}
           />
 
           {/* Services Grid */}
           <div className="mt-16">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-900 text-center mb-4">
-              Unsere Privatdetektei-Leistungen
+              Für diese Anliegen vermitteln wir Detekteien
             </h2>
             <p className="text-primary-600 text-center max-w-2xl mx-auto mb-12">
-              Von Untreue-Ermittlungen bis zur Personensuche – wir bieten
-              diskrete Lösungen für Ihre persönlichen Anliegen.
+              Wählen Sie Ihr Thema – wir finden die passende Detektei für Sie.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -203,16 +201,15 @@ export default function PrivatdetekteiPage() {
                   können rechtlich problematisch sein und emotional belasten.
                 </p>
                 <p>
-                  Unsere professionellen Privatdetektive arbeiten diskret,
+                  <strong>Professionelle Privatdetektive</strong> arbeiten diskret,
                   effizient und im Rahmen der gesetzlichen Möglichkeiten. Die
                   gewonnenen Beweise sind gerichtsverwertbar und können in
                   rechtlichen Verfahren eingesetzt werden.
                 </p>
                 <p>
-                  <strong>
-                    Eine professionelle Ermittlung schafft Klarheit – ohne dass
-                    Sie sich selbst in rechtliche Grauzonen begeben.
-                  </strong>
+                  <strong>Über Detektei Base</strong> finden Sie die passende 
+                  Detektei für Ihren Fall – alle Partner sind IHK-zugelassen 
+                  und von uns geprüft.
                 </p>
               </div>
             </div>
@@ -244,8 +241,8 @@ export default function PrivatdetekteiPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <CTABox
-            title="Vertrauliche Erstberatung"
-            description="Schildern Sie uns Ihre Situation – kostenlos und unverbindlich"
+            title="Jetzt passende Privatdetektei finden"
+            description="Kostenlose Vermittlung an geprüfte Partner-Detekteien"
             variant="dark"
           />
         </div>

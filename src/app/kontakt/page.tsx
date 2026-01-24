@@ -4,9 +4,9 @@ import { ContactInfo } from "@/components/contact/ContactInfo";
 import { Phone, Shield, Lock, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Kontakt | Kostenlose Erstberatung",
+  title: "Kontakt | Kostenlose Beratung",
   description:
-    "Kontaktieren Sie unsere Detektei für eine kostenlose und unverbindliche Erstberatung. Diskret, vertraulich und professionell. Jetzt anfragen!",
+    "Finden Sie die passende Detektei für Ihren Fall. Kostenlose und unverbindliche Beratung. Wir vermitteln Sie an geprüfte Partner-Detekteien.",
 };
 
 const trustItems = [
@@ -22,8 +22,8 @@ const trustItems = [
   },
   {
     icon: Clock,
-    title: "Schnelle Antwort",
-    description: "Wir melden uns innerhalb von 24 Stunden",
+    title: "Schnelle Vermittlung",
+    description: "Passende Partner-Detektei innerhalb von 24h",
   },
 ];
 
@@ -42,8 +42,8 @@ export default function KontaktPage() {
               Sprechen Sie mit uns über Ihren Fall
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Vertraulich, unverbindlich und kostenfrei. Schildern Sie uns Ihre
-              Situation und wir beraten Sie zu den Möglichkeiten.
+              Schildern Sie uns Ihre Situation – wir vermitteln Sie an die 
+              passende Partner-Detektei aus unserem Netzwerk. Kostenlos und unverbindlich.
             </p>
           </div>
         </div>
@@ -81,11 +81,11 @@ export default function KontaktPage() {
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl border border-primary-100 p-6 sm:p-8 shadow-sm">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Anfrage senden
+                  Vermittlungsanfrage senden
                 </h2>
                 <p className="text-primary-600 mb-8">
-                  Füllen Sie das Formular aus und wir melden uns schnellstmöglich
-                  bei Ihnen.
+                  Schildern Sie Ihren Fall – wir finden die passende 
+                  Partner-Detektei für Sie.
                 </p>
                 <ContactForm />
               </div>
@@ -108,22 +108,22 @@ export default function KontaktPage() {
           <div className="mt-8 space-y-6 text-left">
             <div className="bg-white rounded-xl p-6 border border-primary-100">
               <h3 className="font-semibold text-primary-900 mb-2">
-                Ist die Erstberatung wirklich kostenlos?
+                Ist die Vermittlung wirklich kostenlos?
               </h3>
               <p className="text-primary-600 text-sm">
-                Ja, die erste Beratung ist völlig kostenlos und unverbindlich.
-                Wir besprechen Ihren Fall und zeigen Ihnen die Möglichkeiten auf
-                – ohne versteckte Kosten.
+                Ja, die Vermittlung über Detektei Base ist völlig kostenlos und 
+                unverbindlich. Wir finden die passende Partner-Detektei für Ihren 
+                Fall – Sie zahlen nur die Detektei direkt.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-primary-100">
               <h3 className="font-semibold text-primary-900 mb-2">
-                Wie schnell erhalte ich eine Antwort?
+                Wie schnell werde ich vermittelt?
               </h3>
               <p className="text-primary-600 text-sm">
-                In der Regel melden wir uns innerhalb von 24 Stunden bei Ihnen.
-                In dringenden Fällen erreichen Sie uns auch telefonisch außerhalb
-                der Geschäftszeiten.
+                In der Regel meldet sich eine passende Partner-Detektei innerhalb 
+                von 24 Stunden bei Ihnen. In dringenden Fällen erreichen Sie uns 
+                auch telefonisch.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-primary-100">
@@ -131,9 +131,9 @@ export default function KontaktPage() {
                 Werden meine Daten vertraulich behandelt?
               </h3>
               <p className="text-primary-600 text-sm">
-                Absolut. Alle Informationen werden streng vertraulich behandelt
-                und nicht an Dritte weitergegeben. Wir arbeiten DSGVO-konform und
-                garantieren höchste Diskretion.
+                Absolut. Ihre Daten werden nur an die eine ausgewählte Partner-Detektei 
+                weitergegeben. Wir arbeiten DSGVO-konform – Details finden Sie in 
+                unserer Datenschutzerklärung.
               </p>
             </div>
           </div>

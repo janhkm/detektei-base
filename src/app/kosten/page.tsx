@@ -6,9 +6,9 @@ import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Kosten | Transparente Preise für Detektiv-Leistungen",
+  title: "Kosten | Detektei-Preise im Überblick",
   description:
-    "Transparente Detektei-Kosten: 60-150€/Stunde, Tagessätze ab 800€. ✓ Kostenlose Erstberatung ✓ Keine versteckten Gebühren ✓ Vorab-Kostenvoranschlag.",
+    "Detektei-Kosten: 60-150€/Stunde, Tagessätze ab 800€. ✓ Kostenlose Vermittlung über Detektei Base ✓ Transparente Preise der Partner-Detekteien.",
 };
 
 const preisKategorien = [
@@ -63,7 +63,7 @@ const faqs = [
   {
     question: "Was ist, wenn das Budget überschritten wird?",
     answer:
-      "Wir informieren Sie rechtzeitig, wenn das vereinbarte Budget erschöpft ist. Ohne Ihre ausdrückliche Zustimmung werden keine weiteren Kosten verursacht.",
+      "Die Detektei informiert Sie rechtzeitig, wenn das vereinbarte Budget erschöpft ist. Ohne Ihre ausdrückliche Zustimmung werden keine weiteren Kosten verursacht.",
   },
   {
     question: "Kann ich die Kosten steuerlich absetzen?",
@@ -73,7 +73,7 @@ const faqs = [
   {
     question: "Gibt es Pauschalpreise?",
     answer:
-      "Für bestimmte Standardleistungen wie Adressermittlung oder Mitarbeiterüberprüfung bieten wir Pauschalpreise an. Bei komplexen Ermittlungen erfolgt die Abrechnung nach Aufwand.",
+      "Für bestimmte Standardleistungen wie Adressermittlung oder Mitarbeiterüberprüfung bieten Detekteien Pauschalpreise an. Bei komplexen Ermittlungen erfolgt die Abrechnung nach Aufwand. Die Vermittlung über Detektei Base ist kostenlos.",
   },
 ];
 

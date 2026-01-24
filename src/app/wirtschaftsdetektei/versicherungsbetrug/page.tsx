@@ -7,9 +7,9 @@ import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Versicherungsbetrug | Betrugsermittlung für Versicherungen",
+  title: "Versicherungsbetrug | Detektei für Versicherungen finden",
   description:
-    "Aufklärung von Versicherungsbetrug: ✓ Fingierte Unfälle ✓ Übertriebene Schäden ✓ Falsche Arbeitsunfähigkeit. Gerichtsverwertbare Beweise für Versicherer.",
+    "Finden Sie eine Detektei für Versicherungsbetrug. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Fingierte Unfälle ✓ Gerichtsverwertbare Beweise.",
 };
 
 const betrugsarten = [
@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "Welche Arten von Versicherungsbetrug gibt es?",
     answer:
-      "Die häufigsten Formen sind: fingierte Unfälle, übertriebene Schadensmeldungen, vorgetäuschte Diebstähle, gefälschte Belege, simulierte Arbeitsunfähigkeit und Brandstiftung. Wir ermitteln in allen Bereichen.",
+      "Die häufigsten Formen sind: fingierte Unfälle, übertriebene Schadensmeldungen, vorgetäuschte Diebstähle, gefälschte Belege, simulierte Arbeitsunfähigkeit und Brandstiftung. Detekteien ermitteln in allen Bereichen.",
   },
   {
     question: "Wie decken Detektive Versicherungsbetrug auf?",
@@ -49,12 +49,12 @@ const faqs = [
   {
     question: "Für wen arbeiten Sie bei Versicherungsbetrug?",
     answer:
-      "Wir arbeiten primär für Versicherungsunternehmen, die Betrugsverdacht haben. Aber auch Unternehmen, die von Mitarbeitern durch fingierte Arbeitsunfälle geschädigt werden, beauftragen uns.",
+      "Detekteien arbeiten primär für Versicherungsunternehmen, die Betrugsverdacht haben. Aber auch Unternehmen, die von Mitarbeitern durch fingierte Arbeitsunfälle geschädigt werden, beauftragen Detekteien.",
   },
   {
     question: "Sind die Ermittlungen legal?",
     answer:
-      "Ja, alle unsere Ermittlungen erfolgen im Rahmen der Jedermannsrechte. Wir observieren nur im öffentlichen Raum und nutzen legale Recherchemethoden. Die Beweise sind gerichtsverwertbar.",
+      "Ja, alle Ermittlungen professioneller Detekteien erfolgen im Rahmen der Jedermannsrechte. Es wird nur im öffentlichen Raum observiert und mit legalen Recherchemethoden gearbeitet. Die Beweise sind gerichtsverwertbar.",
   },
   {
     question: "Was kostet eine Betrugsermittlung für Versicherungen?",
@@ -98,8 +98,8 @@ export default function VersicherungsbetrugsPage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               <strong>Fingierte Unfälle, überhöhte Schäden, vorgetäuschte Arbeitsunfähigkeit</strong> –
-              Versicherungsbetrug kostet Milliarden. Wir ermitteln diskret und
-              liefern gerichtsverwertbare Beweise.
+              Versicherungsbetrug kostet Milliarden. Wir vermitteln Sie an <strong>spezialisierte 
+              Partner-Detekteien</strong> für gerichtsverwertbare Beweise.
             </p>
           </div>
         </div>

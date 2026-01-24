@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
@@ -6,39 +6,59 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileCTA } from "@/components/layout/MobileCTA";
 import { SkipLink } from "@/components/layout/SkipLink";
 
+// ============================================================================
+// FONT OPTIMIZATION
+// ============================================================================
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  // Preload nur die wichtigsten Gewichte
+  preload: true,
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
+  preload: true,
+  // Nur benötigte Gewichte laden
+  weight: ["400", "700"],
 });
+
+// ============================================================================
+// VIEWPORT CONFIGURATION
+// ============================================================================
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#1e3a5f",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://detektei-base.de"),
   title: {
-    default: "Detektei Oliver Peth | Zertifizierter Ermittler & Kriminalist",
-    template: "%s | Detektei Peth",
+    default: "Detektei finden | Geprüfte Privatdetektive deutschlandweit",
+    template: "%s | Detektei Base",
   },
   description:
-    "Oliver Peth – Zertifizierter Ermittler, Kriminalist und Profiler. Diskrete Privatdetektei und Wirtschaftsdetektei mit gerichtsverwertbarer Beweissicherung. Deutschlandweit.",
+    "Finden Sie sofort die richtige Detektei für Ihren Fall. Unser Netzwerk aus geprüften Partner-Detekteien vermittelt Sie diskret und schnell an zertifizierte Ermittler in Ihrer Region.",
   keywords: [
-    "Detektei",
-    "Oliver Peth",
+    "Detektei finden",
     "Privatdetektiv",
     "Wirtschaftsdetektei",
+    "Detektei Vermittlung",
     "Ermittler",
-    "Kriminalist",
-    "Profiler",
+    "Observation",
     "Beweissicherung",
+    "Detektei Deutschland",
   ],
-  authors: [{ name: "Oliver Peth" }],
-  creator: "Oliver Peth",
-  publisher: "Detektei Oliver Peth",
+  authors: [{ name: "Detektei Base" }],
+  creator: "Detektei Base",
+  publisher: "Detektei Base",
   formatDetection: {
     email: false,
     address: false,
@@ -56,12 +76,12 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Detektei Peth",
+    title: "Detektei Base",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Detektei Oliver Peth",
+    siteName: "Detektei Base",
   },
   robots: {
     index: true,
@@ -83,7 +103,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="min-h-screen flex flex-col">
+      <head>
+        {/* DNS Prefetch für schnellere externe Ressourcen */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        
+        {/* Preconnect zu kritischen Domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
+      <body className="min-h-screen flex flex-col antialiased">
         <SkipLink />
         <Header />
         <main id="main-content" className="flex-1" tabIndex={-1}>{children}</main>
