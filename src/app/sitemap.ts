@@ -62,12 +62,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/einsatzgebiete`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
   );
 
-  // Rechtliches
+  // Rechtliches (nur die indexierbaren Seiten)
   pages.push(
     { url: `${baseUrl}/rechtliches`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/impressum`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${baseUrl}/datenschutz`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${baseUrl}/agb`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    // Impressum, Datenschutz und AGB werden nicht indexiert (siehe robots.ts)
   );
 
   // Blog Index

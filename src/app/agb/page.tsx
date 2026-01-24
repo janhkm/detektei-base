@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "AGB | Allgemeine Geschäftsbedingungen",
   description:
     "Allgemeine Geschäftsbedingungen der Detektei Base Vermittlungsplattform. Transparente Bedingungen für die Vermittlung von Detektiv-Dienstleistungen.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function AGBPage() {

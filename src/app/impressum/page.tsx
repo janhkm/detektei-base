@@ -4,6 +4,10 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Impressum | Rechtliche Angaben",
   description: "Impressum und rechtliche Angaben der Detektei Base Vermittlungsplattform gemäß § 5 TMG.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function ImpressumPage() {

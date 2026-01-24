@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "Datenschutz | Datenschutzerklärung",
   description:
     "Datenschutzerklärung der Detektei Base Vermittlungsplattform gemäß DSGVO. Informationen zur Verarbeitung Ihrer personenbezogenen Daten.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function DatenschutzPage() {
