@@ -99,7 +99,7 @@ export default function UeberUnsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <KeyTakeaways
             items={[
-              "<strong>Netzwerk:</strong> 4 geprüfte Partner-Detekteien deutschlandweit mit 20+ Jahren Erfahrung",
+              "<strong>Netzwerk:</strong> Geprüfte Partner-Detekteien deutschlandweit mit langjähriger Erfahrung",
               "<strong>Qualität:</strong> Alle Partner sind IHK-zugelassen nach §34a GewO",
               "<strong>Service:</strong> Kostenlose Vermittlung innerhalb von 24 Stunden",
               "<strong>Garantie:</strong> Passende Experten für jeden Ermittlungsfall",
@@ -121,7 +121,7 @@ export default function UeberUnsPage() {
                 </p>
                 <p>
                   <strong>Detektei Base nimmt Ihnen diese Arbeit ab.</strong> Wir haben 
-                  ein Netzwerk aus über 50 geprüften Partner-Detekteien aufgebaut, die 
+                  ein Netzwerk aus geprüften Partner-Detekteien aufgebaut, die 
                   alle unsere strengen Qualitätskriterien erfüllen: IHK-Zulassung, 
                   Berufshaftpflicht, nachgewiesene Erfahrung.
                 </p>

@@ -310,15 +310,15 @@ export default async function StadtPage({ params }: PageProps) {
                 {/* Trust Badges */}
                 <div className="bg-white rounded-xl p-6 border border-primary-100">
                   <h3 className="font-display font-bold text-primary-900 mb-4">
-                    Das garantieren wir
+                    Unsere Vermittlungsgarantie
                   </h3>
                   <ul className="space-y-3 text-sm">
                     {[
                       "Nur geprüfte Partner-Detekteien",
-                      "IHK-zugelassene Partner (§34a GewO)",
-                      "100% Diskretion bei der Vermittlung",
-                      "Kostenlose Vermittlung",
-                      "DSGVO-konforme Arbeitsweise",
+                      "Alle Partner IHK-zugelassen (§34a GewO)",
+                      "Diskrete Vermittlung",
+                      "Kostenlose Vermittlung für Sie",
+                      "Partner arbeiten DSGVO-konform",
                     ].map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-primary-700">
                         <span className="text-accent-500">✓</span>

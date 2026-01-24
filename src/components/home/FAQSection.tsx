@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "In welchen Regionen vermitteln Sie Detekteien?",
     answer:
-      "Unser Netzwerk umfasst über 50 Partner-Detekteien in ganz Deutschland. Egal ob in München, Berlin, Hamburg oder ländlichen Regionen – wir finden eine geeignete Detektei in Ihrer Nähe.",
+      "Unser Netzwerk umfasst geprüfte Partner-Detekteien in ganz Deutschland. Egal ob in München, Berlin, Hamburg oder ländlichen Regionen – wir finden eine geeignete Detektei in Ihrer Nähe.",
   },
   {
     question: "Sind die Beweise einer Detektei vor Gericht verwertbar?",

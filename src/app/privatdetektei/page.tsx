@@ -137,7 +137,7 @@ export default function PrivatdetekteiPage() {
             items={[
               "<strong>Leistungen:</strong> Untreue, Personensuche, Sorgerecht, Stalking, Betrug",
               "<strong>Kosten:</strong> Vermittlung kostenlos, Detektei ab 60€/Stunde",
-              "<strong>Partner:</strong> 4 geprüfte Privatdetekteien deutschlandweit mit 20+ Jahren Erfahrung",
+              "<strong>Partner:</strong> Geprüfte Privatdetekteien deutschlandweit mit langjähriger Erfahrung",
               "<strong>Garantie:</strong> Alle Partner sind IHK-zugelassen",
             ]}
           />

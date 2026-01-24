@@ -3,7 +3,7 @@ import { Shield, Award, Clock, Users, Scale, Lock } from "lucide-react";
 const indicators = [
   {
     icon: Shield,
-    label: "IHK-zugelassen",
+    label: "Partner IHK-geprüft",
     description: "§34a GewO zertifiziert",
   },
   {
@@ -14,22 +14,22 @@ const indicators = [
   {
     icon: Lock,
     label: "100% Diskret",
-    description: "Absolute Vertraulichkeit",
+    description: "Vertrauliche Vermittlung",
   },
   {
     icon: Clock,
-    label: "24/7 Einsatzbereit",
+    label: "24h Vermittlung",
     description: "Schnelle Reaktionszeit",
   },
   {
     icon: Users,
-    label: "2.500+ Fälle",
-    description: "Netzwerkweit gelöst",
+    label: "Deutschlandweit",
+    description: "Partner-Netzwerk",
   },
   {
     icon: Award,
-    label: "20+ Jahre",
-    description: "Partner-Erfahrung",
+    label: "Kostenlos",
+    description: "Vermittlung für Sie",
   },
 ];
 

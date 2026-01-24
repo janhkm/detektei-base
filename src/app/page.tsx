@@ -16,7 +16,7 @@ import { generateHomepageSchema } from "@/lib/schemas/homepage";
 export const metadata: Metadata = {
   title: "Detektei finden | Geprüfte Privatdetektive deutschlandweit | Detektei Base",
   description:
-    "Finden Sie sofort die richtige Detektei für Ihren Fall. Unser Netzwerk aus geprüften Partner-Detekteien mit über 20 Jahren Erfahrung vermittelt Sie diskret und schnell an zertifizierte Ermittler in Ihrer Region.",
+    "Finden Sie sofort die richtige Detektei für Ihren Fall. Wir vermitteln Sie kostenlos an geprüfte Partner-Detekteien mit langjähriger Erfahrung – diskret und schnell an zertifizierte Ermittler in Ihrer Region.",
   keywords: [
     "Detektei finden",
     "Privatdetektiv",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Detektei Base",
     title: "Detektei finden | Geprüfte Privatdetektive deutschlandweit",
     description:
-      "Finden Sie sofort die richtige Detektei. Geprüfte Partner-Detekteien mit über 20 Jahren Erfahrung vermitteln wir diskret und schnell.",
+      "Finden Sie sofort die richtige Detektei. Kostenlose Vermittlung an geprüfte Partner-Detekteien – diskret und schnell.",
     images: [
       {
         url: "https://detektei-base.de/images/og-homepage.jpg",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Detektei finden | Geprüfte Privatdetektive deutschlandweit",
     description:
-      "Finden Sie sofort die richtige Detektei. Geprüfte Partner-Detekteien mit über 20 Jahren Erfahrung deutschlandweit.",
+      "Finden Sie sofort die richtige Detektei. Kostenlose Vermittlung an geprüfte Partner-Detekteien deutschlandweit.",
     images: ["https://detektei-base.de/images/og-homepage.jpg"],
   },
   robots: {

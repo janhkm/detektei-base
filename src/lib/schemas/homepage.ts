@@ -55,12 +55,12 @@ export function generateOrganizationSchema() {
 
 export function generateLocalBusinessSchema() {
   return {
-    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@type": ["Organization", "LocalBusiness"],
     "@id": `${SITE_URL}/#localbusiness`,
     name: COMPANY_NAME,
     alternateName: ["Detektei Vermittlung", "Detektiv finden"],
     description:
-      "Detektei Base ist Ihre zentrale Anlaufstelle für professionelle Ermittlungen. Wir vermitteln Sie an geprüfte Partner-Detekteien mit IHK-Zulassung – schnell, diskret und deutschlandweit.",
+      "Detektei Base ist eine Vermittlungsplattform für professionelle Ermittlungen. Wir vermitteln Sie an geprüfte Partner-Detekteien mit IHK-Zulassung – schnell, diskret und deutschlandweit.",
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
@@ -120,7 +120,7 @@ export function generateLocalBusinessSchema() {
             "@type": "Service",
             name: "Deutschlandweites Netzwerk",
             description:
-              "Zugang zu über 50 geprüften Partner-Detekteien in allen Bundesländern",
+              "Zugang zu geprüften Partner-Detekteien in allen Bundesländern",
           },
         },
       ],
@@ -226,7 +226,7 @@ export function generateHomepageFAQSchema() {
     {
       question: "In welchen Regionen vermitteln Sie Detekteien?",
       answer:
-        "Unser Netzwerk umfasst über 50 Partner-Detekteien in ganz Deutschland. Egal ob in München, Berlin, Hamburg oder ländlichen Regionen – wir finden eine geeignete Detektei in Ihrer Nähe.",
+        "Unser Netzwerk umfasst geprüfte Partner-Detekteien in ganz Deutschland. Egal ob in München, Berlin, Hamburg oder ländlichen Regionen – wir finden eine geeignete Detektei in Ihrer Nähe.",
     },
     {
       question: "Kann ich auch direkt eine Detektei kontaktieren?",

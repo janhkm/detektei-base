@@ -18,7 +18,7 @@ export function CTASection() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 rounded-full bg-accent-500/20 px-4 py-1.5 text-sm text-accent-300 mb-6">
           <Users className="h-4 w-4" />
-          <span>Geprüfte Partner-Detekteien mit 20+ Jahren Erfahrung</span>
+          <span>Kostenlose Vermittlung an geprüfte Partner-Detekteien</span>
         </div>
 
         {/* Headline */}

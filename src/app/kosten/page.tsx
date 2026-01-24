@@ -90,12 +90,13 @@ export default function KostenPage() {
               <span>Transparente Preise</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-white leading-tight">
-              Kosten – Fair, transparent, kalkulierbar
+              Detektei-Kosten – Fair, transparent, kalkulierbar
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Wir glauben an <strong>transparente Preise</strong>. Hier finden
-              Sie eine Übersicht unserer Kosten – ohne versteckte Gebühren oder
-              böse Überraschungen.
+              Unsere Partner-Detekteien arbeiten mit <strong>transparenten Preisen</strong>. 
+              Hier finden Sie eine Übersicht der üblichen Kosten für Detektiv-Dienstleistungen – 
+              ohne versteckte Gebühren oder böse Überraschungen. Die Vermittlung über 
+              Detektei Base ist für Sie kostenfrei.
             </p>
           </div>
         </div>
@@ -116,11 +117,11 @@ export default function KostenPage() {
           {/* Preiskategorien */}
           <div className="mt-16">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-900 text-center mb-4">
-              Unsere Preise im Überblick
+              Preise der Partner-Detekteien im Überblick
             </h2>
             <p className="text-primary-600 text-center max-w-2xl mx-auto mb-12">
               Die genauen Kosten hängen vom individuellen Fall ab. Diese
-              Richtwerte geben Ihnen eine erste Orientierung.
+              Richtwerte unserer Partner-Detekteien geben Ihnen eine erste Orientierung.
             </p>
 
             <div className="grid lg:grid-cols-3 gap-8">
@@ -177,9 +178,9 @@ export default function KostenPage() {
                   Individuelles Angebot gewünscht?
                 </h3>
                 <p className="text-primary-600">
-                  Jeder Fall ist anders. Kontaktieren Sie uns für eine kostenlose
-                  Erstberatung und einen unverbindlichen Kostenvoranschlag,
-                  maßgeschneidert auf Ihre Situation.
+                  Jeder Fall ist anders. Wir vermitteln Sie kostenlos an eine 
+                  passende Partner-Detektei, die Ihnen einen unverbindlichen 
+                  Kostenvoranschlag erstellt – maßgeschneidert auf Ihre Situation.
                 </p>
               </div>
               <a

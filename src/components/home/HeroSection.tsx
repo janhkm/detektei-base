@@ -40,16 +40,16 @@ export function HeroSection() {
             {/* Trust Stats */}
             <div className="mt-8 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
-                <div className="text-2xl sm:text-3xl font-bold text-accent-400">4</div>
-                <div className="text-xs sm:text-sm text-primary-300">Partner deutschlandweit</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-2xl sm:text-3xl font-bold text-accent-400">20+</div>
-                <div className="text-xs sm:text-sm text-primary-300">Jahre Partner-Erfahrung</div>
+                <div className="text-2xl sm:text-3xl font-bold text-accent-400">24h</div>
+                <div className="text-xs sm:text-sm text-primary-300">Schnelle Vermittlung</div>
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-2xl sm:text-3xl font-bold text-accent-400">100%</div>
-                <div className="text-xs sm:text-sm text-primary-300">Diskretion</div>
+                <div className="text-xs sm:text-sm text-primary-300">IHK-geprüfte Partner</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl sm:text-3xl font-bold text-accent-400">0€</div>
+                <div className="text-xs sm:text-sm text-primary-300">Kostenlose Vermittlung</div>
               </div>
             </div>
 
@@ -145,7 +145,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-center">
                 <p className="text-white font-semibold text-sm">
-                  4 geprüfte Partner-Detekteien deutschlandweit
+                  Geprüfte Partner-Detekteien deutschlandweit
                 </p>
               </div>
             </div>

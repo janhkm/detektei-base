@@ -88,9 +88,9 @@ export default function WirtschaftsdetekteiPage() {
               </h1>
               <p className="mt-6 text-lg text-primary-200 leading-relaxed">
                 Mitarbeiterbetrug, Diebstahl, Krankfeiermissbrauch – interne
-                Probleme kosten Unternehmen Milliarden. Unsere
-                Wirtschaftsdetektive ermitteln diskret und liefern
-                gerichtsverwertbare Beweise.
+                Probleme kosten Unternehmen Milliarden. Wir vermitteln Sie an 
+                spezialisierte <strong>Partner-Wirtschaftsdetekteien</strong>, die 
+                diskret ermitteln und gerichtsverwertbare Beweise liefern.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link
@@ -148,11 +148,11 @@ export default function WirtschaftsdetekteiPage() {
           {/* Services Grid */}
           <div className="mt-16">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-900 text-center mb-4">
-              Unsere Wirtschaftsdetektei-Leistungen
+              Wirtschaftsdetektei-Leistungen unserer Partner
             </h2>
             <p className="text-primary-600 text-center max-w-2xl mx-auto mb-12">
               Von der Mitarbeiterüberprüfung bis zur Betrugsermittlung –
-              professionelle Lösungen für Ihre Unternehmenssicherheit.
+              wir vermitteln Sie an Partner-Detekteien mit passender Spezialisierung.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -237,8 +237,8 @@ export default function WirtschaftsdetekteiPage() {
                   Verdächtige gewarnt werden.
                 </p>
                 <p>
-                  Unsere Wirtschaftsdetektive arbeiten diskret, kennen die
-                  rechtlichen Grenzen und liefern Beweise, die auch vor
+                  Die von uns vermittelten Wirtschaftsdetektive arbeiten diskret, 
+                  kennen die rechtlichen Grenzen und liefern Beweise, die auch vor
                   Arbeitsgerichten Bestand haben.
                 </p>
                 <p>
