@@ -21,11 +21,12 @@ import { getAllPosts } from "@/lib/blog";
 
 const baseUrl = "https://detektei-base.de";
 
-// Fester Startpunkt für Einsatzgebiete-Seiten (Launch-Datum)
-const EINSATZGEBIETE_LAUNCH = new Date("2026-01-01");
+// Fester Startpunkt für Einsatzgebiete-Seiten
+// So gewählt, dass mit 60 Tagen Spread alle Daten VOR heute (24.01.2026) liegen
+const EINSATZGEBIETE_LAUNCH = new Date("2025-11-15");
 
 // Festes Datum für statische Seiten (letztes größeres Update)
-const STATIC_PAGES_DATE = new Date("2026-01-15");
+const STATIC_PAGES_DATE = new Date("2026-01-20");
 
 /**
  * Generiert ein deterministisches, einzigartiges Datum basierend auf einem Seed.
