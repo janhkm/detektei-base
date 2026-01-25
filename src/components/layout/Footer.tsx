@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { openCookieSettings } from "./CookieBanner";
 
 const footerNavigation = {
   leistungen: [
@@ -29,6 +32,7 @@ const footerNavigation = {
     { name: "Datenschutz", href: "/datenschutz" },
     { name: "AGB", href: "/agb" },
     { name: "Rechtliche Hinweise", href: "/rechtliches" },
+    { name: "Cookie-Einstellungen", href: "#", onClick: true },
   ],
 };
 
@@ -146,12 +150,21 @@ export function Footer() {
                 <ul className="mt-4 space-y-3" aria-labelledby="footer-rechtliches">
                   {footerNavigation.rechtliches.map((item) => (
                     <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
+                      {item.onClick ? (
+                        <button
+                          onClick={openCookieSettings}
+                          className="text-sm hover:text-white transition-colors text-left"
+                        >
+                          {item.name}
+                        </button>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className="text-sm hover:text-white transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

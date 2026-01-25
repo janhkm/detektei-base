@@ -387,7 +387,8 @@ export function ContactForm() {
             >
               Datenschutzerklärung
             </a>{" "}
-            gelesen und bin mit der Verarbeitung meiner Daten einverstanden.{" "}
+            gelesen und willige ein, dass meine Daten zur Vermittlung an eine 
+            Partner-Detektei weitergegeben werden.{" "}
             <span className="text-red-500">*</span>
           </span>
         </label>

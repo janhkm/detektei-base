@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -8,11 +8,27 @@ const GA_MEASUREMENT_ID = "G-D2H0E6PG1D";
 
 type ConsentStatus = "pending" | "accepted" | "rejected";
 
+// Globale Funktion zum Öffnen der Cookie-Einstellungen
+let openCookieSettingsCallback: (() => void) | null = null;
+
+export function openCookieSettings() {
+  if (openCookieSettingsCallback) {
+    openCookieSettingsCallback();
+  }
+}
+
 export function CookieBanner() {
   const [consentStatus, setConsentStatus] = useState<ConsentStatus>("pending");
   const [showBanner, setShowBanner] = useState(false);
 
+  const showSettings = useCallback(() => {
+    setShowBanner(true);
+  }, []);
+
   useEffect(() => {
+    // Registriere die Callback-Funktion
+    openCookieSettingsCallback = showSettings;
+    
     // Prüfe ob bereits eine Entscheidung getroffen wurde
     const storedConsent = localStorage.getItem("cookie-consent");
     if (storedConsent === "accepted") {
@@ -25,7 +41,11 @@ export function CookieBanner() {
       // Noch keine Entscheidung - Banner anzeigen
       setShowBanner(true);
     }
-  }, []);
+    
+    return () => {
+      openCookieSettingsCallback = null;
+    };
+  }, [showSettings]);
 
   const handleAccept = () => {
     localStorage.setItem("cookie-consent", "accepted");

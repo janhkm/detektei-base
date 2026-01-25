@@ -123,9 +123,13 @@ export default function DatenschutzPage() {
             Website ist:
           </p>
           <p>
-            Detektei Base
+            <strong>Hemkemeier & Awad GbR</strong>
             <br />
-            [Vollständige Adresse siehe Impressum]
+            Mühlstraße 41
+            <br />
+            71229 Leonberg
+            <br />
+            Deutschland
             <br />
             <br />
             Telefon: 0176 66918653
@@ -393,7 +397,30 @@ export default function DatenschutzPage() {
             </li>
             <li>
               <strong>Beschwerderecht:</strong> Sie haben das Recht, sich bei
-              einer Datenschutz-Aufsichtsbehörde zu beschweren.
+              einer Datenschutz-Aufsichtsbehörde zu beschweren. Die für uns
+              zuständige Aufsichtsbehörde ist:
+              <br />
+              <br />
+              Der Landesbeauftragte für den Datenschutz und die
+              Informationsfreiheit Baden-Württemberg
+              <br />
+              Lautenschlagerstraße 20
+              <br />
+              70173 Stuttgart
+              <br />
+              Telefon: 0711 615541-0
+              <br />
+              E-Mail: poststelle@lfdi.bwl.de
+              <br />
+              Website:{" "}
+              <a
+                href="https://www.baden-wuerttemberg.datenschutz.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-700 underline"
+              >
+                www.baden-wuerttemberg.datenschutz.de
+              </a>
             </li>
           </ul>
 
