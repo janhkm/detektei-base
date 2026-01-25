@@ -1609,7 +1609,7 @@
       "searchKeyword": "observation dauer",
       "intent": "informational",
       "category": "Featured Snippets",
-      "status": "pending",
+      "status": "published",
       "priority": 1,
       "searchVolume": "hoch",
       "difficulty": "leicht",
