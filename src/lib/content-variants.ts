@@ -132,11 +132,11 @@ export function getBundeslandH1(bundesland: Bundesland): string {
 type MetaGenerator = (name: string, extra?: string) => string;
 
 const META_STADT_VARIANTEN: MetaGenerator[] = [
-  (name) => `Professionelle Detektei in ${name}. ✓ Privatdetektei ✓ Wirtschaftsdetektei ✓ Beweissicherung. Kostenlose Erstberatung!`,
+  (name) => `Professionelle Detektei in ${name}. ✓ Privatdetektei ✓ Wirtschaftsdetektei ✓ Beweissicherung. Jetzt anrufen!`,
   (name, bl) => `Ihr Privatdetektiv in ${name} (${bl}): Diskrete Ermittlungen, gerichtsverwertbare Beweise. Jetzt anfragen!`,
   (name) => `Detektei ${name}: Erfahrene Ermittler für Privat- & Wirtschaftsfälle. ✓ Diskret ✓ Professionell. Beratung gratis.`,
   (name, bl) => `Ermittlungen in ${name}, ${bl}. Privatdetektei & Wirtschaftsdetektei. Vertraulich & effektiv.`,
-  (name) => `Privatdetektiv ${name} – Professionelle Aufklärung bei Untreue, Betrug & mehr. Kostenlose Erstberatung.`,
+  (name) => `Privatdetektiv ${name} – Professionelle Aufklärung bei Untreue, Betrug & mehr. Jetzt anrufen.`,
   (name) => `${name}: Ihre Detektei vor Ort. Diskrete Ermittlungen mit gerichtsfester Dokumentation. Jetzt beraten lassen!`,
 ];
 
@@ -145,20 +145,20 @@ const META_GROSSSTADT_VARIANTEN: MetaGenerator[] = [
   (name) => `Ihr erfahrener Privatdetektiv in ${name}. ✓ Observation ✓ Wirtschaftsermittlung ✓ Beweissicherung. Jetzt anfragen!`,
   (name, bl) => `${name}, ${bl}: Führende Detektei für diskrete Ermittlungen. Gerichtsverwertbare Beweise. Kostenlose Beratung.`,
   (name) => `Großstadt-Ermittlungen in ${name}: Erfahrene Detektive für komplexe Fälle. Schnelle Einsatzbereitschaft.`,
-  (name) => `Detektei ${name} – Diskretion auf höchstem Niveau. Privat- & Wirtschaftsermittlungen. Erstberatung gratis.`,
+  (name) => `Detektei ${name} – Diskretion auf höchstem Niveau. Privat- & Wirtschaftsermittlungen. Jetzt anrufen.`,
 ];
 
 const META_LANDKREIS_VARIANTEN: MetaGenerator[] = [
   (name, bl) => `Detektei im ${name} (${bl}): Ermittlungen im gesamten Landkreis. ✓ Diskret ✓ Professionell. Jetzt anfragen!`,
   (name, count) => `Privatdetektiv für den ${name} – Einsätze in ${count} Städten. Privatdetektei & Wirtschaftsdetektei.`,
-  (name) => `Ihre Detektei im ${name}: Erfahrene Ermittler vor Ort. Gerichtsverwertbare Beweise. Kostenlose Erstberatung.`,
+  (name) => `Ihre Detektei im ${name}: Erfahrene Ermittler vor Ort. Gerichtsverwertbare Beweise. Jetzt anrufen.`,
   (name, bl) => `${name}, ${bl}: Professionelle Detektei für den gesamten Landkreis. Diskrete Ermittlungen. Jetzt beraten lassen!`,
   (name) => `Ermittlungen im ${name} – Von Observation bis Wirtschaftsermittlung. Ihr Detektiv im Landkreis.`,
 ];
 
 const META_BUNDESLAND_VARIANTEN: MetaGenerator[] = [
   (name) => `Detektei ${name}: Landesweite Ermittlungen von erfahrenen Privatdetektiven. ✓ Diskret ✓ Professionell. Jetzt anfragen!`,
-  (name, cap) => `Ihr Privatdetektiv in ${name} – Von ${cap} bis in ländliche Regionen. Kostenlose Erstberatung.`,
+  (name, cap) => `Ihr Privatdetektiv in ${name} – Von ${cap} bis in ländliche Regionen. Jetzt anrufen.`,
   (name) => `${name}: Professionelle Detektei mit landesweitem Netzwerk. Privatdetektei & Wirtschaftsdetektei.`,
   (name) => `Ermittlungen in ganz ${name}: Erfahrene Detektive vor Ort. Gerichtsverwertbare Beweise. Diskret & effektiv.`,
   (name, cap) => `Detektei ${name} (Sitz: ${cap}): Landesweite Ermittlungen. ✓ Schnelle Einsatzbereitschaft. Beratung gratis.`,

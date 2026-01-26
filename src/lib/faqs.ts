@@ -11,30 +11,30 @@ type AnswerGenerator = (name: string, extra?: string) => string;
 
 // --- KOSTEN FRAGE ---
 const KOSTEN_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Ein Privatdetektiv in ${name} kostet zwischen 60-150€ pro Stunde, abhängig von Erfahrung und Auftragsart. Für ganztägige Observationen sollten Sie mit 800-1.500€ rechnen. Über Detektei Base finden Sie passende Partner-Detekteien – die Vermittlung ist kostenlos.`,
+  (name) => `Die Kosten für einen Privatdetektiv in ${name} werden individuell nach Fall und Aufwand berechnet. Faktoren wie Ermittlungsdauer, Komplexität und benötigte Ressourcen fließen in die Kalkulation ein. Über Detektei Base erhalten Sie ein unverbindliches Angebot – die Vermittlung ist kostenlos.`,
   
-  (name) => `Die Kosten für einen Detektiv in ${name} variieren: Stundenpreise von 60-150€, Tagessätze ab 800€. Detektei Base vermittelt Sie kostenlos an geprüfte Partner-Detekteien, die Ihnen transparente Kostenvoranschläge erstellen.`,
+  (name) => `Detektivkosten in ${name} hängen vom konkreten Auftrag ab: Art der Ermittlung, Dauer und Aufwand bestimmen den Preis. Detektei Base vermittelt Sie kostenlos an geprüfte Partner-Detekteien, die Ihnen ein individuelles Angebot erstellen.`,
   
-  (name) => `In ${name} liegen die Detektivkosten bei 60-150€ pro Stunde. Für Observationen rechnen Sie mit 800-1.500€ täglich. Die Vermittlung über Detektei Base ist für Sie kostenlos.`,
+  (name) => `In ${name} werden die Detektivkosten individuell kalkuliert – je nach Ermittlungsart, Dauer und Komplexität Ihres Falls. Die Erstberatung und Vermittlung über Detektei Base ist für Sie kostenlos.`,
   
-  (name) => `Für professionelle Ermittlungen in ${name} zahlen Sie 60-150€/Stunde. Tageseinsätze kosten 800-1.500€. Über Detektei Base finden Sie die passende Detektei – kostenlos und unverbindlich.`,
+  (name) => `Die Kosten für Ermittlungen in ${name} richten sich nach dem individuellen Aufwand. Im kostenlosen Erstgespräch erhalten Sie eine transparente Einschätzung. Detektei Base vermittelt Sie an passende Partner – unverbindlich und kostenlos.`,
   
-  (name) => `Detektivkosten in ${name}: Stundensätze 60-150€, Tagespauschalen ab 800€. Die Kosten hängen vom konkreten Auftrag ab. Detektei Base vermittelt Sie kostenlos an passende Partner-Detekteien.`,
+  (name) => `Was kostet ein Detektiv in ${name}? Das hängt von Ihrem individuellen Fall ab – Auftragsart, Dauer und Komplexität bestimmen den Preis. Detektei Base vermittelt Sie kostenlos an passende Partner-Detekteien.`,
   
-  (name) => `Was kostet ein Detektiv in ${name}? Rechnen Sie mit 60-150€ pro Stunde oder 800-1.500€ pro Observationstag. Die Vermittlung über Detektei Base ist kostenlos – Sie zahlen nur die Detektei direkt.`,
+  (name) => `Die Ermittlungskosten in ${name} werden nach individuellem Aufwand berechnet. Jeder Fall ist anders – daher erstellen Partner-Detekteien Ihnen ein maßgeschneidertes Angebot. Die Vermittlung über Detektei Base ist kostenlos.`,
 ];
 
 // --- SERIÖSER DETEKTIV FRAGE ---
 const SERIOES_VARIANTEN: AnswerGenerator[] = [
-  () => `Achten Sie auf: IHK-Zulassung nach §34a GewO, Mitgliedschaft in Berufsverbänden (BDD, BVPD), transparente Preisgestaltung mit schriftlichem Kostenvoranschlag, und professionelle Kommunikation. Detektei Base vermittelt nur geprüfte Partner.`,
+  () => `Achten Sie auf: Mitgliedschaft in Berufsverbänden (BDD, BVPD), transparente Preisgestaltung mit schriftlichem Kostenvoranschlag, langjährige Erfahrung und professionelle Kommunikation. Detektei Base vermittelt nur geprüfte Partner.`,
   
-  () => `Seriöse Detekteien erkennen Sie an: Gewerbezulassung, transparente Preise ohne Vorauskasse, schriftliche Verträge, und einer kostenlosen Erstberatung. Alle Partner-Detekteien von Detektei Base erfüllen diese Kriterien.`,
+  () => `Seriöse Detekteien erkennen Sie an: Gewerbezulassung, transparente Preise ohne Vorauskasse, schriftliche Verträge. Alle Partner-Detekteien von Detektei Base erfüllen diese Kriterien. Jetzt anrufen.`,
   
-  () => `Prüfen Sie: Ist die Detektei IHK-zugelassen? Gibt es einen schriftlichen Vertrag? Sind die Kosten transparent? Detektei Base arbeitet nur mit Partnern zusammen, die alle Qualitätskriterien erfüllen.`,
+  () => `Prüfen Sie: Gibt es einen schriftlichen Vertrag? Sind die Kosten transparent? Hat die Detektei Erfahrung? Detektei Base arbeitet nur mit Partnern zusammen, die alle Qualitätskriterien erfüllen.`,
   
-  () => `Merkmale seriöser Detekteien: IHK-Zulassung, Berufshaftpflicht, transparente Preise, schriftliche Auftragsbestätigung. Detektei Base prüft alle Partner-Detekteien auf diese Kriterien.`,
+  () => `Merkmale seriöser Detekteien: Berufshaftpflicht, transparente Preise, schriftliche Auftragsbestätigung, langjährige Erfahrung. Detektei Base prüft alle Partner-Detekteien auf diese Kriterien.`,
   
-  () => `Eine gute Detektei bietet: Kostenlose Erstberatung, transparente Kostenaufstellung, schriftlichen Vertrag und realistische Einschätzungen. Detektei Base vermittelt Sie an Detekteien, die diese Standards erfüllen.`,
+  () => `Eine gute Detektei bietet: Transparente Kostenaufstellung, schriftlichen Vertrag und realistische Einschätzungen. Detektei Base vermittelt Sie an Detekteien, die diese Standards erfüllen. Jetzt anrufen.`,
 ];
 
 // --- GERICHTSVERWERTBARKEIT FRAGE ---
@@ -91,15 +91,15 @@ const DISKRETION_VARIANTEN: AnswerGenerator[] = [
 
 // --- ANONYME BEAUFTRAGUNG FRAGE ---
 const ANONYM_VARIANTEN: AnswerGenerator[] = [
-  () => `Für die Erstberatung bei Detektei Base können Sie anonym bleiben. Schildern Sie Ihren Fall ohne Ihren Namen zu nennen. Erst bei der Vermittlung an eine Partner-Detektei werden Kontaktdaten benötigt – diese werden vertraulich behandelt.`,
+  () => `Beim ersten Anruf bei Detektei Base können Sie anonym bleiben. Schildern Sie Ihren Fall ohne Ihren Namen zu nennen. Erst bei der Vermittlung an eine Partner-Detektei werden Kontaktdaten benötigt – diese werden vertraulich behandelt.`,
   
-  () => `Anonyme Erstberatung ist möglich. Kontaktieren Sie Detektei Base, ohne sich vorzustellen. Für die Vermittlung an eine Detektei werden später Kontaktdaten benötigt – alle Daten werden vertraulich behandelt.`,
+  () => `Anonymer Anruf ist möglich. Kontaktieren Sie Detektei Base, ohne sich vorzustellen. Für die Vermittlung an eine Detektei werden später Kontaktdaten benötigt – alle Daten werden vertraulich behandelt.`,
   
   () => `Sie können Detektei Base anonym kontaktieren und Ihre Situation schildern. Die Beratung erfolgt ohne Verpflichtung. Für eine Vermittlung sind dann Kontaktdaten nötig, die streng vertraulich behandelt werden.`,
   
-  () => `Erste Beratung anonym: Ja. Kontaktieren Sie Detektei Base und schildern Sie den Fall, ohne sich zu identifizieren. Für eine Vermittlung werden später Kontaktdaten benötigt – alle Daten werden vertraulich behandelt.`,
+  () => `Erster Anruf anonym: Ja. Kontaktieren Sie Detektei Base und schildern Sie den Fall, ohne sich zu identifizieren. Für eine Vermittlung werden später Kontaktdaten benötigt – alle Daten werden vertraulich behandelt.`,
   
-  () => `Anonymität ist wichtig. Für die Erstberatung bei Detektei Base müssen Sie sich nicht identifizieren. Erst für die Vermittlung an eine Partner-Detektei werden Ihre (vertraulichen) Daten benötigt.`,
+  () => `Anonymität ist wichtig. Beim ersten Anruf bei Detektei Base müssen Sie sich nicht identifizieren. Erst für die Vermittlung an eine Partner-Detektei werden Ihre (vertraulichen) Daten benötigt.`,
 ];
 
 // --- KONTAKT FRAGE ---
@@ -308,13 +308,13 @@ export function getLandkreisFAQs(landkreis: Landkreis, bundesland: Bundesland): 
 
 // --- BUNDESLAND SPEZIFISCHE VARIANTEN ---
 const BL_KOSTEN_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Ein Privatdetektiv in ${name} kostet zwischen 50-150€ pro Stunde, je nach Region und Auftragsart. In Ballungsräumen liegen die Preise tendenziell höher als in ländlichen Gebieten. Die Vermittlung über Detektei Base ist kostenlos.`,
+  (name) => `Die Kosten für einen Privatdetektiv in ${name} werden individuell nach Aufwand berechnet. Faktoren wie Ermittlungsart, Dauer und Komplexität bestimmen den Preis. Die Vermittlung über Detektei Base ist kostenlos.`,
   
-  (name) => `Die Kosten in ${name} variieren regional: In Großstädten 80-150€/Stunde, in ländlichen Gebieten ab 50€. Observationen kosten landesweit 800-1.500€ pro Tag. Detektei Base vermittelt kostenlos.`,
+  (name) => `Detektivkosten in ${name} hängen vom konkreten Auftrag ab. Im kostenlosen Erstgespräch erhalten Sie eine transparente Einschätzung für Ihren individuellen Fall. Detektei Base vermittelt kostenlos.`,
   
-  (name) => `Detektivkosten in ${name}: 50-150€ pro Stunde, abhängig von Standort und Auftrag. Die Partner-Detektei erstellt Ihnen ein individuelles Angebot – die Vermittlung ist kostenlos.`,
+  (name) => `In ${name} werden die Ermittlungskosten individuell kalkuliert – je nach Auftragsart und Aufwand. Die Partner-Detektei erstellt Ihnen ein maßgeschneidertes Angebot. Die Vermittlung ist kostenlos.`,
   
-  (name) => `In ${name} zahlen Sie für einen Privatdetektiv 50-150€/Stunde. Die genauen Kosten hängen von der Region und dem Ermittlungsumfang ab. Detektei Base vermittelt Sie kostenlos an passende Partner.`,
+  (name) => `Was kostet ein Detektiv in ${name}? Das richtet sich nach Ihrem individuellen Fall. Detektei Base vermittelt Sie kostenlos an passende Partner, die Ihnen ein unverbindliches Angebot erstellen.`,
 ];
 
 const BL_LEISTUNGEN_VARIANTEN: AnswerGenerator[] = [

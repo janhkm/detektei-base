@@ -69,7 +69,7 @@ const faqs = [
 ];
 
 const prices = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
+  { service: "Erstkontakt", priceRange: "Jetzt anrufen", duration: "-" },
   { service: "Lauschabwehr-Sweep (bis 200m²)", priceRange: "ab 2.000€", duration: "1 Tag" },
   { service: "Sicherheitsaudit", priceRange: "ab 3.000€", duration: "1-2 Wochen" },
   { service: "Ermittlung bei Verdacht", priceRange: "ab 5.000€", duration: "individuell" },

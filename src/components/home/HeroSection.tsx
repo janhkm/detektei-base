@@ -38,28 +38,24 @@ export function HeroSection() {
             </p>
 
             {/* Trust Stats */}
-            <div className="mt-8 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
+            <div className="mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
                 <div className="text-2xl sm:text-3xl font-bold text-accent-400">24h</div>
                 <div className="text-xs sm:text-sm text-primary-300">Schnelle Vermittlung</div>
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-2xl sm:text-3xl font-bold text-accent-400">100%</div>
-                <div className="text-xs sm:text-sm text-primary-300">IHK-geprüfte Partner</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-2xl sm:text-3xl font-bold text-accent-400">0€</div>
-                <div className="text-xs sm:text-sm text-primary-300">Kostenlose Vermittlung</div>
+                <div className="text-xs sm:text-sm text-primary-300">Geprüfte Partner</div>
               </div>
             </div>
 
             {/* USP List */}
             <ul className="mt-8 space-y-3 text-left max-w-md mx-auto lg:mx-0">
               {[
-                "Kostenlose Erstberatung – unverbindlich",
-                "Geprüfte Detekteien mit IHK-Zulassung",
+                "Jetzt anrufen – unverbindlich",
+                "Geprüfte, erfahrene Detekteien",
                 "Passende Experten für jeden Fall",
-                "Deutschlandweites Netzwerk",
+                "Weltweites Netzwerk",
               ].map((item, index) => (
                 <li key={index} className="flex items-center gap-3 text-white">
                   <CheckCircle className="h-5 w-5 text-accent-400 flex-shrink-0" />
@@ -110,7 +106,7 @@ export function HeroSection() {
 
             {/* Floating Badge */}
             <div className="absolute -top-4 -right-4 bg-accent-500 text-primary-900 rounded-lg shadow-lg px-4 py-2 text-sm font-semibold">
-              Alle IHK-geprüft
+              Alle geprüft
             </div>
 
             {/* Floating Stats Card */}

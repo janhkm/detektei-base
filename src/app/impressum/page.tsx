@@ -50,7 +50,7 @@ export default function ImpressumPage() {
             E-Mail: kontakt@detektei-base.de
           </p>
 
-          <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+          <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
           <p>
             Hemkemeier & Awad GbR
             <br />

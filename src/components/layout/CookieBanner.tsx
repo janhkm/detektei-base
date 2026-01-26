@@ -102,17 +102,18 @@ export function CookieBanner() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 lg:flex-shrink-0">
+                {/* DSGVO-konform: Beide Buttons müssen gleichwertig gestaltet sein */}
                 <button
                   onClick={handleReject}
-                  className="px-5 py-2.5 text-sm font-medium text-primary-300 bg-primary-800 hover:bg-primary-700 rounded-lg transition-colors border border-primary-700"
+                  className="px-5 py-2.5 text-sm font-medium text-white bg-primary-700 hover:bg-primary-600 rounded-lg transition-colors border border-primary-600"
                 >
-                  Nur notwendige
+                  Ablehnen
                 </button>
                 <button
                   onClick={handleAccept}
-                  className="px-5 py-2.5 text-sm font-medium text-primary-900 bg-accent-500 hover:bg-accent-400 rounded-lg transition-colors"
+                  className="px-5 py-2.5 text-sm font-medium text-white bg-primary-700 hover:bg-primary-600 rounded-lg transition-colors border border-primary-600"
                 >
-                  Alle akzeptieren
+                  Akzeptieren
                 </button>
               </div>
             </div>

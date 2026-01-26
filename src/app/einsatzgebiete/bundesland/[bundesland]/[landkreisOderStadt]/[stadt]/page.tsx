@@ -9,7 +9,6 @@ import {
 import { Breadcrumbs, BreadcrumbItem } from "@/components/ui/Breadcrumbs";
 import { KeyTakeaways } from "@/components/ui/KeyTakeaways";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
-import { PriceTable } from "@/components/ui/PriceTable";
 import { CTABox } from "@/components/ui/CTABox";
 import { ServicesList } from "@/components/einsatzgebiete/ServicesList";
 import { ProcessTimeline } from "@/components/einsatzgebiete/ProcessTimeline";
@@ -19,7 +18,6 @@ import { WarumLokal } from "@/components/einsatzgebiete/WarumLokal";
 import { RechtlicheHinweise } from "@/components/einsatzgebiete/RechtlicheHinweise";
 import { getStadtFAQs } from "@/lib/faqs";
 import { generateGraphSchema } from "@/lib/schemas/einsatzgebiete";
-import { STANDARD_PRICES } from "@/data/types";
 import {
   getStadtH1,
   getStadtTitle,
@@ -179,7 +177,7 @@ export default async function StadtPage({ params }: PageProps) {
             <div className="lg:col-span-2">
               <KeyTakeaways
                 items={[
-                  `<strong>Kosten:</strong> 60-150€/Stunde, Tagessätze ab 800€`,
+                  `<strong>Kosten:</strong> Individuell nach Fall und Aufwand – jetzt anrufen`,
                   `<strong>Reaktionszeit:</strong> Innerhalb von 24h einsatzbereit in ${stadt.name}`,
                   `<strong>Leistungen:</strong> Privatdetektei & Wirtschaftsdetektei`,
                   `<strong>Beweise:</strong> Gerichtsverwertbar & DSGVO-konform`,
@@ -238,11 +236,35 @@ export default async function StadtPage({ params }: PageProps) {
                   Kosten für einen Detektiv in {stadt.name}
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Ein Privatdetektiv in {stadt.name}{" "}
-                  kostet zwischen 60-150€ pro Stunde. Für ganztägige
-                  Observationen sollten Sie mit 800-1.500€ rechnen.
+                  <strong>Kurz:</strong> Die Kosten für einen Privatdetektiv in {stadt.name}{" "}
+                  werden individuell nach Fall und Aufwand berechnet. Rufen Sie jetzt an – 
+                  Sie erhalten ein unverbindliches Angebot für Ihre Situation.
                 </p>
-                <PriceTable prices={STANDARD_PRICES} />
+                <div className="bg-primary-50 rounded-xl p-6 border border-primary-100">
+                  <h3 className="font-semibold text-primary-900 mb-3">Was beeinflusst die Kosten?</h3>
+                  <ul className="space-y-2 text-primary-700 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent-500 mt-0.5">•</span>
+                      <span><strong>Art der Ermittlung:</strong> Observation, Recherche, Personensuche</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent-500 mt-0.5">•</span>
+                      <span><strong>Dauer und Umfang:</strong> Einzelne Termine oder längere Überwachung</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent-500 mt-0.5">•</span>
+                      <span><strong>Komplexität:</strong> Einfache oder aufwändige Ermittlung</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent-500 mt-0.5">•</span>
+                      <span><strong>Ressourcen:</strong> Anzahl der benötigten Ermittler</span>
+                    </li>
+                  </ul>
+                  <p className="mt-4 text-sm text-primary-600">
+                    <strong>Jetzt anrufen.</strong> Schildern Sie Ihren Fall – 
+                    Sie erhalten eine transparente Einschätzung ohne Verpflichtung.
+                  </p>
+                </div>
               </div>
 
               {/* Rechtliche Hinweise */}
@@ -315,7 +337,7 @@ export default async function StadtPage({ params }: PageProps) {
                   <ul className="space-y-3 text-sm">
                     {[
                       "Nur geprüfte Partner-Detekteien",
-                      "Alle Partner IHK-zugelassen (§34a GewO)",
+                      "Alle Partner erfahren und geprüft",
                       "Diskrete Vermittlung",
                       "Kostenlose Vermittlung für Sie",
                       "Partner arbeiten DSGVO-konform",

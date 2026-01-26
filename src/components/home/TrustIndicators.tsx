@@ -3,8 +3,8 @@ import { Shield, Award, Clock, Users, Scale, Lock } from "lucide-react";
 const indicators = [
   {
     icon: Shield,
-    label: "Partner IHK-geprüft",
-    description: "§34a GewO zertifiziert",
+    label: "Geprüfte Partner",
+    description: "Erfahrene Ermittler",
   },
   {
     icon: Scale,

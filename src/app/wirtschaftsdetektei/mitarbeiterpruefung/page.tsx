@@ -73,7 +73,7 @@ const faqs = [
 ];
 
 const prices = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
+  { service: "Erstkontakt", priceRange: "Jetzt anrufen", duration: "-" },
   { service: "Basis-Check (Identität, Lebenslauf)", priceRange: "ab 300€", duration: "3-5 Tage" },
   { service: "Standard-Check (inkl. Referenzen)", priceRange: "ab 500€", duration: "5-7 Tage" },
   { service: "Premium-Check (umfassend)", priceRange: "ab 800€", duration: "1-2 Wochen" },

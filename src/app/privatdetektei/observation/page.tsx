@@ -79,7 +79,7 @@ const faqs = [
 ];
 
 const prices = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
+  { service: "Erstkontakt", priceRange: "Jetzt anrufen", duration: "-" },
   { service: "Observation (Stunde)", priceRange: "60-150€", duration: "pro Detektiv" },
   { service: "Observation (Halbtag)", priceRange: "400-800€", duration: "4-6h" },
   { service: "Observation (Tag)", priceRange: "800-1.500€", duration: "8-12h" },

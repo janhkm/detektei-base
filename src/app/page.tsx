@@ -16,7 +16,7 @@ import { generateHomepageSchema } from "@/lib/schemas/homepage";
 export const metadata: Metadata = {
   title: "Detektei finden | Geprüfte Privatdetektive deutschlandweit | Detektei Base",
   description:
-    "Finden Sie sofort die richtige Detektei für Ihren Fall. Wir vermitteln Sie kostenlos an geprüfte Partner-Detekteien mit langjähriger Erfahrung – diskret und schnell an zertifizierte Ermittler in Ihrer Region.",
+    "Finden Sie sofort die richtige Detektei für Ihren Fall. Wir vermitteln Sie kostenlos an geprüfte Partner-Detekteien mit langjähriger Erfahrung – diskret und schnell an erfahrene Ermittler in Ihrer Region.",
   keywords: [
     "Detektei finden",
     "Privatdetektiv",

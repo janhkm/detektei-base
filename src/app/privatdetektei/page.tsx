@@ -113,7 +113,7 @@ export default function PrivatdetekteiPage() {
                 <ul className="space-y-3">
                   {[
                     "Nur geprüfte Partner-Detekteien",
-                    "Alle Partner IHK-zugelassen",
+                    "Alle Partner erfahren und geprüft",
                     "Kostenlose Vermittlung für Sie",
                     "Passende Experten für jeden Fall",
                     "Schnelle Rückmeldung in 24h",
@@ -136,9 +136,9 @@ export default function PrivatdetekteiPage() {
           <KeyTakeaways
             items={[
               "<strong>Leistungen:</strong> Untreue, Personensuche, Sorgerecht, Stalking, Betrug",
-              "<strong>Kosten:</strong> Vermittlung kostenlos, Detektei ab 60€/Stunde",
+              "<strong>Kosten:</strong> Individuell nach Fall – Vermittlung kostenlos",
               "<strong>Partner:</strong> Geprüfte Privatdetekteien deutschlandweit mit langjähriger Erfahrung",
-              "<strong>Garantie:</strong> Alle Partner sind IHK-zugelassen",
+              "<strong>Garantie:</strong> Alle Partner sind erfahrene, geprüfte Ermittler",
             ]}
           />
 
@@ -208,7 +208,7 @@ export default function PrivatdetekteiPage() {
                 </p>
                 <p>
                   <strong>Über Detektei Base</strong> finden Sie die passende 
-                  Detektei für Ihren Fall – alle Partner sind IHK-zugelassen 
+                  Detektei für Ihren Fall – alle Partner sind erfahren 
                   und von uns geprüft.
                 </p>
               </div>

@@ -189,7 +189,7 @@ export function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>Partner IHK-zugelassen</span>
+              <span>Geprüfte Partner</span>
             </li>
             <li className="flex items-center gap-2">
               <svg

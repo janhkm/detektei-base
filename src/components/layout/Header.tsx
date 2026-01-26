@@ -105,7 +105,7 @@ export function Header() {
               href="/kontakt"
               className="inline-flex items-center justify-center rounded-lg bg-primary-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 hover:-translate-y-0.5 active:translate-y-0 transition-all"
             >
-              Kostenlose Beratung
+              Jetzt kontaktieren
             </Link>
           </div>
 
@@ -190,7 +190,7 @@ export function Header() {
                 className="block w-full text-center rounded-lg bg-primary-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Kostenlose Beratung
+                Jetzt kontaktieren
               </Link>
             </div>
           </div>

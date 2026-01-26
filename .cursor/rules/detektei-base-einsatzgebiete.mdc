@@ -185,7 +185,7 @@ interface EinsatzgebieteSchemas {
       "name": "Wie finde ich einen seriösen Detektiv in [Stadt]?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Achten Sie auf IHK-Zulassung nach §34a GewO..."
+        "text": "Achten Sie auf Mitgliedschaft in Berufsverbänden, Erfahrung..."
       }
     }
   ]
@@ -607,7 +607,7 @@ H2: Rechtliche Grundlagen für Detektei-Einsätze in [Stadt]
 H2: Warum unsere Detektei in [Stadt] wählen?
 
   [Trust-Signale]
-  - ✓ IHK-Zulassung nach §34a GewO
+  - ✓ Geprüfte, erfahrene Ermittler
   - ✓ Mitglied im Bundesverband Deutscher Detektive (BDD)
   - ✓ Über XX Jahre Erfahrung
   - ✓ Lokale Präsenz in [Stadt]
@@ -1349,7 +1349,7 @@ async function notifyIndexNow(url: string) {
     "@type": "Person",
     "name": "Max Mustermann",
     "jobTitle": "Geschäftsführer & Chefermittler",
-    "description": "Über 20 Jahre Erfahrung als Privatdetektiv, IHK-zertifiziert",
+    "description": "Über 20 Jahre Erfahrung als Privatdetektiv",
     "image": "https://domain.de/images/team/max-mustermann.webp",
     "sameAs": [
       "https://www.linkedin.com/in/max-mustermann/"
@@ -1367,7 +1367,7 @@ async function notifyIndexNow(url: string) {
 ```markdown
 ## Warum unsere Detektei in [Stadt] wählen?
 
-- ✓ **IHK-Zulassung** nach §34a GewO (Gewerbeordnung)
+- ✓ **Geprüfte Partner** mit langjähriger Erfahrung
 - ✓ **Mitglied** im Bundesverband Deutscher Detektive (BDD)
 - ✓ **Mitglied** im Bund Internationaler Detektive (BID)
 - ✓ **XX+ Jahre** Erfahrung in der Branche
@@ -1389,7 +1389,7 @@ async function notifyIndexNow(url: string) {
   </nav>
   
   <div class="trust-badges">
-    <img src="/images/badges/ihk-zugelassen.svg" alt="IHK zugelassen" width="120" height="40">
+    <img src="/images/badges/geprueft.svg" alt="Geprüfte Partner" width="120" height="40">
     <img src="/images/badges/bdd-mitglied.svg" alt="BDD Mitglied" width="120" height="40">
   </div>
 </footer>
@@ -1757,7 +1757,7 @@ const priorities = {
 - [ ] Keyword-reiche Anchor-Texte (keine "hier klicken")
 
 #### E-E-A-T & Trust
-- [ ] Trust-Signale im Content (IHK, Verbände, Erfahrung)
+- [ ] Trust-Signale im Content (Verbände, Erfahrung, Berufshaftpflicht)
 - [ ] Link zu Impressum, Datenschutz im Footer
 - [ ] NAP konsistent (Name, Address, Phone)
 - [ ] Kontaktmöglichkeiten sichtbar

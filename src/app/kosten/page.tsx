@@ -6,39 +6,42 @@ import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Kosten | Detektei-Preise im Überblick",
+  title: "Kosten | Individuelle Preisgestaltung",
   description:
-    "Detektei-Kosten: 60-150€/Stunde, Tagessätze ab 800€. ✓ Kostenlose Vermittlung über Detektei Base ✓ Transparente Preise der Partner-Detekteien.",
+    "Detektei-Kosten werden individuell nach Fall und Aufwand berechnet. ✓ Jetzt anrufen ✓ Kostenlose Vermittlung über Detektei Base ✓ Transparente Angebote.",
 };
 
-const preisKategorien = [
+const leistungsKategorien = [
   {
     title: "Observation",
     description: "Überwachung und Dokumentation von Personen",
-    prices: [
-      { item: "Stundenpreis", price: "60-150€" },
-      { item: "Tagessatz (8-12h)", price: "800-1.500€" },
-      { item: "Wochenpaket", price: "ab 3.500€" },
+    faktoren: [
+      "Dauer der Observation (Stunden/Tage)",
+      "Anzahl der eingesetzten Ermittler",
+      "Komplexität der Überwachung",
+      "Entfernung zum Einsatzort",
     ],
-    includes: ["Fotodokumentation", "Ermittlungsbericht", "Spesen (Nahbereich)"],
+    includes: ["Fotodokumentation", "Ermittlungsbericht", "Gerichtsverwertbare Beweise"],
   },
   {
     title: "Personensuche",
     description: "Ermittlung von Aufenthaltsorten und Adressen",
-    prices: [
-      { item: "Adressermittlung (einfach)", price: "ab 500€" },
-      { item: "Personensuche (komplex)", price: "ab 1.500€" },
-      { item: "Internationale Suche", price: "ab 2.500€" },
+    faktoren: [
+      "Verfügbare Ausgangsinformationen",
+      "Nationale oder internationale Suche",
+      "Komplexität des Falls",
+      "Benötigte Recherchetiefe",
     ],
-    includes: ["Datenbankrecherche", "Abschlussbericht", "Erfolgsmeldung"],
+    includes: ["Datenbankrecherche", "Abschlussbericht", "Verifizierte Ergebnisse"],
   },
   {
     title: "Wirtschaftsermittlungen",
     description: "Ermittlungen für Unternehmen",
-    prices: [
-      { item: "Mitarbeiterüberprüfung", price: "ab 300€" },
-      { item: "Krankfeierkontrolle (Tag)", price: "800-1.500€" },
-      { item: "Betrugsermittlung", price: "ab 2.000€" },
+    faktoren: [
+      "Art der Ermittlung (Prüfung, Observation)",
+      "Umfang der Untersuchung",
+      "Anzahl betroffener Personen",
+      "Erforderliche Spezialkenntnisse",
     ],
     includes: ["Dokumentation", "Gerichtsverwertbarer Bericht", "Beratung"],
   },
@@ -107,25 +110,25 @@ export default function KostenPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <KeyTakeaways
             items={[
-              "<strong>Erstberatung:</strong> Immer kostenlos und unverbindlich",
-              "<strong>Stundensätze:</strong> 60-150€ je nach Leistung",
-              "<strong>Tagessätze:</strong> 800-1.500€ für Observationen",
-              "<strong>Transparenz:</strong> Vorab-Kostenvoranschlag, keine versteckten Kosten",
+              "<strong>Erstkontakt:</strong> Jetzt anrufen – unverbindlich",
+              "<strong>Preisgestaltung:</strong> Individuell nach Fall und Aufwand",
+              "<strong>Angebot:</strong> Transparenter Kostenvoranschlag vor Auftragserteilung",
+              "<strong>Vermittlung:</strong> Über Detektei Base für Sie kostenlos",
             ]}
           />
 
-          {/* Preiskategorien */}
+          {/* Leistungskategorien */}
           <div className="mt-16">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-900 text-center mb-4">
-              Preise der Partner-Detekteien im Überblick
+              Wovon hängen die Kosten ab?
             </h2>
             <p className="text-primary-600 text-center max-w-2xl mx-auto mb-12">
-              Die genauen Kosten hängen vom individuellen Fall ab. Diese
-              Richtwerte unserer Partner-Detekteien geben Ihnen eine erste Orientierung.
+              Jeder Fall ist einzigartig – daher werden die Kosten individuell kalkuliert. 
+              Hier sehen Sie, welche Faktoren in die Preisgestaltung einfließen.
             </p>
 
             <div className="grid lg:grid-cols-3 gap-8">
-              {preisKategorien.map((kategorie, i) => (
+              {leistungsKategorien.map((kategorie, i) => (
                 <div
                   key={i}
                   className="bg-primary-50 rounded-2xl border border-primary-100 overflow-hidden"
@@ -137,18 +140,17 @@ export default function KostenPage() {
                     </p>
                   </div>
                   <div className="p-6">
-                    <ul className="space-y-4 mb-6">
-                      {kategorie.prices.map((price, j) => (
-                        <li key={j} className="flex justify-between items-center">
-                          <span className="text-primary-700">{price.item}</span>
-                          <span className="font-semibold text-primary-900">
-                            {price.price}
-                          </span>
+                    <p className="text-xs text-primary-500 mb-2">Kostenfaktoren:</p>
+                    <ul className="space-y-3 mb-6">
+                      {kategorie.faktoren.map((faktor, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-primary-700">
+                          <span className="text-accent-500 mt-0.5">•</span>
+                          {faktor}
                         </li>
                       ))}
                     </ul>
                     <div className="pt-4 border-t border-primary-200">
-                      <p className="text-xs text-primary-500 mb-2">Inklusive:</p>
+                      <p className="text-xs text-primary-500 mb-2">Immer inklusive:</p>
                       <ul className="space-y-1">
                         {kategorie.includes.map((item, k) => (
                           <li
@@ -256,7 +258,7 @@ export default function KostenPage() {
       <section className="py-16 lg:py-24 bg-primary-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <CTABox
-            title="Kostenlose Erstberatung"
+            title="Jetzt anrufen"
             description="Erhalten Sie ein unverbindliches Angebot für Ihren Fall"
             variant="dark"
           />

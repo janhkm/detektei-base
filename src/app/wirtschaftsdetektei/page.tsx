@@ -139,7 +139,7 @@ export default function WirtschaftsdetekteiPage() {
           <KeyTakeaways
             items={[
               "<strong>Leistungen:</strong> Mitarbeiterprüfung, Krankfeier, Betrug, Diebstahl, Wettbewerb",
-              "<strong>Kosten:</strong> Individuelle Kalkulation, kostenlose Erstberatung",
+              "<strong>Kosten:</strong> Individuelle Kalkulation – jetzt anrufen",
               "<strong>Beweise:</strong> Gerichtsverwertbar & arbeitsrechtlich belastbar",
               "<strong>Diskretion:</strong> Vertrauliche Behandlung aller Unternehmensdaten",
             ]}
@@ -277,7 +277,7 @@ export default function WirtschaftsdetekteiPage() {
       <section className="py-16 lg:py-24 bg-primary-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <CTABox
-            title="Vertrauliche Erstberatung für Unternehmen"
+            title="Jetzt anrufen"
             description="Schildern Sie uns Ihre Situation – kostenlos und diskret"
             variant="dark"
           />

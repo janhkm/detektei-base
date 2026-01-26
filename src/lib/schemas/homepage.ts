@@ -26,7 +26,7 @@ export function generateOrganizationSchema() {
       height: 512,
     },
     description:
-      "Detektei Base vermittelt Sie an geprüfte Partner-Detekteien in ganz Deutschland. Unser Netzwerk aus IHK-zugelassenen Ermittlern garantiert Qualität und Diskretion.",
+      "Detektei Base vermittelt Sie an geprüfte Partner-Detekteien in ganz Deutschland. Unser Netzwerk aus erfahrenen Ermittlern garantiert Qualität und Diskretion.",
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -60,7 +60,7 @@ export function generateLocalBusinessSchema() {
     name: COMPANY_NAME,
     alternateName: ["Detektei Vermittlung", "Detektiv finden"],
     description:
-      "Detektei Base ist eine Vermittlungsplattform für professionelle Ermittlungen. Wir vermitteln Sie an geprüfte Partner-Detekteien mit IHK-Zulassung – schnell, diskret und deutschlandweit.",
+      "Detektei Base ist eine Vermittlungsplattform für professionelle Ermittlungen. Wir vermitteln Sie an geprüfte, erfahrene Partner-Detekteien – schnell, diskret und deutschlandweit.",
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
@@ -156,14 +156,7 @@ export function generateWebSiteSchema() {
       "@id": `${SITE_URL}/#organization`,
     },
     inLanguage: "de-DE",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${SITE_URL}/suche?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
+    // SearchAction entfernt - keine Suchseite vorhanden
   };
 }
 
@@ -180,7 +173,7 @@ export function generateWebPageSchema() {
     url: SITE_URL,
     name: "Detektei finden | Geprüfte Privatdetektive deutschlandweit | Detektei Base",
     description:
-      "Finden Sie sofort die richtige Detektei für Ihren Fall. Unser Netzwerk aus geprüften Partner-Detekteien vermittelt Sie diskret und schnell an zertifizierte Ermittler in Ihrer Region.",
+      "Finden Sie sofort die richtige Detektei für Ihren Fall. Unser Netzwerk aus geprüften Partner-Detekteien vermittelt Sie diskret und schnell an erfahrene Ermittler in Ihrer Region.",
     inLanguage: "de-DE",
     isPartOf: {
       "@id": `${SITE_URL}/#website`,
@@ -206,12 +199,12 @@ export function generateHomepageFAQSchema() {
     {
       question: "Was kostet die Vermittlung einer Detektei?",
       answer:
-        "Die Vermittlung über Detektei Base ist für Sie komplett kostenfrei. Wir finanzieren uns über Vermittlungsprovisionen der Partner-Detekteien. Die Kosten für die eigentliche Detektiv-Dienstleistung werden direkt mit der vermittelten Detektei vereinbart.",
+        "Die Vermittlung über Detektei Base ist für Sie komplett kostenfrei. Wir finanzieren uns über Vermittlungsprovisionen der Partner-Detekteien. Die Kosten für die eigentliche Detektiv-Dienstleistung werden individuell nach Fall und Aufwand mit der vermittelten Detektei vereinbart.",
     },
     {
       question: "Wie finde ich eine seriöse Detektei?",
       answer:
-        "Über Detektei Base werden Sie nur an geprüfte Partner-Detekteien vermittelt. Alle Partner sind IHK-zugelassen nach §34a GewO, haben eine Berufshaftpflichtversicherung und sind zur Einhaltung der DSGVO verpflichtet. So sparen Sie sich die aufwendige Recherche.",
+        "Über Detektei Base werden Sie nur an geprüfte Partner-Detekteien vermittelt. Alle Partner haben eine Berufshaftpflichtversicherung und sind zur Einhaltung der DSGVO verpflichtet. So sparen Sie sich die aufwendige Recherche.",
     },
     {
       question: "Wie schnell werde ich an eine Detektei vermittelt?",

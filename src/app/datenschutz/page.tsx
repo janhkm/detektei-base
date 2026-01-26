@@ -276,7 +276,16 @@ export default function DatenschutzPage() {
             können.
           </p>
 
-          <h2>6. Webanalyse mit Google Analytics</h2>
+          <h2>6. Schriftarten (Lokal gehostet)</h2>
+          <p>
+            Diese Website verwendet Schriftarten (Inter, Playfair Display), die
+            <strong> lokal auf unserem Server gehostet</strong> werden. Es werden
+            keine Verbindungen zu externen Servern (wie Google Fonts) hergestellt.
+            Dadurch werden keine personenbezogenen Daten an Dritte übertragen,
+            wenn Sie unsere Website besuchen.
+          </p>
+
+          <h2>7. Webanalyse mit Google Analytics</h2>
 
           <h3>Umfang der Verarbeitung</h3>
           <p>
@@ -362,7 +371,7 @@ export default function DatenschutzPage() {
             </a>
           </p>
 
-          <h2>7. Ihre Rechte als betroffene Person</h2>
+          <h2>8. Ihre Rechte als betroffene Person</h2>
           <p>Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
           <ul>
             <li>
@@ -424,7 +433,7 @@ export default function DatenschutzPage() {
             </li>
           </ul>
 
-          <h2>8. SSL- bzw. TLS-Verschlüsselung</h2>
+          <h2>9. SSL- bzw. TLS-Verschlüsselung</h2>
           <p>
             Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der
             Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie
@@ -434,7 +443,7 @@ export default function DatenschutzPage() {
             Schloss-Symbol in Ihrer Browserzeile.
           </p>
 
-          <h2>9. Änderungen dieser Datenschutzerklärung</h2>
+          <h2>10. Änderungen dieser Datenschutzerklärung</h2>
           <p>
             Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie
             an geänderte Rechtslagen oder bei Änderungen unserer Leistungen

@@ -57,7 +57,7 @@ const faqs = [
 ];
 
 const prices = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
+  { service: "Erstkontakt", priceRange: "Jetzt anrufen", duration: "-" },
   { service: "Observation (Tag)", priceRange: "800-1.500€", duration: "8-12h" },
   { service: "Observation (Halbtag)", priceRange: "500-800€", duration: "4-6h" },
   { service: "Ermittlungsbericht", priceRange: "Inklusive", duration: "-" },

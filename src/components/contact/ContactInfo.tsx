@@ -70,8 +70,9 @@ export function ContactInfo() {
 
         <div className="mt-4 pt-4 border-t border-primary-200">
           <p className="text-xs text-primary-500">
-            <strong>Notfall-Hotline:</strong> In dringenden Fällen erreichen Sie
-            uns auch außerhalb der Geschäftszeiten.
+            <strong>Hinweis:</strong> Außerhalb der Geschäftszeiten können Sie 
+            uns eine Nachricht auf dem Anrufbeantworter hinterlassen oder eine 
+            E-Mail senden. Wir melden uns schnellstmöglich zurück.
           </p>
         </div>
       </div>
@@ -130,7 +131,7 @@ export function ContactInfo() {
           <div className="flex items-center gap-3">
             <Shield className="h-5 w-5 text-accent-600" />
             <span className="text-sm text-primary-700">
-              IHK-zugelassene Partner (§34a GewO)
+              Erfahrene, geprüfte Partner
             </span>
           </div>
           <div className="flex items-center gap-3">

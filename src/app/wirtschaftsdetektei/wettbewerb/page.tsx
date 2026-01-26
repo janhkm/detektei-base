@@ -73,7 +73,7 @@ const faqs = [
 ];
 
 const prices = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
+  { service: "Erstkontakt", priceRange: "Jetzt anrufen", duration: "-" },
   { service: "Recherche & Analyse", priceRange: "ab 1.500€", duration: "1-2 Wochen" },
   { service: "Testkauf (Markenpiraterie)", priceRange: "ab 500€", duration: "individuell" },
   { service: "Observation", priceRange: "800-1.500€/Tag", duration: "variabel" },

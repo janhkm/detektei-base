@@ -8,12 +8,12 @@ const faqs = [
   {
     question: "Was kostet die Vermittlung einer Detektei?",
     answer:
-      "Die Vermittlung über Detektei Base ist für Sie komplett kostenfrei. Wir finanzieren uns über Vermittlungsprovisionen der Partner-Detekteien. Die Kosten für die eigentliche Detektiv-Dienstleistung werden direkt mit der vermittelten Detektei vereinbart.",
+      "Die Vermittlung über Detektei Base ist für Sie komplett kostenfrei. Die Kosten für die eigentliche Detektiv-Dienstleistung werden individuell nach Fall und Aufwand mit der vermittelten Detektei vereinbart.",
   },
   {
     question: "Wie finde ich eine seriöse Detektei?",
     answer:
-      "Über Detektei Base werden Sie nur an geprüfte Partner-Detekteien vermittelt. Alle Partner sind IHK-zugelassen nach §34a GewO, haben eine Berufshaftpflichtversicherung und sind zur Einhaltung der DSGVO verpflichtet. So sparen Sie sich die aufwendige Recherche.",
+      "Über Detektei Base werden Sie nur an geprüfte Partner-Detekteien vermittelt. Alle Partner haben eine Berufshaftpflichtversicherung und sind zur Einhaltung der DSGVO verpflichtet. So sparen Sie sich die aufwendige Recherche.",
   },
   {
     question: "Wie schnell werde ich an eine Detektei vermittelt?",

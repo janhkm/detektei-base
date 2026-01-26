@@ -84,10 +84,10 @@ const verboten = [
 
 const gesetze = [
   {
-    gesetz: "§ 34a GewO",
-    titel: "Gewerbeordnung",
+    gesetz: "Gewerberecht",
+    titel: "Gewerbeanmeldung",
     beschreibung:
-      "Regelt die Zulassung von Detekteien. Detektive benötigen eine IHK-Erlaubnis und müssen ihre Zuverlässigkeit nachweisen.",
+      "Regelt die Zulassung von Detekteien. Detektive müssen ihre Zuverlässigkeit nachweisen und eine Gewerbeanmeldung haben.",
   },
   {
     gesetz: "§ 32 BDSG / Art. 6 DSGVO",
@@ -150,7 +150,7 @@ const faqs = [
   {
     question: "Wie schütze ich mich vor unseriösen Detekteien?",
     answer:
-      "Achten Sie auf: IHK-Zulassung, Mitgliedschaft in Berufsverbänden (BDD, BVPD), schriftliche Auftragserteilung mit klarer Kostenaufstellung, transparente Kommunikation über die Grenzen des Erlaubten.",
+      "Achten Sie auf: Mitgliedschaft in Berufsverbänden (BDD, BVPD), schriftliche Auftragserteilung mit klarer Kostenaufstellung, transparente Kommunikation über die Grenzen des Erlaubten, langjährige Erfahrung.",
   },
 ];
 
@@ -343,8 +343,8 @@ export default function RechtlichesPage() {
             {[
               {
                 icon: Shield,
-                title: "IHK-Zulassung",
-                description: "Zugelassen nach §34a GewO",
+                title: "Geprüfte Partner",
+                description: "Erfahrene Ermittler",
               },
               {
                 icon: FileText,

@@ -63,7 +63,7 @@ const faqs = [
   {
     question: "Wie finde ich die richtige Detektei für Untreue-Ermittlungen?",
     answer:
-      "Über Detektei Base werden Sie kostenlos an eine geprüfte Partner-Detektei vermittelt, die auf Untreue-Ermittlungen spezialisiert ist. Alle Partner sind IHK-zugelassen und erfahren.",
+      "Über Detektei Base werden Sie kostenlos an eine geprüfte Partner-Detektei vermittelt, die auf Untreue-Ermittlungen spezialisiert ist. Alle Partner sind erfahren und von uns geprüft.",
   },
 ];
 

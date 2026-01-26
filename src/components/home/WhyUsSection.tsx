@@ -12,7 +12,7 @@ const reasons = [
     icon: Shield,
     title: "Nur geprüfte Detekteien",
     description:
-      "Alle Partner-Detekteien sind nach §34a GewO zugelassen und werden von uns auf Qualität geprüft.",
+      "Alle Partner-Detekteien werden von uns sorgfältig ausgewählt und auf Qualität geprüft.",
   },
   {
     icon: Scale,
@@ -65,33 +65,6 @@ export function WhyUsSection() {
               kompetenten Partner für Ihren Fall.
             </p>
 
-            {/* Stats */}
-            <div className="mt-10 grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-primary-900">
-                  4
-                </div>
-                <div className="text-sm text-primary-500 mt-1">
-                  Partner deutschlandweit
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-primary-900">
-                  2.500+
-                </div>
-                <div className="text-sm text-primary-500 mt-1">
-                  Fälle netzwerkweit
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-primary-900">
-                  24h
-                </div>
-                <div className="text-sm text-primary-500 mt-1">
-                  Vermittlungszeit
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Features Grid */}

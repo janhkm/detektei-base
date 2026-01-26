@@ -61,12 +61,12 @@ export interface BreadcrumbItem {
  * Wird für kontextuelle Link-Injektion verwendet
  */
 const KEYWORD_LINKS: Record<string, { url: string; priority: number }> = {
-  // Kosten-Keywords
-  "detektiv kosten": { url: "/blog/privatdetektiv-kosten-pro-stunde", priority: 8 },
-  "privatdetektiv kosten": { url: "/blog/privatdetektiv-kosten-pro-stunde", priority: 9 },
-  "was kostet ein detektiv": { url: "/blog/privatdetektiv-kosten-pro-stunde", priority: 9 },
+  // Kosten-Keywords (verweisen auf Kosten-Seite)
+  "detektiv kosten": { url: "/kosten", priority: 8 },
+  "privatdetektiv kosten": { url: "/kosten", priority: 9 },
+  "was kostet ein detektiv": { url: "/kosten", priority: 9 },
   "detektei preise": { url: "/kosten", priority: 7 },
-  "stundensatz detektiv": { url: "/blog/privatdetektiv-kosten-pro-stunde", priority: 8 },
+  "kosten detektei": { url: "/kosten", priority: 8 },
   
   // Grundlagen-Keywords
   "was macht ein detektiv": { url: "/blog/privatdetektiv-aufgaben-erklaerung", priority: 8 },

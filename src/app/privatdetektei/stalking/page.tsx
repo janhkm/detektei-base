@@ -82,7 +82,7 @@ const faqs = [
 ];
 
 const prices = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
+  { service: "Erstkontakt", priceRange: "Jetzt anrufen", duration: "-" },
   { service: "Täteridentifikation", priceRange: "ab 1.000€", duration: "individuell" },
   { service: "Observation (Tag)", priceRange: "800-1.500€", duration: "8-12h" },
   { service: "Beweisdokumentation", priceRange: "ab 500€", duration: "individuell" },
@@ -128,7 +128,7 @@ export default function StalkingPage() {
                 items={[
                   "<strong>Leistungen:</strong> Täteridentifikation, Beweissicherung, Dokumentation",
                   "<strong>Ziel:</strong> Grundlage für Strafanzeige & Gewaltschutzanordnung",
-                  "<strong>Kosten:</strong> Ab 1.000€, kostenlose Erstberatung",
+                  "<strong>Kosten:</strong> Ab 1.000€, jetzt anrufen",
                   "<strong>Wichtig:</strong> Parallel immer auch Strafanzeige erstatten",
                 ]}
               />

@@ -3,7 +3,7 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     content:
-      "Ich wusste nicht, wo ich anfangen sollte. Detektei Base hat mich innerhalb eines Tages an eine passende Detektei in meiner Region vermittelt. Die Erstberatung war kostenlos und hat mir sehr geholfen, meinen Fall einzuordnen.",
+      "Ich wusste nicht, wo ich anfangen sollte. Detektei Base hat mich innerhalb eines Tages an eine passende Detektei in meiner Region vermittelt. Das erste Gespräch hat mir sehr geholfen, meinen Fall einzuordnen.",
     author: "M. Schmidt",
     role: "Privatperson",
     rating: 5,

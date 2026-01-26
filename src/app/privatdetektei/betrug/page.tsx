@@ -80,7 +80,7 @@ const faqs = [
 ];
 
 const prices = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
+  { service: "Erstkontakt", priceRange: "Jetzt anrufen", duration: "-" },
   { service: "Identitätsprüfung (Basis)", priceRange: "ab 500€", duration: "3-5 Tage" },
   { service: "Hintergrund-Check (umfassend)", priceRange: "ab 1.000€", duration: "1-2 Wochen" },
   { service: "Internationale Recherche", priceRange: "ab 1.500€", duration: "individuell" },

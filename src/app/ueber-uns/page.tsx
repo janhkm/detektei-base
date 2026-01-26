@@ -18,7 +18,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Über uns | Ihr Netzwerk für geprüfte Detekteien",
   description:
-    "Detektei Base vermittelt Sie an geprüfte Partner-Detekteien in ganz Deutschland. Unser Netzwerk aus IHK-zugelassenen Ermittlern garantiert Qualität und Diskretion.",
+    "Detektei Base vermittelt Sie an geprüfte Partner-Detekteien in ganz Deutschland. Unser Netzwerk aus erfahrenen Ermittlern garantiert Qualität und Diskretion.",
 };
 
 const vorteile = [
@@ -26,7 +26,7 @@ const vorteile = [
     icon: Shield,
     title: "Geprüfte Partner",
     description:
-      "Jede Detektei in unserem Netzwerk ist IHK-zugelassen und wird regelmäßig auf Qualität geprüft.",
+      "Jede Detektei in unserem Netzwerk wird sorgfältig ausgewählt und regelmäßig auf Qualität geprüft.",
   },
   {
     icon: Zap,
@@ -48,17 +48,11 @@ const vorteile = [
   },
 ];
 
-const fakten = [
-  { value: "4", label: "Partner deutschlandweit" },
-  { value: "100%", label: "IHK-zugelassen" },
-  { value: "24h", label: "Vermittlungszeit" },
-  { value: "DE", label: "Bundesweit verfügbar" },
-];
 
 const qualitaetsstandards = [
   {
-    title: "IHK-Zulassung",
-    description: "Alle Partner sind nach §34a GewO zugelassen",
+    title: "Geprüfte Qualifikation",
+    description: "Alle Partner sind erfahrene Ermittler",
   },
   {
     title: "Berufshaftpflicht",
@@ -100,7 +94,7 @@ export default function UeberUnsPage() {
           <KeyTakeaways
             items={[
               "<strong>Netzwerk:</strong> Geprüfte Partner-Detekteien deutschlandweit mit langjähriger Erfahrung",
-              "<strong>Qualität:</strong> Alle Partner sind IHK-zugelassen nach §34a GewO",
+              "<strong>Qualität:</strong> Alle Partner sind erfahrene, geprüfte Ermittler",
               "<strong>Service:</strong> Kostenlose Vermittlung innerhalb von 24 Stunden",
               "<strong>Garantie:</strong> Passende Experten für jeden Ermittlungsfall",
             ]}
@@ -122,8 +116,8 @@ export default function UeberUnsPage() {
                 <p>
                   <strong>Detektei Base nimmt Ihnen diese Arbeit ab.</strong> Wir haben 
                   ein Netzwerk aus geprüften Partner-Detekteien aufgebaut, die 
-                  alle unsere strengen Qualitätskriterien erfüllen: IHK-Zulassung, 
-                  Berufshaftpflicht, nachgewiesene Erfahrung.
+                  alle unsere strengen Qualitätskriterien erfüllen: 
+                  Berufshaftpflicht und nachgewiesene Erfahrung.
                 </p>
                 <p>
                   Nach Ihrer Anfrage analysieren wir Ihren Fall und vermitteln Sie 
@@ -132,19 +126,6 @@ export default function UeberUnsPage() {
                   Sie Zeit und können sicher sein, einen kompetenten Partner zu bekommen.
                 </p>
               </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {fakten.map((fakt, i) => (
-                <div
-                  key={i}
-                  className="bg-primary-50 rounded-xl p-6 text-center border border-primary-100"
-                >
-                  <div className="text-3xl font-bold text-primary-900 mb-1">
-                    {fakt.value}
-                  </div>
-                  <p className="text-sm text-primary-600">{fakt.label}</p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -285,7 +266,7 @@ export default function UeberUnsPage() {
                   Für Detekteien: Partner werden
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  Sie sind eine etablierte Detektei mit IHK-Zulassung und möchten 
+                  Sie sind eine erfahrene Detektei und möchten 
                   Teil unseres Netzwerks werden? Wir freuen uns auf qualifizierte 
                   Partner, die unsere hohen Standards teilen.
                 </p>

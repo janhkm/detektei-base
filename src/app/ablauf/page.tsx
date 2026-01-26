@@ -46,7 +46,7 @@ const steps = [
       "Analyse Ihres Falls",
       "Auswahl nach Spezialisierung",
       "Regionale Verfügbarkeit prüfen",
-      "Nur IHK-zugelassene Partner",
+      "Nur geprüfte, erfahrene Partner",
     ],
     duration: "Wenige Stunden",
   },
@@ -118,7 +118,7 @@ const faqs = [
   {
     question: "Wie wählen Sie die Partner-Detektei aus?",
     answer:
-      "Wir berücksichtigen Ihr Anliegen (z.B. Untreue, Wirtschaftsermittlung), Ihren Standort und die Spezialisierung der Detektei. Alle Partner sind IHK-zugelassen und von uns geprüft.",
+      "Wir berücksichtigen Ihr Anliegen (z.B. Untreue, Wirtschaftsermittlung), Ihren Standort und die Spezialisierung der Detektei. Alle Partner sind erfahren und von uns geprüft.",
   },
   {
     question: "Was, wenn ich mit der vermittelten Detektei nicht zufrieden bin?",
@@ -153,7 +153,7 @@ export default function AblaufPage() {
             items={[
               "<strong>Kostenlos:</strong> Unsere Vermittlung ist für Sie gratis",
               "<strong>Schnell:</strong> Partner-Detektei meldet sich in 24h",
-              "<strong>Geprüft:</strong> Alle Partner sind IHK-zugelassen",
+              "<strong>Geprüft:</strong> Alle Partner sind erfahrene Ermittler",
               "<strong>Unverbindlich:</strong> Keine Verpflichtung zur Beauftragung",
             ]}
           />
@@ -229,7 +229,7 @@ export default function AblaufPage() {
               {
                 icon: Shield,
                 title: "Geprüfte Partner",
-                description: "Alle Detekteien sind IHK-zugelassen",
+                description: "Alle Detekteien sind erfahren und geprüft",
               },
               {
                 icon: MessageCircle,

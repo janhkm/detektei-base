@@ -253,21 +253,18 @@ export interface FAQ {
   answer: string;
 }
 
-// Preis-Typ für Tabellen
+// Preis-Typ für Tabellen (falls benötigt)
 export interface PriceItem {
   service: string;
   priceRange: string;
   duration: string;
 }
 
+// Hinweis: Konkrete Preise werden nicht mehr angezeigt
+// Alle Kosten werden individuell nach Fall und Aufwand berechnet
 export const STANDARD_PRICES: PriceItem[] = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
-  { service: "Observation (Stunde)", priceRange: "60-150€", duration: "-" },
-  { service: "Observation (Tag)", priceRange: "800-1.500€", duration: "8-12h" },
-  { service: "Personensuche", priceRange: "ab 500€", duration: "3-10 Tage" },
-  {
-    service: "Wirtschaftsermittlung",
-    priceRange: "ab 1.000€",
-    duration: "individuell",
-  },
+  { service: "Erstberatung", priceRange: "Kostenlos", duration: "ca. 30 min" },
+  { service: "Observation", priceRange: "Individuell", duration: "nach Aufwand" },
+  { service: "Personensuche", priceRange: "Individuell", duration: "nach Fall" },
+  { service: "Wirtschaftsermittlung", priceRange: "Individuell", duration: "nach Umfang" },
 ];

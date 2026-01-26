@@ -69,7 +69,7 @@ const faqs = [
 ];
 
 const prices = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
+  { service: "Erstkontakt", priceRange: "Jetzt anrufen", duration: "-" },
   { service: "Verdachtsprüfung", priceRange: "ab 1.500€", duration: "3-5 Tage" },
   { service: "Observation (Tag)", priceRange: "800-1.500€", duration: "8-12h" },
   { service: "Umfassende Ermittlung", priceRange: "ab 3.000€", duration: "individuell" },

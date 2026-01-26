@@ -3,31 +3,12 @@
     "description": "Definiert die Pillar-Cluster Beziehungen für interne Verlinkung",
     "lastUpdated": "2026-01-24",
     "instructions": "Jeder Cluster-Artikel gehört zu EINEM Pillar. Zusätzliche Verlinkungen via alsoLinkTo.",
-    "activePillars": 14,
+    "activePillars": 13,
     "deferredPillars": 1,
-    "totalClusters": 55,
+    "totalClusters": 46,
     "notes": "Lokaler Pillar (ID 41) ist auf 'deferred' gesetzt. Keine doppelten Cluster-IDs."
   },
   "pillars": [
-    {
-      "pillarId": 11,
-      "pillarTitle": "Was kostet ein Privatdetektiv pro Stunde?",
-      "pillarSlug": "privatdetektiv-kosten-pro-stunde",
-      "pillarUrl": "/blog/privatdetektiv-kosten-pro-stunde",
-      "category": "Kosten",
-      "clusters": [
-        { "id": 12, "slug": "detektei-kosten-uebersicht", "linkText": ["Kosten einer Detektei", "Detektei Kostenübersicht"] },
-        { "id": 13, "slug": "detektei-pauschalpreis", "linkText": ["Pauschalpreise bei Detekteien", "Detektei Pauschalen"] },
-        { "id": 14, "slug": "billige-detektei-erfahrungen", "linkText": ["Erfahrungen mit günstigen Detekteien", "billige Detektive"] },
-        { "id": 15, "slug": "detektivkosten-steuerlich-absetzbar", "linkText": ["Detektivkosten von der Steuer absetzen", "steuerliche Absetzbarkeit"] },
-        { "id": 16, "slug": "detektivkosten-erstattung-gericht", "linkText": ["Kostenerstattung vor Gericht", "wer zahlt die Detektivkosten"] },
-        { "id": 17, "slug": "detektei-oder-selbst-ermitteln", "linkText": ["selbst ermitteln vs. Detektei", "Kostenvergleich"] },
-        { "id": 18, "slug": "detektiv-kosten-ehebruch", "linkText": ["Kosten bei Untreue-Ermittlung", "Detektiv Kosten Ehebruch"] },
-        { "id": 19, "slug": "warum-detektei-teuer", "linkText": ["warum Detektive kosten", "Preise erklärt"] },
-        { "id": 20, "slug": "detektei-kosten-sparen", "linkText": ["Kosten sparen bei der Detektei", "günstig beauftragen"] }
-      ],
-      "alsoLinkTo": ["/kosten", "/kontakt"]
-    },
     {
       "pillarId": 1,
       "pillarTitle": "Was macht ein Privatdetektiv wirklich? Aufgaben & Grenzen erklärt",
@@ -68,7 +49,7 @@
         { "id": 82, "slug": "detektei-fehler-vermeiden", "linkText": ["Fehler bei der Beauftragung", "häufige Fehler"] },
         { "id": 85, "slug": "detektei-vertrauen", "linkText": ["Vertrauen zur Detektei", "Vertrauensaufbau"] }
       ],
-      "alsoLinkTo": ["/ueber-uns", "/kontakt", "/blog/billige-detektei-erfahrungen"]
+      "alsoLinkTo": ["/ueber-uns", "/kontakt"]
     },
     {
       "pillarId": 8,
@@ -111,7 +92,7 @@
         { "id": 26, "slug": "detektiv-sorgerecht", "linkText": ["Detektiv bei Sorgerecht", "Sorgerechtsstreit"] },
         { "id": 27, "slug": "unterhaltsbetrug-detektiv", "linkText": ["Unterhaltsbetrug aufdecken", "Unterhalt"] }
       ],
-      "alsoLinkTo": ["/privatdetektei/untreue", "/privatdetektei/sorgerecht", "/blog/detektiv-kosten-ehebruch"]
+      "alsoLinkTo": ["/privatdetektei/untreue", "/privatdetektei/sorgerecht", "/kosten"]
     },
     {
       "pillarId": 31,

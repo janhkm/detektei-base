@@ -131,7 +131,7 @@ export default async function BundeslandPage({ params }: PageProps) {
             items={[
               `<strong>Einsatzgebiet:</strong> Ganz ${bundesland.name}`,
               `<strong>Leistungen:</strong> Privatdetektei & Wirtschaftsdetektei`,
-              `<strong>Kosten:</strong> 60-150€/Stunde, kostenlose Erstberatung`,
+              `<strong>Kosten:</strong> 60-150€/Stunde, jetzt anrufen`,
               `<strong>Reaktionszeit:</strong> Innerhalb von 24h einsatzbereit`,
             ]}
           />
@@ -220,7 +220,7 @@ export default async function BundeslandPage({ params }: PageProps) {
           <div className="mt-16">
             <CTABox
               title={`Detektei in ${bundesland.name} kontaktieren`}
-              description="Kostenlose & unverbindliche Erstberatung"
+              description="Jetzt anrufen – unverbindlich"
               variant="dark"
             />
           </div>

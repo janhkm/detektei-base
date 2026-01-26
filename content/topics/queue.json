@@ -143,7 +143,7 @@
       "slug": "serioese-detektei-erkennen",
       "relatedServices": ["erstberatung"],
       "conversionPotential": "sehr hoch",
-      "notes": "Trust-Builder! Zeigt eigene Qualifikationen (IHK, Verbände). Checkliste als Lead-Magnet möglich."
+      "notes": "Trust-Builder! Zeigt Qualifikationen (Erfahrung, Verbände). Checkliste als Lead-Magnet möglich."
     },
     {
       "id": 8,
@@ -179,7 +179,7 @@
       "slug": "qualifikation-privatdetektiv",
       "relatedServices": [],
       "conversionPotential": "mittel",
-      "notes": "Zeigt IHK §34a, ZAD, Verbände. Positioniert uns als Experten. Gut für E-E-A-T."
+      "notes": "Zeigt Berufserfahrung, Verbände. Positioniert uns als Experten. Gut für E-E-A-T."
     },
     {
       "id": 10,

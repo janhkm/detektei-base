@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     template: "%s | Detektei Base",
   },
   description:
-    "Finden Sie sofort die richtige Detektei für Ihren Fall. Unser Netzwerk aus geprüften Partner-Detekteien vermittelt Sie diskret und schnell an zertifizierte Ermittler in Ihrer Region.",
+    "Finden Sie sofort die richtige Detektei für Ihren Fall. Unser Netzwerk aus geprüften Partner-Detekteien vermittelt Sie diskret und schnell an erfahrene Ermittler in Ihrer Region.",
   keywords: [
     "Detektei finden",
     "Privatdetektiv",
@@ -104,16 +104,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${inter.variable} ${playfair.variable}`}>
-      <head>
-        {/* DNS Prefetch für schnellere externe Ressourcen */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        
-        {/* Preconnect zu kritischen Domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
+      {/* 
+        HINWEIS: Keine preconnect/dns-prefetch zu Google Fonts!
+        Next.js next/font/google hostet Fonts automatisch lokal zur Build-Zeit.
+        Manuelle Links zu Google-Servern würden IP-Adressen ohne Einwilligung übertragen (DSGVO-Verstoß).
+        Google Tag Manager wird nur nach Cookie-Consent geladen.
+      */}
       <body className="min-h-screen flex flex-col antialiased">
         <SkipLink />
         <Header />

@@ -36,7 +36,7 @@ export default function KontaktPage() {
           <div className="text-center max-w-3xl mx-auto">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-white/90 backdrop-blur-sm mb-6">
               <Phone className="h-4 w-4 text-accent-400" />
-              <span>Kostenlose Erstberatung</span>
+              <span>Jetzt anrufen</span>
             </span>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-white leading-tight">
               Sprechen Sie mit uns über Ihren Fall
@@ -81,7 +81,7 @@ export default function KontaktPage() {
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl border border-primary-100 p-6 sm:p-8 shadow-sm">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Vermittlungsanfrage senden
+                  Anfrage senden
                 </h2>
                 <p className="text-primary-600 mb-8">
                   Schildern Sie Ihren Fall – wir finden die passende 

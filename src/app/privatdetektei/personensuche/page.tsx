@@ -76,7 +76,7 @@ const faqs = [
 ];
 
 const prices = [
-  { service: "Erstberatung", priceRange: "Kostenlos", duration: "30 min" },
+  { service: "Erstkontakt", priceRange: "Jetzt anrufen", duration: "-" },
   { service: "Adressermittlung (einfach)", priceRange: "ab 500€", duration: "3-5 Tage" },
   { service: "Personensuche (komplex)", priceRange: "ab 1.500€", duration: "1-4 Wochen" },
   { service: "Internationale Suche", priceRange: "ab 2.500€", duration: "individuell" },

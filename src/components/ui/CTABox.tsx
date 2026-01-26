@@ -10,7 +10,7 @@ interface CTABoxProps {
 }
 
 export function CTABox({
-  title = "Jetzt kostenlose Erstberatung anfragen",
+  title = "Jetzt anrufen",
   description = "Vertraulich, unverbindlich und diskret. Schildern Sie uns Ihren Fall.",
   showPhone = true,
   showEmail = true,

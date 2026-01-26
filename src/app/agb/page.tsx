@@ -118,8 +118,7 @@ export default function AGBPage() {
               Gewerbeanmeldung für Detektei-Dienstleistungen
             </li>
             <li>
-              Sachkundenachweis nach § 34a Gewerbeordnung (GewO) oder
-              gleichwertige Qualifikation
+              Nachweis von langjähriger Berufserfahrung und Qualifikation
             </li>
             <li>
               Nachweis einer Berufshaftpflichtversicherung
@@ -227,6 +226,39 @@ export default function AGBPage() {
             begonnen haben und eine Partner-Detektei bereits kontaktiert wurde,
             kann das Widerrufsrecht vorzeitig erlöschen.
           </p>
+
+          <p>
+            (5) <strong>Muster-Widerrufsformular:</strong>
+          </p>
+          <div className="bg-primary-50 border border-primary-200 rounded-lg p-4 my-4 text-sm">
+            <p className="font-semibold mb-2">Muster-Widerrufsformular</p>
+            <p className="mb-2">
+              (Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte
+              dieses Formular aus und senden Sie es zurück.)
+            </p>
+            <ul className="list-disc list-inside space-y-1 text-primary-700">
+              <li>
+                An: Hemkemeier & Awad GbR, Mühlstraße 41, 71229 Leonberg,
+                E-Mail: kontakt@detektei-base.de
+              </li>
+              <li>
+                Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*)
+                abgeschlossenen Vertrag über die Erbringung der folgenden
+                Dienstleistung: Vermittlung einer Detektei
+              </li>
+              <li>Bestellt am (*) / erhalten am (*): _______________</li>
+              <li>Name des/der Verbraucher(s): _______________</li>
+              <li>Anschrift des/der Verbraucher(s): _______________</li>
+              <li>
+                Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf
+                Papier): _______________
+              </li>
+              <li>Datum: _______________</li>
+            </ul>
+            <p className="mt-2 text-xs text-primary-500">
+              (*) Unzutreffendes streichen.
+            </p>
+          </div>
 
           <h2>§ 9 Schlussbestimmungen</h2>
           <p>
