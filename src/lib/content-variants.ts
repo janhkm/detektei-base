@@ -57,18 +57,18 @@ export function getCitySize(population: number): "metropole" | "grossstadt" | "m
 type H1Generator = (name: string, bundesland?: string) => string;
 
 const H1_STADT_VARIANTEN: H1Generator[] = [
-  (name) => `Detektei ${name} – Diskrete Ermittlungen vor Ort`,
+  (name) => `Detektei ${name} – Diskrete Ermittlungen`,
   (name) => `Privatdetektiv ${name} – Professionelle Ermittlungen`,
   (name) => `Detektei ${name} – Vertraulich & effektiv`,
   (name, bl) => `Detektei ${name} (${bl}) – Professionelle Aufklärung`,
-  (name) => `Ermittlungen in ${name} – Ihre Detektei vor Ort`,
+  (name) => `Ermittlungen in ${name} – Detektei Base`,
   (name) => `Detektiv in ${name} – Diskret. Professionell. Erfolgreich.`,
 ];
 
 const H1_GROSSSTADT_VARIANTEN: H1Generator[] = [
   (name) => `Detektei ${name} – Professionelle Ermittlungen in der Großstadt`,
   (name) => `Privatdetektiv in ${name} – Diskrete Aufklärung`,
-  (name) => `${name}: Ihre Detektei vor Ort`,
+  (name) => `${name}: Detektei Base – Ihre Ermittler`,
   (name, bl) => `Detektei ${name}, ${bl} – Ermittlungen auf höchstem Niveau`,
   (name) => `Detektei ${name} – Professionelle Ermittlungen`,
 ];
@@ -77,12 +77,12 @@ const H1_METROPOLE_VARIANTEN: H1Generator[] = [
   (name) => `Detektei ${name} – Ermittlungen in der Metropole`,
   (name) => `Privatdetektiv in ${name} – Professionell & diskret`,
   (name) => `${name}: Ihre Detektei für anspruchsvolle Ermittlungen`,
-  (name) => `Detektei ${name} – Erfahrene Ermittler vor Ort`,
+  (name) => `Detektei ${name} – Erfahrene Ermittler`,
 ];
 
 const H1_LANDKREIS_VARIANTEN: H1Generator[] = [
   (name) => `Detektei im ${name} – Ermittlungen im gesamten Landkreis`,
-  (name) => `Privatdetektiv für den ${name} – Diskret vor Ort`,
+  (name) => `Privatdetektiv für den ${name} – Diskret & professionell`,
   (name) => `Detektei im ${name} – Professionelle Aufklärung`,
   (name, bl) => `Ermittlungen im ${name} (${bl}) – Ihre Detektei`,
   (name) => `${name}: Detektei für den gesamten Landkreis`,
@@ -137,11 +137,11 @@ const META_STADT_VARIANTEN: MetaGenerator[] = [
   (name) => `Detektei ${name}: Professionelle Ermittler für Privat- & Wirtschaftsfälle. ✓ Diskret ✓ Professionell. Beratung gratis.`,
   (name, bl) => `Ermittlungen in ${name}, ${bl}. Privatdetektei & Wirtschaftsdetektei. Vertraulich & effektiv.`,
   (name) => `Privatdetektiv ${name} – Professionelle Aufklärung bei Untreue, Betrug & mehr. Jetzt anrufen.`,
-  (name) => `${name}: Detektei Base vor Ort. Diskrete Ermittlungen mit gerichtsfester Dokumentation. Jetzt beraten lassen!`,
+  (name) => `${name}: Detektei Base – deutschlandweit tätig. Diskrete Ermittlungen mit gerichtsfester Dokumentation.`,
 ];
 
 const META_GROSSSTADT_VARIANTEN: MetaGenerator[] = [
-  (name, pop) => `Detektei ${name} (${pop} Einwohner): Professionelle Ermittlungen in der Großstadt. Erfahrene Ermittler vor Ort.`,
+  (name, pop) => `Detektei ${name} (${pop} Einwohner): Professionelle Ermittlungen in der Großstadt. Erfahrene Ermittler.`,
   (name) => `Ihr Privatdetektiv in ${name}. ✓ Observation ✓ Wirtschaftsermittlung ✓ Beweissicherung. Jetzt anfragen!`,
   (name, bl) => `${name}, ${bl}: Detektei Base für diskrete Ermittlungen. Gerichtsverwertbare Beweise. Kostenlose Beratung.`,
   (name) => `Großstadt-Ermittlungen in ${name}: Erfahrene Detektive für komplexe Fälle. Schnelle Einsatzbereitschaft.`,
@@ -151,17 +151,17 @@ const META_GROSSSTADT_VARIANTEN: MetaGenerator[] = [
 const META_LANDKREIS_VARIANTEN: MetaGenerator[] = [
   (name, bl) => `Detektei im ${name} (${bl}): Ermittlungen im gesamten Landkreis. ✓ Diskret ✓ Professionell. Jetzt anfragen!`,
   (name, count) => `Privatdetektiv für den ${name} – Einsätze in ${count} Städten. Privatdetektei & Wirtschaftsdetektei.`,
-  (name) => `Detektei Base im ${name}: Erfahrene Ermittler vor Ort. Gerichtsverwertbare Beweise. Jetzt anrufen.`,
+  (name) => `Detektei Base im ${name}: Erfahrene Ermittler – schnell einsatzbereit. Gerichtsverwertbare Beweise.`,
   (name, bl) => `${name}, ${bl}: Professionelle Detektei für den gesamten Landkreis. Diskrete Ermittlungen. Jetzt beraten lassen!`,
-  (name) => `Ermittlungen im ${name} – Von Observation bis Wirtschaftsermittlung. Detektei Base vor Ort.`,
+  (name) => `Ermittlungen im ${name} – Von Observation bis Wirtschaftsermittlung. Detektei Base – deutschlandweit tätig.`,
 ];
 
 const META_BUNDESLAND_VARIANTEN: MetaGenerator[] = [
   (name) => `Detektei ${name}: Landesweite Ermittlungen von Detektei Base. ✓ Diskret ✓ Professionell. Jetzt anfragen!`,
   (name, cap) => `Ihr Privatdetektiv in ${name} – Von ${cap} bis in ländliche Regionen. Jetzt anrufen.`,
   (name) => `${name}: Detektei Base – landesweit tätig. Privatdetektei & Wirtschaftsdetektei.`,
-  (name) => `Ermittlungen in ganz ${name}: Detektei Base vor Ort. Gerichtsverwertbare Beweise. Diskret & effektiv.`,
-  (name, cap) => `Detektei ${name} (Sitz: ${cap}): Landesweite Ermittlungen. ✓ Schnelle Einsatzbereitschaft. Beratung gratis.`,
+  (name) => `Ermittlungen in ganz ${name}: Detektei Base – deutschlandweit tätig. Gerichtsverwertbare Beweise.`,
+  (name, cap) => `Detektei ${name}: Landesweite Ermittlungen. ✓ Schnelle Einsatzbereitschaft. Beratung gratis.`,
 ];
 
 export function getStadtMetaDescription(stadt: Stadt, bundesland: Bundesland): string {
@@ -200,7 +200,7 @@ export function getStadtTitle(stadt: Stadt, bundesland: Bundesland): string {
   const size = getCitySize(stadt.population);
   
   const varianten = [
-    `Detektei ${stadt.name} | Privatdetektiv vor Ort`,
+    `Detektei ${stadt.name} | Privatdetektiv`,
     `Privatdetektiv in ${stadt.name} | Diskrete Ermittlungen`,
     `Detektei in ${stadt.name}, ${bundesland.name} | Ermittlungen`,
     `${stadt.name}: Ihre Detektei | Professionelle Aufklärung`,
@@ -211,7 +211,7 @@ export function getStadtTitle(stadt: Stadt, bundesland: Bundesland): string {
   if (size === "metropole" || size === "grossstadt") {
     const grossVarianten = [
       `Detektei ${stadt.name} | Professionelle Ermittlungen`,
-      `Privatdetektiv ${stadt.name} | Ihr Experte vor Ort`,
+      `Privatdetektiv ${stadt.name} | Ihr Experte`,
       `${stadt.name} Detektei | Diskret & Erfolgreich`,
     ];
     const index = getVariantIndex(stadt.name + "title", grossVarianten.length);
@@ -225,7 +225,7 @@ export function getStadtTitle(stadt: Stadt, bundesland: Bundesland): string {
 export function getLandkreisTitle(landkreis: Landkreis, bundesland: Bundesland): string {
   const varianten = [
     `Detektei ${landkreis.name} | Ermittlungen im Landkreis`,
-    `Privatdetektiv im ${landkreis.name} | Diskret vor Ort`,
+    `Privatdetektiv im ${landkreis.name} | Diskret & professionell`,
     `${landkreis.name}: Ihre Detektei | ${bundesland.name}`,
     `Ermittlungen ${landkreis.name} | Professionelle Detektei`,
   ];
@@ -257,13 +257,13 @@ export function getStadtIntroText(stadt: Stadt, bundesland: Bundesland): string 
   const varianten = [
     `Sie suchen einen erfahrenen Privatdetektiv in ${stadt.name}? Detektei Base führt professionelle Ermittlungen durch – Privatdetektei und Wirtschaftsdetektei mit gerichtsfester Beweissicherung.`,
     
-    `In ${stadt.name} und Umgebung ist Detektei Base für Sie da. Ob Untreue, Unterhaltsermittlung oder Wirtschaftsdelikte – professionelle Ermittlungen vor Ort.`,
+    `In ${stadt.name} und Umgebung ist Detektei Base für Sie da. Ob Untreue, Unterhaltsermittlung oder Wirtschaftsdelikte – professionelle Ermittlungen mit schneller Einsatzbereitschaft.`,
     
-    `Detektei Base ist in ${stadt.name} (${bundesland.name}) für das komplette Spektrum an Ermittlungsleistungen tätig. Erfahrene Ermittler vor Ort.`,
+    `Detektei Base ist in ${stadt.name} (${bundesland.name}) für das komplette Spektrum an Ermittlungsleistungen tätig. Erfahrene Ermittler – schnell einsatzbereit.`,
     
     `Für Ermittlungen in ${stadt.name} ist Detektei Base Ihr Ansprechpartner. Alle Beweise werden gerichtsfest dokumentiert.`,
     
-    `${stadt.name}: Hier ist Detektei Base für Sie vor Ort. Professionelle Ermittlungen mit modernsten Methoden und absoluter Vertraulichkeit.`,
+    `${stadt.name}: Detektei Base ist für Sie tätig. Professionelle Ermittlungen mit modernsten Methoden und absoluter Vertraulichkeit.`,
     
     `Sie benötigen einen Detektiv in ${stadt.name}? Detektei Base führt diskrete Ermittlungen durch und liefert gerichtsverwertbare Ergebnisse.`,
   ];
@@ -271,9 +271,9 @@ export function getStadtIntroText(stadt: Stadt, bundesland: Bundesland): string 
   // Großstädte bekommen Zusatz mit Einwohnerzahl
   if (size === "grossstadt" || size === "metropole") {
     const grossVarianten = [
-      `${stadt.name} mit seinen ${popStr} Einwohnern stellt besondere Anforderungen an Ermittlungen. Detektei Base ist mit erfahrenen Ermittlern vor Ort, die die Stadt kennen und diskret arbeiten.`,
+      `${stadt.name} mit seinen ${popStr} Einwohnern stellt besondere Anforderungen an Ermittlungen. Detektei Base arbeitet mit erfahrenen Ermittlern, die die Stadt kennen und diskret arbeiten.`,
       
-      `Für Ermittlungen in ${stadt.name} ist Detektei Base mit eingespielten Teams vor Ort. In der ${popStr}-Einwohner-Stadt sind wir schnell einsatzbereit.`,
+      `Für Ermittlungen in ${stadt.name} ist Detektei Base mit eingespielten Teams tätig. In der ${popStr}-Einwohner-Stadt sind wir schnell einsatzbereit.`,
       
       `Professionelle Ermittlungen in ${stadt.name}: Detektei Base ist auf komplexe Fälle in der Großstadt spezialisiert.`,
     ];
@@ -289,13 +289,13 @@ export function getLandkreisIntroText(landkreis: Landkreis, bundesland: Bundesla
   const varianten = [
     `Sie suchen eine Detektei im ${landkreis.name}? Detektei Base ist im gesamten Landkreis tätig – diskret, professionell und mit gerichtsverwertbarer Beweissicherung.`,
     
-    `Im ${landkreis.name} (${bundesland.name}) führt Detektei Base Ermittlungen aller Art durch. Von der Personensuche bis zur Wirtschaftsdetektei – erfahrene Ermittler vor Ort.`,
+    `Im ${landkreis.name} (${bundesland.name}) führt Detektei Base Ermittlungen aller Art durch. Von der Personensuche bis zur Wirtschaftsdetektei – erfahrene Ermittler, schnell einsatzbereit.`,
     
     `Professionelle Detektei-Leistungen im gesamten ${landkreis.name}: Detektei Base kennt die Region und arbeitet diskret in allen Städten und Gemeinden.`,
     
-    `Ob in der Kreisstadt oder in kleineren Gemeinden – im ${landkreis.name} ist Detektei Base schnell verfügbar mit lokaler Präsenz.`,
+    `Ob in der Kreisstadt oder in kleineren Gemeinden – im ${landkreis.name} ist Detektei Base schnell verfügbar und einsatzbereit.`,
     
-    `Der ${landkreis.name} wird durch Detektei Base vollständig abgedeckt. Ortskenntnis, Diskretion und professionelle Dokumentation.`,
+    `Der ${landkreis.name} wird durch Detektei Base vollständig abgedeckt. Regionale Expertise, Diskretion und professionelle Dokumentation.`,
   ];
   
   const index = getVariantIndex(landkreis.slug + "intro", varianten.length);
@@ -303,26 +303,26 @@ export function getLandkreisIntroText(landkreis: Landkreis, bundesland: Bundesla
 }
 
 // ============================================================================
-// WARUM LOKALE DETEKTEI - VARIANTEN
+// WARUM DETEKTEI BASE - VARIANTEN
 // ============================================================================
 
 export function getWarumLokalText(name: string, isLandkreis: boolean, seed: string): string {
   const stadtVarianten = [
-    `Eine lokale Detektei in ${name} bietet entscheidende Vorteile: Wir kennen die Stadt, ihre Strukturen und können schnell vor Ort sein. Das spart Zeit und Kosten – und erhöht die Erfolgschancen erheblich.`,
+    `Warum Detektei Base für ${name}? Wir sind deutschlandweit tätig und kennen die Anforderungen verschiedener Regionen. Schnelle Einsatzbereitschaft, professionelle Methoden und gerichtsverwertbare Ergebnisse.`,
     
-    `Warum ein Detektiv aus ${name}? Ortskenntnis ist bei Ermittlungen Gold wert. Detektei Base kennt die Gegebenheiten, kann Zielpersonen unauffällig verfolgen und weiß, wo am effektivsten gearbeitet wird.`,
+    `Detektei Base für Ermittlungen in ${name}: Regionale Expertise ist bei Ermittlungen Gold wert. Wir kennen die Gegebenheiten, können Zielpersonen unauffällig verfolgen und arbeiten effektiv.`,
     
-    `Lokale Präsenz macht den Unterschied: Detektei Base in ${name} ist in Minuten einsatzbereit – nicht in Stunden. Bei zeitkritischen Observationen kann das entscheidend sein.`,
+    `Schnelle Einsatzbereitschaft macht den Unterschied: Detektei Base ist deutschlandweit tätig und in ${name} kurzfristig verfügbar. Bei zeitkritischen Observationen kann das entscheidend sein.`,
     
-    `Ein Privatdetektiv vor Ort in ${name} bedeutet: kürzere Anfahrtswege, niedrigere Spesen, schnellere Reaktionszeiten. Detektei Base ist in der Region präsent.`,
+    `Ermittlungen in ${name} mit Detektei Base bedeutet: professionelle Methoden, transparente Kosten und schnelle Reaktionszeiten. Wir sind deutschlandweit für Sie tätig.`,
   ];
   
   const landkreisVarianten = [
-    `Detektei Base im ${name} kennt die Region: Wir wissen, welche Routen Zielpersonen nutzen, wo sich Observation lohnt und wie in ländlichen wie städtischen Gebieten effektiv gearbeitet wird.`,
+    `Detektei Base für den ${name}: Wir sind deutschlandweit tätig und kennen die Anforderungen ländlicher wie städtischer Gebiete. Effektive Ermittlungen im gesamten Landkreis.`,
     
-    `Warum Detektei Base im ${name}? Regionale Expertise spart Zeit und Geld. Wir sind mit den Gegebenheiten im gesamten Landkreis vertraut und schnell vor Ort.`,
+    `Warum Detektei Base für den ${name}? Regionale Expertise spart Zeit und Geld. Wir sind mit den Gegebenheiten im gesamten Landkreis vertraut und schnell einsatzbereit.`,
     
-    `Lokale Detektei-Präsenz im ${name}: Detektei Base ist in allen Städten und Gemeinden des Landkreises einsatzbereit. Kurze Wege, schnelle Reaktion, bessere Ergebnisse.`,
+    `Detektei Base für den ${name}: Wir sind in allen Städten und Gemeinden des Landkreises einsatzbereit. Professionelle Methoden, schnelle Reaktion, gerichtsverwertbare Ergebnisse.`,
     
     `Der ${name} wird durch Detektei Base abgedeckt. Von der größten Stadt bis zur kleinsten Gemeinde – wir arbeiten seit Jahren erfolgreich und diskret.`,
   ];
@@ -461,9 +461,9 @@ export function getServiceBeschreibung(serviceType: "untreue" | "personensuche" 
       `Untreue-Ermittlungen in ${name} führt Detektei Base mit größter Diskretion durch. Die Zielperson erfährt nichts von der Beobachtung. Sie erhalten aussagekräftige Beweise, die auch vor Gericht Bestand haben.`,
     ],
     personensuche: [
-      `Personensuche in ${name} und darüber hinaus: Detektei Base findet vermisste Angehörige, untergetauchte Schuldner oder Zeugen. Die Methoden reichen von Datenbankrecherchen bis zu Vor-Ort-Ermittlungen.`,
+      `Personensuche in ${name} und darüber hinaus: Detektei Base findet vermisste Angehörige, untergetauchte Schuldner oder Zeugen. Die Methoden reichen von Datenbankrecherchen bis zu Ermittlungen in der Region.`,
       `Sie suchen jemanden in ${name}? Detektei Base ermittelt aktuelle Adressen, Arbeitgeber und Lebensumstände. Ob Erbfall, Unterhalt oder private Gründe – die Person wird gefunden.`,
-      `Adressermittlung und Personensuche in ${name}: Mit legalen Recherchemethoden und lokaler Präsenz spürt Detektei Base Personen auf, die sich Ihren Ansprüchen entziehen wollen.`,
+      `Adressermittlung und Personensuche in ${name}: Mit legalen Recherchemethoden und regionaler Expertise spürt Detektei Base Personen auf, die sich Ihren Ansprüchen entziehen wollen.`,
     ],
     wirtschaft: [
       `Wirtschaftsermittlungen in ${name}: Mitarbeiterüberprüfung, Krankfeierkontrolle, Diebstahlaufklärung – Detektei Base schützt Ihr Unternehmen vor internem Betrug und Missbrauch.`,

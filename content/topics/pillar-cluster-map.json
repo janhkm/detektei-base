@@ -159,7 +159,7 @@
         { "id": 48, "slug": "detektiv-diskret-kleinstadt", "linkText": ["Detektiv in der Kleinstadt", "ländliche Gebiete"] },
         { "id": 49, "slug": "detektei-einsatzgebiet", "linkText": ["Einsatzgebiet", "wie weit reisen Detektive"] },
         { "id": 50, "slug": "detektiv-deutschlandweit", "linkText": ["deutschlandweit beauftragen", "bundesweite Detektei"] },
-        { "id": 86, "slug": "regionale-detektei-vorteile", "linkText": ["lokale Detektei Vorteile", "regionale Ermittler"] }
+        { "id": 86, "slug": "regionale-detektei-vorteile", "linkText": ["regionale Detektei Vorteile", "regionale Ermittler"] }
       ],
       "alsoLinkTo": ["/einsatzgebiete"],
       "notes": "DEFERRED: Lokale Artikel werden später bearbeitet."

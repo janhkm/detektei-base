@@ -117,8 +117,8 @@ export default async function BundeslandPage({ params }: PageProps) {
             <p className="mt-6 text-lg text-primary-200 leading-relaxed intro-text">
               Sie suchen eine <strong>Detektei in {bundesland.name}</strong>?
               Detektei Base führt professionelle Ermittlungen durch – Privatdetektei 
-              und Wirtschaftsdetektei. Zusätzlich mit geprüften Partnern vor Ort.
-              und mit gerichtsverwertbarer Beweissicherung.
+              und Wirtschaftsdetektei mit gerichtsverwertbarer Beweissicherung. 
+              Deutschlandweit tätig, schnell einsatzbereit.
             </p>
           </div>
         </div>
@@ -148,7 +148,7 @@ export default async function BundeslandPage({ params }: PageProps) {
                     Kreisfreie Städte in {bundesland.name}
                   </h2>
                   <p className="text-sm text-primary-500">
-                    Direkte Detektei-Präsenz in den großen Städten
+                    Detektei Base ist in allen Großstädten tätig
                   </p>
                 </div>
               </div>

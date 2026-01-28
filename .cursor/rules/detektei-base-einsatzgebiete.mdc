@@ -384,13 +384,13 @@ secondaryKeywords:
   - "Ermittlungen [Landkreis]"
 image:
   src: "/images/einsatzgebiete/[landkreis].webp"
-  alt: "Detektei [Landkreis] - Ermittlungen vor Ort"
+  alt: "Detektei [Landkreis] - Professionelle Ermittlungen"
 faqs:
   - question: "Welche Städte im [Landkreis] werden abgedeckt?"
     answer: "..."
   - question: "Was kostet ein Detektiv im [Landkreis]?"
     answer: "..."
-  - question: "Wie schnell ist ein Detektiv im [Landkreis] vor Ort?"
+  - question: "Wie schnell kann ein Detektiv im [Landkreis] starten?"
     answer: "..."
   - question: "Arbeiten Sie auch in kleineren Gemeinden im [Landkreis]?"
     answer: "..."
@@ -413,7 +413,7 @@ kleineGemeinden:
 #### Content-Struktur
 
 ```
-H1: Detektei im [Landkreis] – Ermittlungen vor Ort
+H1: Detektei im [Landkreis] – Professionelle Ermittlungen
 
   [KeyTakeaways Box]
   
@@ -537,7 +537,7 @@ services:
 #### Content-Struktur (GOLDSTANDARD)
 
 ```
-H1: Detektei in [Stadt] – Ihr Privatdetektiv vor Ort
+H1: Detektei in [Stadt] – Ihr Privatdetektiv
 
   [KeyTakeaways Box - PFLICHT]
   
@@ -610,7 +610,7 @@ H2: Warum unsere Detektei in [Stadt] wählen?
   - ✓ Geprüfte, erfahrene Ermittler
   - ✓ Mitglied im Bundesverband Deutscher Detektive (BDD)
   - ✓ Über XX Jahre Erfahrung
-  - ✓ Lokale Präsenz in [Stadt]
+  - ✓ Deutschlandweit tätig
 
 H2: Einsatzgebiet rund um [Stadt]
 
@@ -1788,7 +1788,7 @@ type: "stadt"
 # ... weitere Frontmatter
 ---
 
-# Detektei in München – Ihr Privatdetektiv vor Ort
+# Detektei in München – Ihr Privatdetektiv
 
 <KeyTakeaways>
 - **Kosten:** 60-150€/Stunde, Tagessätze ab 900€
@@ -1798,9 +1798,9 @@ type: "stadt"
 </KeyTakeaways>
 
 Sie suchen eine **Detektei in München**? Unsere erfahrenen Privatdetektive unterstützen 
-Sie diskret bei Observationen, Personensuche und Wirtschaftsermittlungen. Mit lokaler 
-Präsenz in München und Umgebung sind wir schnell vor Ort und liefern gerichtsverwertbare 
-Beweise.
+Sie diskret bei Observationen, Personensuche und Wirtschaftsermittlungen. Detektei Base 
+ist deutschlandweit tätig und in München schnell einsatzbereit – mit gerichtsverwertbaren 
+Beweisen.
 
 ## Unsere Detektei-Leistungen in München
 

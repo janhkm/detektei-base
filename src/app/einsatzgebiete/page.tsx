@@ -28,7 +28,7 @@ export default function EinsatzgebietePage() {
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               Detektei Base ist deutschlandweit tätig. Wählen Sie Ihr Bundesland – 
               wir führen professionelle Ermittlungen durch und arbeiten zusätzlich 
-              mit geprüften Partnern vor Ort zusammen.
+              mit geprüften Partnern in allen Regionen zusammen.
             </p>
           </div>
         </div>
@@ -67,12 +67,12 @@ export default function EinsatzgebietePage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <MapPin className="h-12 w-12 text-primary-600 mx-auto mb-6" />
           <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-900 mb-4">
-            Lokale Präsenz, professionelle Ermittlungen
+            Deutschlandweit tätig, professionelle Ermittlungen
           </h2>
           <p className="text-primary-600 leading-relaxed max-w-2xl mx-auto">
             Detektei Base ist in ganz Deutschland tätig. Mit unserer Erfahrung und 
             zusätzlichen geprüften Partnern bieten wir schnelle und professionelle 
-            Detektei vor Ort – ob in Großstädten oder ländlichen Regionen.
+            Ermittlungen – ob in Großstädten oder ländlichen Regionen.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <div className="px-4 py-2 bg-white rounded-lg border border-primary-200">

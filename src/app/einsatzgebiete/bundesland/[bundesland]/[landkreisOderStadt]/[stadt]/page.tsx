@@ -214,10 +214,10 @@ export default async function StadtPage({ params }: PageProps) {
                 <ProcessTimeline stadtName={stadt.name} />
               </div>
 
-              {/* Warum lokale Detektei */}
+              {/* Warum Detektei Base */}
               <div className="mt-16">
                 <WarumLokal
-                  title={`Warum eine lokale Detektei in ${stadt.name}?`}
+                  title={`Warum Detektei Base für ${stadt.name}?`}
                   text={warumLokalText}
                 />
               </div>
@@ -337,10 +337,10 @@ export default async function StadtPage({ params }: PageProps) {
                   <ul className="space-y-3 text-sm">
                     {[
                       "Professionelle Ermittlungen",
-                      "Zusätzlich geprüfte Partner vor Ort",
+                      "Deutschlandweit tätig",
                       "100% Diskretion garantiert",
                       "Rund um die Uhr erreichbar",
-                      "Partner arbeiten DSGVO-konform",
+                      "DSGVO-konforme Arbeitsweise",
                     ].map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-primary-700">
                         <span className="text-accent-500">✓</span>

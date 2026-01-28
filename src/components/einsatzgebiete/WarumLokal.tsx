@@ -7,10 +7,10 @@ interface WarumLokalProps {
 }
 
 const DEFAULT_BENEFITS = [
-  "Kurze Anfahrtswege – schnelle Reaktionszeiten",
-  "Kenntnis der lokalen Gegebenheiten",
-  "Geringere Spesen und Fahrtkosten",
-  "Netzwerk vor Ort für Recherchen",
+  "Schnelle Einsatzbereitschaft – deutschlandweit",
+  "Erfahrung mit regionalen Gegebenheiten",
+  "Transparente Kostenstruktur",
+  "Bundesweites Netzwerk für Recherchen",
   "Flexible Einsatzplanung möglich",
 ];
 

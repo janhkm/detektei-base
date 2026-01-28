@@ -251,10 +251,10 @@ function StadtPageContent({ data }: { data: StadtPageData }) {
                 <ProcessTimeline stadtName={stadt.name} />
               </div>
 
-              {/* Warum lokale Detektei */}
+              {/* Warum Detektei Base */}
               <div className="mt-16">
                 <WarumLokal
-                  title={`Warum eine lokale Detektei in ${stadt.name}?`}
+                  title={`Warum Detektei Base für ${stadt.name}?`}
                   text={warumLokalText}
                 />
               </div>
@@ -366,7 +366,7 @@ function StadtPageContent({ data }: { data: StadtPageData }) {
                   <ul className="space-y-3 text-sm">
                     {[
                       "Professionelle Ermittlungen",
-                      "Zusätzlich geprüfte Partner vor Ort",
+                      "Deutschlandweit tätig",
                       "100% Diskretion garantiert",
                       "Rund um die Uhr erreichbar",
                       "DSGVO-konforme Arbeitsweise",
@@ -526,10 +526,10 @@ function LandkreisPageContent({ data }: { data: LandkreisPageData }) {
             </div>
           </div>
 
-          {/* Warum lokale Detektei */}
+          {/* Warum Detektei Base */}
           <div className="mt-16">
             <WarumLokal
-              title={`Warum eine Detektei im ${landkreis.name}?`}
+              title={`Warum Detektei Base für den ${landkreis.name}?`}
               text={warumLokalText}
             />
           </div>

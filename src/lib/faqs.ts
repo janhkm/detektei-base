@@ -228,7 +228,7 @@ const LK_STAEDTE_VARIANTEN: AnswerGenerator[] = [
   
   (name) => `Im ${name} ist Detektei Base flächendeckend tätig. Alle Städte und Gemeinden werden abgedeckt – von der Kreisstadt bis zu ländlichen Ortschaften.`,
   
-  (name) => `Detektei Base ermittelt im gesamten ${name}. Ob in der Kreisstadt oder in kleineren Gemeinden – wir sind vor Ort verfügbar.`,
+  (name) => `Detektei Base ermittelt im gesamten ${name}. Ob in der Kreisstadt oder in kleineren Gemeinden – wir sind schnell einsatzbereit.`,
   
   (name) => `Der ${name} wird vollständig abgedeckt. Detektei Base ist in allen Städten tätig. Eine Übersicht finden Sie unten.`,
   
@@ -238,7 +238,7 @@ const LK_STAEDTE_VARIANTEN: AnswerGenerator[] = [
 const LK_SCHNELL_VARIANTEN: AnswerGenerator[] = [
   (name) => `Detektei Base kann im ${name} schnell reagieren. In den meisten Fällen sind wir innerhalb von 24-48 Stunden einsatzbereit.`,
   
-  (name) => `Im ${name} sind wir kurzfristig verfügbar. Dank lokaler Präsenz erreichen unsere Ermittler jeden Ort im Landkreis zeitnah.`,
+  (name) => `Im ${name} sind wir kurzfristig verfügbar. Als deutschlandweit tätige Detektei erreichen unsere Ermittler jeden Ort im Landkreis zeitnah.`,
   
   (name) => `Schnelle Reaktion im ${name}: Nach Anfrage bei Detektei Base können wir meist innerhalb von 24-48 Stunden mit der Arbeit beginnen.`,
   
@@ -272,7 +272,7 @@ export function getLandkreisFAQs(landkreis: Landkreis, bundesland: Bundesland): 
       answer: KOSTEN_VARIANTEN[getVariantIndex(seed + "kosten", KOSTEN_VARIANTEN.length)](name),
     },
     {
-      question: `Wie schnell ist ein Detektiv im ${name} vor Ort?`,
+      question: `Wie schnell kann ein Detektiv im ${name} starten?`,
       answer: LK_SCHNELL_VARIANTEN[getVariantIndex(seed + "schnell", LK_SCHNELL_VARIANTEN.length)](name),
     },
     {

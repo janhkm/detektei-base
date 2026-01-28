@@ -32,11 +32,11 @@ Lokale Artikel sind **Templates**, die für spezifische Städte/Regionen angepas
 ### Pflicht-Elemente für jeden lokalen Artikel:
 
 ```mdx
-## Privatdetektiv in München – Ihre lokale Detektei
+## Privatdetektiv in München – Ihre Detektei
 
-**Kurz:** Als Detektei mit Sitz in München bieten wir diskrete Ermittlungen 
-im gesamten Großraum München, von Schwabing bis Pasing, von Freising bis 
-Starnberg. Unsere Detektive kennen die Stadt und ihre Besonderheiten.
+**Kurz:** Detektei Base ist deutschlandweit tätig und führt diskrete Ermittlungen 
+im gesamten Großraum München durch, von Schwabing bis Pasing, von Freising bis 
+Starnberg. Unsere Ermittler sind mit der Region vertraut.
 ```
 
 ### Lokale Bezüge variieren:
@@ -138,30 +138,30 @@ location:
 
 ---
 
-## 6. Struktur: Local Landing Page
+## 6. Struktur: Regional Landing Page
 
 ```
 1. ## [Dienstleistung] in [Stadt] – [USP] (+ "Kurz:")
-2. <KeyTakeaways> Box (lokale Vorteile)
-3. ## Warum ein lokaler Detektiv in [Stadt]?
-   - Ortskenntnis
-   - Keine Anfahrtskosten
-   - Schnelle Verfügbarkeit
-   - Kenntnis lokaler Gegebenheiten
+2. <KeyTakeaways> Box (regionale Vorteile)
+3. ## Warum Detektei Base für [Stadt]?
+   - Regionale Expertise
+   - Transparente Kosten
+   - Schnelle Einsatzbereitschaft
+   - Deutschlandweit tätig
 4. ## Unsere Leistungen in [Stadt] und Umgebung
    - Liste der Services
    - Verlinkung auf Service-Seiten
 5. ## Typische Einsätze in [Region]
-   - 3-4 anonymisierte Fallbeispiele mit lokalem Bezug
+   - 3-4 anonymisierte Fallbeispiele mit regionalem Bezug
 6. ## Kosten für Detektiv-Einsätze in [Stadt]
    - Regionale Preisangaben
    - "Im Raum [Stadt] liegen die Kosten bei..."
-7. ## So erreichen Sie uns in [Stadt]
+7. ## So erreichen Sie uns
    - Kontaktmöglichkeiten
    - Verfügbarkeit
 8. ## Häufige Fragen zu Detekteien in [Stadt]
-   - 5-6 lokale FAQs
-9. ## Fazit mit lokalem CTA
+   - 5-6 regionale FAQs
+9. ## Fazit mit CTA
 ```
 
 ---
@@ -176,9 +176,9 @@ faqs:
     München rechnen Sie mit 900-1.500€ pro Tag."
     
   - question: "Wie schnell kann ein Detektiv in München starten?"
-    answer: "Als lokale Detektei in München können wir oft noch 
-    am selben Tag mit Ermittlungen beginnen. In dringenden Fällen 
-    sind wir innerhalb weniger Stunden einsatzbereit."
+    answer: "Detektei Base ist deutschlandweit tätig und kann oft noch 
+    am selben Tag mit Ermittlungen in München beginnen. In dringenden 
+    Fällen sind wir innerhalb weniger Stunden einsatzbereit."
     
   - question: "Ermitteln Sie auch im Umland von München?"
     answer: "Ja, unser Einsatzgebiet umfasst den gesamten Großraum 

@@ -372,31 +372,33 @@ Beantworten Sie diese 5 Fragen:
 
 ## 13. articleType: `local_landing` (6 Artikel - Templates)
 
-**Wann verwenden:** Lokale SEO-Seiten für Städte/Regionen.
+**Wann verwenden:** Regionale SEO-Seiten für Städte/Regionen.
 
 **Ziel-Wortanzahl:** 1.500-2.000 Wörter
 
 **ACHTUNG:** Dies sind Templates! `[Stadt]` und `[Region]` ersetzen.
 
-**→ SIEHE AUCH:** `einsatzgebiete-seitenaufbau.mdc` für detaillierte lokale SEO-Anleitung!
+**→ SIEHE AUCH:** `einsatzgebiete-seitenaufbau.mdc` für detaillierte regionale SEO-Anleitung!
+
+**⚠️ WICHTIG:** Detektei Base ist DEUTSCHLANDWEIT TÄTIG, aber NICHT ortsansässig! Niemals "lokale Detektei", "vor Ort ansässig" oder ähnliches verwenden!
 
 ```
-1. ## Privatdetektiv in [Stadt] – Ihre lokale Detektei (+ "Kurz:")
-2. <KeyTakeaways> Box (Lokale Vorteile)
-3. ## Warum ein lokaler Detektiv in [Stadt]?
+1. ## Privatdetektiv in [Stadt] – Ihre Detektei (+ "Kurz:")
+2. <KeyTakeaways> Box (Regionale Vorteile)
+3. ## Warum Detektei Base für [Stadt]?
 4. ## Unsere Leistungen in [Stadt] und Umgebung
 5. ## Typische Einsätze in [Region]
 6. ## Kosten für Detektiv-Einsätze in [Stadt]
-7. ## So erreichen Sie uns in [Stadt]
+7. ## So erreichen Sie uns
 8. ## Häufige Fragen zu Detekteien in [Stadt]
-9. ## Fazit mit lokalem CTA
+9. ## Fazit mit CTA
 ```
 
-**Lokale Elemente einbauen:**
-- Lokale Bezüge ("Im Großraum München...", "Für Kunden aus dem Rhein-Main-Gebiet...")
+**Regionale Elemente einbauen:**
+- Regionale Bezüge ("Im Großraum München...", "Für Kunden aus dem Rhein-Main-Gebiet...")
 - Regionale Besonderheiten erwähnen
-- Anfahrtszeiten/Erreichbarkeit
-- Lokale Gerichtsstandorte (wenn relevant)
+- Schnelle Einsatzbereitschaft betonen
+- Regionale Gerichtsstandorte (wenn relevant)
 - **Mindestens 40% einzigartiger Content** (kein Copy-Paste mit Stadt-Tausch!)
 
 **Verlinken auf:** `/einsatzgebiete/bundesland/[bundesland]/[stadt]`
