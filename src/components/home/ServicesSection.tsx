@@ -64,15 +64,14 @@ export function ServicesSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-sm font-semibold text-accent-600 uppercase tracking-wider">
-            Unsere Vermittlung
+            Unsere Leistungen
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-primary-900">
-            Für jeden Fall die passende Detektei
+            Professionelle Ermittlungen für jeden Fall
           </h2>
           <p className="mt-4 text-lg text-primary-600">
             Von privaten Angelegenheiten bis hin zu komplexen
-            Wirtschaftsermittlungen – wir vermitteln Sie an spezialisierte 
-            Partner-Detekteien mit höchster Diskretion.
+            Wirtschaftsermittlungen – Detektei Base arbeitet mit höchster Diskretion.
           </p>
         </div>
 

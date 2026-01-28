@@ -16,9 +16,9 @@ import { KeyTakeaways } from "@/components/ui/KeyTakeaways";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Wirtschaftsdetektei | Detektei für Unternehmen finden",
+  title: "Wirtschaftsdetektei | Ermittlungen für Unternehmen",
   description:
-    "Finden Sie eine Wirtschaftsdetektei für Ihr Unternehmen. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Mitarbeiterüberprüfung ✓ Krankfeierkontrolle.",
+    "Detektei Base – Ihre Wirtschaftsdetektei. ✓ Mitarbeiterüberprüfung ✓ Krankfeierkontrolle ✓ Betrugsermittlung. Professionelle Ermittlungen für Unternehmen.",
 };
 
 const services = [
@@ -88,9 +88,9 @@ export default function WirtschaftsdetekteiPage() {
               </h1>
               <p className="mt-6 text-lg text-primary-200 leading-relaxed">
                 Mitarbeiterbetrug, Diebstahl, Krankfeiermissbrauch – interne
-                Probleme kosten Unternehmen Milliarden. Wir vermitteln Sie an 
-                spezialisierte <strong>Partner-Wirtschaftsdetekteien</strong>, die 
-                diskret ermitteln und gerichtsverwertbare Beweise liefern.
+                Probleme kosten Unternehmen Milliarden. <strong>Detektei Base</strong> führt 
+                professionelle Wirtschaftsermittlungen durch – diskret und mit 
+                gerichtsverwertbaren Beweisen. Zusätzlich arbeiten wir mit geprüften Partnern.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link
@@ -148,11 +148,11 @@ export default function WirtschaftsdetekteiPage() {
           {/* Services Grid */}
           <div className="mt-16">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-900 text-center mb-4">
-              Wirtschaftsdetektei-Leistungen unserer Partner
+              Unsere Wirtschaftsdetektei-Leistungen
             </h2>
             <p className="text-primary-600 text-center max-w-2xl mx-auto mb-12">
               Von der Mitarbeiterüberprüfung bis zur Betrugsermittlung –
-              wir vermitteln Sie an Partner-Detekteien mit passender Spezialisierung.
+              wir haben die passende Lösung für Ihr Unternehmen.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -237,7 +237,7 @@ export default function WirtschaftsdetekteiPage() {
                   Verdächtige gewarnt werden.
                 </p>
                 <p>
-                  Die von uns vermittelten Wirtschaftsdetektive arbeiten diskret, 
+                  Unsere Wirtschaftsdetektive arbeiten diskret, 
                   kennen die rechtlichen Grenzen und liefern Beweise, die auch vor
                   Arbeitsgerichten Bestand haben.
                 </p>

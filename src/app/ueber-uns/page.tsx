@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import {
   Shield,
-  Award,
-  Users,
-  Clock,
   CheckCircle,
   Building2,
-  Scale,
   Zap,
   Target,
   HandshakeIcon,
@@ -16,9 +12,9 @@ import { KeyTakeaways } from "@/components/ui/KeyTakeaways";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Über uns | Ihr Netzwerk für geprüfte Detekteien",
+  title: "Über uns | Detektei Base",
   description:
-    "Detektei Base vermittelt Sie an geprüfte Partner-Detekteien in ganz Deutschland. Unser Netzwerk aus erfahrenen Ermittlern garantiert Qualität und Diskretion.",
+    "Detektei Base – Professionelle Ermittlungen. Privatdetektei und Wirtschaftsdetektei deutschlandweit, zusätzlich mit geprüften Partnern.",
 };
 
 const vorteile = [
@@ -30,7 +26,7 @@ const vorteile = [
   },
   {
     icon: Zap,
-    title: "Schnelle Vermittlung",
+    title: "Schnelle Reaktionszeit",
     description:
       "Keine Zeit verlieren: Wir finden innerhalb von 24 Stunden die passende Detektei für Ihren Fall.",
   },
@@ -42,9 +38,9 @@ const vorteile = [
   },
   {
     icon: HandshakeIcon,
-    title: "Kostenlos für Sie",
+    title: "Rund um die Uhr erreichbar",
     description:
-      "Unsere Vermittlung ist für Sie komplett kostenfrei und unverbindlich.",
+      "Die Erstberatung ist für Sie komplett kostenfrei und unverbindlich.",
   },
 ];
 
@@ -56,7 +52,7 @@ const qualitaetsstandards = [
   },
   {
     title: "Berufshaftpflicht",
-    description: "Jede Partner-Detektei ist versichert",
+    description: "Vollumfänglich versichert",
   },
   {
     title: "Erfahrung",
@@ -77,12 +73,12 @@ export default function UeberUnsPage() {
           <Breadcrumbs items={[{ label: "Über uns", href: "/ueber-uns" }]} />
           <div className="mt-8 max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-white leading-tight">
-              Ihr Netzwerk für professionelle Ermittlungen
+              Ihre Detektei für professionelle Ermittlungen
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              <strong>Detektei Base</strong> verbindet Sie mit den besten 
-              Detekteien Deutschlands. Unser Netzwerk aus geprüften Partner-Detekteien 
-              garantiert Ihnen Qualität, Diskretion und schnelle Ergebnisse.
+              <strong>Detektei Base</strong> – Ihre Detektei für professionelle 
+              Ermittlungen. Privatdetektei und Wirtschaftsdetektei deutschlandweit, 
+              zusätzlich mit geprüften Partnern.
             </p>
           </div>
         </div>
@@ -93,9 +89,9 @@ export default function UeberUnsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <KeyTakeaways
             items={[
-              "<strong>Netzwerk:</strong> Geprüfte Partner-Detekteien deutschlandweit mit langjähriger Erfahrung",
-              "<strong>Qualität:</strong> Alle Partner sind erfahrene, geprüfte Ermittler",
-              "<strong>Service:</strong> Kostenlose Vermittlung innerhalb von 24 Stunden",
+              "<strong>Leistungen:</strong> Privatdetektei und Wirtschaftsdetektei deutschlandweit",
+              "<strong>Zusätzlich:</strong> Geprüfte Partner in allen Bundesländern",
+              "<strong>Service:</strong> Rund um die Uhr erreichbar, Rückmeldung innerhalb von 24 Stunden",
               "<strong>Garantie:</strong> Passende Experten für jeden Ermittlungsfall",
             ]}
           />
@@ -114,14 +110,14 @@ export default function UeberUnsPage() {
                   im Internet trauen?
                 </p>
                 <p>
-                  <strong>Detektei Base nimmt Ihnen diese Arbeit ab.</strong> Wir haben 
-                  ein Netzwerk aus geprüften Partner-Detekteien aufgebaut, die 
+                  <strong>Detektei Base – Ihre Detektei.</strong> Wir führen professionelle 
+                  Ermittlungen durch und arbeiten zusätzlich mit geprüften Partnern zusammen, die 
                   alle unsere strengen Qualitätskriterien erfüllen: 
                   Berufshaftpflicht und nachgewiesene Erfahrung.
                 </p>
                 <p>
-                  Nach Ihrer Anfrage analysieren wir Ihren Fall und vermitteln Sie 
-                  an die <strong>Detektei, die am besten zu Ihrem Anliegen passt</strong> – 
+                  Nach Ihrer Anfrage analysieren wir Ihren Fall und finden 
+                  die <strong>Detektei, die am besten zu Ihrem Anliegen passt</strong> – 
                   ob Observation, Personensuche oder Wirtschaftsermittlung. So sparen 
                   Sie Zeit und können sicher sein, einen kompetenten Partner zu bekommen.
                 </p>
@@ -161,7 +157,7 @@ export default function UeberUnsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-900 mb-4">
-              So funktioniert die Vermittlung
+              So funktioniert es
             </h2>
             <p className="text-primary-600 max-w-2xl mx-auto">
               In drei einfachen Schritten zur passenden Detektei
@@ -185,7 +181,7 @@ export default function UeberUnsPage() {
                 step: "3",
                 title: "Direkte Verbindung",
                 description:
-                  "Die ausgewählte Partner-Detektei meldet sich bei Ihnen für eine persönliche Beratung und Auftragsklärung.",
+                  "Wir melden uns bei Ihnen für eine persönliche Beratung und Auftragsklärung.",
               },
             ].map((item, i) => (
               <div key={i} className="relative">
@@ -238,8 +234,8 @@ export default function UeberUnsPage() {
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Nur geprüfte Partner-Detekteien",
-                  "Transparente Vermittlung",
+                  "Professionelle Ermittlungen",
+                  "Zusätzlich geprüfte Partner",
                   "Keine versteckten Kosten",
                   "Datenschutz nach DSGVO",
                   "Schnelle Bearbeitung Ihrer Anfrage",
@@ -255,58 +251,12 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      {/* Für Partner-Detekteien */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl p-8 lg:p-12">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <Users className="h-12 w-12 text-primary-700 mb-4" />
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-900 mb-4">
-                  Für Detekteien: Partner werden
-                </h2>
-                <p className="text-primary-600 mb-6">
-                  Sie sind eine erfahrene Detektei und möchten 
-                  Teil unseres Netzwerks werden? Wir freuen uns auf qualifizierte 
-                  Partner, die unsere hohen Standards teilen.
-                </p>
-                <ul className="space-y-2 text-primary-600">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent-500" />
-                    <span>Qualifizierte Anfragen erhalten</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent-500" />
-                    <span>Regionale und überregionale Aufträge</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent-500" />
-                    <span>Faire Konditionen</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="text-center lg:text-right">
-                <a
-                  href="mailto:partner@detektei-base.de"
-                  className="inline-flex items-center justify-center rounded-lg bg-primary-900 px-6 py-3.5 text-base font-semibold text-white shadow-lg hover:bg-primary-800 transition-all"
-                >
-                  Partner werden
-                </a>
-                <p className="mt-3 text-sm text-primary-500">
-                  Kontakt: partner@detektei-base.de
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-16 lg:py-24 bg-primary-50">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <CTABox
-            title="Jetzt die passende Detektei finden"
-            description="Kostenlose und unverbindliche Vermittlung"
+            title="Jetzt kontaktieren"
+            description="Kostenlose und unverbindliche Erstberatung"
             variant="dark"
           />
         </div>

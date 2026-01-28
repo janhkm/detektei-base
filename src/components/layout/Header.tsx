@@ -34,14 +34,9 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2" aria-label="Detektei Base - Zur Startseite">
             
-            <div className="flex flex-col">
-              <span className="font-display text-lg font-bold text-primary-900 leading-tight">
-                Detektei Base
-              </span>
-              <span className="text-xs text-primary-500 hidden sm:block">
-                Detektei-Vermittlung
-              </span>
-            </div>
+            <span className="font-display text-lg font-bold text-primary-900 leading-tight">
+              Detektei Base
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

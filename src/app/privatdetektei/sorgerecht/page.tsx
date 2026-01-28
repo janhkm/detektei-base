@@ -9,7 +9,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Sorgerecht & Unterhalt | Detektei für Familienrecht finden",
   description:
-    "Finden Sie eine Detektei für Beweissicherung bei Sorgerecht und Unterhalt. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung. Gerichtsverwertbare Beweise.",
+    "Detektei Base – Beweissicherung bei Sorgerecht und Unterhalt. ✓ Gerichtsverwertbare Beweise ✓ Rund um die Uhr erreichbar.",
 };
 
 const leistungen = [
@@ -102,9 +102,8 @@ export default function SorgerechtPage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               Verdacht auf <strong>Unterhaltsbetrug</strong>? Verletzung des
-              Umgangsrechts? Wir vermitteln Sie an <strong>spezialisierte 
-              Partner-Detekteien</strong> für gerichtsverwertbare Beweise – 
-              diskret, professionell und im Interesse des Kindeswohls.
+              Umgangsrechts? <strong>Detektei Base</strong> liefert gerichtsverwertbare 
+              Beweise – diskret, professionell und im Interesse des Kindeswohls.
             </p>
           </div>
         </div>

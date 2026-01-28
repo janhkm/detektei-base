@@ -16,9 +16,9 @@ import { KeyTakeaways } from "@/components/ui/KeyTakeaways";
 import { CTABox } from "@/components/ui/CTABox";
 
 export const metadata: Metadata = {
-  title: "Privatdetektei finden | Diskrete Ermittlungen für Privatpersonen",
+  title: "Privatdetektei | Diskrete Ermittlungen für Privatpersonen",
   description:
-    "Finden Sie die passende Privatdetektei für Ihren Fall. ✓ Untreue aufdecken ✓ Personensuche ✓ Unterhaltsermittlungen ✓ Geprüfte Partner-Detekteien. Kostenlose Vermittlung.",
+    "Detektei Base – Ihre Privatdetektei. ✓ Untreue aufdecken ✓ Personensuche ✓ Unterhaltsermittlungen. Professionelle Ermittlungen, zusätzlich mit geprüften Partnern deutschlandweit.",
 };
 
 const services = [
@@ -26,7 +26,7 @@ const services = [
     icon: Heart,
     title: "Untreue & Fremdgehen",
     description:
-      "Diskrete Observation bei Verdacht auf Untreue. Geprüfte Partner-Detekteien liefern Ihnen gerichtsverwertbare Beweise.",
+      "Diskrete Observation bei Verdacht auf Untreue. Wir liefern Ihnen gerichtsverwertbare Beweise.",
     href: "/privatdetektei/untreue",
     features: ["Verdeckte Observation", "Fotodokumentation", "GPS-Ortung", "Detaillierter Bericht"],
   },
@@ -82,19 +82,19 @@ export default function PrivatdetekteiPage() {
           <div className="mt-8 grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl sm:text-5xl font-display font-bold text-white leading-tight">
-                Privatdetektei finden – Diskrete Ermittlungen
+                Privatdetektei – Diskrete Ermittlungen
               </h1>
               <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-                Verdacht auf Untreue? Suchen Sie eine vermisste Person? Wir vermitteln 
-                Sie an <strong>geprüfte Privatdetekteien</strong>, die Sie diskret und 
-                professionell unterstützen – mit gerichtsverwertbaren Beweisen.
+                Verdacht auf Untreue? Suchen Sie eine vermisste Person? <strong>Detektei Base</strong> führt 
+                professionelle Ermittlungen durch – diskret und mit gerichtsverwertbaren Beweisen. 
+                Zusätzlich arbeiten wir mit geprüften Partnern deutschlandweit.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/kontakt"
                   className="inline-flex items-center justify-center rounded-lg bg-accent-500 px-6 py-3.5 text-base font-semibold text-primary-900 hover:bg-accent-400 transition-colors"
                 >
-                  Jetzt Detektei finden
+                  Jetzt kontaktieren
                 </Link>
                 <a
                   href="tel:+4917666918653"
@@ -108,15 +108,15 @@ export default function PrivatdetekteiPage() {
             <div className="hidden lg:block">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <h3 className="text-lg font-semibold text-white mb-4">
-                  Unsere Vermittlungsgarantie
+                  Unsere Qualitätsgarantie
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Nur geprüfte Partner-Detekteien",
-                    "Alle Partner erfahren und geprüft",
-                    "Kostenlose Vermittlung für Sie",
-                    "Passende Experten für jeden Fall",
-                    "Schnelle Rückmeldung in 24h",
+                    "Professionelle Ermittlungen",
+                    "Zusätzlich geprüfte Partner deutschlandweit",
+                    "Rund um die Uhr erreichbar",
+                    "Erfahrene Ermittler für jeden Fall",
+                    "Schnelle Reaktionszeit in 24h",
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-primary-200">
                       <CheckCircle className="h-5 w-5 text-accent-400 flex-shrink-0" />
@@ -136,19 +136,19 @@ export default function PrivatdetekteiPage() {
           <KeyTakeaways
             items={[
               "<strong>Leistungen:</strong> Untreue, Personensuche, Sorgerecht, Stalking, Betrug",
-              "<strong>Kosten:</strong> Individuell nach Fall – Vermittlung kostenlos",
-              "<strong>Partner:</strong> Geprüfte Privatdetekteien deutschlandweit mit langjähriger Erfahrung",
-              "<strong>Garantie:</strong> Alle Partner sind erfahrene, geprüfte Ermittler",
+              "<strong>Kosten:</strong> Individuell nach Fall – Erstberatung kostenlos",
+              "<strong>Reichweite:</strong> Deutschlandweit, zusätzlich mit geprüften Partnern",
+              "<strong>Ergebnis:</strong> Gerichtsverwertbare Beweise und detaillierte Berichte",
             ]}
           />
 
           {/* Services Grid */}
           <div className="mt-16">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-primary-900 text-center mb-4">
-              Für diese Anliegen vermitteln wir Detekteien
+              Unsere Leistungen im Privatbereich
             </h2>
             <p className="text-primary-600 text-center max-w-2xl mx-auto mb-12">
-              Wählen Sie Ihr Thema – wir finden die passende Detektei für Sie.
+              Wählen Sie Ihr Thema – wir beraten Sie unverbindlich.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -207,9 +207,8 @@ export default function PrivatdetekteiPage() {
                   rechtlichen Verfahren eingesetzt werden.
                 </p>
                 <p>
-                  <strong>Über Detektei Base</strong> finden Sie die passende 
-                  Detektei für Ihren Fall – alle Partner sind erfahren 
-                  und von uns geprüft.
+                  <strong>Detektei Base</strong> führt professionelle Ermittlungen durch 
+                  und arbeitet zusätzlich mit geprüften Partnern deutschlandweit zusammen.
                 </p>
               </div>
             </div>
@@ -241,8 +240,8 @@ export default function PrivatdetekteiPage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <CTABox
-            title="Jetzt passende Privatdetektei finden"
-            description="Kostenlose Vermittlung an geprüfte Partner-Detekteien"
+            title="Jetzt kontaktieren"
+            description="Detektei Base – Ihre Privatdetektei für professionelle Ermittlungen"
             variant="dark"
           />
         </div>

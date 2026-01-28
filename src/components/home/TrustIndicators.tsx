@@ -3,7 +3,7 @@ import { Shield, Award, Clock, Users, Scale, Lock } from "lucide-react";
 const indicators = [
   {
     icon: Shield,
-    label: "Geprüfte Partner",
+    label: "Professionell",
     description: "Erfahrene Ermittler",
   },
   {
@@ -14,22 +14,22 @@ const indicators = [
   {
     icon: Lock,
     label: "100% Diskret",
-    description: "Vertrauliche Vermittlung",
+    description: "Vertrauliche Bearbeitung",
   },
   {
     icon: Clock,
-    label: "24h Vermittlung",
+    label: "24h Einsatzbereit",
     description: "Schnelle Reaktionszeit",
   },
   {
     icon: Users,
     label: "Deutschlandweit",
-    description: "Partner-Netzwerk",
+    description: "Flächendeckend tätig",
   },
   {
     icon: Award,
-    label: "Kostenlos",
-    description: "Vermittlung für Sie",
+    label: "24/7 Erreichbar",
+    description: "Rund um die Uhr",
   },
 ];
 

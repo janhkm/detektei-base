@@ -10,39 +10,39 @@ import {
 const reasons = [
   {
     icon: Shield,
-    title: "Nur geprüfte Detekteien",
+    title: "Professionelle Ermittlungen",
     description:
-      "Alle Partner-Detekteien werden von uns sorgfältig ausgewählt und auf Qualität geprüft.",
+      "Privatdetektei und Wirtschaftsdetektei – wir führen Ermittlungen selbst durch und arbeiten zusätzlich mit geprüften Partnern.",
   },
   {
     icon: Scale,
     title: "Gerichtsverwertbare Beweise",
     description:
-      "Unsere Partner liefern Ermittlungsberichte und Dokumentationen, die von Gerichten anerkannt werden.",
+      "Wir liefern Ermittlungsberichte und Dokumentationen, die von Gerichten anerkannt werden.",
   },
   {
     icon: Lock,
     title: "Absolute Diskretion",
     description:
-      "Vertraulichkeit ist oberstes Gebot. Ihre Daten werden nur an eine ausgewählte Partner-Detektei weitergegeben.",
+      "Vertraulichkeit ist oberstes Gebot. Alle Anfragen und Ermittlungen werden streng diskret behandelt.",
   },
   {
     icon: Clock,
-    title: "Schnelle Vermittlung",
+    title: "Schnelle Reaktionszeit",
     description:
-      "Keine Zeit verlieren: In der Regel erhalten Sie innerhalb von 24 Stunden einen Rückruf.",
+      "Keine Zeit verlieren: In der Regel können wir innerhalb von 24 Stunden mit Ermittlungen beginnen.",
   },
   {
     icon: Award,
-    title: "Erfahrene Spezialisten",
+    title: "Erfahrene Ermittler",
     description:
       "Für jeden Fall die passende Expertise – von Observation bis Wirtschaftsermittlung.",
   },
   {
     icon: HeartHandshake,
-    title: "Kostenlos für Sie",
+    title: "Rund um die Uhr erreichbar",
     description:
-      "Unsere Vermittlung ist komplett kostenlos. Die Konditionen vereinbaren Sie direkt mit der Detektei.",
+      "Die Erstberatung ist komplett kostenlos und unverbindlich. Rufen Sie uns an.",
   },
 ];
 
@@ -57,12 +57,12 @@ export function WhyUsSection() {
               Warum Detektei Base?
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-primary-900">
-              Ihr Netzwerk für professionelle Ermittlungen
+              Ihre Detektei für professionelle Ermittlungen
             </h2>
             <p className="mt-4 text-lg text-primary-600 leading-relaxed">
-              Die Suche nach der richtigen Detektei ist zeitaufwendig und schwierig. 
-              Wir haben das Netzwerk – Sie sparen Zeit und bekommen garantiert einen 
-              kompetenten Partner für Ihren Fall.
+              Detektei Base – Privatdetektei und Wirtschaftsdetektei. Wir führen 
+              professionelle Ermittlungen durch und arbeiten zusätzlich mit geprüften 
+              Partnern deutschlandweit zusammen.
             </p>
 
           </div>

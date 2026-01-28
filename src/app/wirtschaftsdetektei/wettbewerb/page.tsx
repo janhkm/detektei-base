@@ -9,7 +9,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Wettbewerbsverstöße | Detektei für Wettbewerbsrecht finden",
   description:
-    "Finden Sie eine Detektei bei Wettbewerbsverstößen. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Markenpiraterie ✓ Geschäftsgeheimnis-Schutz.",
+    "Detektei Base – Ermittlungen bei Wettbewerbsverstößen. ✓ Markenpiraterie ✓ Geschäftsgeheimnis-Schutz ✓ Rund um die Uhr erreichbar.",
 };
 
 const verstoesse = [
@@ -102,8 +102,8 @@ export default function WettbewerbsverstoessePage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               <strong>Markenpiraterie, unlautere Abwerbung, Geheimnisverrat</strong> –
-              Wettbewerbsverstöße schaden Ihrem Unternehmen. Wir vermitteln Sie an 
-              <strong> spezialisierte Partner-Detekteien</strong> für Beweissicherung.
+              Wettbewerbsverstöße schaden Ihrem Unternehmen. <strong>Detektei Base</strong> sichert 
+              Beweise und schützt Ihre Geschäftsinteressen.
             </p>
           </div>
         </div>

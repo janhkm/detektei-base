@@ -3,21 +3,21 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     content:
-      "Ich wusste nicht, wo ich anfangen sollte. Detektei Base hat mich innerhalb eines Tages an eine passende Detektei in meiner Region vermittelt. Das erste Gespräch hat mir sehr geholfen, meinen Fall einzuordnen.",
+      "Ich wusste nicht, wo ich anfangen sollte. Detektei Base hat meinen Fall professionell und diskret bearbeitet. Das erste Gespräch hat mir sehr geholfen, die Situation einzuordnen.",
     author: "M. Schmidt",
     role: "Privatperson",
     rating: 5,
   },
   {
     content:
-      "Als Unternehmer brauchte ich schnell einen erfahrenen Wirtschaftsdetektiv. Über Detektei Base wurde mir innerhalb von 24 Stunden ein spezialisierter Partner vermittelt, der genau zu unserem Fall passte.",
+      "Als Unternehmer brauchte ich schnell einen erfahrenen Wirtschaftsdetektiv. Detektei Base hat innerhalb von 24 Stunden mit den Ermittlungen begonnen – professionell und diskret.",
     author: "K. Müller",
     role: "Geschäftsführer",
     rating: 5,
   },
   {
     content:
-      "Die Beratung war ehrlich und unverbindlich. Man hat mir erklärt, welche Art von Detektei ich brauche und mich dann an einen geprüften Partner weitergeleitet. So stelle ich mir guten Service vor.",
+      "Die Beratung war ehrlich und unverbindlich. Man hat mir erklärt, welche Ermittlungsmethoden sinnvoll sind. Professioneller Service und gerichtsverwertbare Ergebnisse.",
     author: "S. Weber",
     role: "Privatperson",
     rating: 5,
@@ -37,8 +37,8 @@ export function TestimonialsSection() {
             So bewerten uns unsere Kunden
           </h2>
           <p className="mt-4 text-lg text-primary-300">
-            Wir vermitteln Sie an die passende Detektei – schnell, diskret und 
-            unverbindlich. Lesen Sie, wie andere unseren Service erlebt haben.
+            Professionelle Ermittlungen – schnell, diskret und 
+            mit gerichtsverwertbaren Ergebnissen. Lesen Sie, wie andere unseren Service erlebt haben.
           </p>
         </div>
 

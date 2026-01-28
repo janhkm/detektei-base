@@ -8,7 +8,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Kosten | Individuelle Preisgestaltung",
   description:
-    "Detektei-Kosten werden individuell nach Fall und Aufwand berechnet. ✓ Jetzt anrufen ✓ Kostenlose Vermittlung über Detektei Base ✓ Transparente Angebote.",
+    "Detektei-Kosten werden individuell nach Fall und Aufwand berechnet. ✓ Rund um die Uhr erreichbar ✓ Transparente Angebote von Detektei Base.",
 };
 
 const leistungsKategorien = [
@@ -76,7 +76,7 @@ const faqs = [
   {
     question: "Gibt es Pauschalpreise?",
     answer:
-      "Für bestimmte Standardleistungen wie Adressermittlung oder Mitarbeiterüberprüfung bieten Detekteien Pauschalpreise an. Bei komplexen Ermittlungen erfolgt die Abrechnung nach Aufwand. Die Vermittlung über Detektei Base ist kostenlos.",
+      "Für bestimmte Standardleistungen wie Adressermittlung oder Mitarbeiterüberprüfung bieten Detekteien Pauschalpreise an. Bei komplexen Ermittlungen erfolgt die Abrechnung nach Aufwand. Die Erstberatung bei Detektei Base ist kostenlos.",
   },
 ];
 
@@ -96,9 +96,9 @@ export default function KostenPage() {
               Detektei-Kosten – Fair, transparent, kalkulierbar
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Unsere Partner-Detekteien arbeiten mit <strong>transparenten Preisen</strong>. 
+              Wir arbeiten mit <strong>transparenten Preisen</strong>. 
               Hier finden Sie eine Übersicht der üblichen Kosten für Detektiv-Dienstleistungen – 
-              ohne versteckte Gebühren oder böse Überraschungen. Die Vermittlung über 
+              ohne versteckte Gebühren oder böse Überraschungen. Die Erstberatung bei 
               Detektei Base ist für Sie kostenfrei.
             </p>
           </div>
@@ -113,7 +113,7 @@ export default function KostenPage() {
               "<strong>Erstkontakt:</strong> Jetzt anrufen – unverbindlich",
               "<strong>Preisgestaltung:</strong> Individuell nach Fall und Aufwand",
               "<strong>Angebot:</strong> Transparenter Kostenvoranschlag vor Auftragserteilung",
-              "<strong>Vermittlung:</strong> Über Detektei Base für Sie kostenlos",
+              "<strong>Erstberatung:</strong> Bei Detektei Base für Sie kostenlos",
             ]}
           />
 
@@ -180,9 +180,8 @@ export default function KostenPage() {
                   Individuelles Angebot gewünscht?
                 </h3>
                 <p className="text-primary-600">
-                  Jeder Fall ist anders. Wir vermitteln Sie kostenlos an eine 
-                  passende Partner-Detektei, die Ihnen einen unverbindlichen 
-                  Kostenvoranschlag erstellt – maßgeschneidert auf Ihre Situation.
+                  Jeder Fall ist anders. Wir erstellen Ihnen einen 
+                  unverbindlichen Kostenvoranschlag – maßgeschneidert auf Ihre Situation.
                 </p>
               </div>
               <a

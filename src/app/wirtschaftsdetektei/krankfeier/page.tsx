@@ -9,7 +9,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Krankfeierkontrolle | Detektei für Lohnfortzahlungsbetrug finden",
   description:
-    "Finden Sie eine Detektei bei Verdacht auf vorgetäuschte Krankheit. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Gerichtsverwertbare Beweise.",
+    "Detektei Base – Ermittlungen bei vorgetäuschter Krankheit. ✓ Gerichtsverwertbare Beweise ✓ Rund um die Uhr erreichbar.",
 };
 
 const anzeichen = [
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "Was kostet eine Krankfeierkontrolle?",
     answer:
-      "Eine Observation kostet 800-1.500€ pro Tag. Die genauen Kosten hängen von Dauer und Umfang ab. Meist werden 2-3 Observationstage für aussagekräftige Ergebnisse empfohlen. Die Vermittlung über Detektei Base ist kostenlos.",
+      "Eine Observation kostet 800-1.500€ pro Tag. Die genauen Kosten hängen von Dauer und Umfang ab. Meist werden 2-3 Observationstage für aussagekräftige Ergebnisse empfohlen. Die Erstberatung bei Detektei Base ist kostenlos.",
   },
 ];
 
@@ -86,8 +86,8 @@ export default function KrankfeierPage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               Verdacht auf <strong>vorgetäuschte Arbeitsunfähigkeit</strong>?
-              Wir vermitteln Sie an <strong>spezialisierte Partner-Detekteien</strong>, 
-              die diskret prüfen und gerichtsverwertbare Beweise liefern.
+              <strong>Detektei Base</strong> prüft diskret und liefert gerichtsverwertbare Beweise 
+              für arbeitsrechtliche Maßnahmen.
             </p>
           </div>
         </div>

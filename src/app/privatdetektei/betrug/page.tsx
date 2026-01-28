@@ -9,7 +9,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Betrug & Scamming | Detektei für Betrugsermittlung finden",
   description:
-    "Finden Sie eine Detektei bei Romance Scam & Heiratsschwindel. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Identitätsprüfung.",
+    "Detektei Base – Ermittlungen bei Romance Scam & Heiratsschwindel. ✓ Identitätsprüfung ✓ Rund um die Uhr erreichbar.",
 };
 
 const betrugsarten = [
@@ -109,8 +109,8 @@ export default function BetrugsermittlungPage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               <strong>Romance Scam, Heiratsschwindel, Erbschleicherei</strong> –
-              Betrüger nutzen Gefühle aus. Wir vermitteln Sie an <strong>spezialisierte 
-              Partner-Detekteien</strong>, die Personen diskret prüfen.
+              Betrüger nutzen Gefühle aus. <strong>Detektei Base</strong> prüft Personen 
+              diskret und liefert Ihnen gerichtsverwertbare Beweise.
             </p>
           </div>
         </div>

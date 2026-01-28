@@ -199,8 +199,8 @@ export function ContactForm() {
           Vielen Dank für Ihre Anfrage!
         </h3>
         <p className="text-primary-600 mb-6">
-          Wir haben Ihre Nachricht erhalten und vermitteln Sie schnellstmöglich 
-          an eine passende Partner-Detektei.
+          Wir haben Ihre Nachricht erhalten und melden uns schnellstmöglich 
+          bei Ihnen.
         </p>
         <button
           onClick={() => setStatus("idle")}
@@ -387,8 +387,7 @@ export function ContactForm() {
             >
               Datenschutzerklärung
             </a>{" "}
-            gelesen und willige ein, dass meine Daten zur Vermittlung an eine 
-            Partner-Detektei weitergegeben werden.{" "}
+            gelesen und willige in die Verarbeitung meiner Daten ein.{" "}
             <span className="text-red-500">*</span>
           </span>
         </label>

@@ -6,7 +6,7 @@ import { Phone, Shield, Lock, Clock } from "lucide-react";
 export const metadata: Metadata = {
   title: "Kontakt | Kostenlose Beratung",
   description:
-    "Finden Sie die passende Detektei für Ihren Fall. Kostenlose und unverbindliche Beratung. Wir vermitteln Sie an geprüfte Partner-Detekteien.",
+    "Detektei Base kontaktieren. Kostenlose und unverbindliche Erstberatung. Privatdetektei und Wirtschaftsdetektei deutschlandweit.",
 };
 
 const trustItems = [
@@ -22,8 +22,8 @@ const trustItems = [
   },
   {
     icon: Clock,
-    title: "Schnelle Vermittlung",
-    description: "Passende Partner-Detektei innerhalb von 24h",
+    title: "Schnelle Reaktionszeit",
+    description: "Rückmeldung innerhalb von 24h",
   },
 ];
 
@@ -42,8 +42,8 @@ export default function KontaktPage() {
               Sprechen Sie mit uns über Ihren Fall
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Schildern Sie uns Ihre Situation – wir vermitteln Sie an die 
-              passende Partner-Detektei aus unserem Netzwerk. Kostenlos und unverbindlich.
+              Schildern Sie uns Ihre Situation – wir beraten Sie 
+              kostenlos und unverbindlich zu Ihrem Fall.
             </p>
           </div>
         </div>
@@ -84,8 +84,8 @@ export default function KontaktPage() {
                   Anfrage senden
                 </h2>
                 <p className="text-primary-600 mb-8">
-                  Schildern Sie Ihren Fall – wir finden die passende 
-                  Partner-Detektei für Sie.
+                  Schildern Sie Ihren Fall – wir beraten Sie 
+                  unverbindlich zu den Möglichkeiten.
                 </p>
                 <ContactForm />
               </div>
@@ -108,20 +108,20 @@ export default function KontaktPage() {
           <div className="mt-8 space-y-6 text-left">
             <div className="bg-white rounded-xl p-6 border border-primary-100">
               <h3 className="font-semibold text-primary-900 mb-2">
-                Ist die Vermittlung wirklich kostenlos?
+                Ist die Erstberatung wirklich kostenlos?
               </h3>
               <p className="text-primary-600 text-sm">
-                Ja, die Vermittlung über Detektei Base ist völlig kostenlos und 
-                unverbindlich. Wir finden die passende Partner-Detektei für Ihren 
-                Fall – Sie zahlen nur die Detektei direkt.
+                Ja, die Erstberatung bei Detektei Base ist völlig kostenlos und 
+                unverbindlich. Wir beraten Sie zu Ihrem Fall und erstellen ein 
+                individuelles Angebot.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 border border-primary-100">
               <h3 className="font-semibold text-primary-900 mb-2">
-                Wie schnell werde ich vermittelt?
+                Wie schnell erhalte ich eine Rückmeldung?
               </h3>
               <p className="text-primary-600 text-sm">
-                In der Regel meldet sich eine passende Partner-Detektei innerhalb 
+                In der Regel melden wir uns innerhalb 
                 von 24 Stunden bei Ihnen. In dringenden Fällen erreichen Sie uns 
                 auch telefonisch.
               </p>
@@ -131,8 +131,8 @@ export default function KontaktPage() {
                 Werden meine Daten vertraulich behandelt?
               </h3>
               <p className="text-primary-600 text-sm">
-                Absolut. Ihre Daten werden nur an die eine ausgewählte Partner-Detektei 
-                weitergegeben. Wir arbeiten DSGVO-konform – Details finden Sie in 
+                Absolut. Alle Anfragen werden streng vertraulich behandelt. 
+                Wir arbeiten DSGVO-konform – Details finden Sie in 
                 unserer Datenschutzerklärung.
               </p>
             </div>

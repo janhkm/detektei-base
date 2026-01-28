@@ -4,30 +4,30 @@ const steps = [
   {
     step: "01",
     icon: Phone,
-    title: "Kostenlose Anfrage",
+    title: "Erste Kontaktaufnahme",
     description:
-      "Schildern Sie uns Ihren Fall vertraulich. Wir benötigen nur die wichtigsten Informationen, um die passende Detektei zu finden.",
+      "Schildern Sie uns Ihren Fall vertraulich. Wir beraten Sie zu den Möglichkeiten und erstellen ein individuelles Angebot.",
   },
   {
     step: "02",
     icon: Users,
-    title: "Wir finden den Experten",
+    title: "Individuelle Planung",
     description:
-      "Basierend auf Ihrem Anliegen und Standort wählen wir die geeignete Partner-Detektei aus unserem Netzwerk.",
+      "Basierend auf Ihrem Anliegen planen wir die Ermittlung – ob durch uns direkt oder mit einem unserer geprüften Partner.",
   },
   {
     step: "03",
     icon: Handshake,
-    title: "Direkter Kontakt",
+    title: "Auftragserteilung",
     description:
-      "Die Partner-Detektei meldet sich bei Ihnen für eine persönliche Beratung und bespricht das weitere Vorgehen.",
+      "Sie erhalten einen transparenten Kostenvoranschlag. Erst nach Ihrer Zustimmung beginnen wir mit der Arbeit.",
   },
   {
     step: "04",
     icon: CheckCircle,
     title: "Professionelle Ermittlung",
     description:
-      "Die Detektei führt die Ermittlung durch und liefert Ihnen gerichtsverwertbare Ergebnisse.",
+      "Wir führen die Ermittlung durch und liefern Ihnen gerichtsverwertbare Ergebnisse und einen detaillierten Bericht.",
   },
 ];
 
@@ -41,11 +41,11 @@ export function ProcessSection() {
             So funktioniert&apos;s
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-primary-900">
-            In 4 Schritten zur richtigen Detektei
+            In 4 Schritten zu Ihrem Ergebnis
           </h2>
           <p className="mt-4 text-lg text-primary-600">
-            Unkompliziert und schnell – von der Anfrage bis zum passenden 
-            Ermittler für Ihren Fall.
+            Unkompliziert und schnell – von der Erstberatung bis zum 
+            gerichtsverwertbaren Ermittlungsergebnis.
           </p>
         </div>
 

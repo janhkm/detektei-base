@@ -227,7 +227,7 @@ function StadtPageContent({ data }: { data: StadtPageData }) {
                   Detektei-Leistungen in {stadt.name}
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Partner-Detekteien in {stadt.name} bieten
+                  <strong>Kurz:</strong> Detektei Base bietet in {stadt.name} 
                   das gesamte Spektrum der Privatdetektei und Wirtschaftsdetektei – 
                   diskret, professionell und gerichtsverwertbar.
                 </p>
@@ -365,10 +365,10 @@ function StadtPageContent({ data }: { data: StadtPageData }) {
                   </h3>
                   <ul className="space-y-3 text-sm">
                     {[
-                      "Nur geprüfte Partner-Detekteien",
-                      "Erfahrene, geprüfte Partner",
-                      "100% Diskretion bei der Vermittlung",
-                      "Kostenlose Vermittlung",
+                      "Professionelle Ermittlungen",
+                      "Zusätzlich geprüfte Partner vor Ort",
+                      "100% Diskretion garantiert",
+                      "Rund um die Uhr erreichbar",
                       "DSGVO-konforme Arbeitsweise",
                     ].map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-primary-700">
@@ -501,7 +501,7 @@ function LandkreisPageContent({ data }: { data: LandkreisPageData }) {
           {kleineGemeinden.length > 0 && (
             <div className="mt-8 p-4 bg-accent-50 rounded-lg border border-accent-200">
               <p className="text-sm text-primary-700">
-                <strong>Auch in kleineren Gemeinden:</strong> Partner-Detekteien
+                <strong>Auch in kleineren Gemeinden:</strong> Wir 
                 führen Ermittlungen auch in {kleineGemeinden.slice(0, 5).join(", ")}
                 {kleineGemeinden.length > 5 &&
                   ` und ${kleineGemeinden.length - 5} weiteren Orten`}{" "}
@@ -516,7 +516,7 @@ function LandkreisPageContent({ data }: { data: LandkreisPageData }) {
               Detektei-Leistungen im {landkreis.name}
             </h2>
             <p className="text-primary-600 mb-6">
-              <strong>Kurz:</strong> Partner-Detekteien im {landkreis.name} bieten
+              <strong>Kurz:</strong> Detektei Base bietet im {landkreis.name} 
               das gesamte Spektrum der Privatdetektei und Wirtschaftsdetektei – 
               diskret, professionell und gerichtsverwertbar.
             </p>

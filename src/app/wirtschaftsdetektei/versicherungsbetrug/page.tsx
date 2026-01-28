@@ -9,7 +9,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Versicherungsbetrug | Detektei für Versicherungen finden",
   description:
-    "Finden Sie eine Detektei für Versicherungsbetrug. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Fingierte Unfälle ✓ Gerichtsverwertbare Beweise.",
+    "Detektei Base – Ermittlungen bei Versicherungsbetrug. ✓ Fingierte Unfälle ✓ Gerichtsverwertbare Beweise ✓ Rund um die Uhr erreichbar.",
 };
 
 const betrugsarten = [
@@ -98,8 +98,8 @@ export default function VersicherungsbetrugsPage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               <strong>Fingierte Unfälle, überhöhte Schäden, vorgetäuschte Arbeitsunfähigkeit</strong> –
-              Versicherungsbetrug kostet Milliarden. Wir vermitteln Sie an <strong>spezialisierte 
-              Partner-Detekteien</strong> für gerichtsverwertbare Beweise.
+              Versicherungsbetrug kostet Milliarden. <strong>Detektei Base</strong> liefert 
+              gerichtsverwertbare Beweise für Ihre Schadensabwicklung.
             </p>
           </div>
         </div>

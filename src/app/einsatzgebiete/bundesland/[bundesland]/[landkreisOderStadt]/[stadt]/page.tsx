@@ -190,7 +190,7 @@ export default async function StadtPage({ params }: PageProps) {
                   Detektei-Leistungen in {stadt.name}
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Partner-Detekteien in {stadt.name} bieten
+                  <strong>Kurz:</strong> Detektei Base bietet in {stadt.name} 
                   das gesamte Spektrum der Privatdetektei und Wirtschaftsdetektei – 
                   diskret, professionell und gerichtsverwertbar.
                 </p>
@@ -332,14 +332,14 @@ export default async function StadtPage({ params }: PageProps) {
                 {/* Trust Badges */}
                 <div className="bg-white rounded-xl p-6 border border-primary-100">
                   <h3 className="font-display font-bold text-primary-900 mb-4">
-                    Unsere Vermittlungsgarantie
+                    Unsere Qualitätsgarantie
                   </h3>
                   <ul className="space-y-3 text-sm">
                     {[
-                      "Nur geprüfte Partner-Detekteien",
-                      "Alle Partner erfahren und geprüft",
-                      "Diskrete Vermittlung",
-                      "Kostenlose Vermittlung für Sie",
+                      "Professionelle Ermittlungen",
+                      "Zusätzlich geprüfte Partner vor Ort",
+                      "100% Diskretion garantiert",
+                      "Rund um die Uhr erreichbar",
                       "Partner arbeiten DSGVO-konform",
                     ].map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-primary-700">

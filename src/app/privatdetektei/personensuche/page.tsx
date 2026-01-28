@@ -16,7 +16,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Personensuche | Detektei für Vermisstensuche finden",
   description:
-    "Finden Sie eine Detektei für professionelle Personensuche. ✓ Vermisste finden ✓ Schuldner aufspüren ✓ Erbenermittlung ✓ Geprüfte Partner. Kostenlose Vermittlung.",
+    "Detektei Base – professionelle Personensuche. ✓ Vermisste finden ✓ Schuldner aufspüren ✓ Erbenermittlung ✓ Rund um die Uhr erreichbar.",
 };
 
 const anwendungsfaelle = [
@@ -105,7 +105,7 @@ export default function PersonensuchePage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               Sie suchen einen vermissten Angehörigen, einen Schuldner oder
-              unbekannte Erben? Wir vermitteln Sie an spezialisierte Detekteien, 
+              unbekannte Erben? Wir arbeiten mit spezialisierten Detekteien zusammen, 
               die Personen finden – <strong>deutschlandweit und international</strong>.
             </p>
           </div>

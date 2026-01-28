@@ -21,7 +21,7 @@ import { generatePrivatdetekteiBreadcrumbSchema } from "@/lib/schemas/breadcrumb
 export const metadata: Metadata = {
   title: "Observation | Detektei für Personenüberwachung finden",
   description:
-    "Finden Sie eine Detektei für professionelle Observation. ✓ Diskrete Überwachung ✓ Gerichtsverwertbare Beweise ✓ Geprüfte Partner. Kostenlose Vermittlung.",
+    "Detektei Base – professionelle Observation. ✓ Diskrete Überwachung ✓ Gerichtsverwertbare Beweise ✓ Rund um die Uhr erreichbar.",
 };
 
 const einsatzgebiete = [
@@ -117,9 +117,9 @@ export default function ObservationPage() {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
               Die <strong>Observation</strong> ist das Kerngeschäft jeder
-              Detektei. Wir vermitteln Sie an erfahrene Partner-Detekteien, die 
-              Zielpersonen diskret überwachen und alle relevanten Aktivitäten 
-              dokumentieren – für gerichtsverwertbare Beweise.
+              Detektei. <strong>Detektei Base</strong> überwacht Zielpersonen diskret 
+              und dokumentiert alle relevanten Aktivitäten – für gerichtsverwertbare Beweise. 
+              Zusätzlich arbeiten wir mit geprüften Partnern deutschlandweit.
             </p>
           </div>
         </div>
@@ -341,11 +341,11 @@ export default function ObservationPage() {
 
                 <div className="bg-accent-50 rounded-xl p-6 border border-accent-200">
                   <h3 className="font-display font-bold text-primary-900 mb-2">
-                    Schnelle Vermittlung
+                    Schnelle Reaktionszeit
                   </h3>
                   <p className="text-sm text-primary-600">
-                    In dringenden Fällen vermitteln wir Sie innerhalb von 24 Stunden 
-                    an eine einsatzbereite Partner-Detektei. Kontaktieren Sie uns 
+                    In dringenden Fällen können wir innerhalb von 24 Stunden 
+                    einsatzbereit sein. Kontaktieren Sie uns 
                     für eine schnelle Beratung.
                   </p>
                 </div>

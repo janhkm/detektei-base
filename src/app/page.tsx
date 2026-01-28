@@ -14,20 +14,20 @@ import { generateHomepageSchema } from "@/lib/schemas/homepage";
 // ============================================
 
 export const metadata: Metadata = {
-  title: "Detektei finden | Geprüfte Privatdetektive deutschlandweit | Detektei Base",
+  title: "Detektei Base | Professionelle Ermittlungen deutschlandweit",
   description:
-    "Finden Sie sofort die richtige Detektei für Ihren Fall. Wir vermitteln Sie kostenlos an geprüfte Partner-Detekteien mit langjähriger Erfahrung – diskret und schnell an erfahrene Ermittler in Ihrer Region.",
+    "Detektei Base – Professionelle Ermittlungen. Privatdetektei und Wirtschaftsdetektei für diskrete Aufklärung mit gerichtsverwertbaren Beweisen. Zusätzlich mit geprüften Partnern deutschlandweit.",
   keywords: [
-    "Detektei finden",
+    "Detektei",
     "Privatdetektiv",
-    "Detektei Vermittlung",
+    "Privatdetektei",
     "Wirtschaftsdetektei",
     "Beweissicherung",
     "Observation",
     "Personensuche",
     "Untreue Ermittlung",
-    "Detektiv Deutschland",
-    "geprüfte Detektei",
+    "Ermittlungen",
+    "Detektei Deutschland",
   ],
   alternates: {
     canonical: "https://detektei-base.de",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     locale: "de_DE",
     url: "https://detektei-base.de",
     siteName: "Detektei Base",
-    title: "Detektei finden | Geprüfte Privatdetektive deutschlandweit",
+    title: "Detektei Base | Professionelle Ermittlungen deutschlandweit",
     description:
-      "Finden Sie sofort die richtige Detektei. Kostenlose Vermittlung an geprüfte Partner-Detekteien – diskret und schnell.",
+      "Detektei Base – Professionelle Ermittlungen. Privatdetektei & Wirtschaftsdetektei, zusätzlich mit geprüften Partnern.",
     images: [
       {
         url: "https://detektei-base.de/images/og-homepage.jpg",
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Detektei finden | Geprüfte Privatdetektive deutschlandweit",
+    title: "Detektei Base | Professionelle Ermittlungen deutschlandweit",
     description:
-      "Finden Sie sofort die richtige Detektei. Kostenlose Vermittlung an geprüfte Partner-Detekteien deutschlandweit.",
+      "Detektei Base – Professionelle Ermittlungen. Privatdetektei & Wirtschaftsdetektei deutschlandweit.",
     images: ["https://detektei-base.de/images/og-homepage.jpg"],
   },
   robots: {

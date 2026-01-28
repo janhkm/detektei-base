@@ -192,7 +192,7 @@ export default async function CategoryPage({ params }: PageProps) {
                 {/* CTA */}
                 <div className="bg-primary-900 rounded-xl p-6 text-white">
                   <h3 className="font-display font-bold mb-2">
-                    Detektei finden
+                    Rund um die Uhr erreichbar
                   </h3>
                   <p className="text-primary-200 text-sm mb-4">
                     Sie brauchen professionelle Hilfe? Wir beraten Sie kostenlos
@@ -202,7 +202,7 @@ export default async function CategoryPage({ params }: PageProps) {
                     href="/kontakt"
                     className="inline-flex items-center justify-center w-full rounded-lg bg-accent-500 px-4 py-3 text-sm font-semibold text-primary-900 hover:bg-accent-400 transition-colors"
                   >
-                    Jetzt Detektei finden
+                    Jetzt Kontakt aufnehmen
                   </Link>
                 </div>
               </div>

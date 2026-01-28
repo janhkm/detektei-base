@@ -4,20 +4,20 @@ const steps = [
   {
     step: "01",
     icon: Phone,
-    title: "Kostenlose Anfrage",
+    title: "Erste Kontaktaufnahme",
     description: "Schildern Sie Ihren Fall vertraulich per Telefon oder E-Mail.",
   },
   {
     step: "02",
     icon: FileText,
-    title: "Vermittlung an Partner",
-    description: "Wir finden die passende Detektei und stellen den Kontakt her.",
+    title: "Individuelles Angebot",
+    description: "Sie erhalten einen transparenten Kostenvoranschlag.",
   },
   {
     step: "03",
     icon: Search,
-    title: "Ermittlung",
-    description: "Die Partner-Detektei führt die Ermittlungen diskret durch.",
+    title: "Professionelle Ermittlung",
+    description: "Wir führen die Ermittlungen diskret und professionell durch.",
   },
   {
     step: "04",
@@ -73,7 +73,7 @@ export function ProcessTimeline({ stadtName, className }: ProcessTimelineProps) 
       <div className="mt-6 p-4 bg-accent-50 rounded-lg border border-accent-200">
         <p className="text-sm text-primary-700">
           <strong>Schnellstart möglich:</strong> In dringenden Fällen können 
-          Partner-Detekteien innerhalb von 24 Stunden{stadtName ? ` in ${stadtName}` : ""} mit den
+          wir innerhalb von 24 Stunden{stadtName ? ` in ${stadtName}` : ""} mit den
           Ermittlungen beginnen.
         </p>
       </div>

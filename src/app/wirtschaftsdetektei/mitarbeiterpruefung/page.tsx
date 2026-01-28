@@ -9,7 +9,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Mitarbeiterüberprüfung | Detektei für Background Check finden",
   description:
-    "Finden Sie eine Detektei für Mitarbeiterüberprüfung. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Pre-Employment Screening ✓ Background Checks.",
+    "Detektei Base – Mitarbeiterüberprüfung. ✓ Pre-Employment Screening ✓ Background Checks ✓ Rund um die Uhr erreichbar.",
 };
 
 const pruefungen = [

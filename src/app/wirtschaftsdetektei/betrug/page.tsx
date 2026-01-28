@@ -9,7 +9,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Betrug & Unterschlagung | Detektei für Unternehmen finden",
   description:
-    "Finden Sie eine Detektei bei Betrug und Unterschlagung. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Täterermittlung ✓ Gerichtsverwertbare Beweise.",
+    "Detektei Base – Ermittlungen bei Betrug und Unterschlagung. ✓ Täterermittlung ✓ Gerichtsverwertbare Beweise ✓ Rund um die Uhr erreichbar.",
 };
 
 const betrugsarten = [

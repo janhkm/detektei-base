@@ -9,7 +9,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Stalking & Mobbing | Detektei für Beweissicherung finden",
   description:
-    "Finden Sie eine Detektei bei Stalking und Mobbing. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Beweissicherung für Strafanzeige.",
+    "Detektei Base – Hilfe bei Stalking und Mobbing. ✓ Beweissicherung für Strafanzeige ✓ Rund um die Uhr erreichbar.",
 };
 
 const anzeichen = [
@@ -62,7 +62,7 @@ const faqs = [
   {
     question: "Was kostet die Hilfe bei Stalking?",
     answer:
-      "Die Kosten hängen vom Umfang ab. Täteridentifikation und Dokumentation beginnen ab 1.000€. Bei längerer Observation entsprechend mehr. Die Vermittlung über Detektei Base ist kostenlos.",
+      "Die Kosten hängen vom Umfang ab. Täteridentifikation und Dokumentation beginnen ab 1.000€. Bei längerer Observation entsprechend mehr. Die Erstberatung bei Detektei Base ist kostenlos.",
   },
   {
     question: "Soll ich parallel zur Polizei gehen?",
@@ -110,9 +110,8 @@ export default function StalkingPage() {
               Stalking & Mobbing – Professionelle Hilfe finden
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Werden Sie verfolgt, belästigt oder bedroht? Wir vermitteln Sie an 
-              <strong> spezialisierte Partner-Detekteien</strong>, die Beweise sichern, 
-              den Täter identifizieren und Sie rechtlich schützen.
+              Werden Sie verfolgt, belästigt oder bedroht? <strong>Detektei Base</strong> sichert 
+              Beweise, identifiziert den Täter und schützt Sie rechtlich – diskret und professionell.
             </p>
           </div>
         </div>

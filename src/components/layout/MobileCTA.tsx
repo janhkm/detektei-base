@@ -65,7 +65,7 @@ export function MobileCTA() {
 
         {/* Trust indicator */}
         <p className="text-center text-xs text-primary-300 mt-2">
-          Geprüfte Partner-Detekteien deutschlandweit
+          Professionelle Ermittlungen deutschlandweit
         </p>
       </div>
     </div>

@@ -116,8 +116,8 @@ export default async function BundeslandPage({ params }: PageProps) {
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed intro-text">
               Sie suchen eine <strong>Detektei in {bundesland.name}</strong>?
-              Wir vermitteln Sie an geprüfte Partner-Detekteien für alle Fälle der
-              Privatdetektei und Wirtschaftsdetektei – diskret, professionell
+              Detektei Base führt professionelle Ermittlungen durch – Privatdetektei 
+              und Wirtschaftsdetektei. Zusätzlich mit geprüften Partnern vor Ort.
               und mit gerichtsverwertbarer Beweissicherung.
             </p>
           </div>

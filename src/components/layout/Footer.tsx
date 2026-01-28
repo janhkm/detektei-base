@@ -53,18 +53,13 @@ export function Footer() {
                     DB
                   </span>
                 </div>
-                <div className="flex flex-col">
-                  <span className="font-display text-lg font-bold text-white leading-tight">
-                    Detektei Base
-                  </span>
-                  <span className="text-xs text-primary-400">
-                    Detektei-Vermittlung
-                  </span>
-                </div>
+                <span className="font-display text-lg font-bold text-white leading-tight">
+                  Detektei Base
+                </span>
               </Link>
               <p className="mt-4 text-sm text-primary-300 leading-relaxed">
-                Ihr Netzwerk für professionelle Ermittlungen. Wir vermitteln Sie 
-                an geprüfte Partner-Detekteien – diskret und zuverlässig.
+                Professionelle Ermittlungen – Privatdetektei & Wirtschaftsdetektei. 
+                Zusätzlich mit geprüften Partnern deutschlandweit.
               </p>
               <address className="mt-6 space-y-3 not-italic">
                 <a
@@ -219,7 +214,7 @@ export function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>Kostenlose Vermittlung</span>
+              <span>Rund um die Uhr erreichbar</span>
             </li>
             <li className="flex items-center gap-2">
               <svg
@@ -235,7 +230,7 @@ export function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>Geprüfte Partner-Detekteien</span>
+              <span>Zusätzlich geprüfte Partner</span>
             </li>
           </ul>
         </div>

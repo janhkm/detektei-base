@@ -10,7 +10,7 @@ export function ContactInfo() {
         </h3>
         <p className="text-primary-200 text-sm mb-6">
           Sie möchten lieber direkt sprechen? Rufen Sie uns an oder
-          schreiben Sie uns eine E-Mail – wir vermitteln Sie schnell weiter.
+          schreiben Sie uns eine E-Mail – wir helfen Ihnen schnell weiter.
         </p>
 
         <div className="space-y-4">
@@ -84,13 +84,13 @@ export function ContactInfo() {
             <MapPin className="h-5 w-5 text-primary-700" />
           </div>
           <h3 className="font-display font-bold text-primary-900">
-            Unser Netzwerk
+            Einsatzgebiete
           </h3>
         </div>
 
         <p className="text-sm text-primary-600">
-          Wir vermitteln Partner-Detekteien <strong>deutschlandweit</strong>. 
-          Bei Bedarf auch mit internationaler Reichweite.
+          Wir sind <strong>deutschlandweit</strong> tätig. Zusätzlich arbeiten wir mit 
+          geprüften Partnern in allen Regionen zusammen.
         </p>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -125,19 +125,19 @@ export function ContactInfo() {
           <div className="flex items-center gap-3">
             <Shield className="h-5 w-5 text-accent-600" />
             <span className="text-sm text-primary-700">
-              Nur geprüfte Partner-Detekteien
+              Professionelle Ermittlungen
             </span>
           </div>
           <div className="flex items-center gap-3">
             <Shield className="h-5 w-5 text-accent-600" />
             <span className="text-sm text-primary-700">
-              Erfahrene, geprüfte Partner
+              Zusätzlich geprüfte Partner
             </span>
           </div>
           <div className="flex items-center gap-3">
             <Shield className="h-5 w-5 text-accent-600" />
             <span className="text-sm text-primary-700">
-              100% Diskretion bei der Vermittlung
+              100% Diskretion garantiert
             </span>
           </div>
           <div className="flex items-center gap-3">

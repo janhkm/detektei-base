@@ -6,34 +6,34 @@ import { clsx } from "clsx";
 
 const faqs = [
   {
-    question: "Was kostet die Vermittlung einer Detektei?",
+    question: "Ist die Erstberatung wirklich kostenlos?",
     answer:
-      "Die Vermittlung über Detektei Base ist für Sie komplett kostenfrei. Die Kosten für die eigentliche Detektiv-Dienstleistung werden individuell nach Fall und Aufwand mit der vermittelten Detektei vereinbart.",
+      "Ja, die Erstberatung bei Detektei Base ist für Sie komplett kostenfrei und unverbindlich. Die Kosten für die Ermittlung werden individuell nach Fall und Aufwand berechnet.",
   },
   {
-    question: "Wie finde ich eine seriöse Detektei?",
+    question: "Welche Leistungen bietet Detektei Base?",
     answer:
-      "Über Detektei Base werden Sie nur an geprüfte Partner-Detekteien vermittelt. Alle Partner haben eine Berufshaftpflichtversicherung und sind zur Einhaltung der DSGVO verpflichtet. So sparen Sie sich die aufwendige Recherche.",
+      "Wir bieten professionelle Privatdetektei (Untreue, Personensuche, Sorgerecht) und Wirtschaftsdetektei (Mitarbeiterüberprüfung, Krankfeierkontrolle, Betrugsermittlung). Zusätzlich arbeiten wir mit geprüften Partnern deutschlandweit.",
   },
   {
-    question: "Wie schnell werde ich an eine Detektei vermittelt?",
+    question: "Wie schnell können Ermittlungen beginnen?",
     answer:
-      "In der Regel erhalten Sie innerhalb von 24 Stunden (an Werktagen) einen Rückruf von einer passenden Partner-Detektei. In dringenden Fällen ist oft eine noch schnellere Vermittlung möglich.",
+      "In der Regel können wir innerhalb von 24 Stunden mit den Ermittlungen beginnen. In dringenden Fällen ist oft ein noch schnellerer Einsatz möglich.",
   },
   {
     question: "Werden meine Daten vertraulich behandelt?",
     answer:
-      "Ja, absolut. Wir behandeln alle Anfragen streng vertraulich. Ihre Daten werden nur an die eine ausgewählte Partner-Detektei weitergegeben, nicht an mehrere. Details finden Sie in unserer Datenschutzerklärung.",
+      "Ja, absolut. Wir behandeln alle Anfragen streng vertraulich. Diskretion ist bei uns oberstes Gebot. Details finden Sie in unserer Datenschutzerklärung.",
   },
   {
-    question: "In welchen Regionen vermitteln Sie Detekteien?",
+    question: "In welchen Regionen sind Sie tätig?",
     answer:
-      "Unser Netzwerk umfasst geprüfte Partner-Detekteien in ganz Deutschland. Egal ob in München, Berlin, Hamburg oder ländlichen Regionen – wir finden eine geeignete Detektei in Ihrer Nähe.",
+      "Detektei Base ist deutschlandweit tätig. Zusätzlich arbeiten wir mit geprüften Partnern in allen Bundesländern zusammen – von Großstädten bis ländliche Regionen.",
   },
   {
-    question: "Sind die Beweise einer Detektei vor Gericht verwertbar?",
+    question: "Sind die Beweise vor Gericht verwertbar?",
     answer:
-      "Ja, professionell gesicherte Beweise sind vor Gericht verwertbar, sofern sie legal beschafft wurden. Alle unsere Partner-Detekteien sind darauf spezialisiert, gerichtsfeste Dokumentationen zu erstellen.",
+      "Ja, professionell gesicherte Beweise sind vor Gericht verwertbar, sofern sie legal beschafft wurden. Wir sind darauf spezialisiert, gerichtsfeste Dokumentationen zu erstellen.",
   },
 ];
 
@@ -49,7 +49,7 @@ export function FAQSection() {
             Häufige Fragen
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-primary-900">
-            FAQ – Ihre Fragen zur Vermittlung
+            FAQ – Ihre Fragen beantwortet
           </h2>
         </div>
 

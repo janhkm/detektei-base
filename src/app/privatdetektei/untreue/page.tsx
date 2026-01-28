@@ -18,9 +18,9 @@ import { ProcessTimeline } from "@/components/einsatzgebiete/ProcessTimeline";
 import { generatePrivatdetekteiBreadcrumbSchema } from "@/lib/schemas/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Untreue aufdecken | Detektei für Fremdgehen finden",
+  title: "Untreue aufdecken | Privatdetektei für Fremdgehen",
   description:
-    "Verdacht auf Untreue? Finden Sie eine spezialisierte Detektei für diskrete Ermittlungen. ✓ Geprüfte Partner ✓ Gerichtsverwertbare Beweise ✓ Kostenlose Vermittlung.",
+    "Verdacht auf Untreue? Detektei Base führt diskrete Ermittlungen durch. ✓ Gerichtsverwertbare Beweise ✓ Rund um die Uhr erreichbar ✓ Zusätzlich geprüfte Partner.",
 };
 
 const anzeichen = [
@@ -53,7 +53,7 @@ const faqs = [
   {
     question: "Was kostet eine Untreue-Ermittlung?",
     answer:
-      "Die Kosten liegen typischerweise bei 60-150€ pro Stunde bzw. 800-1.500€ pro Observationstag. Sie erhalten von der Detektei vorab einen transparenten Kostenvoranschlag. Unsere Vermittlung ist kostenlos.",
+      "Die Kosten liegen typischerweise bei 60-150€ pro Stunde bzw. 800-1.500€ pro Observationstag. Sie erhalten von der Detektei vorab einen transparenten Kostenvoranschlag. Die Erstberatung ist kostenlos.",
   },
   {
     question: "Erfährt mein Partner von der Ermittlung?",
@@ -61,14 +61,14 @@ const faqs = [
       "Nein, absolute Diskretion ist garantiert. Professionelle Detektive arbeiten verdeckt und unauffällig. Ihr Partner erfährt nichts von der Observation – weder während noch nach der Ermittlung.",
   },
   {
-    question: "Wie finde ich die richtige Detektei für Untreue-Ermittlungen?",
+    question: "Wie beauftrage ich eine Detektei für Untreue-Ermittlungen?",
     answer:
-      "Über Detektei Base werden Sie kostenlos an eine geprüfte Partner-Detektei vermittelt, die auf Untreue-Ermittlungen spezialisiert ist. Alle Partner sind erfahren und von uns geprüft.",
+      "Rufen Sie Detektei Base an – wir sind rund um die Uhr erreichbar. Wir führen professionelle Untreue-Ermittlungen durch und arbeiten zusätzlich mit geprüften Partnern deutschlandweit zusammen.",
   },
 ];
 
 const prices = [
-  { service: "Vermittlung über Detektei Base", priceRange: "Kostenlos", duration: "-" },
+  { service: "Erstberatung bei Detektei Base", priceRange: "Kostenlos", duration: "-" },
   { service: "Observation (Stunde)", priceRange: "60-150€", duration: "-" },
   { service: "Observation (Tag)", priceRange: "800-1.500€", duration: "8-12h" },
   { service: "Ermittlungsbericht", priceRange: "Meist inklusive", duration: "-" },
@@ -97,16 +97,15 @@ export default function UntreuePage() {
           <div className="mt-8 max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-white/90 backdrop-blur-sm mb-6">
               <Heart className="h-4 w-4 text-accent-400" />
-              <span>Spezialisierte Partner-Detekteien</span>
+              <span>Privatdetektei</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-white leading-tight">
-              Untreue aufdecken – Die richtige Detektei finden
+              Untreue aufdecken – Professionelle Ermittlungen
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed">
-              Der Verdacht auf <strong>Untreue</strong> belastet. Statt selbst zu 
-              ermitteln, lassen Sie sich an eine <strong>spezialisierte Detektei</strong> 
-              vermitteln. Professionelle Ermittler liefern Ihnen diskret und legal 
-              gerichtsverwertbare Beweise.
+              Der Verdacht auf <strong>Untreue</strong> belastet. <strong>Detektei Base</strong> führt 
+              professionelle Ermittlungen durch und liefert Ihnen diskret und legal 
+              gerichtsverwertbare Beweise. Zusätzlich arbeiten wir mit geprüften Partnern.
             </p>
           </div>
         </div>
@@ -122,7 +121,7 @@ export default function UntreuePage() {
                 items={[
                   "<strong>Methode:</strong> Diskrete Observation mit Foto-/Videodokumentation",
                   "<strong>Dauer:</strong> Meist 2-5 Observationstage für Klarheit",
-                  "<strong>Kosten:</strong> 800-1.500€/Tag, Vermittlung kostenlos",
+                  "<strong>Kosten:</strong> 800-1.500€/Tag, Erstberatung kostenlos",
                   "<strong>Ergebnis:</strong> Gerichtsverwertbarer Ermittlungsbericht",
                 ]}
               />
@@ -209,7 +208,7 @@ export default function UntreuePage() {
                 <p className="text-primary-600 mb-6">
                   <strong>Kurz:</strong> Eine Untreue-Ermittlung kostet typischerweise 
                   800-1.500€ pro Observationstag. Die genauen Kosten vereinbaren Sie 
-                  direkt mit der Detektei – unsere Vermittlung ist für Sie kostenlos.
+                  direkt mit der Detektei – die Erstberatung ist für Sie kostenlos.
                 </p>
                 <PriceTable prices={prices} />
               </div>
@@ -250,11 +249,11 @@ export default function UntreuePage() {
 
                 <div className="bg-accent-50 rounded-xl p-6 border border-accent-200">
                   <h3 className="font-display font-bold text-primary-900 mb-2">
-                    Kostenlose Vermittlung
+                    Rund um die Uhr erreichbar
                   </h3>
                   <p className="text-sm text-primary-600">
-                    Wir vermitteln Sie kostenlos an eine geprüfte Detektei, die 
-                    auf Untreue-Ermittlungen spezialisiert ist. Ihre Anfrage wird 
+                    Wir arbeiten mit geprüften Detekteien zusammen, die 
+                    auf Untreue-Ermittlungen spezialisiert sind. Ihre Anfrage wird 
                     100% vertraulich behandelt.
                   </p>
                 </div>
@@ -277,7 +276,7 @@ export default function UntreuePage() {
                     </li>
                     <li>
                       <Link href="/ablauf" className="text-primary-600 hover:text-primary-900 transition-colors">
-                        → So funktioniert die Vermittlung
+                        → So funktioniert es
                       </Link>
                     </li>
                     <li>

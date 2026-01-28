@@ -11,152 +11,152 @@ type AnswerGenerator = (name: string, extra?: string) => string;
 
 // --- KOSTEN FRAGE ---
 const KOSTEN_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Die Kosten für einen Privatdetektiv in ${name} werden individuell nach Fall und Aufwand berechnet. Faktoren wie Ermittlungsdauer, Komplexität und benötigte Ressourcen fließen in die Kalkulation ein. Über Detektei Base erhalten Sie ein unverbindliches Angebot – die Vermittlung ist kostenlos.`,
+  (name) => `Die Kosten für einen Privatdetektiv in ${name} werden individuell nach Fall und Aufwand berechnet. Faktoren wie Ermittlungsdauer, Komplexität und benötigte Ressourcen fließen in die Kalkulation ein. Detektei Base bietet Ihnen ein unverbindliches Angebot – die Erstberatung ist kostenlos.`,
   
-  (name) => `Detektivkosten in ${name} hängen vom konkreten Auftrag ab: Art der Ermittlung, Dauer und Aufwand bestimmen den Preis. Detektei Base vermittelt Sie kostenlos an geprüfte Partner-Detekteien, die Ihnen ein individuelles Angebot erstellen.`,
+  (name) => `Detektivkosten in ${name} hängen vom konkreten Auftrag ab: Art der Ermittlung, Dauer und Aufwand bestimmen den Preis. Bei Detektei Base erhalten Sie ein individuelles Angebot nach der kostenlosen Erstberatung.`,
   
-  (name) => `In ${name} werden die Detektivkosten individuell kalkuliert – je nach Ermittlungsart, Dauer und Komplexität Ihres Falls. Die Erstberatung und Vermittlung über Detektei Base ist für Sie kostenlos.`,
+  (name) => `In ${name} werden die Detektivkosten individuell kalkuliert – je nach Ermittlungsart, Dauer und Komplexität Ihres Falls. Die Erstberatung bei Detektei Base ist kostenlos.`,
   
-  (name) => `Die Kosten für Ermittlungen in ${name} richten sich nach dem individuellen Aufwand. Im kostenlosen Erstgespräch erhalten Sie eine transparente Einschätzung. Detektei Base vermittelt Sie an passende Partner – unverbindlich und kostenlos.`,
+  (name) => `Die Kosten für Ermittlungen in ${name} richten sich nach dem individuellen Aufwand. Im kostenlosen Erstgespräch erhalten Sie eine transparente Einschätzung von Detektei Base.`,
   
-  (name) => `Was kostet ein Detektiv in ${name}? Das hängt von Ihrem individuellen Fall ab – Auftragsart, Dauer und Komplexität bestimmen den Preis. Detektei Base vermittelt Sie kostenlos an passende Partner-Detekteien.`,
+  (name) => `Was kostet ein Detektiv in ${name}? Das hängt von Ihrem individuellen Fall ab – Auftragsart, Dauer und Komplexität bestimmen den Preis. Detektei Base berät Sie kostenlos.`,
   
-  (name) => `Die Ermittlungskosten in ${name} werden nach individuellem Aufwand berechnet. Jeder Fall ist anders – daher erstellen Partner-Detekteien Ihnen ein maßgeschneidertes Angebot. Die Vermittlung über Detektei Base ist kostenlos.`,
+  (name) => `Die Ermittlungskosten in ${name} werden nach individuellem Aufwand berechnet. Jeder Fall ist anders – daher erstellen wir Ihnen ein maßgeschneidertes Angebot. Die Erstberatung ist kostenlos.`,
 ];
 
 // --- SERIÖSER DETEKTIV FRAGE ---
 const SERIOES_VARIANTEN: AnswerGenerator[] = [
-  () => `Achten Sie auf: Mitgliedschaft in Berufsverbänden (BDD, BVPD), transparente Preisgestaltung mit schriftlichem Kostenvoranschlag, langjährige Erfahrung und professionelle Kommunikation. Detektei Base vermittelt nur geprüfte Partner.`,
+  () => `Achten Sie auf: Mitgliedschaft in Berufsverbänden (BDD, BVPD), transparente Preisgestaltung mit schriftlichem Kostenvoranschlag, langjährige Erfahrung und professionelle Kommunikation. Detektei Base erfüllt alle diese Kriterien.`,
   
-  () => `Seriöse Detekteien erkennen Sie an: Gewerbezulassung, transparente Preise ohne Vorauskasse, schriftliche Verträge. Alle Partner-Detekteien von Detektei Base erfüllen diese Kriterien. Jetzt anrufen.`,
+  () => `Seriöse Detekteien erkennen Sie an: Gewerbezulassung, transparente Preise ohne Vorauskasse, schriftliche Verträge. Detektei Base bietet professionelle Ermittlungen mit höchsten Qualitätsstandards.`,
   
-  () => `Prüfen Sie: Gibt es einen schriftlichen Vertrag? Sind die Kosten transparent? Hat die Detektei Erfahrung? Detektei Base arbeitet nur mit Partnern zusammen, die alle Qualitätskriterien erfüllen.`,
+  () => `Prüfen Sie: Gibt es einen schriftlichen Vertrag? Sind die Kosten transparent? Hat die Detektei Erfahrung? Detektei Base arbeitet mit transparenten Preisen und klaren Verträgen.`,
   
-  () => `Merkmale seriöser Detekteien: Berufshaftpflicht, transparente Preise, schriftliche Auftragsbestätigung, langjährige Erfahrung. Detektei Base prüft alle Partner-Detekteien auf diese Kriterien.`,
+  () => `Merkmale seriöser Detekteien: Berufshaftpflicht, transparente Preise, schriftliche Auftragsbestätigung, langjährige Erfahrung. Detektei Base erfüllt alle Qualitätskriterien.`,
   
-  () => `Eine gute Detektei bietet: Transparente Kostenaufstellung, schriftlichen Vertrag und realistische Einschätzungen. Detektei Base vermittelt Sie an Detekteien, die diese Standards erfüllen. Jetzt anrufen.`,
+  () => `Eine gute Detektei bietet: Transparente Kostenaufstellung, schriftlichen Vertrag und realistische Einschätzungen. Detektei Base steht für professionelle, diskrete Ermittlungen.`,
 ];
 
 // --- GERICHTSVERWERTBARKEIT FRAGE ---
 const GERICHT_VARIANTEN: AnswerGenerator[] = [
   () => `Ja, professionell gesicherte Beweise sind vor Gericht verwertbar, sofern sie legal im Rahmen der Jedermannsrechte beschafft wurden. Das gilt für Observationsberichte, Fotos aus dem öffentlichen Raum und Zeugenaussagen.`,
   
-  () => `Die Beweise professioneller Detekteien sind gerichtsverwertbar. Seriöse Detekteien arbeiten ausschließlich mit legalen Methoden und dokumentieren alle Ermittlungen so, dass sie vor Zivil- und Arbeitsgerichten Bestand haben.`,
+  () => `Die Beweise von Detektei Base sind gerichtsverwertbar. Wir arbeiten ausschließlich mit legalen Methoden und dokumentieren alle Ermittlungen so, dass sie vor Zivil- und Arbeitsgerichten Bestand haben.`,
   
-  () => `Ja, wenn sie legal erhoben wurden. Professionelle Detektive sind in gerichtsfester Dokumentation geschult. Observationsberichte und Fotomaterial werden von Gerichten als Beweismittel anerkannt.`,
+  () => `Ja, wenn sie legal erhoben wurden. Unsere Ermittler sind in gerichtsfester Dokumentation geschult. Observationsberichte und Fotomaterial werden von Gerichten als Beweismittel anerkannt.`,
   
   () => `Gerichtsverwertbar sind: Observationsberichte, Fotos/Videos aus dem öffentlichen Raum, Zeugenaussagen der Detektive. Alle Ermittlungen erfolgen im Rahmen der Jedermannsrechte.`,
   
-  () => `Die von Detekteien gesicherten Beweise können Sie in rechtlichen Verfahren verwenden. Professionelle Ermittler achten streng auf legale Methoden und lückenlose Dokumentation.`,
+  () => `Die von Detektei Base gesicherten Beweise können Sie in rechtlichen Verfahren verwenden. Wir achten streng auf legale Methoden und lückenlose Dokumentation.`,
 ];
 
 // --- SCHNELLIGKEIT FRAGE ---
 const SCHNELL_VARIANTEN: AnswerGenerator[] = [
-  (name) => `In dringenden Fällen kann eine Detektei innerhalb von 24 Stunden in ${name} mit den Ermittlungen beginnen. Detektei Base vermittelt Sie schnell an einsatzbereite Partner-Detekteien vor Ort.`,
+  (name) => `In dringenden Fällen kann Detektei Base innerhalb von 24 Stunden in ${name} mit den Ermittlungen beginnen. Wir sind schnell einsatzbereit – deutschlandweit.`,
   
-  (name) => `Schnelle Vermittlung in ${name}: Detektei Base findet kurzfristig verfügbare Partner-Detekteien. Bei Eilaufträgen können Ermittlungen oft schon am nächsten Tag starten.`,
+  (name) => `Schnelle Reaktionszeit in ${name}: Detektei Base kann bei Eilaufträgen oft schon am nächsten Tag mit Ermittlungen starten.`,
   
-  (name) => `In ${name} sind Partner-Detekteien kurzfristig verfügbar. Bei dringenden Fällen können Ermittlungen oft schon am nächsten Tag beginnen. Detektei Base vermittelt Sie schnell.`,
+  (name) => `In ${name} sind wir kurzfristig verfügbar. Bei dringenden Fällen können Ermittlungen oft schon am nächsten Tag beginnen.`,
   
-  (name) => `Schnelle Reaktionszeiten in ${name}: Durch das Netzwerk von Detektei Base sind Partner-Detekteien meist innerhalb von 24-48 Stunden einsatzbereit.`,
+  (name) => `Schnelle Reaktionszeiten in ${name}: Detektei Base ist meist innerhalb von 24-48 Stunden einsatzbereit.`,
   
-  (name) => `Schnellstart möglich: In ${name} können Partner-Detekteien nach Auftragserteilung kurzfristig beginnen. Das Netzwerk von Detektei Base ermöglicht flexible Einsatzplanung.`,
+  (name) => `Schnellstart möglich: In ${name} können wir nach Auftragserteilung kurzfristig beginnen. Detektei Base bietet flexible Einsatzplanung.`,
 ];
 
 // --- LEISTUNGEN FRAGE ---
 const LEISTUNGEN_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Detektei Base vermittelt in ${name} Partner-Detekteien für Privatermittlungen (Untreue, Personensuche, Unterhaltsermittlungen) und Wirtschaftsermittlungen (Mitarbeiterüberprüfung, Krankfeierkontrolle, Diebstahlermittlung).`,
+  (name) => `Detektei Base bietet in ${name}: Privatdetektei (Untreue, Personensuche, Unterhaltsermittlungen) und Wirtschaftsdetektei (Mitarbeiterüberprüfung, Krankfeierkontrolle, Diebstahlermittlung).`,
   
-  (name) => `In ${name} vermittelt Detektei Base Partner für das komplette Spektrum: Privatdetektei (Untreue, Sorgerecht, Stalking) und Wirtschaftsdetektei (Mitarbeiterüberprüfung, Krankfeierkontrolle, Betrugsermittlung).`,
+  (name) => `In ${name} führt Detektei Base das komplette Ermittlungsspektrum durch: Privatdetektei (Untreue, Sorgerecht, Stalking) und Wirtschaftsdetektei (Mitarbeiterüberprüfung, Krankfeierkontrolle, Betrugsermittlung).`,
   
-  (name) => `Leistungsspektrum unserer Partner in ${name}: Privat – Untreue aufdecken, Personen finden, Sorgerecht. Geschäftlich – Mitarbeiter-Checks, Krankfeier, Wirtschaftsdelikte. Alles diskret und legal.`,
+  (name) => `Leistungsspektrum in ${name}: Privat – Untreue aufdecken, Personen finden, Sorgerecht. Geschäftlich – Mitarbeiter-Checks, Krankfeier, Wirtschaftsdelikte. Alles diskret und legal.`,
   
-  (name) => `Partner-Detekteien in ${name} ermitteln bei: Fremdgehensverdacht, vermissten Personen, Unterhaltsstreitigkeiten, Mitarbeiterbetrug, simulierter Krankheit und Diebstahl. Detektei Base vermittelt den passenden Experten.`,
+  (name) => `Detektei Base ermittelt in ${name} bei: Fremdgehensverdacht, vermissten Personen, Unterhaltsstreitigkeiten, Mitarbeiterbetrug, simulierter Krankheit und Diebstahl.`,
   
-  (name) => `Das komplette Ermittlungsspektrum in ${name}: Von der Untreue-Observation über Adressermittlung bis zur Wirtschaftsdetektei. Detektei Base findet die passende Partner-Detektei.`,
+  (name) => `Das komplette Ermittlungsspektrum in ${name}: Von der Untreue-Observation über Adressermittlung bis zur Wirtschaftsdetektei – Detektei Base ist Ihr Ansprechpartner.`,
 ];
 
 // --- DISKRETION FRAGE ---
 const DISKRETION_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Ja, absolute Diskretion ist das Fundament professioneller Detektivarbeit. Partner-Detekteien in ${name} arbeiten verdeckt und unauffällig. Ihre Identität und der Ermittlungsauftrag bleiben stets geschützt.`,
+  (name) => `Ja, absolute Diskretion ist das Fundament professioneller Detektivarbeit. Detektei Base arbeitet in ${name} verdeckt und unauffällig. Ihre Identität und der Ermittlungsauftrag bleiben stets geschützt.`,
   
-  (name) => `Diskretion in ${name} garantiert: Ihre Anfrage wird vertraulich behandelt. Professionelle Detekteien arbeiten unauffällig, und alle Ergebnisse gehen ausschließlich an Sie.`,
+  (name) => `Diskretion in ${name} garantiert: Ihre Anfrage wird vertraulich behandelt. Wir arbeiten unauffällig, und alle Ergebnisse gehen ausschließlich an Sie.`,
   
-  (name) => `In ${name} arbeiten professionelle Detekteien mit höchster Diskretion. Niemand erfährt von der Ermittlung – weder die Zielperson noch Dritte. Vertraulichkeit ist oberstes Gebot.`,
+  (name) => `In ${name} arbeiten wir mit höchster Diskretion. Niemand erfährt von der Ermittlung – weder die Zielperson noch Dritte. Vertraulichkeit ist oberstes Gebot.`,
   
-  (name) => `100% diskret in ${name}: Professionelle Detekteien nutzen verdeckte Arbeitsmethoden ohne Rückverfolgung zu Ihnen. Detektei Base vermittelt nur seriöse, diskrete Partner.`,
+  (name) => `100% diskret in ${name}: Detektei Base nutzt verdeckte Arbeitsmethoden ohne Rückverfolgung zu Ihnen.`,
   
-  (name) => `Vertraulichkeit in ${name} ist selbstverständlich: Professionelle Detektive agieren im Verborgenen, Ihre Daten werden geschützt, der Auftrag bleibt geheim.`,
+  (name) => `Vertraulichkeit in ${name} ist selbstverständlich: Wir agieren im Verborgenen, Ihre Daten werden geschützt, der Auftrag bleibt geheim.`,
 ];
 
 // --- ANONYME BEAUFTRAGUNG FRAGE ---
 const ANONYM_VARIANTEN: AnswerGenerator[] = [
-  () => `Beim ersten Anruf bei Detektei Base können Sie anonym bleiben. Schildern Sie Ihren Fall ohne Ihren Namen zu nennen. Erst bei der Vermittlung an eine Partner-Detektei werden Kontaktdaten benötigt – diese werden vertraulich behandelt.`,
+  () => `Beim ersten Anruf bei Detektei Base können Sie anonym bleiben. Schildern Sie Ihren Fall ohne Ihren Namen zu nennen. Für die Beauftragung werden dann Kontaktdaten benötigt – diese werden vertraulich behandelt.`,
   
-  () => `Anonymer Anruf ist möglich. Kontaktieren Sie Detektei Base, ohne sich vorzustellen. Für die Vermittlung an eine Detektei werden später Kontaktdaten benötigt – alle Daten werden vertraulich behandelt.`,
+  () => `Anonymer Anruf ist möglich. Kontaktieren Sie Detektei Base, ohne sich vorzustellen. Für die Beauftragung werden später Kontaktdaten benötigt – alle Daten werden vertraulich behandelt.`,
   
-  () => `Sie können Detektei Base anonym kontaktieren und Ihre Situation schildern. Die Beratung erfolgt ohne Verpflichtung. Für eine Vermittlung sind dann Kontaktdaten nötig, die streng vertraulich behandelt werden.`,
+  () => `Sie können Detektei Base anonym kontaktieren und Ihre Situation schildern. Die Beratung erfolgt ohne Verpflichtung. Für eine Beauftragung sind dann Kontaktdaten nötig, die streng vertraulich behandelt werden.`,
   
-  () => `Erster Anruf anonym: Ja. Kontaktieren Sie Detektei Base und schildern Sie den Fall, ohne sich zu identifizieren. Für eine Vermittlung werden später Kontaktdaten benötigt – alle Daten werden vertraulich behandelt.`,
+  () => `Erster Anruf anonym: Ja. Kontaktieren Sie Detektei Base und schildern Sie den Fall, ohne sich zu identifizieren. Für eine Beauftragung werden später Kontaktdaten benötigt.`,
   
-  () => `Anonymität ist wichtig. Beim ersten Anruf bei Detektei Base müssen Sie sich nicht identifizieren. Erst für die Vermittlung an eine Partner-Detektei werden Ihre (vertraulichen) Daten benötigt.`,
+  () => `Anonymität ist wichtig. Beim ersten Anruf bei Detektei Base müssen Sie sich nicht identifizieren. Erst für die Beauftragung werden Ihre (vertraulichen) Kontaktdaten benötigt.`,
 ];
 
 // --- KONTAKT FRAGE ---
 const KONTAKT_VARIANTEN: AnswerGenerator[] = [
-  () => `Sie erreichen Detektei Base telefonisch unter 0176 66918653 (Mo-Fr 8-20 Uhr, Sa 9-16 Uhr) oder per E-Mail. Nutzen Sie auch das Kontaktformular für eine unverbindliche Anfrage zur Vermittlung.`,
+  () => `Sie erreichen Detektei Base telefonisch unter 0176 66918653 (Mo-Fr 8-20 Uhr, Sa 9-16 Uhr) oder per E-Mail. Nutzen Sie auch das Kontaktformular für eine unverbindliche Anfrage.`,
   
-  () => `Kontakt Detektei Base: Telefon 0176 66918653 (werktags 8-20 Uhr, samstags 9-16 Uhr), E-Mail oder Kontaktformular. Die Beratung und Vermittlung ist kostenlos und vertraulich.`,
+  () => `Kontakt Detektei Base: Telefon 0176 66918653 (werktags 8-20 Uhr, samstags 9-16 Uhr), E-Mail oder Kontaktformular. Die Erstberatung ist kostenlos und vertraulich.`,
   
-  () => `Rufen Sie Detektei Base an: 0176 66918653. Die Berater sind Mo-Fr 8-20 Uhr und Sa 9-16 Uhr für Sie da. Oder schreiben Sie – wir vermitteln diskret an passende Partner-Detekteien.`,
+  () => `Rufen Sie Detektei Base an: 0176 66918653. Wir sind Mo-Fr 8-20 Uhr und Sa 9-16 Uhr für Sie da. Oder schreiben Sie – wir beraten Sie diskret.`,
   
-  () => `Detektei Base ist erreichbar unter 0176 66918653 (Montag bis Freitag 8-20 Uhr, Samstag 9-16 Uhr). Alternativ nutzen Sie das Kontaktformular für eine diskrete Vermittlungsanfrage.`,
+  () => `Detektei Base ist erreichbar unter 0176 66918653 (Montag bis Freitag 8-20 Uhr, Samstag 9-16 Uhr). Alternativ nutzen Sie das Kontaktformular für eine diskrete Anfrage.`,
   
-  () => `Ihr Draht zu Detektei Base: 0176 66918653. Erreichbarkeit Mo-Fr 8-20, Sa 9-16 Uhr. Per E-Mail oder Formular erreichen Sie uns rund um die Uhr – Vermittlung binnen 24h.`,
+  () => `Ihr Draht zu Detektei Base: 0176 66918653. Erreichbarkeit Mo-Fr 8-20, Sa 9-16 Uhr. Per E-Mail oder Formular erreichen Sie uns rund um die Uhr – Rückmeldung binnen 24h.`,
 ];
 
 // --- DAUER FRAGE ---
 const DAUER_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Die Dauer einer Ermittlung in ${name} hängt vom Fall ab: Einfache Fälle klären sich oft in 2-3 Tagen, komplexere Ermittlungen können 1-2 Wochen dauern. Die Partner-Detektei berät Sie vorab zur realistischen Zeitplanung.`,
+  (name) => `Die Dauer einer Ermittlung in ${name} hängt vom Fall ab: Einfache Fälle klären sich oft in 2-3 Tagen, komplexere Ermittlungen können 1-2 Wochen dauern. Detektei Base berät Sie vorab zur realistischen Zeitplanung.`,
   
-  (name) => `Wie lange dauert eine Ermittlung in ${name}? Das variiert: Manche Observationen bringen schon am ersten Tag Ergebnisse, andere benötigen eine Woche oder mehr. Die Detektei berät Sie vorab realistisch.`,
+  (name) => `Wie lange dauert eine Ermittlung in ${name}? Das variiert: Manche Observationen bringen schon am ersten Tag Ergebnisse, andere benötigen eine Woche oder mehr. Wir beraten Sie vorab realistisch.`,
   
-  (name) => `In ${name} rechnen Sie je nach Auftragsart mit 2-10 Tagen. Die tatsächliche Dauer bespricht die vermittelte Detektei nach Analyse Ihres Falls – transparent und ehrlich.`,
+  (name) => `In ${name} rechnen Sie je nach Auftragsart mit 2-10 Tagen. Die tatsächliche Dauer besprechen wir nach Analyse Ihres Falls – transparent und ehrlich.`,
   
-  (name) => `Ermittlungsdauer in ${name}: Privatdetektei-Fälle dauern typischerweise 3-7 Tage, Wirtschaftsdetektei-Fälle 5-14 Tage. Bei eiligen Fällen vermittelt Detektei Base priorisiert.`,
+  (name) => `Ermittlungsdauer in ${name}: Privatdetektei-Fälle dauern typischerweise 3-7 Tage, Wirtschaftsdetektei-Fälle 5-14 Tage. Bei eiligen Fällen reagieren wir schnell.`,
 ];
 
 // --- KEINE BEWEISE FRAGE ---
 const KEINE_BEWEISE_VARIANTEN: AnswerGenerator[] = [
-  () => `Wenn die Detektei keine Beweise findet, ist das auch ein Ergebnis – und manchmal das bessere. Sie zahlen für die Arbeit, nicht für ein bestimmtes Ergebnis. Detekteien dokumentieren, was sie beobachten – auch wenn das "nichts Auffälliges" ist.`,
+  () => `Wenn keine Beweise gefunden werden, ist das auch ein Ergebnis – und manchmal das bessere. Sie zahlen für die Arbeit, nicht für ein bestimmtes Ergebnis. Wir dokumentieren, was wir beobachten – auch wenn das "nichts Auffälliges" ist.`,
   
-  () => `Keine Garantie für Ergebnisse, aber Garantie für professionelle Arbeit: Wenn die Zielperson sich im Beobachtungszeitraum unauffällig verhält, dokumentiert die Detektei das. Oft ist auch das eine wertvolle Information.`,
+  () => `Keine Garantie für Ergebnisse, aber Garantie für professionelle Arbeit: Wenn die Zielperson sich im Beobachtungszeitraum unauffällig verhält, dokumentieren wir das. Oft ist auch das eine wertvolle Information.`,
   
   () => `Seriöse Detekteien versprechen keine Ergebnisse, sondern professionelle Ermittlung. Wenn nichts gefunden wird, könnte der Verdacht unbegründet sein – oder die Zielperson war im Beobachtungszeitraum vorsichtig.`,
   
-  () => `Seriöse Detekteien versprechen Methoden, keine Ergebnisse. Wenn die Observation keine Beweise erbringt, wird das transparent dokumentiert. Manchmal ist "nichts gefunden" die beste Nachricht.`,
+  () => `Detektei Base verspricht Methoden, keine Ergebnisse. Wenn die Observation keine Beweise erbringt, wird das transparent dokumentiert. Manchmal ist "nichts gefunden" die beste Nachricht.`,
 ];
 
 // --- ZEUGE VOR GERICHT FRAGE ---
 const ZEUGE_VARIANTEN: AnswerGenerator[] = [
-  () => `Ja, professionelle Detektive können als Zeugen vor Gericht aussagen. Seriöse Detekteien sind darauf vorbereitet und haben Erfahrung mit Vernehmungen. Die Dokumentation ist so angelegt, dass sie die Aussage stützt.`,
+  () => `Ja, unsere Detektive können als Zeugen vor Gericht aussagen. Wir sind darauf vorbereitet und haben Erfahrung mit Vernehmungen. Die Dokumentation ist so angelegt, dass sie die Aussage stützt.`,
   
-  () => `Selbstverständlich stehen Detektive als Zeugen zur Verfügung. Die gerichtsfeste Dokumentation und die persönliche Aussage des Detektivs ergänzen sich und erhöhen die Beweiskraft.`,
+  () => `Selbstverständlich stehen unsere Ermittler als Zeugen zur Verfügung. Die gerichtsfeste Dokumentation und die persönliche Aussage des Detektivs ergänzen sich und erhöhen die Beweiskraft.`,
   
-  () => `Ja, bei Bedarf sagen Detektive vor Gericht aus. Das ist Teil des Service professioneller Detekteien. Erfahrene Ermittler kennen sich mit Vernehmungen und Gerichtsverfahren aus.`,
+  () => `Ja, bei Bedarf sagen unsere Detektive vor Gericht aus. Das ist Teil unseres Service. Erfahrene Ermittler kennen sich mit Vernehmungen und Gerichtsverfahren aus.`,
   
-  () => `Detektive können Sie als Zeugen benennen. Professionelle Detekteien dokumentieren Beobachtungen so, dass sie auch Jahre später präzise wiedergegeben werden können. Gerichtserfahrung ist Standard.`,
+  () => `Sie können unsere Ermittler als Zeugen benennen. Wir dokumentieren Beobachtungen so, dass sie auch Jahre später präzise wiedergegeben werden können. Gerichtserfahrung ist Standard.`,
 ];
 
 // --- FORTSCHRITT FRAGE ---
 const FORTSCHRITT_VARIANTEN: AnswerGenerator[] = [
-  () => `Die Detektei hält Sie regelmäßig auf dem Laufenden – je nach Wunsch täglich oder nach Abschluss wichtiger Phasen. Bei dringenden Erkenntnissen werden Sie sofort informiert. Alle Berichte erfolgen über sichere Kanäle.`,
+  () => `Wir halten Sie regelmäßig auf dem Laufenden – je nach Wunsch täglich oder nach Abschluss wichtiger Phasen. Bei dringenden Erkenntnissen werden Sie sofort informiert. Alle Berichte erfolgen über sichere Kanäle.`,
   
-  () => `Updates erhalten Sie nach Vereinbarung mit der Detektei: telefonisch, per verschlüsselter E-Mail oder persönlich. Bei wichtigen Entwicklungen werden Sie sofort informiert. Diskretion hat dabei höchste Priorität.`,
+  () => `Updates erhalten Sie nach Vereinbarung: telefonisch, per verschlüsselter E-Mail oder persönlich. Bei wichtigen Entwicklungen werden Sie sofort informiert. Diskretion hat dabei höchste Priorität.`,
   
-  () => `Über den Fortschritt informiert die Detektei Sie regelmäßig und diskret. Wann und wie oft wird vorab besprochen. Bei eiligen Erkenntnissen werden Sie umgehend kontaktiert – sicher und vertraulich.`,
+  () => `Über den Fortschritt informieren wir Sie regelmäßig und diskret. Wann und wie oft wird vorab besprochen. Bei eiligen Erkenntnissen werden Sie umgehend kontaktiert – sicher und vertraulich.`,
   
-  () => `Sie bleiben informiert: Regelmäßige Statusberichte, sofortige Meldung bei wichtigen Erkenntnissen. Die Kommunikation erfolgt ausschließlich über vereinbarte, sichere Kanäle zwischen Ihnen und der Detektei.`,
+  () => `Sie bleiben informiert: Regelmäßige Statusberichte, sofortige Meldung bei wichtigen Erkenntnissen. Die Kommunikation erfolgt ausschließlich über vereinbarte, sichere Kanäle.`,
 ];
 
 // ============================================================================
@@ -188,11 +188,11 @@ export function getStadtFAQs(stadt: Stadt, bundesland: Bundesland): FAQ[] {
       answer: SCHNELL_VARIANTEN[getVariantIndex(seed + "schnell", SCHNELL_VARIANTEN.length)](name),
     },
     {
-      question: `Welche Ermittlungen führt die Detektei in ${name} durch?`,
+      question: `Welche Ermittlungen führt Detektei Base in ${name} durch?`,
       answer: LEISTUNGEN_VARIANTEN[getVariantIndex(seed + "leistungen", LEISTUNGEN_VARIANTEN.length)](name),
     },
     {
-      question: `Arbeitet die Detektei diskret in ${name}?`,
+      question: `Arbeitet Detektei Base diskret in ${name}?`,
       answer: DISKRETION_VARIANTEN[getVariantIndex(seed + "diskret", DISKRETION_VARIANTEN.length)](name),
     },
     {
@@ -212,11 +212,11 @@ export function getStadtFAQs(stadt: Stadt, bundesland: Bundesland): FAQ[] {
       answer: FORTSCHRITT_VARIANTEN[getVariantIndex(seed + "fortschritt", FORTSCHRITT_VARIANTEN.length)](name),
     },
     {
-      question: `Kann ich die Detektei in ${name} auch anonym beauftragen?`,
+      question: `Kann ich Detektei Base in ${name} auch anonym beauftragen?`,
       answer: ANONYM_VARIANTEN[getVariantIndex(seed + "anonym", ANONYM_VARIANTEN.length)](name),
     },
     {
-      question: `Wie kontaktiere ich die Detektei in ${name}?`,
+      question: `Wie kontaktiere ich Detektei Base in ${name}?`,
       answer: KONTAKT_VARIANTEN[getVariantIndex(seed + "kontakt", KONTAKT_VARIANTEN.length)](name),
     },
   ];
@@ -224,35 +224,35 @@ export function getStadtFAQs(stadt: Stadt, bundesland: Bundesland): FAQ[] {
 
 // --- LANDKREIS SPEZIFISCHE VARIANTEN ---
 const LK_STAEDTE_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Detektei Base vermittelt Partner-Detekteien im gesamten ${name}. Alle größeren Städte sowie kleinere Gemeinden werden abgedeckt. Die genaue Auflistung der Einsatzorte finden Sie auf dieser Seite.`,
+  (name) => `Detektei Base ist im gesamten ${name} tätig. Alle größeren Städte sowie kleinere Gemeinden werden abgedeckt. Die genaue Auflistung der Einsatzorte finden Sie auf dieser Seite.`,
   
-  (name) => `Im ${name} vermittelt Detektei Base Partner flächendeckend. Alle Städte und Gemeinden werden abgedeckt – von der Kreisstadt bis zu ländlichen Ortschaften.`,
+  (name) => `Im ${name} ist Detektei Base flächendeckend tätig. Alle Städte und Gemeinden werden abgedeckt – von der Kreisstadt bis zu ländlichen Ortschaften.`,
   
-  (name) => `Detektei Base vermittelt im gesamten ${name}. Ob in der Kreisstadt oder in kleineren Gemeinden – Partner-Detekteien sind vor Ort verfügbar.`,
+  (name) => `Detektei Base ermittelt im gesamten ${name}. Ob in der Kreisstadt oder in kleineren Gemeinden – wir sind vor Ort verfügbar.`,
   
-  (name) => `Der ${name} wird vollständig abgedeckt. Detektei Base vermittelt Partner in allen Städten. Eine Übersicht finden Sie unten.`,
+  (name) => `Der ${name} wird vollständig abgedeckt. Detektei Base ist in allen Städten tätig. Eine Übersicht finden Sie unten.`,
   
-  (name) => `Flächendeckend im ${name}: Detektei Base vermittelt Partner-Detekteien in allen Städten und Gemeinden des Landkreises. Scrollen Sie nach unten für eine Übersicht.`,
+  (name) => `Flächendeckend im ${name}: Detektei Base führt Ermittlungen in allen Städten und Gemeinden des Landkreises durch. Scrollen Sie nach unten für eine Übersicht.`,
 ];
 
 const LK_SCHNELL_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Durch das Netzwerk von Detektei Base können Partner-Detekteien im ${name} schnell reagieren. In den meisten Fällen ist ein Detektiv innerhalb von 24-48 Stunden einsatzbereit.`,
+  (name) => `Detektei Base kann im ${name} schnell reagieren. In den meisten Fällen sind wir innerhalb von 24-48 Stunden einsatzbereit.`,
   
-  (name) => `Im ${name} sind Partner-Detekteien kurzfristig verfügbar. Dank lokaler Präsenz erreichen Detektive jeden Ort im Landkreis zeitnah.`,
+  (name) => `Im ${name} sind wir kurzfristig verfügbar. Dank lokaler Präsenz erreichen unsere Ermittler jeden Ort im Landkreis zeitnah.`,
   
-  (name) => `Schnelle Vermittlung im ${name}: Nach Anfrage bei Detektei Base können Partner meist innerhalb von 24-48 Stunden mit der Arbeit beginnen.`,
+  (name) => `Schnelle Reaktion im ${name}: Nach Anfrage bei Detektei Base können wir meist innerhalb von 24-48 Stunden mit der Arbeit beginnen.`,
   
-  (name) => `Das Netzwerk von Detektei Base im ${name} ermöglicht schnelle Reaktionszeiten. Kontaktieren Sie uns – wir vermitteln schnell an verfügbare Partner.`,
+  (name) => `Detektei Base ermöglicht im ${name} schnelle Reaktionszeiten. Kontaktieren Sie uns – wir sind schnell einsatzbereit.`,
 ];
 
 const LK_KLEIN_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Ja, Detektei Base vermittelt auch Partner für kleinere Gemeinden im ${name}. Ermittlungen im gesamten Landkreis werden abgedeckt – diskret und professionell.`,
+  (name) => `Ja, Detektei Base ist auch in kleineren Gemeinden im ${name} tätig. Ermittlungen im gesamten Landkreis werden abgedeckt – diskret und professionell.`,
   
-  (name) => `Auch in kleinen Gemeinden des ${name} sind Partner-Detekteien verfügbar. Das Netzwerk ermöglicht Ermittlungen in jeder Ecke des Landkreises.`,
+  (name) => `Auch in kleinen Gemeinden des ${name} ist Detektei Base verfügbar. Wir ermitteln in jeder Ecke des Landkreises.`,
   
-  (name) => `Im ${name} vermittelt Detektei Base überall – nicht nur in den großen Städten. Auch ländliche Gemeinden werden durch Partner-Detekteien abgedeckt.`,
+  (name) => `Im ${name} sind wir überall tätig – nicht nur in den großen Städten. Auch ländliche Gemeinden werden abgedeckt.`,
   
-  (name) => `Selbstverständlich vermittelt Detektei Base auch Partner für kleinere Orte im ${name}. Diskrete Ermittlungen sind überall im Landkreis möglich.`,
+  (name) => `Selbstverständlich führt Detektei Base auch Ermittlungen in kleineren Orten im ${name} durch. Diskrete Ermittlungen sind überall im Landkreis möglich.`,
 ];
 
 /**
@@ -276,11 +276,11 @@ export function getLandkreisFAQs(landkreis: Landkreis, bundesland: Bundesland): 
       answer: LK_SCHNELL_VARIANTEN[getVariantIndex(seed + "schnell", LK_SCHNELL_VARIANTEN.length)](name),
     },
     {
-      question: `Arbeiten Sie auch in kleineren Gemeinden im ${name}?`,
+      question: `Arbeitet Detektei Base auch in kleineren Gemeinden im ${name}?`,
       answer: LK_KLEIN_VARIANTEN[getVariantIndex(seed + "klein", LK_KLEIN_VARIANTEN.length)](name),
     },
     {
-      question: `Welche Ermittlungen führen Sie im ${name} durch?`,
+      question: `Welche Ermittlungen führt Detektei Base im ${name} durch?`,
       answer: LEISTUNGEN_VARIANTEN[getVariantIndex(seed + "leistungen", LEISTUNGEN_VARIANTEN.length)](name),
     },
     {
@@ -292,7 +292,7 @@ export function getLandkreisFAQs(landkreis: Landkreis, bundesland: Bundesland): 
       answer: DAUER_VARIANTEN[getVariantIndex(seed + "dauer", DAUER_VARIANTEN.length)](name),
     },
     {
-      question: `Arbeitet die Detektei diskret im ${name}?`,
+      question: `Arbeitet Detektei Base diskret im ${name}?`,
       answer: DISKRETION_VARIANTEN[getVariantIndex(seed + "diskret", DISKRETION_VARIANTEN.length)](name),
     },
     {
@@ -300,7 +300,7 @@ export function getLandkreisFAQs(landkreis: Landkreis, bundesland: Bundesland): 
       answer: FORTSCHRITT_VARIANTEN[getVariantIndex(seed + "fortschritt", FORTSCHRITT_VARIANTEN.length)](name),
     },
     {
-      question: `Wie kontaktiere ich die Detektei im ${name}?`,
+      question: `Wie kontaktiere ich Detektei Base im ${name}?`,
       answer: KONTAKT_VARIANTEN[getVariantIndex(seed + "kontakt", KONTAKT_VARIANTEN.length)](name),
     },
   ];
@@ -308,33 +308,33 @@ export function getLandkreisFAQs(landkreis: Landkreis, bundesland: Bundesland): 
 
 // --- BUNDESLAND SPEZIFISCHE VARIANTEN ---
 const BL_KOSTEN_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Die Kosten für einen Privatdetektiv in ${name} werden individuell nach Aufwand berechnet. Faktoren wie Ermittlungsart, Dauer und Komplexität bestimmen den Preis. Die Vermittlung über Detektei Base ist kostenlos.`,
+  (name) => `Die Kosten für einen Privatdetektiv in ${name} werden individuell nach Aufwand berechnet. Faktoren wie Ermittlungsart, Dauer und Komplexität bestimmen den Preis. Die Erstberatung bei Detektei Base ist kostenlos.`,
   
-  (name) => `Detektivkosten in ${name} hängen vom konkreten Auftrag ab. Im kostenlosen Erstgespräch erhalten Sie eine transparente Einschätzung für Ihren individuellen Fall. Detektei Base vermittelt kostenlos.`,
+  (name) => `Detektivkosten in ${name} hängen vom konkreten Auftrag ab. Im kostenlosen Erstgespräch erhalten Sie eine transparente Einschätzung für Ihren individuellen Fall.`,
   
-  (name) => `In ${name} werden die Ermittlungskosten individuell kalkuliert – je nach Auftragsart und Aufwand. Die Partner-Detektei erstellt Ihnen ein maßgeschneidertes Angebot. Die Vermittlung ist kostenlos.`,
+  (name) => `In ${name} werden die Ermittlungskosten individuell kalkuliert – je nach Auftragsart und Aufwand. Detektei Base erstellt Ihnen ein maßgeschneidertes Angebot. Die Erstberatung ist kostenlos.`,
   
-  (name) => `Was kostet ein Detektiv in ${name}? Das richtet sich nach Ihrem individuellen Fall. Detektei Base vermittelt Sie kostenlos an passende Partner, die Ihnen ein unverbindliches Angebot erstellen.`,
+  (name) => `Was kostet ein Detektiv in ${name}? Das richtet sich nach Ihrem individuellen Fall. Detektei Base berät Sie kostenlos und erstellt ein unverbindliches Angebot.`,
 ];
 
 const BL_LEISTUNGEN_VARIANTEN: AnswerGenerator[] = [
-  (name) => `In ${name} vermittelt Detektei Base Partner für: Privatdetektei (Untreue, Sorgerecht, Stalking, Betrug) und Wirtschaftsdetektei (Mitarbeiterüberprüfung, Krankfeierkontrolle, Betrugsermittlung). Landesweit verfügbar.`,
+  (name) => `In ${name} bietet Detektei Base: Privatdetektei (Untreue, Sorgerecht, Stalking, Betrug) und Wirtschaftsdetektei (Mitarbeiterüberprüfung, Krankfeierkontrolle, Betrugsermittlung). Landesweit verfügbar.`,
   
-  (name) => `Das Angebot in ${name}: Privat – Untreue, Personensuche, Sorgerecht. Geschäftlich – Mitarbeiter-Checks, Krankfeier, Betrug. Detektei Base vermittelt landesweit professionelle Partner.`,
+  (name) => `Das Angebot in ${name}: Privat – Untreue, Personensuche, Sorgerecht. Geschäftlich – Mitarbeiter-Checks, Krankfeier, Betrug. Detektei Base ist landesweit tätig.`,
   
-  (name) => `Landesweit in ${name}: Detektei Base vermittelt Partner für Privatpersonen (Untreue, Sorgerecht, Stalking) und Unternehmen (Mitarbeiterprüfung, Krankfeier, Betrug).`,
+  (name) => `Landesweit in ${name}: Detektei Base ermittelt für Privatpersonen (Untreue, Sorgerecht, Stalking) und Unternehmen (Mitarbeiterprüfung, Krankfeier, Betrug).`,
   
-  (name) => `Das komplette Ermittlungsspektrum in ganz ${name}: Von der Personensuche über Untreue-Ermittlung bis zur Wirtschaftsdetektei – Detektei Base findet den passenden Partner.`,
+  (name) => `Das komplette Ermittlungsspektrum in ganz ${name}: Von der Personensuche über Untreue-Ermittlung bis zur Wirtschaftsdetektei – Detektei Base ist Ihr Ansprechpartner.`,
 ];
 
 const BL_LAND_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Ja, Detektei Base vermittelt Partner in ganz ${name} – sowohl in Städten als auch in ländlichen Regionen. Das Netzwerk ermöglicht Einsätze im gesamten Bundesland.`,
+  (name) => `Ja, Detektei Base ist in ganz ${name} tätig – sowohl in Städten als auch in ländlichen Regionen. Zusätzlich arbeiten wir mit geprüften Partnern im gesamten Bundesland.`,
   
-  (name) => `Landesweit in ${name}: Das Netzwerk von Detektei Base reicht von den Großstädten bis in ländliche Gebiete. Überall im Bundesland sind Partner-Detekteien verfügbar.`,
+  (name) => `Landesweit in ${name}: Detektei Base ist von den Großstädten bis in ländliche Gebiete tätig. Zusätzlich mit Partnern überall im Bundesland.`,
   
-  (name) => `Auch auf dem Land in ${name} vermittelt Detektei Base Partner. Dank des Netzwerks werden alle Regionen des Bundeslandes abgedeckt.`,
+  (name) => `Auch auf dem Land in ${name} ist Detektei Base tätig. Wir decken alle Regionen des Bundeslandes ab – direkt oder mit geprüften Partnern.`,
   
-  (name) => `In ganz ${name} werden Partner vermittelt – Großstadt wie Land. Flexible Einsatzplanung ermöglicht Aufträge in allen Regionen über Detektei Base.`,
+  (name) => `In ganz ${name} aktiv – Großstadt wie Land. Detektei Base ermöglicht flexible Ermittlungen in allen Regionen.`,
 ];
 
 /**
@@ -358,11 +358,11 @@ export function getBundeslandFAQs(bundesland: Bundesland): FAQ[] {
       answer: GERICHT_VARIANTEN[getVariantIndex(seed + "gericht", GERICHT_VARIANTEN.length)](name),
     },
     {
-      question: `Wie schnell kann ein Detektiv in ${name} starten?`,
+      question: `Wie schnell kann Detektei Base in ${name} starten?`,
       answer: SCHNELL_VARIANTEN[getVariantIndex(seed + "schnell", SCHNELL_VARIANTEN.length)](name),
     },
     {
-      question: `Arbeitet die Detektei auch in ländlichen Gebieten von ${name}?`,
+      question: `Ist Detektei Base auch in ländlichen Gebieten von ${name} tätig?`,
       answer: BL_LAND_VARIANTEN[getVariantIndex(seed + "land", BL_LAND_VARIANTEN.length)](name),
     },
   ];

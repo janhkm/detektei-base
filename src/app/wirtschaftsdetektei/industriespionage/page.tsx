@@ -9,7 +9,7 @@ import { CTABox } from "@/components/ui/CTABox";
 export const metadata: Metadata = {
   title: "Industriespionage | Detektei für Spionageabwehr finden",
   description:
-    "Finden Sie eine Detektei zum Schutz vor Industriespionage. ✓ Geprüfte Partner ✓ Kostenlose Vermittlung ✓ Spionageabwehr ✓ Informationsschutz.",
+    "Detektei Base – Schutz vor Industriespionage. ✓ Spionageabwehr ✓ Informationsschutz ✓ Rund um die Uhr erreichbar.",
 };
 
 const bedrohungen = [

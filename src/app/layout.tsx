@@ -42,17 +42,17 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://detektei-base.de"),
   title: {
-    default: "Detektei finden | Geprüfte Privatdetektive deutschlandweit",
+    default: "Detektei Base | Professionelle Ermittlungen deutschlandweit",
     template: "%s | Detektei Base",
   },
   description:
-    "Finden Sie sofort die richtige Detektei für Ihren Fall. Unser Netzwerk aus geprüften Partner-Detekteien vermittelt Sie diskret und schnell an erfahrene Ermittler in Ihrer Region.",
+    "Detektei Base – Professionelle Ermittlungen. Privatdetektei und Wirtschaftsdetektei für diskrete Aufklärung. Zusätzlich mit geprüften Partnern deutschlandweit.",
   keywords: [
-    "Detektei finden",
+    "Detektei",
     "Privatdetektiv",
     "Wirtschaftsdetektei",
-    "Detektei Vermittlung",
-    "Ermittler",
+    "Privatdetektei",
+    "Ermittlungen",
     "Observation",
     "Beweissicherung",
     "Detektei Deutschland",

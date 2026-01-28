@@ -1,6 +1,6 @@
 // ============================================
 // HOMEPAGE SCHEMA - Optimiert für SEO
-// Vermittlungsplattform für Detekteien
+// Professionelle Ermittlungen – Privatdetektei & Wirtschaftsdetektei
 // ============================================
 
 const SITE_URL = "https://detektei-base.de";
@@ -26,7 +26,7 @@ export function generateOrganizationSchema() {
       height: 512,
     },
     description:
-      "Detektei Base vermittelt Sie an geprüfte Partner-Detekteien in ganz Deutschland. Unser Netzwerk aus erfahrenen Ermittlern garantiert Qualität und Diskretion.",
+      "Detektei Base – Professionelle Ermittlungen. Privatdetektei und Wirtschaftsdetektei deutschlandweit, zusätzlich mit geprüften Partnern.",
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -58,13 +58,13 @@ export function generateLocalBusinessSchema() {
     "@type": ["Organization", "LocalBusiness"],
     "@id": `${SITE_URL}/#localbusiness`,
     name: COMPANY_NAME,
-    alternateName: ["Detektei Vermittlung", "Detektiv finden"],
+    alternateName: ["Privatdetektei", "Wirtschaftsdetektei"],
     description:
-      "Detektei Base ist eine Vermittlungsplattform für professionelle Ermittlungen. Wir vermitteln Sie an geprüfte, erfahrene Partner-Detekteien – schnell, diskret und deutschlandweit.",
+      "Detektei Base – Professionelle Ermittlungen. Privatdetektei und Wirtschaftsdetektei deutschlandweit.",
     url: SITE_URL,
     telephone: PHONE,
     email: EMAIL,
-    priceRange: "Kostenlose Vermittlung",
+    priceRange: "Auf Anfrage",
     areaServed: {
       "@type": "Country",
       name: "Deutschland",
@@ -94,40 +94,40 @@ export function generateLocalBusinessSchema() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Vermittlung von Detektiv-Dienstleistungen",
+      name: "Detektiv-Dienstleistungen",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Vermittlung Privatdetektei",
+            name: "Privatdetektei",
             description:
-              "Vermittlung an geprüfte Privatdetekteien für Untreue-Ermittlungen, Personensuche, Sorgerecht",
+              "Professionelle Ermittlungen: Untreue, Personensuche, Sorgerecht, Stalking",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Vermittlung Wirtschaftsdetektei",
+            name: "Wirtschaftsdetektei",
             description:
-              "Vermittlung an spezialisierte Wirtschaftsdetekteien für Mitarbeiterüberprüfung, Betrugsaufklärung",
+              "Professionelle Ermittlungen: Mitarbeiterüberprüfung, Krankfeierkontrolle, Betrugsaufklärung",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Deutschlandweites Netzwerk",
+            name: "Deutschlandweite Ermittlungen",
             description:
-              "Zugang zu geprüften Partner-Detekteien in allen Bundesländern",
+              "Professionelle Ermittlungen in allen Bundesländern, zusätzlich mit geprüften Partnern",
           },
         },
       ],
     },
     knowsAbout: [
-      "Detektei Vermittlung",
-      "Privatdetektiv finden",
+      "Detektei",
+      "Privatdetektiv",
       "Wirtschaftsdetektei",
       "Observation",
       "Personensuche",
@@ -149,9 +149,9 @@ export function generateWebSiteSchema() {
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
     name: COMPANY_NAME,
-    alternateName: "Detektei finden",
+    alternateName: "Detektei",
     description:
-      "Vermittlungsplattform für geprüfte Detekteien in Deutschland",
+      "Professionelle Ermittlungen – Privatdetektei und Wirtschaftsdetektei deutschlandweit",
     publisher: {
       "@id": `${SITE_URL}/#organization`,
     },
@@ -171,9 +171,9 @@ export function generateWebPageSchema() {
     "@type": "WebPage",
     "@id": `${SITE_URL}/#webpage`,
     url: SITE_URL,
-    name: "Detektei finden | Geprüfte Privatdetektive deutschlandweit | Detektei Base",
+    name: "Detektei Base | Professionelle Ermittlungen deutschlandweit",
     description:
-      "Finden Sie sofort die richtige Detektei für Ihren Fall. Unser Netzwerk aus geprüften Partner-Detekteien vermittelt Sie diskret und schnell an erfahrene Ermittler in Ihrer Region.",
+      "Detektei Base – Professionelle Ermittlungen. Privatdetektei und Wirtschaftsdetektei deutschlandweit, zusätzlich mit geprüften Partnern.",
     inLanguage: "de-DE",
     isPartOf: {
       "@id": `${SITE_URL}/#website`,
@@ -197,34 +197,34 @@ export function generateWebPageSchema() {
 export function generateHomepageFAQSchema() {
   const faqs = [
     {
-      question: "Was kostet die Vermittlung einer Detektei?",
+      question: "Ist die Erstberatung wirklich kostenlos?",
       answer:
-        "Die Vermittlung über Detektei Base ist für Sie komplett kostenfrei. Wir finanzieren uns über Vermittlungsprovisionen der Partner-Detekteien. Die Kosten für die eigentliche Detektiv-Dienstleistung werden individuell nach Fall und Aufwand mit der vermittelten Detektei vereinbart.",
+        "Ja, die Erstberatung bei Detektei Base ist für Sie komplett kostenfrei und unverbindlich. Die Kosten für die Ermittlung werden individuell nach Fall und Aufwand berechnet.",
     },
     {
-      question: "Wie finde ich eine seriöse Detektei?",
+      question: "Welche Leistungen bietet Detektei Base?",
       answer:
-        "Über Detektei Base werden Sie nur an geprüfte Partner-Detekteien vermittelt. Alle Partner haben eine Berufshaftpflichtversicherung und sind zur Einhaltung der DSGVO verpflichtet. So sparen Sie sich die aufwendige Recherche.",
+        "Detektei Base bietet professionelle Privatdetektei (Untreue, Personensuche, Sorgerecht) und Wirtschaftsdetektei (Mitarbeiterüberprüfung, Krankfeierkontrolle, Betrugsermittlung). Zusätzlich arbeiten wir mit geprüften Partnern deutschlandweit.",
     },
     {
-      question: "Wie schnell werde ich an eine Detektei vermittelt?",
+      question: "Wie schnell können Ermittlungen beginnen?",
       answer:
-        "In der Regel erhalten Sie innerhalb von 24 Stunden (an Werktagen) einen Rückruf von einer passenden Partner-Detektei. In dringenden Fällen ist oft eine noch schnellere Vermittlung möglich.",
+        "In der Regel können wir innerhalb von 24 Stunden mit den Ermittlungen beginnen. In dringenden Fällen ist oft ein noch schnellerer Einsatz möglich.",
     },
     {
       question: "Werden meine Daten vertraulich behandelt?",
       answer:
-        "Ja, absolut. Wir behandeln alle Anfragen streng vertraulich. Ihre Daten werden nur an die eine ausgewählte Partner-Detektei weitergegeben, nicht an mehrere. Details finden Sie in unserer Datenschutzerklärung.",
+        "Ja, absolut. Wir behandeln alle Anfragen streng vertraulich. Diskretion ist bei uns oberstes Gebot. Details finden Sie in unserer Datenschutzerklärung.",
     },
     {
-      question: "In welchen Regionen vermitteln Sie Detekteien?",
+      question: "In welchen Regionen ist Detektei Base tätig?",
       answer:
-        "Unser Netzwerk umfasst geprüfte Partner-Detekteien in ganz Deutschland. Egal ob in München, Berlin, Hamburg oder ländlichen Regionen – wir finden eine geeignete Detektei in Ihrer Nähe.",
+        "Detektei Base ist deutschlandweit tätig. Zusätzlich arbeiten wir mit geprüften Partnern in allen Bundesländern zusammen – von Großstädten bis ländliche Regionen.",
     },
     {
-      question: "Kann ich auch direkt eine Detektei kontaktieren?",
+      question: "Sind die Beweise vor Gericht verwertbar?",
       answer:
-        "Natürlich. Detektei Base ist ein freiwilliges Angebot. Der Vorteil unserer Vermittlung: Sie sparen Zeit bei der Suche und können sicher sein, dass unsere Partner geprüft und qualifiziert sind.",
+        "Ja, professionell gesicherte Beweise sind vor Gericht verwertbar, sofern sie legal beschafft wurden. Wir sind darauf spezialisiert, gerichtsfeste Dokumentationen zu erstellen.",
     },
   ];
 

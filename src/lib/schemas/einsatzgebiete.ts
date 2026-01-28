@@ -82,7 +82,7 @@ export function generateLocalBusinessSchema(options: LocalBusinessOptions) {
     url: `${SITE_URL}${options.url}`,
     telephone: PHONE,
     email: EMAIL,
-    priceRange: "Kostenlose Vermittlung",
+    priceRange: "Auf Anfrage",
     image: `${SITE_URL}/images/og/detektei.jpg`,
     address: {
       "@type": "PostalAddress",
@@ -110,30 +110,30 @@ export function generateLocalBusinessSchema(options: LocalBusinessOptions) {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Vermittlung von Detektiv-Dienstleistungen",
+      name: "Detektiv-Dienstleistungen",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Vermittlung Observation",
-            description: "Vermittlung an Detekteien für professionelle Observationen",
+            name: "Observation",
+            description: "Professionelle Observationen durch Detektei Base",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Vermittlung Personensuche",
-            description: "Vermittlung an Detekteien für Adressermittlung und Personensuche",
+            name: "Personensuche",
+            description: "Adressermittlung und Personensuche durch Detektei Base",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Vermittlung Wirtschaftsermittlungen",
-            description: "Vermittlung an Wirtschaftsdetekteien",
+            name: "Wirtschaftsermittlungen",
+            description: "Wirtschaftsdetektei durch spezialisierte Partner",
           },
         },
       ],
@@ -216,7 +216,7 @@ export function generateWebPageSchema(options: WebPageOptions) {
 export function generateServiceSchema(stadtName: string, bundeslandName: string) {
   return {
     "@type": "Service",
-    serviceType: "Vermittlung von Detektei-Dienstleistungen",
+    serviceType: "Detektei-Dienstleistungen",
     provider: {
       "@type": "LocalBusiness",
       "@id": `${SITE_URL}/#organization`,
@@ -231,13 +231,13 @@ export function generateServiceSchema(stadtName: string, bundeslandName: string)
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: `Detektei-Vermittlung in ${stadtName}`,
+      name: `Detektei in ${stadtName}`,
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: `Detektei finden in ${stadtName}`,
+            name: `Detektei ${stadtName}`,
           },
         },
         {

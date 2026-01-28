@@ -22,26 +22,26 @@ export function HeroSection() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-white/90 backdrop-blur-sm mb-6">
               <Users className="h-4 w-4 text-accent-400" />
-              <span>Netzwerk geprüfter Partner-Detekteien</span>
+              <span>Privatdetektei | Wirtschaftsdetektei</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-tight">
-              Die richtige <span className="text-accent-400">Detektei</span> für Ihren Fall – sofort
+              Professionelle <span className="text-accent-400">Ermittlungen</span> für Ihren Fall
             </h1>
 
             {/* Subheadline */}
             <p className="mt-6 text-lg sm:text-xl text-primary-200 leading-relaxed max-w-xl mx-auto lg:mx-0 hero-description">
-              <strong>Verlieren Sie keine Zeit.</strong> Wir vermitteln Sie direkt an die passende 
-              Detektei aus unserem Netzwerk geprüfter Partner – diskret, schnell und mit 
-              gerichtsverwertbarer Beweissicherung.
+              <strong>Detektei Base – Ihre Detektei.</strong> Wir führen professionelle Ermittlungen durch – 
+              Privatdetektei und Wirtschaftsdetektei. Zusätzlich arbeiten wir mit geprüften Partnern 
+              deutschlandweit für gerichtsverwertbare Beweissicherung.
             </p>
 
             {/* Trust Stats */}
             <div className="mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
                 <div className="text-2xl sm:text-3xl font-bold text-accent-400">24h</div>
-                <div className="text-xs sm:text-sm text-primary-300">Schnelle Vermittlung</div>
+                <div className="text-xs sm:text-sm text-primary-300">Schnelle Reaktionszeit</div>
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-2xl sm:text-3xl font-bold text-accent-400">100%</div>
@@ -52,10 +52,10 @@ export function HeroSection() {
             {/* USP List */}
             <ul className="mt-8 space-y-3 text-left max-w-md mx-auto lg:mx-0">
               {[
-                "Jetzt anrufen – unverbindlich",
-                "Geprüfte, erfahrene Detekteien",
-                "Passende Experten für jeden Fall",
-                "Weltweites Netzwerk",
+                "Rund um die Uhr erreichbar",
+                "Privatdetektei & Wirtschaftsdetektei",
+                "Zusätzlich geprüfte Partner deutschlandweit",
+                "Gerichtsverwertbare Beweise",
               ].map((item, index) => (
                 <li key={index} className="flex items-center gap-3 text-white">
                   <CheckCircle className="h-5 w-5 text-accent-400 flex-shrink-0" />
@@ -71,7 +71,7 @@ export function HeroSection() {
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent-500 px-6 py-3.5 text-base font-semibold text-primary-900 shadow-lg hover:bg-accent-400 transition-all hover:shadow-xl"
               >
                 <Zap className="h-5 w-5" />
-                Jetzt Detektei finden
+                Jetzt kontaktieren
               </Link>
               <a
                 href="tel:+4917666918653"
@@ -141,7 +141,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-center">
                 <p className="text-white font-semibold text-sm">
-                  Geprüfte Partner-Detekteien deutschlandweit
+                  Professionelle Ermittlungen deutschlandweit
                 </p>
               </div>
             </div>
