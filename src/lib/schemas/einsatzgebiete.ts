@@ -77,7 +77,7 @@ export function generateLocalBusinessSchema(options: LocalBusinessOptions) {
   const schema: Record<string, unknown> = {
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}${options.url}/#localbusiness`,
-    name: `${COMPANY_NAME} – Detektei in ${options.name}`,
+    name: `${COMPANY_NAME} – Detektei für ${options.name}`,
     description: options.description,
     url: `${SITE_URL}${options.url}`,
     telephone: PHONE,
@@ -231,7 +231,7 @@ export function generateServiceSchema(stadtName: string, bundeslandName: string)
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: `Detektei in ${stadtName}`,
+      name: `Detektei für ${stadtName}`,
       itemListElement: [
         {
           "@type": "Offer",
@@ -244,7 +244,7 @@ export function generateServiceSchema(stadtName: string, bundeslandName: string)
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: `Privatdetektiv in ${stadtName}`,
+            name: `Privatdetektiv für ${stadtName}`,
           },
         },
       ],

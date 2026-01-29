@@ -11,7 +11,7 @@ type AnswerGenerator = (name: string, extra?: string) => string;
 
 // --- KOSTEN FRAGE ---
 const KOSTEN_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Die Kosten für einen Privatdetektiv in ${name} werden individuell nach Fall und Aufwand berechnet. Faktoren wie Ermittlungsdauer, Komplexität und benötigte Ressourcen fließen in die Kalkulation ein. Detektei Base bietet Ihnen ein unverbindliches Angebot – die Erstberatung ist kostenlos.`,
+  (name) => `Die Kosten für einen Privatdetektiv für ${name} werden individuell nach Fall und Aufwand berechnet. Faktoren wie Ermittlungsdauer, Komplexität und benötigte Ressourcen fließen in die Kalkulation ein. Detektei Base bietet Ihnen ein unverbindliches Angebot – die Erstberatung ist kostenlos.`,
   
   (name) => `Detektivkosten in ${name} hängen vom konkreten Auftrag ab: Art der Ermittlung, Dauer und Aufwand bestimmen den Preis. Bei Detektei Base erhalten Sie ein individuelles Angebot nach der kostenlosen Erstberatung.`,
   
@@ -19,7 +19,7 @@ const KOSTEN_VARIANTEN: AnswerGenerator[] = [
   
   (name) => `Die Kosten für Ermittlungen in ${name} richten sich nach dem individuellen Aufwand. Im kostenlosen Erstgespräch erhalten Sie eine transparente Einschätzung von Detektei Base.`,
   
-  (name) => `Was kostet ein Detektiv in ${name}? Das hängt von Ihrem individuellen Fall ab – Auftragsart, Dauer und Komplexität bestimmen den Preis. Detektei Base berät Sie kostenlos.`,
+  (name) => `Was kostet ein Detektiv für ${name}? Das hängt von Ihrem individuellen Fall ab – Auftragsart, Dauer und Komplexität bestimmen den Preis. Detektei Base berät Sie kostenlos.`,
   
   (name) => `Die Ermittlungskosten in ${name} werden nach individuellem Aufwand berechnet. Jeder Fall ist anders – daher erstellen wir Ihnen ein maßgeschneidertes Angebot. Die Erstberatung ist kostenlos.`,
 ];
@@ -172,11 +172,11 @@ export function getStadtFAQs(stadt: Stadt, bundesland: Bundesland): FAQ[] {
   
   return [
     {
-      question: `Was kostet ein Privatdetektiv in ${name}?`,
+      question: `Was kostet ein Privatdetektiv für ${name}?`,
       answer: KOSTEN_VARIANTEN[getVariantIndex(seed + "kosten", KOSTEN_VARIANTEN.length)](name),
     },
     {
-      question: `Wie finde ich einen seriösen Detektiv in ${name}?`,
+      question: `Wie finde ich einen seriösen Detektiv für ${name}?`,
       answer: SERIOES_VARIANTEN[getVariantIndex(seed + "serioes", SERIOES_VARIANTEN.length)](name),
     },
     {
@@ -184,7 +184,7 @@ export function getStadtFAQs(stadt: Stadt, bundesland: Bundesland): FAQ[] {
       answer: GERICHT_VARIANTEN[getVariantIndex(seed + "gericht", GERICHT_VARIANTEN.length)](name),
     },
     {
-      question: `Wie schnell kann ein Detektiv in ${name} starten?`,
+      question: `Wie schnell kann ein Detektiv für ${name} starten?`,
       answer: SCHNELL_VARIANTEN[getVariantIndex(seed + "schnell", SCHNELL_VARIANTEN.length)](name),
     },
     {
@@ -308,13 +308,13 @@ export function getLandkreisFAQs(landkreis: Landkreis, bundesland: Bundesland): 
 
 // --- BUNDESLAND SPEZIFISCHE VARIANTEN ---
 const BL_KOSTEN_VARIANTEN: AnswerGenerator[] = [
-  (name) => `Die Kosten für einen Privatdetektiv in ${name} werden individuell nach Aufwand berechnet. Faktoren wie Ermittlungsart, Dauer und Komplexität bestimmen den Preis. Die Erstberatung bei Detektei Base ist kostenlos.`,
+  (name) => `Die Kosten für einen Privatdetektiv für ${name} werden individuell nach Aufwand berechnet. Faktoren wie Ermittlungsart, Dauer und Komplexität bestimmen den Preis. Die Erstberatung bei Detektei Base ist kostenlos.`,
   
   (name) => `Detektivkosten in ${name} hängen vom konkreten Auftrag ab. Im kostenlosen Erstgespräch erhalten Sie eine transparente Einschätzung für Ihren individuellen Fall.`,
   
   (name) => `In ${name} werden die Ermittlungskosten individuell kalkuliert – je nach Auftragsart und Aufwand. Detektei Base erstellt Ihnen ein maßgeschneidertes Angebot. Die Erstberatung ist kostenlos.`,
   
-  (name) => `Was kostet ein Detektiv in ${name}? Das richtet sich nach Ihrem individuellen Fall. Detektei Base berät Sie kostenlos und erstellt ein unverbindliches Angebot.`,
+  (name) => `Was kostet ein Detektiv für ${name}? Das richtet sich nach Ihrem individuellen Fall. Detektei Base berät Sie kostenlos und erstellt ein unverbindliches Angebot.`,
 ];
 
 const BL_LEISTUNGEN_VARIANTEN: AnswerGenerator[] = [
@@ -346,7 +346,7 @@ export function getBundeslandFAQs(bundesland: Bundesland): FAQ[] {
   
   return [
     {
-      question: `Was kostet ein Privatdetektiv in ${name}?`,
+      question: `Was kostet ein Privatdetektiv für ${name}?`,
       answer: BL_KOSTEN_VARIANTEN[getVariantIndex(seed + "kosten", BL_KOSTEN_VARIANTEN.length)](name),
     },
     {

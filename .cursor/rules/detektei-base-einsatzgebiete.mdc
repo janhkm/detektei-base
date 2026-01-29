@@ -174,15 +174,15 @@ interface EinsatzgebieteSchemas {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Was kostet ein Privatdetektiv in [Stadt]?",
+      "name": "Was kostet ein Privatdetektiv für [Stadt]?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ein Privatdetektiv in [Stadt] kostet zwischen 50-150€ pro Stunde..."
+        "text": "Ein Privatdetektiv für [Stadt] kostet zwischen 50-150€ pro Stunde..."
       }
     },
     {
       "@type": "Question",
-      "name": "Wie finde ich einen seriösen Detektiv in [Stadt]?",
+      "name": "Wie finde ich einen seriösen Detektiv für [Stadt]?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Achten Sie auf Mitgliedschaft in Berufsverbänden, Erfahrung..."
@@ -213,7 +213,7 @@ interface EinsatzgebieteSchemas {
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Ermittlungsleistungen in [Stadt]",
+    "name": "Ermittlungsleistungen für [Stadt]",
     "itemListElement": [
       {
         "@type": "Offer",
@@ -233,7 +233,7 @@ interface EinsatzgebieteSchemas {
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Detektei in [Stadt] | Privatdetektiv & Wirtschaftsdetektei",
+  "name": "Detektei für [Stadt] | Privatdetektiv & Wirtschaftsdetektei",
   "description": "...",
   "url": "https://domain.de/einsatzgebiete/...",
   "inLanguage": "de-DE",
@@ -243,7 +243,7 @@ interface EinsatzgebieteSchemas {
   },
   "about": {
     "@type": "Thing",
-    "name": "Detektei-Dienstleistungen in [Stadt]"
+    "name": "Detektei-Dienstleistungen für [Stadt]"
   },
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -269,8 +269,8 @@ interface EinsatzgebieteSchemas {
 
 ```yaml
 ---
-title: "Detektei in [Bundesland] | Privatdetektiv & Ermittlungen 2026"
-description: "Professionelle Detektei in [Bundesland]. ✓ Observationen ✓ Personensuche ✓ Wirtschaftsermittlungen. Diskret & gerichtsverwertbar. Jetzt Beratung anfragen."
+title: "Detektei für [Bundesland] | Privatdetektiv & Ermittlungen 2026"
+description: "Professionelle Detektei für [Bundesland]. ✓ Observationen ✓ Personensuche ✓ Wirtschaftsermittlungen. Diskret & gerichtsverwertbar. Jetzt Beratung anfragen."
 slug: "[bundesland-slug]"
 type: "bundesland"
 bundesland:
@@ -288,13 +288,13 @@ image:
   src: "/images/einsatzgebiete/[bundesland].webp"
   alt: "Detektei [Bundesland] - Professionelle Ermittlungen"
 faqs:
-  - question: "Was kostet ein Privatdetektiv in [Bundesland]?"
+  - question: "Was kostet ein Privatdetektiv für [Bundesland]?"
     answer: "..."
   - question: "Welche Detektei-Leistungen gibt es in [Bundesland]?"
     answer: "..."
   - question: "Sind Detektiv-Beweise in [Bundesland] gerichtsverwertbar?"
     answer: "..."
-  - question: "Wie schnell kann ein Detektiv in [Bundesland] starten?"
+  - question: "Wie schnell kann ein Detektiv für [Bundesland] starten?"
     answer: "..."
   - question: "Arbeitet die Detektei auch in ländlichen Gebieten?"
     answer: "..."
@@ -318,13 +318,13 @@ kreisfreieStaedte:
 #### Content-Struktur (H-Tag Hierarchie)
 
 ```
-H1: Detektei in [Bundesland] – Professionelle Ermittlungen 2026
+H1: Detektei für [Bundesland] – Professionelle Ermittlungen 2026
 
   [KeyTakeaways Box]
   
   [Einleitungstext mit Keyword im ersten Satz]
 
-H2: Unsere Detektei-Leistungen in [Bundesland]
+H2: Unsere Detektei-Leistungen für [Bundesland]
   H3: Privatermittlungen
   H3: Wirtschaftsermittlungen
   
@@ -347,10 +347,10 @@ H2: Kosten für Detektiv-Einsätze in [Bundesland]
 H2: Ablauf einer Ermittlung in [Bundesland]
   [Prozess-Grafik/Timeline]
 
-H2: Häufige Fragen zu Detektei-Leistungen in [Bundesland]
+H2: Häufige Fragen zu Detektei-Leistungen für [Bundesland]
   [FAQ Akkordeon - automatisch aus Frontmatter]
 
-H2: Jetzt Detektei in [Bundesland] kontaktieren
+H2: Jetzt Detektei für [Bundesland] kontaktieren
   [CTA-Box mit Kontaktmöglichkeiten]
 ```
 
@@ -461,8 +461,8 @@ H2: Kontakt zur Detektei im [Landkreis]
 
 ```yaml
 ---
-title: "Detektei in [Stadt] | Privatdetektiv [Stadt] 2026"
-description: "Professionelle Detektei in [Stadt]. ✓ Observationen ✓ Personensuche ✓ Wirtschaftsermittlungen ✓ Gerichtsverwertbare Beweise. Jetzt anfragen!"
+title: "Detektei für [Stadt] | Privatdetektiv [Stadt] 2026"
+description: "Professionelle Detektei für [Stadt]. ✓ Observationen ✓ Personensuche ✓ Wirtschaftsermittlungen ✓ Gerichtsverwertbare Beweise. Jetzt anfragen!"
 slug: "[stadt-slug]"
 type: "stadt"
 bundesland:
@@ -497,21 +497,21 @@ image:
   src: "/images/einsatzgebiete/[stadt].webp"
   alt: "Detektei [Stadt] - Professionelle Ermittlungen"
 faqs:
-  - question: "Was kostet ein Privatdetektiv in [Stadt]?"
-    answer: "Ein Privatdetektiv in [Stadt] kostet zwischen 50-150€ pro Stunde. Für ganztägige Observationen sollten Sie mit 800-1.500€ rechnen."
-  - question: "Wie finde ich einen seriösen Detektiv in [Stadt]?"
+  - question: "Was kostet ein Privatdetektiv für [Stadt]?"
+    answer: "Ein Privatdetektiv für [Stadt] kostet zwischen 50-150€ pro Stunde. Für ganztägige Observationen sollten Sie mit 800-1.500€ rechnen."
+  - question: "Wie finde ich einen seriösen Detektiv für [Stadt]?"
     answer: "..."
   - question: "Sind Detektiv-Beweise aus [Stadt] vor Gericht verwertbar?"
     answer: "..."
-  - question: "Wie schnell kann ein Detektiv in [Stadt] starten?"
+  - question: "Wie schnell kann ein Detektiv für [Stadt] starten?"
     answer: "..."
-  - question: "Welche Ermittlungen führt die Detektei in [Stadt] durch?"
+  - question: "Welche Ermittlungen führt die Detektei für [Stadt] durch?"
     answer: "..."
   - question: "Arbeitet die Detektei diskret in [Stadt]?"
     answer: "..."
-  - question: "Kann ich die Detektei in [Stadt] auch anonym beauftragen?"
+  - question: "Kann ich die Detektei für [Stadt] auch anonym beauftragen?"
     answer: "..."
-  - question: "Wie kontaktiere ich die Detektei in [Stadt]?"
+  - question: "Wie kontaktiere ich die Detektei für [Stadt]?"
     answer: "..."
 nahegelegeneStaedte:
   - name: "München"
@@ -537,7 +537,7 @@ services:
 #### Content-Struktur (GOLDSTANDARD)
 
 ```
-H1: Detektei in [Stadt] – Ihr Privatdetektiv
+H1: Detektei für [Stadt] – Ihr Privatdetektiv
 
   [KeyTakeaways Box - PFLICHT]
   
@@ -553,9 +553,9 @@ H1: Detektei in [Stadt] – Ihr Privatdetektiv
   - Problem-Lösung-Struktur
   - Vertrauensaufbau
 
-H2: Unsere Detektei-Leistungen in [Stadt]
+H2: Unsere Detektei-Leistungen für [Stadt]
 
-  **Kurz:** Unsere Detektei in [Stadt] bietet professionelle Observationen, 
+  **Kurz:** Detektei Base bietet für [Stadt] professionelle Observationen, 
   Personensuche und Wirtschaftsermittlungen – diskret und gerichtsverwertbar.
 
   H3: Privatermittlungen in [Stadt]
@@ -576,9 +576,9 @@ H2: Ablauf einer Ermittlung in [Stadt]
   4. Beweissicherung
   5. Abschlussbericht
 
-H2: Kosten für einen Detektiv in [Stadt]
+H2: Detektiv-Kosten für [Stadt]
 
-  **Kurz:** Ein Privatdetektiv in [Stadt] kostet zwischen 50-150€ pro Stunde. 
+  **Kurz:** Ein Privatdetektiv für [Stadt] kostet zwischen 50-150€ pro Stunde. 
   Für Observationen rechnen Sie mit 800-1.500€ pro Tag inklusive Spesen.
 
   [Preistabelle]
@@ -591,7 +591,7 @@ H2: Kosten für einen Detektiv in [Stadt]
 
 H2: Beweissicherung & Gerichtsverwertbarkeit in [Stadt]
 
-  **Kurz:** Alle von unserer Detektei in [Stadt] gesicherten Beweise sind 
+  **Kurz:** Alle von unserer Detektei für [Stadt] gesicherten Beweise sind 
   gerichtsverwertbar, sofern sie im Rahmen der Jedermannsrechte erhoben wurden.
 
   H3: Verwertbare Beweismittel
@@ -604,7 +604,7 @@ H2: Rechtliche Grundlagen für Detektei-Einsätze in [Stadt]
 
   [Infografik: Erlaubt vs. Verboten]
 
-H2: Warum unsere Detektei in [Stadt] wählen?
+H2: Warum unsere Detektei für [Stadt] wählen?
 
   [Trust-Signale]
   - ✓ Geprüfte, erfahrene Ermittler
@@ -620,12 +620,12 @@ H2: Einsatzgebiet rund um [Stadt]
   [Karte oder Liste mit verlinkten nahegelegenen Städten]
   - Max. 6-10 Links zu anderen Städten
 
-H2: Häufige Fragen zur Detektei in [Stadt]
+H2: Häufige Fragen zur Detektei für [Stadt]
 
   [FAQ Akkordeon - automatisch aus Frontmatter generiert]
   [Mindestens 6-8 FAQs]
 
-H2: Jetzt Detektei in [Stadt] kontaktieren
+H2: Jetzt Detektei für [Stadt] kontaktieren
 
   [CTA-Box]
   - Telefonnummer
@@ -706,7 +706,7 @@ Stadt-Seite verlinkt zu:
 ```
 
 **Anchor-Text Best Practices:**
-- ✅ `Detektei in München` (keyword-reich)
+- ✅ `Detektei für München` (keyword-reich)
 - ✅ `unsere Leistungen in Bayern` (kontextuell)
 - ❌ `hier klicken` (generisch)
 - ❌ `mehr erfahren` (generisch)
@@ -727,8 +727,8 @@ Stadt-Seite verlinkt zu:
 
 ```markdown
 ✅ GUTE FAQ:
-Q: "Was kostet ein Privatdetektiv in München?"
-A: "Ein Privatdetektiv in München kostet zwischen 50-150€ pro Stunde,
+Q: "Was kostet ein Privatdetektiv für München?"
+A: "Ein Privatdetektiv für München kostet zwischen 50-150€ pro Stunde,
    abhängig von Erfahrung und Auftragsart. Für ganztägige Observationen
    sollten Sie mit 800-1.500€ rechnen, Anfahrtskosten inklusive."
 
@@ -789,9 +789,9 @@ Direkt nach dem ersten Absatz auf JEDER Seite:
 Jeder H2-Abschnitt beginnt mit einer direkten Antwort:
 
 ```mdx
-## Was kostet ein Detektiv in [Stadt]?
+## Was kostet ein Detektiv für [Stadt]?
 
-**Kurz:** Ein Detektiv in [Stadt] kostet zwischen 50-150€ pro Stunde.
+**Kurz:** Ein Detektiv für [Stadt] kostet zwischen 50-150€ pro Stunde.
 Für ganztägige Observationen rechnen Sie mit 800-1.500€ inklusive Spesen.
 
 [Dann folgt der ausführliche Text...]
@@ -831,7 +831,7 @@ Für ganztägige Observationen rechnen Sie mit 800-1.500€ inklusive Spesen.
 **Listen für Aufzählungen:**
 
 ```markdown
-Unsere Leistungen in [Stadt]:
+Unsere Leistungen für [Stadt]:
 - ✓ Observationen zur Beweissicherung
 - ✓ Personensuche & Adressermittlung
 - ✓ Unterhaltsermittlungen
@@ -843,7 +843,7 @@ Unsere Leistungen in [Stadt]:
 Formulierungen, die LLMs leicht extrahieren können:
 
 ```markdown
-✅ "Die Kosten für einen Privatdetektiv in München liegen zwischen 50-150€ pro Stunde."
+✅ "Die Kosten für einen Privatdetektiv für München liegen zwischen 50-150€ pro Stunde."
 
 ✅ "Detektiv-Beweise sind vor Gericht verwertbar, sofern sie legal erhoben wurden."
 
@@ -1141,8 +1141,8 @@ async function notifyIndexNow(url: string) {
   <meta property="og:locale" content="de_DE">
   
   <!-- Seitenspezifisch -->
-  <meta property="og:title" content="Detektei in München | Privatdetektiv München 2026">
-  <meta property="og:description" content="Professionelle Detektei in München. ✓ Observationen ✓ Personensuche ✓ Gerichtsverwertbare Beweise.">
+  <meta property="og:title" content="Detektei für München | Privatdetektiv München 2026">
+  <meta property="og:description" content="Professionelle Detektei für München. ✓ Observationen ✓ Personensuche ✓ Gerichtsverwertbare Beweise.">
   <meta property="og:url" content="https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/">
   <meta property="og:image" content="https://domain.de/images/og/muenchen.jpg">
   <meta property="og:image:width" content="1200">
@@ -1156,8 +1156,8 @@ async function notifyIndexNow(url: string) {
 ```html
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@detektei_name">
-<meta name="twitter:title" content="Detektei in München | Privatdetektiv München 2026">
-<meta name="twitter:description" content="Professionelle Detektei in München. Diskret & gerichtsverwertbar.">
+<meta name="twitter:title" content="Detektei für München | Privatdetektiv München 2026">
+<meta name="twitter:description" content="Professionelle Detektei für München. Diskret & gerichtsverwertbar.">
 <meta name="twitter:image" content="https://domain.de/images/twitter/muenchen.jpg">
 ```
 
@@ -1219,7 +1219,7 @@ async function notifyIndexNow(url: string) {
       "@type": "WebPage",
       "@id": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/#webpage",
       "url": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/",
-      "name": "Detektei in München | Privatdetektiv München 2026",
+      "name": "Detektei für München | Privatdetektiv München 2026",
       "isPartOf": {
         "@id": "https://domain.de/#website"
       },
@@ -1250,7 +1250,7 @@ async function notifyIndexNow(url: string) {
       "@type": "LocalBusiness",
       "@id": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/#localbusiness",
       "name": "Detektei [Name] München",
-      "description": "Professionelle Detektei in München für Observationen, Personensuche und Wirtschaftsermittlungen.",
+      "description": "Professionelle Detektei für München – Observationen, Personensuche und Wirtschaftsermittlungen.",
       "url": "https://domain.de/einsatzgebiete/bundesland/bayern/muenchen/",
       "telephone": "+49-XXX-XXXXXXX",
       "priceRange": "€€-€€€",
@@ -1293,10 +1293,10 @@ async function notifyIndexNow(url: string) {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Was kostet ein Privatdetektiv in München?",
+          "name": "Was kostet ein Privatdetektiv für München?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ein Privatdetektiv in München kostet zwischen 60-150€ pro Stunde."
+            "text": "Ein Privatdetektiv für München kostet zwischen 60-150€ pro Stunde."
           }
         }
       ]
@@ -1365,7 +1365,7 @@ async function notifyIndexNow(url: string) {
 ### 10.2 Trust-Signale im Content (PFLICHT)
 
 ```markdown
-## Warum unsere Detektei in [Stadt] wählen?
+## Warum unsere Detektei für [Stadt] wählen?
 
 - ✓ **Geprüfte Partner** mit langjähriger Erfahrung
 - ✓ **Mitglied** im Bundesverband Deutscher Detektive (BDD)
@@ -1486,10 +1486,10 @@ Bei ~10.000 Stadtseiten besteht hohes Risiko für Near-Duplicate Content!
 // lib/templates/stadtseiten.ts
 
 const introTemplates = [
-  "Sie suchen eine **Detektei in {stadt}**? Unsere erfahrenen Privatdetektive...",
+  "Sie suchen eine **Detektei für {stadt}**? Unsere erfahrenen Privatdetektive...",
   "Professionelle Ermittlungen in **{stadt}** – diskret, zuverlässig und gerichtsverwertbar...",
   "Als Detektei mit Einsatzgebiet in **{stadt}** und {landkreis} bieten wir...",
-  "Benötigen Sie einen **Privatdetektiv in {stadt}**? Mit {entfernung_team} km Entfernung...",
+  "Benötigen Sie einen **Privatdetektiv für {stadt}**? Mit {entfernung_team} km Entfernung...",
   "Unsere Detektei ist seit über {jahre} Jahren in **{stadt}** und Umgebung tätig...",
 ];
 
@@ -1576,7 +1576,7 @@ headers: [
 
 <main id="main-content" role="main">
   <article>
-    <h1>Detektei in München</h1>
+    <h1>Detektei für München</h1>
     ...
   </article>
 </main>
@@ -1781,14 +1781,14 @@ const priorities = {
 
 ```mdx
 ---
-title: "Detektei in München | Privatdetektiv München 2026"
-description: "Professionelle Detektei in München. ✓ Observationen ✓ Personensuche ✓ Wirtschaftsermittlungen ✓ Gerichtsverwertbare Beweise. Jetzt anfragen!"
+title: "Detektei für München | Privatdetektiv München 2026"
+description: "Professionelle Detektei für München. ✓ Observationen ✓ Personensuche ✓ Wirtschaftsermittlungen ✓ Gerichtsverwertbare Beweise. Jetzt anfragen!"
 slug: "muenchen"
 type: "stadt"
 # ... weitere Frontmatter
 ---
 
-# Detektei in München – Ihr Privatdetektiv
+# Detektei für München – Ihr Privatdetektiv
 
 <KeyTakeaways>
 - **Kosten:** 60-150€/Stunde, Tagessätze ab 900€
@@ -1797,14 +1797,14 @@ type: "stadt"
 - **Beweise:** Gerichtsverwertbar & DSGVO-konform
 </KeyTakeaways>
 
-Sie suchen eine **Detektei in München**? Unsere erfahrenen Privatdetektive unterstützen 
+Sie suchen eine **Detektei für München**? Unsere erfahrenen Privatdetektive unterstützen 
 Sie diskret bei Observationen, Personensuche und Wirtschaftsermittlungen. Detektei Base 
 ist deutschlandweit tätig und in München schnell einsatzbereit – mit gerichtsverwertbaren 
 Beweisen.
 
 ## Unsere Detektei-Leistungen in München
 
-**Kurz:** Unsere Detektei in München bietet professionelle Observationen, Personensuche 
+**Kurz:** Unsere Detektei für München bietet professionelle Observationen, Personensuche 
 und Wirtschaftsermittlungen – diskret, professionell und gerichtsverwertbar.
 
 ### Privatermittlungen in München
@@ -1821,9 +1821,9 @@ und Wirtschaftsermittlungen – diskret, professionell und gerichtsverwertbar.
 - **Wettbewerbsverstöße:** Ermittlung bei unlauterem Wettbewerb
 - **Diebstahlermittlung:** Aufklärung von Diebstahl im Unternehmen
 
-## Was kostet ein Detektiv in München?
+## Was kostet ein Detektiv für München?
 
-**Kurz:** Ein Privatdetektiv in München kostet zwischen 60-150€ pro Stunde. 
+**Kurz:** Ein Privatdetektiv für München kostet zwischen 60-150€ pro Stunde. 
 Für ganztägige Observationen sollten Sie mit 900-1.600€ rechnen.
 
 | Leistung | Preisspanne | Dauer |
@@ -1836,11 +1836,11 @@ Für ganztägige Observationen sollten Sie mit 900-1.600€ rechnen.
 
 [... weitere Abschnitte ...]
 
-## Häufige Fragen zur Detektei in München
+## Häufige Fragen zur Detektei für München
 
 <FAQ />
 
-## Jetzt Detektei in München kontaktieren
+## Jetzt Detektei für München kontaktieren
 
 <CTABox>
 Kostenlose & unverbindliche Erstberatung
@@ -1965,15 +1965,15 @@ VERÖFFENTLICHUNG:
 ### Meta Title Formeln
 
 ```
-Bundesland: "Detektei in [Bundesland] | Privatdetektiv & Ermittlungen 2026"
+Bundesland: "Detektei für [Bundesland] | Privatdetektiv & Ermittlungen 2026"
 Landkreis:  "Detektei im [Landkreis] | Privatdetektiv [Bundesland] 2026"
-Stadt:      "Detektei in [Stadt] | Privatdetektiv [Stadt] 2026"
+Stadt:      "Detektei für [Stadt] | Privatdetektiv [Stadt] 2026"
 ```
 
 ### Meta Description Formel
 
 ```
-"Professionelle Detektei in [Ort]. ✓ Observationen ✓ Personensuche 
+"Professionelle Detektei für [Ort]. ✓ Observationen ✓ Personensuche 
 ✓ Wirtschaftsermittlungen ✓ Gerichtsverwertbare Beweise. Jetzt anfragen!"
 ```
 

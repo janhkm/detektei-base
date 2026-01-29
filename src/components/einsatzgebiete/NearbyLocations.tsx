@@ -28,7 +28,7 @@ export function NearbyLocations({
             Einsatzgebiet rund um {currentStadt.name}
           </h2>
           <p className="text-sm text-primary-500">
-            Auch in diesen Städten sind wir für Sie da
+            Auch für diese Städte ermitteln wir
           </p>
         </div>
       </div>

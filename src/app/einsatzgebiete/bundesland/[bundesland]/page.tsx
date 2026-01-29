@@ -115,7 +115,7 @@ export default async function BundeslandPage({ params }: PageProps) {
               {h1}
             </h1>
             <p className="mt-6 text-lg text-primary-200 leading-relaxed intro-text">
-              Sie suchen eine <strong>Detektei in {bundesland.name}</strong>?
+              Sie suchen eine <strong>Detektei für {bundesland.name}</strong>?
               Detektei Base führt professionelle Ermittlungen durch – Privatdetektei 
               und Wirtschaftsdetektei mit gerichtsverwertbarer Beweissicherung. 
               Deutschlandweit tätig, schnell einsatzbereit.
@@ -211,7 +211,7 @@ export default async function BundeslandPage({ params }: PageProps) {
           {/* FAQ Section */}
           <div className="mt-16">
             <h2 className="text-2xl font-display font-bold text-primary-900 mb-6">
-              Häufige Fragen zu Detektei-Leistungen in {bundesland.name}
+              Häufige Fragen zu Detektei-Leistungen für {bundesland.name}
             </h2>
             <FAQAccordion faqs={faqs} />
           </div>
@@ -219,7 +219,7 @@ export default async function BundeslandPage({ params }: PageProps) {
           {/* CTA */}
           <div className="mt-16">
             <CTABox
-              title={`Detektei in ${bundesland.name} kontaktieren`}
+              title={`Detektei für ${bundesland.name} kontaktieren`}
               description="Jetzt anrufen – unverbindlich"
               variant="dark"
             />

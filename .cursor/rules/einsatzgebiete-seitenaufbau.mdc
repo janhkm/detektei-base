@@ -32,11 +32,11 @@ Lokale Artikel sind **Templates**, die für spezifische Städte/Regionen angepas
 ### Pflicht-Elemente für jeden lokalen Artikel:
 
 ```mdx
-## Privatdetektiv in München – Ihre Detektei
+## Privatdetektiv für München – Ihre Detektei
 
 **Kurz:** Detektei Base ist deutschlandweit tätig und führt diskrete Ermittlungen 
 im gesamten Großraum München durch, von Schwabing bis Pasing, von Freising bis 
-Starnberg. Unsere Ermittler sind mit der Region vertraut.
+Starnberg. Schnelle Einsatzbereitschaft, professionelle Methoden.
 ```
 
 ### Lokale Bezüge variieren:
@@ -55,7 +55,7 @@ Starnberg. Unsere Ermittler sind mit der Region vertraut.
 "Von der Isar bis zum Ammersee – wir ermitteln diskret."
 
 # Hamburg:
-"Von der Elbe bis zur Alster – Ihre Hamburger Detektei."
+"Von der Elbe bis zur Alster – Detektei Base ermittelt diskret."
 
 # Köln:
 "Am Dom und am Rhein – diskrete Ermittlungen in Köln."
@@ -70,9 +70,9 @@ Jeder lokale Artikel MUSS auf die entsprechende `/einsatzgebiete` Seite verlinke
 ```mdx
 ## Unser Einsatzgebiet in Bayern
 
-Wir sind nicht nur in München aktiv, sondern im gesamten Freistaat. 
+Wir ermitteln nicht nur in München, sondern im gesamten Freistaat. 
 Erfahren Sie mehr über unsere [Einsatzgebiete in Bayern](/einsatzgebiete/bundesland/bayern) 
-und die [Städte, in denen wir für Sie da sind](/einsatzgebiete/bundesland/bayern/muenchen).
+und die [Städte, für die wir tätig werden](/einsatzgebiete/bundesland/bayern/muenchen).
 ```
 
 ### Verlinkungsschema:
@@ -141,14 +141,14 @@ location:
 ## 6. Struktur: Regional Landing Page
 
 ```
-1. ## [Dienstleistung] in [Stadt] – [USP] (+ "Kurz:")
-2. <KeyTakeaways> Box (regionale Vorteile)
+1. ## [Dienstleistung] für [Stadt] – [USP] (+ "Kurz:")
+2. <KeyTakeaways> Box (Vorteile)
 3. ## Warum Detektei Base für [Stadt]?
-   - Regionale Expertise
-   - Transparente Kosten
-   - Schnelle Einsatzbereitschaft
    - Deutschlandweit tätig
-4. ## Unsere Leistungen in [Stadt] und Umgebung
+   - Schnelle Einsatzbereitschaft
+   - Transparente Kosten
+   - Professionelle Methoden
+4. ## Unsere Leistungen für [Stadt] und Umgebung
    - Liste der Services
    - Verlinkung auf Service-Seiten
 5. ## Typische Einsätze in [Region]
@@ -170,12 +170,12 @@ location:
 
 ```yaml
 faqs:
-  - question: "Was kostet ein Privatdetektiv in München?"
+  - question: "Was kostet ein Privatdetektiv für München?"
     answer: "In München liegen die Stundensätze zwischen 60-150€, 
     abhängig von der Auftragsart. Für Observationen im Großraum 
     München rechnen Sie mit 900-1.500€ pro Tag."
     
-  - question: "Wie schnell kann ein Detektiv in München starten?"
+  - question: "Wie schnell kann ein Detektiv für München starten?"
     answer: "Detektei Base ist deutschlandweit tätig und kann oft noch 
     am selben Tag mit Ermittlungen in München beginnen. In dringenden 
     Fällen sind wir innerhalb weniger Stunden einsatzbereit."
@@ -192,18 +192,18 @@ faqs:
 
 ```mdx
 ## München:
-**Jetzt Münchner Detektei kontaktieren:** Rufen Sie uns an oder nutzen 
-Sie unser [Kontaktformular](/kontakt). Wir sind in München und Umgebung 
-für Sie da – diskret und zuverlässig.
+**Detektei für München kontaktieren:** Rufen Sie uns an oder nutzen 
+Sie unser [Kontaktformular](/kontakt). Wir ermitteln für Sie – 
+diskret und zuverlässig.
 
 ## Hamburg:
-**Ihre Hamburger Detektei erreichen Sie unter:** [Telefon] oder über 
+**Detektei für Hamburg erreichen Sie unter:** [Telefon] oder über 
 unser [Kontaktformular](/kontakt). Von Altona bis Bergedorf – wir 
 ermitteln für Sie.
 
 ## Bundesland (Bayern):
 **Bayernweit für Sie im Einsatz:** Von München bis Nürnberg, von 
-Augsburg bis Regensburg – unsere Detektive kennen den Freistaat. 
+Augsburg bis Regensburg – wir ermitteln diskret in ganz Bayern. 
 [Jetzt unverbindlich anfragen →](/kontakt)
 ```
 

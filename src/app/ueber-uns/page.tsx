@@ -22,7 +22,7 @@ const vorteile = [
     icon: Shield,
     title: "Geprüfte Partner",
     description:
-      "Jede Detektei in unserem Netzwerk wird sorgfältig ausgewählt und regelmäßig auf Qualität geprüft.",
+      "Alle Detekteien für unser Netzwerk werden sorgfältig ausgewählt und regelmäßig auf Qualität geprüft.",
   },
   {
     icon: Zap,

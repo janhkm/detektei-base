@@ -142,8 +142,8 @@ export default async function StadtPage({ params }: PageProps) {
     landkreis,
     stadt,
     faqs,
-    pageTitle: `Detektei in ${stadt.name}`,
-    pageDescription: `Professionelle Detektei in ${stadt.name} für diskrete Ermittlungen.`,
+    pageTitle: `Detektei für ${stadt.name}`,
+    pageDescription: `Professionelle Detektei für ${stadt.name} – Diskrete Ermittlungen.`,
     pageUrl,
   });
 
@@ -187,10 +187,10 @@ export default async function StadtPage({ params }: PageProps) {
               {/* Services */}
               <div className="mt-12">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Detektei-Leistungen in {stadt.name}
+                  Detektei-Leistungen für {stadt.name}
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Detektei Base bietet in {stadt.name} 
+                  <strong>Kurz:</strong> Detektei Base bietet für {stadt.name} 
                   das gesamte Spektrum der Privatdetektei und Wirtschaftsdetektei – 
                   diskret, professionell und gerichtsverwertbar.
                 </p>
@@ -233,10 +233,10 @@ export default async function StadtPage({ params }: PageProps) {
               {/* Prices */}
               <div className="mt-16">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-2">
-                  Kosten für einen Detektiv in {stadt.name}
+                  Detektiv-Kosten für {stadt.name}
                 </h2>
                 <p className="text-primary-600 mb-6">
-                  <strong>Kurz:</strong> Die Kosten für einen Privatdetektiv in {stadt.name}{" "}
+                  <strong>Kurz:</strong> Die Kosten für einen Privatdetektiv für {stadt.name}{" "}
                   werden individuell nach Fall und Aufwand berechnet. Rufen Sie jetzt an – 
                   Sie erhalten ein unverbindliches Angebot für Ihre Situation.
                 </p>
@@ -288,7 +288,7 @@ export default async function StadtPage({ params }: PageProps) {
               {/* FAQ */}
               <div className="mt-16">
                 <h2 className="text-2xl font-display font-bold text-primary-900 mb-6">
-                  Häufige Fragen zur Detektei in {stadt.name}
+                  Häufige Fragen zur Detektei für {stadt.name}
                 </h2>
                 <FAQAccordion faqs={faqs} />
               </div>

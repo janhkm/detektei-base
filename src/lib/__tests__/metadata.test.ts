@@ -134,7 +134,7 @@ describe('generateEinsatzgebietMetadata', () => {
   it('should generate metadata for location page', () => {
     const metadata = generateEinsatzgebietMetadata({
       title: 'Detektei München',
-      description: 'Professionelle Detektei in München',
+      description: 'Professionelle Detektei für München',
       url: '/einsatzgebiete/bundesland/bayern/muenchen',
     });
 
@@ -207,13 +207,13 @@ describe('buildTitle', () => {
 
 describe('buildDescription', () => {
   it('should replace placeholders', () => {
-    const template = 'Detektei in {city}, {state} - Professionelle Ermittlungen';
+    const template = 'Detektei für {city}, {state} - Professionelle Ermittlungen';
     const description = buildDescription(template, {
       city: 'München',
       state: 'Bayern',
     });
 
-    expect(description).toBe('Detektei in München, Bayern - Professionelle Ermittlungen');
+    expect(description).toBe('Detektei für München, Bayern - Professionelle Ermittlungen');
   });
 
   it('should truncate if too long', () => {
